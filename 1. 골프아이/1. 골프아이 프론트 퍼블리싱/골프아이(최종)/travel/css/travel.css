@@ -1,0 +1,147 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+
+@font-face {
+    font-family: HanSansNeo_m;
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+@font-face {
+    font-family: HanSansNeo;
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+
+body {font-family: HanSansNeo;}
+
+.mobile 
+{display: none;
+font-family: HanSansNeo_m;}
+
+
+.web
+{width: 100%; max-width: 1920px; min-width: 1340px;
+margin: 0 auto;}
+
+.menu
+{width: 1340px; height: 70px;
+margin: 0 auto;
+overflow: hidden;
+margin-top: 20px;
+margin-bottom: 20px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.menu a:nth-child(1)
+{width: 167px; height: 50px;
+float: left;}
+
+.menu a
+{width: 167.571428px; height: 50px;
+text-align: center; color: #595757; font-weight: bold;
+float: left;}
+
+.menu a:nth-child(5)
+{color: #0d75bc;}
+
+.menu a p 
+{margin-top: 30px;}
+
+.travel
+{width: 1200px;
+margin: 0 auto;
+margin-top: 80px;
+margin-bottom: 100px;}
+
+.travel .title
+{width: 1200px; height: 40px;
+font-size: 32px; font-weight: bold;
+line-height: 40px; text-align: center;
+margin-bottom: 50px;}
+
+.travel .txt01
+{font-size: 14px; line-height: 25px;
+margin-bottom: 20px;}
+
+.txt01 p:nth-child(1) {font-weight: bold;}
+
+.travel .txt02
+{font-size: 14px; line-height: 25px;
+margin-bottom: 20px;}
+
+.txt02 p:nth-child(1) {font-weight: bold;}
+
+.travel .txt03
+{font-size: 14px; line-height: 25px;
+margin-bottom: 20px;}
+
+.txt03 p:nth-child(1) {font-weight: bold;}
+
+.travel .txt04
+{font-size: 14px; line-height: 25px;
+margin-bottom: 20px;}
+
+.txt04 p:nth-child(1) {font-weight: bold;}
+
+@media all and (max-width:768px)
+{
+
+.web 
+{display: none;}
+
+.mobile
+{width: 100%; height: 100vh;
+overflow: hidden;
+overflow-y: scroll;
+display: block;}
+
+.mobile .travel_m_top
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.travel_m_top a, .travel_m_top p 
+{float: left;}
+
+.travel_m_top a:nth-child(1) p 
+{width: 30px; height: 30px;
+line-height: 30px; font-size: 18px; text-align: center;
+margin-top: 5px;
+margin-right: 5px;
+color: #0d75bc;}
+
+.travel_m_top>p:nth-child(2)
+{line-height: 40px;
+font-weight: bold;}
+
+.travel_m_top a:nth-child(3)
+{width: 30px; height: 30px;
+float: right;
+margin-top: 5px;
+margin-right: 5px;}
+
+.travel_m_top a:nth-child(3) img 
+{width: 100%; height: 100%;}
+
+.travel_line_m_01
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-bottom: 20px;}
+
+.travel_txt_m
+{width: 95%;
+margin: 0 auto;
+font-size: 12px; line-height: 20px;}
+
+.travel_txt_m p:nth-child(1),.travel_txt_m p:nth-child(3), .travel_txt_m p:nth-child(5), .travel_txt_m p:nth-child(7)
+{font-weight: bold;
+font-size: 14px;
+margin-bottom: 5px;}
+
+.travel_txt_m p:nth-child(2), .travel_txt_m p:nth-child(4), .travel_txt_m p:nth-child(6), .travel_txt_m p:nth-child(8)
+{margin-bottom: 10px;}
+
+}

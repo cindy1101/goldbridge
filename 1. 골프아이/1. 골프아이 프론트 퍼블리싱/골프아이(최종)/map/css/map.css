@@ -1,0 +1,54 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body
+{font-family: SpoqaHanSansNeo;}
+
+.mobile
+{width: 100%; height: 100vh;
+overflow: hidden;
+position: relative;}
+
+.map_m_top
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.map_m_top a, .map_m_top p 
+{float: left;}
+
+.map_m_top a:nth-child(1) p 
+{width: 30px; height: 30px;
+line-height: 30px; font-size: 18px; text-align: center;
+margin-top: 5px;
+margin-right: 5px;
+color: #0d75bc;}
+
+.map_m_top>p:nth-child(2)
+{line-height: 40px;
+font-weight: bold;}
+
+.map_m_top a:nth-child(3)
+{width: 30px; height: 30px;
+float: right;
+margin-top: 5px;
+margin-right: 5px;}
+
+.map_m_top a:nth-child(3) img 
+{width: 100%; height: 100%;}
+
+.map_line_m_01
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-bottom: 5px;}
+
+.map
+{width: 100%; height: 100vh;
+background-color: #0d75bc;}

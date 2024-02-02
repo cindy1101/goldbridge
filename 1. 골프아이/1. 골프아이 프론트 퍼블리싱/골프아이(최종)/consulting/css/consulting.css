@@ -1,0 +1,210 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+.web
+{width: 540px; height: 1100px;
+margin: 0 auto;}
+
+.consulting
+{width: 440px; height: 1100px;
+margin: 0 auto;
+background-color: white;}
+
+.consulting>p:nth-child(1)
+{width: 440px; height: 100px;
+text-align: center; line-height: 100px; font-size: 22px; font-weight: bold;}
+
+.consulting .consulting_box
+{width: 440px; height: 313px;
+border-bottom: 2px solid #ccc;
+border-top: 2px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 20px;
+background-color: #f7f7f7;}
+
+.consulting_box>p:nth-child(1)
+{width: 420px;
+font-size: 13px; line-height: 20px;
+margin-left: 10px; margin-top: 10px; margin-bottom: 20px;}
+
+.consulting_box .agree_ex
+{width: 400px; height: 220px;
+margin: 0 auto;}
+
+.agree_ex>p:nth-child(1)
+{width: 400px; height: 20px;
+text-align: center; line-height: 20px; font-weight: bold;
+margin-bottom: 5px;}
+
+.agree_ex .agree
+{width: 400px; height: 145px;
+margin: 0 auto;
+border-top: 2px solid #f49800;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+margin-bottom: 10px;}
+
+.agree>div
+{width: 380px; height: 140px;
+margin-left: 10px; margin-top: 10px;}
+
+.agree>div p
+{font-size: 13px; line-height: 20px;
+text-align: justify;}
+
+.agree_ex .agree_chk
+{width: 400px; height: 30px;
+overflow: hidden;}
+
+.agree_chk>p 
+{float: left;
+font-size: 14px; line-height: 30px;}
+
+#agree
+{width: 15px; height: 15px;
+margin-top: 8px; margin-right: 8px;
+float: left;}
+
+.consulting .select_box
+{width: 440px; height: 90px;
+margin-bottom: 20px;
+background-color: #f7f7f7;
+border-top: 2px solid #ccc;
+border-bottom: 2px solid #ccc;
+box-sizing: border-box;}
+
+.select_box>p:nth-child(1)
+{width: 420px; height: 20px;
+margin-left: 10px; font-size: 14px; line-height: 20px;
+color: red; margin-bottom: 10px; margin-top: 10px;}
+
+#product
+{width: 420px; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 10px; margin-left: 10px;}
+
+.consulting .information
+{width: 440px;
+border-top: 2px solid #ccc;
+border-bottom: 2px solid #ccc;
+background-color: #f7f7f7;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+
+.information .box_infor
+{width: 420px;
+margin-left: 10px;}
+
+.box_infor>p:nth-child(1)
+{width: 420px; height: 50px;
+line-height: 50px; font-size: 14px; color: red;}
+
+.box_infor span {color: red;}
+
+.box_infor .name
+{width: 420px; height: 50px;
+margin-bottom: 10px;
+overflow: hidden;}
+
+.name p 
+{float: left;
+font-size: 14px; line-height: 50px;
+margin-right: 15px;}
+
+#name_i
+{width: 300px; height: 50px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+float: left;}
+
+.box_infor .manager
+{width: 420px; height: 50px;
+margin-bottom: 10px;
+overflow: hidden;}
+
+.manager p 
+{float: left;
+font-size: 14px; line-height: 50px;
+margin-right: 63px;}
+
+#manager_i
+{width: 300px; height: 50px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+float: left;}
+
+.box_infor .phone
+{width: 420px; height: 50px;
+margin-bottom: 10px;
+overflow: hidden;}
+
+.phone p 
+{float: left;
+font-size: 14px; line-height: 50px;
+margin-right: 63px;}
+
+#phone_i
+{width: 300px; height: 50px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+float: left;}
+
+.box_infor .day
+{width: 420px; height: 50px;
+margin-bottom: 10px;
+overflow: hidden;}
+
+.day p 
+{float: left;
+font-size: 14px; line-height: 50px;
+margin-right: 28px;}
+
+#day_i
+{width: 300px; height: 50px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+float: left;}
+
+.box_infor .contents
+{width: 420px; height: 120px;
+margin-bottom: 18px;
+overflow: hidden;}
+
+.contents p 
+{float: left;
+font-size: 14px; line-height: 50px;
+margin-right: 47px;}
+
+#contents_i
+{width: 300px; height: 120px;
+overflow-y: scroll;
+border: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+float: left;}
+
+#send
+{width: 440px; height: 60px;
+background-color: #0d75bc;
+border: none;  font-family: SpoqaHanSansNeo;
+color: white; font-size: 16px; font-weight: bold; text-align: center; line-height: 60px;}

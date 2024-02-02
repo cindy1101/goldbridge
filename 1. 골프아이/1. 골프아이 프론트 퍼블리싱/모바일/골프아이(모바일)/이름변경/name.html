@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/name.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <section class="mobile">
+
+        <div class="name_m_top">
+
+            <a href="#">
+                <p>←</p>
+            </a>
+
+            <p>이름변경</p>
+
+            <a href="#">
+                <img src="img/home_m.png">
+            </a>
+
+        </div>
+
+        <div class="name_line_m_01"></div>
+
+        <div class="name_m_box_ex">
+
+            <p>인증받은 휴대전화 번호는 내 회원정보에 등록하겠습니다.</p>
+
+            <input type="text" placeholder="이름" id="name_m_01">
+
+            <div class="namebox01">
+
+                <select id="name_m_02">
+
+                    <option>내국인</option>
+                    <option>외국인</option>
+
+                </select>
+
+                <input type="radio" name="gendar_m" id="man_m">
+                <input type="radio" name="gendar_m" id="woman_m">
+
+                <div class="gender_mobile_box">
+
+                    <label for="man_m">
+                        <p>남성</p>
+                    </label>
+
+                    <label for="woman_m">
+                        <p>여성</p>
+                    </label>
+
+                </div>
+
+
+            </div>
+
+            <div class="namebox02">
+
+                <p>생년월일</p>
+
+                <div class="day_m">
+
+                    <div class="day01_m">
+
+                        <input type="text" id="day_text_01" size="4" maxlength="4">
+
+                        <p>년</p>
+
+                    </div>
+
+                    <div class="day02_m">
+
+                        <input type="text" id="day_text_02" size="2" maxlength="2">
+
+                        <p>월</p>
+                        
+                    </div>
+
+                    <div class="day03_m">
+
+                        <input type="text" id="day_text_03" size="2" maxlength="2">
+
+                        <p>일</p>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="namebox03">
+
+                <select id="name_m_03">
+
+                    <option>SKT</option>
+                    <option>KT</option>
+                    <option>LG</option>
+
+                </select>
+
+
+                <div class="phonenum_box_m">
+
+                    <input type="text" placeholder="전화번호" id="phonenum_m" size="11" maxlength="11">
+
+                    <input type="button" value="인증요청" id="certi_m_btn">
+
+                </div>
+
+
+            </div>
+
+
+            <input type="text" id="certification_m" placeholder="인증번호 입력">
+            
+        </div><!--name_m_box_ex-->
+
+
+        <input type="button" value="변경하기" id="change_m">
+
+
+    </section>
+
+</body>
+</html>

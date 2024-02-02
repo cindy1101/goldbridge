@@ -1,0 +1,675 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+
+@font-face {
+    font-family: gmarket;
+    src: url(../../font/GmarketSansTTFMedium.ttf);
+}
+
+@font-face {
+    font-family: gmarket_b;
+    src: url(../../font/GmarketSansTTFBold.ttf);
+}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+
+.web
+{width: 100%; max-width: 1920px;
+margin: 0 auto;}
+
+.web .academy_detail
+{width: 1340px;
+margin: 0 auto;
+margin-top: 50px;}
+
+.academy_detail .rout_ad
+{width: 1340px; height: 20px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.rout_ad a, .rout_ad p
+{float: left;
+margin-right: 5px;
+font-size: 14px; line-height: 20px;}
+
+.rout_ad p:last-child
+{margin-right: 0;}
+
+.rout_ad>a:nth-child(1)
+{width: 20px; height: 20px;}
+
+.academy_detail>p
+{width: 1340px; height: 30px;
+font-size: 24px; font-weight: bold;
+margin-bottom: 10px;}
+
+.academy_detail .line01
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+.academy_detail .title_ac
+{width: 1340px; height: 50px;
+border-top: 1px solid #f49800;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; font-weight: bold;}
+
+.title_ac span
+{color: #0d75bc;}
+
+.academy_detail .detail_img
+{width: 1340px; height: 1676px;
+margin: 0 auto;}
+
+.academy_detail .golf_club
+{width: 1340px; height: 1160px;
+background-color: #e3fdcd;
+margin-bottom: 100px;}
+
+.golf_club .golf_club_box
+{width: 1140px; height: 960px;
+margin: 0 auto;
+padding-top: 100px;}
+
+.golf_club .golf_club_box
+{width: 1140px; height: 960px;
+margin: 0 auto;
+padding-top: 100px;}
+
+.golf_club_box .club01
+{width: 1140px; height: 470px;
+overflow: hidden;
+background-color: white;
+margin-bottom: 20px;}
+
+.club01 .golf_img01
+{width: 525px; height: 430px;
+float: left;
+margin-left: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 50px;}
+
+.club01 .club_txt_01
+{width: 525px; height: 430px;
+float: left;
+margin-right: 20px;
+font-family: gmarket;
+margin-top: 50px;
+margin-bottom: 20px;}
+
+.club_txt_01>p:nth-child(1)
+{width: 525px; height: 30px;
+line-height: 50px;
+font-size: 24px;
+margin-bottom: 10px;
+font-family: gmarket_b;}
+
+.club_txt_01 .golf_hashtag01
+{width: 525px; height: 30px;
+overflow: hidden;
+margin-bottom: 10px;}
+
+.golf_hashtag01 p
+{float: left;
+background-color: #e9e9e9;
+color: #6c6c6c;
+text-align: center; line-height: 25px;
+border-radius: 15px;}
+
+.golf_hashtag01 p:nth-child(1)
+{width: 130px; height: 25px;}
+
+.golf_hashtag01 p:nth-child(2)
+{width: 150px; height: 25px;
+margin-right: 10px;
+margin-left: 10px;}
+
+.golf_hashtag01 p:nth-child(3)
+{width: 120px; height: 25px;}
+
+.club_txt_01>p:nth-child(3)
+{line-height: 25px;
+color: #6c6c6c;
+margin-bottom: 10px;}
+
+.club_txt_01 span
+{color: #48ab51;}
+
+.club_txt_01 .golf_line01
+{width: 525px; height: 1px;
+background-color: #6c6c6c;
+margin-bottom: 10px;}
+
+.club_txt_01 .golf_detail01
+{width: 525px; height: 125px;
+margin-bottom: 10px;}
+
+.golf_detail01 p
+{width: 525px; height: 25px;
+line-height: 25px;
+color: #6c6c6c;}
+
+.club_txt_01 a p
+{width: 200px; height: 40px;
+background-color: #434343;
+font-size: 18px; line-height: 40px; text-align: center;
+color: white;}
+
+/*02*/
+.golf_club_box .club02
+{width: 1140px; height: 470px;
+overflow: hidden;
+background-color: white;
+margin-bottom: 20px;}
+
+.club02 .golf_img02
+{width: 525px; height: 430px;
+float: left;
+margin-left: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 50px;}
+
+.club02 .club_txt_02
+{width: 525px; height: 430px;
+float: left;
+margin-right: 20px;
+font-family: gmarket;
+margin-top: 50px;
+margin-bottom: 20px;}
+
+.club_txt_02>p:nth-child(1)
+{width: 525px; height: 30px;
+line-height: 50px;
+font-size: 24px;
+margin-bottom: 10px;
+font-family: gmarket_b;}
+
+.club_txt_02 .golf_hashtag02
+{width: 525px; height: 30px;
+overflow: hidden;
+margin-bottom: 10px;}
+
+.golf_hashtag02 p
+{float: left;
+background-color: #e9e9e9;
+color: #6c6c6c;
+text-align: center; line-height: 25px;
+border-radius: 15px;}
+
+.golf_hashtag02 p:nth-child(1)
+{width: 90px; height: 25px;}
+
+.golf_hashtag02 p:nth-child(2)
+{width: 110px; height: 25px;
+margin-right: 10px;
+margin-left: 10px;}
+
+.golf_hashtag02 p:nth-child(3)
+{width: 170px; height: 25px;}
+
+.club_txt_02>p:nth-child(3)
+{line-height: 25px;
+color: #6c6c6c;
+margin-bottom: 10px;}
+
+.club_txt_02 span
+{color: #48ab51;}
+
+.club_txt_02 .golf_line02
+{width: 525px; height: 1px;
+background-color: #6c6c6c;
+margin-bottom: 10px;}
+
+.club_txt_02 .golf_detail02
+{width: 525px; height: 125px;
+margin-bottom: 10px;}
+
+.golf_detail02 p
+{width: 525px; height: 25px;
+line-height: 25px;
+color: #6c6c6c;}
+
+.club_txt_02 a p
+{width: 200px; height: 40px;
+background-color: #434343;
+font-size: 18px; line-height: 40px; text-align: center;
+color: white;}
+
+.academy_detail .btn_ad
+{width: 220px; height: 40px;
+margin: 0 auto;
+margin-bottom: 100px;
+overflow: hidden;}
+
+.btn_ad a p 
+{width: 100px; height: 40px;
+font-size: 14px; text-align: center; line-height: 40px;
+float: left;}
+
+.btn_ad a:nth-child(1) p
+{background-color: #ff1626;
+color: white;
+margin-right: 20px;}
+
+.btn_ad a:nth-child(2) p
+{background-color: #3b8aff;
+color: white;}
+
+@media all and (max-width:768px)
+{   
+    .web {display: none;}
+
+    .mobile
+    {width: 100%; height: 100vh;
+    display: block;
+    overflow-y: scroll;}
+    
+    .rout_m
+    {width: 95%; height: 40px;
+    overflow: hidden;
+    margin: 0 auto;}
+    
+    .rout_m>a:nth-child(1)
+    {width: 30px; height: 30px;
+    text-align: center; line-height: 30px; font-size: 18px;
+    margin-top: 5px; margin-right: 5px;
+    color: #0d75bc;
+    float: left;}
+    
+    .rout_m p:nth-child(2)
+    {font-weight: bold;
+    line-height: 40px;
+    float: left;}
+    
+    .rout_m .rout_icon_m
+    {width: 65px; height: 30px;
+    float: right;}
+    
+    .rout_icon_m>a
+    {width: 30px; height: 30px;
+    margin-top: 5px;
+    float: left;}
+    
+    .rout_icon_m a:nth-child(1)
+    {margin-right: 5px;}
+    
+    .rout_icon_m a img
+    {width: 100%; height: 100%;}
+    
+    .academy_line_01
+    {width: 100%; height: 1px;
+    background-color: #ccc;
+    margin-bottom: 10px;}
+    
+    .academy_title_m
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 5px;}
+    
+    .academy_title_m span
+    {color: #0d75bc;}
+    
+    .academy_line_02
+    {width: 95%; height: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+    
+    .academy_line_02 div:nth-child(1)
+    {width: 20%; height: 2px;
+    background-color: #f49800;
+    float: left;}
+    
+    .academy_line_02 div:nth-child(2)
+    {width: 80%; height: 2px;
+    float: left;
+    background-color: #ccc;}
+    
+    .academy_title_m p 
+    {font-size: 12px; font-weight: bold;
+    line-height: 20px;}
+    
+    .detail_m
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+    
+    .detail_m a img 
+    {width: 100%; height: auto;}
+    
+    .detail_box_m
+    {width: 95%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #e3fdcd;
+    margin: 0 auto;
+    margin-bottom: 20px;}
+    
+    .detail_box_m .golf_m_01
+    {width: 90%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+    
+    .golf_m_01>div:nth-child(1)
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 5px;}
+    
+    .golf_m_01>div:nth-child(1) img
+    {width: 100%; height: auto;}
+    
+    .golf_m_01 .txt_m_01
+    {width: 95%;
+    margin: 0 auto;}
+    
+    .txt_m_01>p:nth-child(1)
+    {font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;}
+    
+    .txt_m_01 .hastag01_m
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;}
+    
+    .hastag01_m div
+    {font-size: 10px;
+    float: left;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    color: #6c6c6c;}
+    
+    .hastag01_m div:nth-child(2)
+    {margin-left: 1px;
+    margin-right: 1px;}
+    
+    .hastag01_m div p
+    {margin: 3px 3px;}
+    
+    .txt_m_01>p:nth-child(3)
+    {font-size: 10px;
+    line-height: 15px;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 5px;}
+    
+    .txt_m_01 span
+    {color: #48ab51;}
+    
+    .txt_m_01>p:nth-child(4)
+    {font-size: 10px;
+    line-height: 15px;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 5px;}
+    
+    .txt_m_01 .golf_line_01
+    {width: 100%; height: 1px;
+    background-color: #ccc;
+    margin-bottom: 5px;}
+    
+    .txt_m_01>p:nth-child(6)
+    {font-size: 10px;
+    line-height: 15px;
+    color: #333;
+    margin-bottom: 10px;}
+    
+    .txt_m_01 a p 
+    {width: 50%; height: 30px;
+    margin: 0 auto;
+    background-color: #333;
+    color: white;
+    text-align: center; font-size: 12px; line-height: 30px;}
+    
+    /*02*/
+    .detail_box_m .golf_m_02
+    {width: 90%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+    
+    .golf_m_02>div:nth-child(1)
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 5px;}
+    
+    .golf_m_02>div:nth-child(1) img
+    {width: 100%; height: auto;}
+    
+    .golf_m_02 .txt_m_02
+    {width: 95%;
+    margin: 0 auto;}
+    
+    .txt_m_02>p:nth-child(1)
+    {font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;}
+    
+    .txt_m_02 .hastag02_m
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;}
+    
+    .hastag02_m div
+    {font-size: 10px;
+    float: left;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    color: #6c6c6c;}
+    
+    .hastag02_m div:nth-child(2)
+    {margin-left: 1px;
+    margin-right: 1px;}
+    
+    .hastag02_m div p
+    {margin: 3px 3px;}
+    
+    .txt_m_02>p:nth-child(3)
+    {font-size: 10px;
+    line-height: 15px;
+    color: #48ab51;
+    text-align: justify;
+    margin-bottom: 5px;}
+    
+    
+    .txt_m_02>p:nth-child(4)
+    {font-size: 10px;
+    line-height: 15px;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 5px;}
+    
+    .txt_m_02 .golf_line_02
+    {width: 100%; height: 1px;
+    background-color: #ccc;
+    margin-bottom: 5px;}
+    
+    .txt_m_02>p:nth-child(6)
+    {font-size: 10px;
+    line-height: 15px;
+    color: #333;
+    margin-bottom: 10px;}
+    
+    .txt_m_02 a p 
+    {width: 50%; height: 30px;
+    margin: 0 auto;
+    background-color: #333;
+    color: white;
+    text-align: center; font-size: 12px; line-height: 30px;}
+    
+    .academy_m_btn
+    {width: 50%; height: 30px;
+    overflow: hidden;
+    margin: 0 auto;}
+    
+    .academy_m_btn a 
+    {width: 49%; height: 30px;
+    font-size: 12px; line-height: 30px; text-align: center;
+    float: left;
+    background-color: #0d75bc;}
+    
+    .academy_m_btn a:nth-child(1)
+    {margin-right: 2%;
+    background-color: #ff1626;
+    color: white;}
+    
+    .academy_m_btn a:nth-child(2)
+    {background-color: #3b8aff;
+    color: white;}
+    
+    
+    .footer_m
+    {width: 100%;
+    margin-top: 20px;}
+    
+    .footer_m .footer_top_m
+    {width: 100%; height: 40px;
+    background-color: #333;}
+    
+    .footer_top_m .sns_m
+    {width: 150px; height: 30px;
+    margin: 0 auto;
+    padding-top: 5px;}
+    
+    .sns_m a 
+    {width: 30px; height: 30px;
+    float: left;
+    margin-right: 10px;}
+    
+    .sns_m a:last-child {margin-right: 0;}
+    
+    .sns_m a img
+    {width: 100%; height: 100%;}
+    
+    .footer_m .footer_mid_m
+    {width: 95%; height: 40px;
+    margin: 0 auto;}
+    
+    .footer_mid_m ul
+    {overflow: hidden;}
+    
+    .footer_mid_m ul a li
+    {height: 20px; line-height: 20px;
+    float: left; color: #333; font-weight: bold;
+    font-size: 10px;}
+    
+    .footer_mid_m ul a:nth-child(1) li
+    {margin-right: 5px;}
+    
+    .footer_mid_m ul a:nth-child(2) li
+    {margin-right: 5px;}
+    
+    .footer_mid_m ul a:nth-child(3) li
+    {margin-right: 5px;}
+    
+    .footer_mid_m ul a:nth-child(4) li
+    {color: red;
+    margin-right: 5px;}
+    
+    .footer_mid_m ul a:nth-child(5) li
+    {margin-right: 5px;}
+    
+    .footer_mid_m ul a:nth-child(6) li
+    {margin-right: 5px;}
+    
+    .footer_mid_m ul a:nth-child(7) li
+    {margin-right: 5px;}
+    
+    
+    .footer_m .footer_line_m_02
+    {width: 100%; height: 1px;
+    background-color: #ccc;}
+    
+    .footer_m .footer_bottom_ex_m
+    {width: 100%;
+    background-color: #f3f3f3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    line-height: 20px;}
+    
+    .footer_bottom_ex_m .footer_bottom_m
+    {width: 95%;
+    margin: 0 auto;}
+    
+    .footer_bottom_m a {color:#333; font-weight: bold;}
+    
+    .footer_bottom_m>p:nth-child(1)
+    {font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;}
+    
+    .footer_bottom_m .footer_box01
+    {width: 100%;}
+    
+    .footer_box01>p
+    {float: left;}
+    
+    .footer_box01>p:nth-child(1)
+    {margin-right: 2px;}
+    
+    .footer_bottom_m .footer_box02
+    {width: 100%;}
+    
+    .footer_box02>p
+    {float: left;}
+    
+    .footer_box02>p:nth-child(1)
+    {margin-right: 2px;}
+    
+    .footer_bottom_ex_m>a p
+    {width: 200px; height: 30px;
+    border: 1px solid #333;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 14px; line-height: 30px; text-align: center;
+    color: #333;}
+    
+    .footer_bottom_ex_m>a span
+    {color: #0d75bc;
+    font-weight: bold;}   
+}
+
+@media all and (min-width:601px) and (max-width:768px)
+{
+    .detail_box_m
+    {width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    .detail_box_m .golf_m_01, .detail_box_m .golf_m_02
+    {width: 48.5%;
+    float: left;}
+
+    .detail_box_m .golf_m_01 
+    {margin-right: 1%;
+    margin-left: 1%;}
+
+    .detail_box_m .golf_m_02
+    {margin-right: 1%;}
+
+    .footer_m .footer_mid_m
+    {width: 95%; height: 20px;
+    margin: 5px auto;}
+
+}

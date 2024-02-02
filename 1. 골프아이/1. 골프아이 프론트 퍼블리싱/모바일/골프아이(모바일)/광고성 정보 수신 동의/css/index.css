@@ -1,0 +1,87 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body
+{font-family: SpoqaHanSansNeo;}
+
+.mobile
+{width: 100%; height: 100vh;
+overflow: hidden;
+background-color: rgba(0, 0, 0, 0.34);
+display: flex;
+justify-content: center;
+align-items: center;}
+
+.advertisement_m_box01
+{width: 95%;
+background-color: white;}
+
+.advertisement_m_box01>p:nth-child(1)
+{width: 95%; height: 20px;
+line-height: 20px; 
+font-weight: bold; text-align: center;
+margin: 0 auto;
+margin-top: 5px; margin-bottom: 5px;}
+
+.advertisement_m_box01 .advertisement_line_m
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-bottom: 5px;}
+
+.advertisement_m_box01>p:nth-child(3)
+{width: 95%; height: 15px;
+margin: 0 auto;
+font-size: 12px; font-weight: bold; line-height: 15px;
+margin-bottom: 5px;} 
+
+.advertisement_m_box01 .advertisement_m_box02
+{width: 95%;
+margin: 0 auto;
+border-top: 2px solid #f49800;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+margin-bottom: 10px;}
+
+.advertisement_m_box02 div
+{width: 95%;
+margin: 0 auto;
+margin-top: 5px; margin-bottom: 5px;}
+
+.advertisement_m_box02 div p 
+{font-size: 12px; line-height: 20px;
+text-align: justify;}
+
+.advertisement_m_box02 div p:nth-child(1)
+{margin-bottom: 5px;}
+
+.advertisement_m_box02 div p:nth-child(2)
+{margin-bottom: 5px;}
+
+.advertisement_m_box02 div p:nth-child(3)
+{text-align: left;}
+
+.advertisement_m_box02 div p:nth-child(4)
+{text-align: left;}
+
+.advertisement_m_box02 div span
+{font-weight: bold;
+text-decoration: underline;}
+
+#advertisement_m_btn
+{width: 95%; height: 40px;
+background-color: #333;
+color: white; font-size: 14px;
+border: none;
+font-family: SpoqaHanSansNeo;
+border-radius: 5px;
+margin-bottom: 20px; margin-left: 2.5%;}

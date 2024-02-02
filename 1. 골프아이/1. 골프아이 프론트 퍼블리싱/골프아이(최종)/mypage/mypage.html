@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>mypage</title>
+    <link href="css/mypage.css" rel="stylesheet">
+</head>
+<body>
+    <section class="web">
+
+    <div class="mypage">
+
+        <div class="mypage_left">
+
+            <div class="mypage_title01">
+
+                <p>마이페이지</p>
+
+                <div>
+                    <img src="img/location.png">
+                </div>
+
+            </div><!--title01-->
+
+            <ul class="mypage_menu">
+                <a href="mypage.html">
+                    <li>
+                        <p>프로필관리</p>
+                        <p>></p>
+                    </li>
+                </a>
+
+                <a href="../reservation_list/reservation_list.html">
+                    <li>
+                        <p>예약리스트</p>
+                        <p>></p>
+                    </li>
+                </a>
+
+                <a href="../notice/notice.html">
+                    <li>
+                        <p>공지사항</p>
+                        <p>></p>
+                    </li>
+                </a>
+
+                <a href="../questions/questions.html">
+                    <li>
+                        <p>자주묻는질문</p>
+                        <p>></p>
+                    </li>
+                </a>
+
+            </ul>
+
+        </div><!--left-->
+
+
+        <div class="mypage_right">
+
+            <div class="mypage_rout">
+                <div>
+                    <img src="img/find.png">
+                </div>
+                <p>></p>
+                <p>마이페이지</p>
+                <p>></p>
+                <p>프로필관리</p>
+            </div>
+
+            <p>내 프로필 관리</p>
+
+            <div class="line01"></div>
+
+            <input type="radio" name="gender" id="man">
+
+            <input type="radio" name="gender" id="woman">
+
+            <div class="profile_box">
+
+                <table cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td>아이디</td>
+                        <td>
+                            <div class="id">
+                                <p>an20o0@naver.com</p>
+                                <a href="#">변경하기</a>
+                            </div>
+                        </td>
+                        <td>생년월일</td>
+                        <td>
+                            <div class="birthday">
+                                <input type="text" id="birthday01" size="4" maxlength="4">
+                                <p>년</p>
+                                <input type="text" id="birthday02" size="2" maxlength="2">
+                                <p>월</p>
+                                <input type="text" id="birthday03" size="2" maxlength="2">
+                                <p>일</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>이름</td>
+                        <td>
+                            <div class="name">
+                                <p>　</p>
+                                <p>※ 개명하셨다면? 이름변경을 해 주세요.</p>
+                                <a href="#">변경하기</a>
+                            </div>
+                        </td>
+                        <td>성별</td>
+                        <td>
+                            <div class="gender">
+                                <label for="man">
+                                    <p>남자</p>
+                                </label>
+
+                                <label for="woman">
+                                    <p>여자</p>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>휴대폰</td>
+                        <td>
+                            <div class="phone">
+                                <p>　</p>
+                                <a href="#">변경하기</a>
+                            </div>
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+
+                    <tr>
+                        <td>비밀번호변경</td>
+                        <td>
+                            <div class="password">
+                                <div class="password01">
+                                    <p>현재 비밀번호</p>
+                                    <input type="password" size="12" maxlength="12" id="pw01">
+                                </div>
+
+                                <div class="password02">
+                                    <p>새 비밀번호</p>
+                                    <input type="password" size="12" maxlength="12" id="pw02">
+                                </div>
+
+                                <div class="password03">
+                                    <p>비밀번호 다시 입력</p>
+                                    <input type="password" size="12" maxlength="12" id="pw03">
+                                </div>
+                            </div>
+                        </td>
+                        <td>캐릭터</td>
+                        <td>
+                            <div class="character">
+                                <div></div>
+                                <a href="#">변경하기</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>수신설정</td>
+                        <td colspan="3">
+
+                            <div class="reception">
+
+                                <div class="reception01">
+                                    <p>마케팅 및 이벤트 목적의 개인정보 수집 및 이용 동의함 22.01.16 /</p>
+                                    <a href="#">&nbsp;전문보기 ></a>
+                                </div>
+
+                                <div class="reception02">
+                                    <p>광고성 정보 수신 철회함 22.01.15
+                                    ( <input type="checkbox" id="sns"> SMS, <input type="checkbox" id="mms"> MMS, <input type="checkbox" id="email"> 이메일, <input type="checkbox" id="push"> 푸시알림 ) / </p>
+                                    
+                                    <a href="#">&nbsp;전문보기 ></a>
+                                </div>
+
+                            </div>
+
+                        </td>                        
+                    </tr>
+
+                </table>
+
+                
+                <div class="button">
+
+                <input type="submit" value="변경" id="reservation">
+                <input type="reset" value="취소" id="cancellation">
+                <a href="#"><p>회원탈퇴</p></a>
+
+                </div>
+
+
+            </div>
+
+            <div class="golf_course">
+
+                <div class="course_title">
+                    <p><span>골프아이</span>가 인증한 일본의 명품 골프장</p>
+                    <p>명품 골프장에서 즐거운 라운딩을 누려보세요!</p>
+                </div>
+
+                <a href="#">
+                    <img src="img/01golfccourse.png">
+                </a>
+
+                <a href="#">
+                    <img src="img/02golfccourse.png">
+                </a>
+
+                <a href="#">
+                    <img src="img/03golfccourse.png">
+                </a>
+
+            </div>
+
+        </div><!--right-->
+
+    </div>
+
+    </section>
+
+    <section class="mobile">
+
+        <input type="checkbox" id="menu_m">
+
+        <header class="header_m">
+
+            <label for="menu_m" class="menu_m">
+                <img src="img/menu_btn.png">
+            </label>
+
+            <div class="rout_m">
+                <p>프로필 관리</p>
+            </div>
+
+            <div class="header_button">
+
+                <div class="main_m">
+                    <a href="#">
+                        <img src="img/home_m.png">
+                    </a>
+                </div>
+
+                <div class="login_m">
+                    <a href="#">
+                        <img src="img/login_mobile.png">
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="lnb_mobile">
+
+
+                <div class="gnb_mobile">
+
+                    <ul>
+
+                        <li>
+                            <a href="#">
+                                <p>로그인</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <div></div>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>즐겨찾기</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <div></div>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>예약확인</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <div></div>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>마이페이지</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <label for="menu_m" id="close">
+                        <p>←</p>
+                    </label>
+
+                </div>
+
+                <input type="radio" name="sub_menu" id="submenu01" checked>
+                <input type="radio" name="sub_menu" id="submenu02">
+                <input type="radio" name="sub_menu" id="submenu03">
+                <input type="radio" name="sub_menu" id="submenu04">
+                <input type="radio" name="sub_menu" id="submenu05">
+                <input type="radio" name="sub_menu" id="submenu06">
+
+
+
+                <div class="menu_mobile">
+
+                    <div class="menu_left_mobile">
+
+                        <label for="submenu01">
+                            <p>일본골프</p>
+                        </label>
+
+                        <label for="submenu02">
+                            <p>태국골프</p>
+                        </label>
+
+                        <label for="submenu03">
+                            <p>베트남골프</p>
+                        </label>
+
+                        <label for="submenu04">
+                            <p>대만골프</p>
+                        </label>
+
+                        <label for="submenu05">
+                            <p>기획전/이벤트</p>
+                        </label>
+
+                        <label for="submenu06">
+                            <p>회원권/아카데미</p>
+                        </label>
+
+
+                    </div><!--left-->
+
+                    <div class="menu_right_mobile">
+
+                        <div class="japan_m">
+
+                            <ul>
+                                <a href="#">
+                                    <li>
+                                        <p>도쿄/간도</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>오사카/간사이</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>홋카이도/삿포로</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>오키나와/나하</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>후쿠오카/야마구치</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>가고시마/미야자키</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>구마모토/오이타</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>나카사키/사가</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>아오모리/니카타</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>나고야/도카이</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>오카야마/츄고쿠</p>
+                                    </li>
+                                </a>
+
+
+                                <a href="#">
+                                    <li>
+                                        <p>다카마츠/마츠야마</p>
+                                    </li>
+                                </a>
+
+
+                            </ul>
+
+                        </div><!--일본-->
+
+                        <div class="thailand_m">
+
+                            <ul>
+
+                                <a href="#">
+                                    <li>
+                                        <p>방콕/파타야</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>치앙마이/치앙라이</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>푸켓</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>칸차나부리/아유타야</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>후아힌</p>
+                                    </li>
+                                </a>
+
+                
+                            </ul>
+
+                        </div><!--태국-->
+
+                        <div class="vietnam_m">
+
+                            <ul>
+
+                                <a href="#">
+                                    <li>
+                                        <p>나트랑</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>푸꾸옥</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>다낭</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>하노이</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>호치민</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>달랏</p>
+                                    </li>
+                                </a>
+
+                
+                            </ul>
+
+                        </div><!--베트남-->
+
+                        <div class="taiwan_m">
+
+                            <ul>
+
+                                <a href="#">
+                                    <li>
+                                        <p>가오슝</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>타이중</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>타이페이</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>신죽</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>타오위안</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                        <p>이란/화련</p>
+                                    </li>
+                                </a>
+
+                
+                            </ul>
+
+                        </div><!--타이완-->
+
+                        <div class="event_m">
+
+                            <ul>
+                                <a href="#">
+                                    <li>
+                                        <p>기획전/이벤트</p>
+                                    </li>
+                                </a>
+                            </ul>
+
+                        </div><!--이벤트-->
+
+                        <div class="academy_m">
+
+                            <ul>
+                                <a href="#">
+                                    <li>
+                                            <p>회원권</p>
+                                    </li>
+                                </a>
+
+                                <a href="#">
+                                    <li>
+                                            <p>아카데미</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+
+                        </div><!--회원권-->
+
+                    </div><!--right-->
+
+                </div>
+
+
+            </div><!--lnb_mobile-->
+
+        </header>
+
+        <div class="profile_line_m_01"></div>
+
+        <div class="profile_menu_m">
+
+            <a href="mypage.html">
+                <p>프로필관리</p>
+            </a>
+
+            <a href="../reservation_list/reservation_list.html">
+                <p>예약리스트</p>
+            </a>
+
+            <a href="../notice/notice.html">
+                <p>공지사항</p>
+            </a>
+
+            <a href="../questions/questions.html">
+                <p>자주묻는질문</p>
+            </a>
+
+        </div>
+
+        <div class="profile_title_m">
+            <p>내 프로필 관리</p>
+        </div>
+
+        <div class="profile_line_m_02">
+            <div></div>
+            <div></div>
+        </div>
+
+        <input type="radio" name="gender_m" id="man_m">
+        <input type="radio" name="gender_m" id="woman_m">
+
+        <table cellpadding="0" cellspacing="0">
+
+            <tr>
+                <td>
+                    <p>아이디</p>
+                </td>
+
+                <td>
+                    <div class="box01_m">
+
+                        <p>an20o0@naver.com</p>
+
+                        <a href="#">
+                            <p>변경하기</p>
+                        </a>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>이름</p>
+                </td>
+
+                <td>
+                    <div class="box02_m">
+
+                        <input type="text" id="profile01_m">
+
+                        <a href="#">
+                            <p>변경하기</p>
+                        </a>
+
+                        <p>※개명하셨다면? 이름 변경을 해주세요.</p>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>휴대폰</p>
+                </td>
+
+                <td>
+                    <div class="box03_m">
+
+                        <input type="text" id="profile02_m">
+
+                        <a href="#">
+                            <p>변경하기</p>
+                        </a>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>생년월일</p>
+                </td>
+
+                <td>
+                    <div class="box04_m">
+
+                        <input type="text" id="day01_m">
+                        <p>년</p>
+                        <input type="text" id="day02_m">
+                        <p>월</p>
+                        <input type="text" id="day03_m">
+                        <p>일</p>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>성별</p>
+                </td>
+
+                <td>
+                    <div class="box05_m">
+
+                        <label for="man_m">
+                            <p>남자</p>
+                        </label>
+
+                        <label for="woman_m">
+                            <p>여자</p>
+                        </label>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>비밀번호<br>변경</p>
+                </td>
+
+                <td>
+                    <div>
+                        <p>현재 비밀번호</p>
+                        <input type="password" id="pw_m_01">
+                    </div>
+
+                    <div>
+                        <p>새 비밀번호</p>
+                        <input type="password" id="pw_m_02">
+                    </div>
+
+                    <div>
+                        <p>비밀번호 다시입력</p>
+                        <input type="password" id="pw_m_03">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>캐릭터<br>선택</p>
+                </td>
+
+                <td>
+                    <div>
+                        <div class="img_box_m"></div>
+
+                        <a href="#">
+                            <p>변경하기</p>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>수신설정</p>
+                </td>
+
+                <td>
+                    <div>
+                        <p>마케팅 및 이벤트 목적의 개인정보수집 및 이용 동의함 22.01.16 / <span><a href="#">전문보기 ></a></span></p>
+                    </div>
+
+                    <div>
+                        <p>광고성 정보 수신 철회함 22.01.15
+                            ( <input type="checkbox" id="sns_m"> SMS, <input type="checkbox" id="mms_m"> MMS, <input type="checkbox" id="email_m"> 이메일, <input type="checkbox" id="push_m"> 푸시알림 ) / <span><a href="#">전문보기 ></a></span></p></p>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <div class="mobile_btn">
+
+            <input type="submit" value="변경" id="btn_m_01">
+
+            <input type="reset" value="취소" id="btn_m_02">
+
+            <a href="#">
+                <p>회원탈퇴</p>
+            </a>
+
+        </div>
+
+        <div class="golf_m_box">
+
+            <div>
+                <p><span>골프아이</span>가 인증한 일본의 명품 골프장</p>
+                <p>명품 골프장에서 즐거운 라운딩을 누려보세요!</p>
+            </div>
+
+            <div>
+                <a href="#">
+                    <img src="img/01golfccourse.png">
+                </a>
+
+                <a href="#">
+                    <img src="img/02golfccourse.png">
+                </a>
+
+                <a href="#">
+                    <img src="img/03golfccourse.png">
+                </a>
+            </div>
+
+
+        </div>
+
+    </section><!--mobile-->
+
+
+</body>
+</html>

@@ -1,0 +1,4087 @@
+*{margin: 0; padding: 0;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+.mobile {display: none;}
+
+.freegolf_detail_box
+{width: 100%; max-width: 1920px;
+margin: 0 auto;}
+
+.freegolf_detail_box .freegolf_detail
+{width: 1340px;
+margin: 0 auto;}
+
+.freegolf_detail .route
+{width: 1340px; height: 20px;
+margin-top: 50px;
+margin-bottom: 50px;
+font-weight: bold;
+overflow: hidden;}
+
+.route a, .route p, .route select
+{float: left;}
+
+.route p 
+{font-size: 14px;
+line-height: 20px;
+margin-right: 5px;
+color: #333;}
+
+.route p:last-child
+{color: #e5004f;}
+
+.route a
+{width: 20px; height: 20px;
+margin-right: 5px;}
+
+.route select
+{width: 120px; height: 20px;
+margin-right: 5px;}
+
+.freegolf_detail .title_detail
+{width: 1340px; height: 40px;
+position: relative;}
+
+.title_detail>p
+{font-size: 24px; line-height: 40px;
+font-weight: bold;
+float: left;
+font-weight: bold;}
+
+.title_detail .icon_detail
+{float: right;}
+
+.icon_detail label
+{width: 40px; height: 40px;
+margin-right: 20px;
+float: left;}
+
+.icon_detail label:last-child
+{margin-right: 0;}
+
+#call {display: none;}
+#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet {display: block;}
+#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet {display: none;}
+#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet {display: none;}
+#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet {display: none;}
+
+
+
+#talk {display: none;}
+#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet {display: block;}
+#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet {display: none;}
+#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet {display: none;}
+#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet {display: none;}
+
+#link {display: none;}
+#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet {display: block;}
+#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet {display: none;}
+#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet {display: none;}
+#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet {display: none;}
+
+#map {display: none;}
+#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet {display: block;}
+#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet {display: none;}
+#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet {display: none;}
+#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet {display: none;}
+
+.icon_detail .call_sheet
+{position: absolute;
+top: 61px; right: 40px;
+border: 1px solid #ccc;
+display: none;}
+
+.call_sheet p:first-child
+{width: 300px; height: 50px;
+font-size: 18px; text-align: center; line-height: 50px;
+font-weight: bold;
+background-color: white;}
+
+.call_sheet p:last-child
+{width: 300px; height: 30px;
+text-align: center; line-height: 30px; color: white;
+background-color: #333;
+font-size: 14px;}
+
+.freegolf_detail .line01
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-top: 10px;
+margin-bottom: 50px;}
+
+.icon_detail .talk_sheet
+{position: absolute;
+top: 61px; right: 0;
+border: 1px solid #ccc;
+display: none;}
+
+.talk_sheet div:nth-child(1)
+{width: 300px; height: 30px;
+font-size: 14px;
+border-bottom: 1px solid #ccc;
+background-color: white;
+box-sizing: border-box;}
+
+.talk_sheet div:nth-child(1) p
+{margin-left: 5px;
+line-height: 30px;}
+
+.talk_sheet div:nth-child(2)
+{width: 300px; height: 350px;
+background-color: white;}
+
+.talk_sheet .talk_btn
+{width: 300px; height: 30px;
+background-color: #0d75bb;}
+
+.talk_btn a
+{width: 20px; height: 20px;
+display: block;
+float: left;}
+
+.talk_btn a img
+{margin-left: 5px;
+margin-top: 5px;}
+
+#talk_box
+{width: 220px; height: 20px;
+border: none;
+float: left;
+margin-top: 5px;
+margin-left: 10px;
+margin-right: 10px;}
+
+#talk_btn
+{width: 35px; height: 20px;
+border: none;
+float: left;
+background-color: white;
+margin-top: 5px;
+color: #0d75bb;}
+
+.icon_detail .link_sheet
+{width: 210px; height: 50px;
+overflow: hidden;
+position: absolute;
+top: 61px; right: 0;
+border: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+border-radius: 10px;
+display: none;}
+
+.link_sheet a
+{width: 30px; height: 30px;
+float: left;
+margin-right: 10px;
+margin-top: 10px;}
+
+.link_sheet a:nth-child(1)
+{margin-left: 10px;}
+
+.link_sheet a:last-child {margin-right: 0;}
+
+.icon_detail .map_sheet
+{width: 1340px; height: 600px;
+background-color: #ccc;
+position: absolute;
+top: 61px; left: 0;
+display: none;}
+
+.map_sheet .close
+{width: 19px; height: 20px;
+position: absolute;
+top: 20px; right: 20px;}
+
+
+/*이미지*/
+.freegolf_detail .img_box
+{width: 1340px;
+margin-bottom: 100px;}
+
+.img_box .big_img
+{width: 1340px; height: 670px;
+background-color: #ddddde;
+margin-bottom: 10px;}
+
+.img_box .mini_img_box
+{width: 1340px; height: 70px;
+overflow: hidden;}
+
+.mini_img_box div
+{width: 125px; height: 70px;
+background-color: #ddddde;
+float: left;
+margin-right: 10px;}
+
+.mini_img_box div:last-child
+{margin-right: 0;}
+
+/*달력*/
+
+#calendar_btn, #right_cal, #left_cal {display: none;}
+
+.freegolf_detail .calendar
+{width: 1340px;
+overflow: hidden;
+margin-bottom: 100px;}
+
+/*left*/
+
+.calendar .calendar_left
+{width: 648px; 
+float: left;
+margin-right: 42px;}
+
+.calendar_left .calendar_day
+{width: 648px; height: 30px;
+overflow: hidden;
+margin-bottom: 10px;}
+
+.calendar_day .top_cal
+{width: 158px; height: 30px;
+margin: 0 auto;}
+
+.calendar_day .top_cal label, .calendar_day .top_cal p
+{float: left;}
+
+.top_cal label
+{width: 29px; height: 30px;}
+
+.top_cal p
+{width: 100px; height: 30px;
+font-size: 20px; text-align: center;
+line-height: 30px;}
+
+.calendar .calendar_box
+{width: 648px;
+border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_box tr:nth-child(1)
+{width: 646px; height: 40px;
+background-color: #0d75bb;}
+
+.calendar_box tr:nth-child(1)>td
+{width: 92px; height: 40px;
+border-right: 1px solid white;
+text-align: center; line-height: 40px;
+color: white;
+font-weight: bold;}
+
+.calendar_box tr:nth-child(1) td:last-child
+{border-right: none;}
+
+.calendar_box tr:nth-child(2)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_box tr:nth-child(2)>td:last-child
+{border-right: none;}
+
+.calendar_box tr:nth-child(2)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333; font-weight: bold;}
+
+.calendar_box tr:nth-child(2)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
+
+.calendar_box tr:nth-child(3)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_box tr:nth-child(3)>td:last-child
+{border-right: none;}
+
+.calendar_box tr:nth-child(3)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333;  font-weight: bold;}
+
+.calendar_box tr:nth-child(3)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
+
+.calendar_box tr:nth-child(4)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_box tr:nth-child(4)>td:last-child
+{border-right: none;}
+
+.calendar_box tr:nth-child(4)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333;  font-weight: bold;}
+
+.calendar_box tr:nth-child(4)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
+
+.calendar_box tr:nth-child(5)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_box tr:nth-child(5)>td:last-child
+{border-right: none;}
+
+.calendar_box tr:nth-child(5)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333;  font-weight: bold;}
+
+.calendar_box tr:nth-child(5)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
+
+.calendar_box tr:nth-child(5)>td:nth-child(4)
+{background-color: rgba(13, 117, 186, 0.53);}
+
+
+.calendar_box tr:nth-child(6)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_box tr:nth-child(6)>td:last-child
+{border-right: none;}
+
+.calendar_box tr:nth-child(6)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333;  font-weight: bold;}
+
+.calendar_box tr:nth-child(6)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
+
+
+
+/*right*/
+
+.calendar .calendar_right
+{width: 650px;
+float: left;}
+
+.calendar_right .calendar_right_title
+{width: 650px; height: 20px;
+overflow: hidden;
+margin-bottom: 20px;}
+
+.calendar_right_title>div
+{float: right;}
+
+.calendar_right_title div p, .calendar_right_title div label
+{float: left;}
+
+.calendar_right_title div p
+{font-size: 14px; color: red;
+line-height: 20px; margin-right: 10px;}
+
+.calendar_right_title div label
+{width: 50px; height: 20px;
+background-color: #595757; color: white; font-size: 14px;
+text-align: center; line-height: 20px;}
+
+.calendar_right .calender_top
+{width: 650px; height: 100px;
+margin-bottom: 20px;}
+
+.calender_top tr td
+{border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calender_top tr:nth-child(1) td:nth-child(1),.calender_top tr:nth-child(1) td:nth-child(3)
+{width: 125px; height: 50px;
+font-size: 14px; text-align: center; line-height: 50px;
+border-bottom: none;
+font-weight: bold; background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.calender_top tr:nth-child(1) td:nth-child(2),.calender_top tr:nth-child(1) td:nth-child(4)
+{width: 200px; height: 50px;
+border-top: 2px solid #333;
+border-bottom: none;
+border-right: none;
+border-left: none;
+box-sizing: border-box;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.calender_top tr:nth-child(1) td:nth-child(4) 
+{border-right: 1px solid #ccc; box-sizing: border-box;
+color: red;}
+
+.calender_top tr:nth-child(2) td:nth-child(1),.calender_top tr:nth-child(2) td:nth-child(3)
+{width: 125px; height: 50px;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold; background-color: #f3f3f3;}
+
+.calender_top tr:nth-child(2) td:nth-child(2),.calender_top tr:nth-child(2) td:nth-child(4)
+{width: 200px; height: 50px;
+border-right: none;
+border-left: none;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.calender_top tr:nth-child(2) td:nth-child(4)
+{border-right: 1px solid #ccc; box-sizing: border-box;}
+
+#calender_sel
+{width: 180px; height: 30px;
+margin-right: 10px;
+margin-bottom: 10px;}
+
+.calendar .calender_bot
+{width: 650px;}
+
+.calender_bot tr td
+{border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calender_bot tr:nth-child(1) td:nth-child(1)
+{width: 650px; height: 40px;
+background-color: #f3f3f3;
+border-top: 2px solid #333;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(2) td:nth-child(1)
+{width: 125px;
+background-color: #f3f3f3;
+border-bottom: none;
+border-top: none;
+border-right: none;
+font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(2) td:nth-child(2)
+{width: 525px;
+border-top: none;
+border-bottom: none;
+font-size: 14px; line-height: 20px;}
+
+.calender_bot tr:nth-child(2) td:nth-child(2) p
+{margin-left: 10px;
+margin-top: 7px;
+margin-bottom: 10px;}
+
+.calender_bot tr:nth-child(3) td:nth-child(1)
+{width: 125px;
+background-color: #f3f3f3;
+border-bottom: none;
+border-right: none; font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(3) td:nth-child(2)
+{width: 525px;
+border-bottom: none;
+font-size: 14px; line-height: 20px;}
+
+.calender_bot tr:nth-child(3) td:nth-child(2) p
+{margin-left: 10px;
+margin-top: 7px;
+margin-bottom: 10px;}
+
+.calender_bot tr:nth-child(4) td:nth-child(1)
+{width: 125px;
+background-color: #f3f3f3;
+border-bottom: none;
+border-right: none; font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(4) td:nth-child(2)
+{width: 525px;
+border-bottom: none;
+font-size: 14px; line-height: 20px;}
+
+.calender_bot tr:nth-child(4) td:nth-child(2) p
+{margin-left: 10px;
+margin-top: 7px;
+margin-bottom: 10px;}
+
+.calender_bot tr:nth-child(5) td:nth-child(1)
+{width: 125px;
+background-color: #f3f3f3;
+border-right: none; font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(5) td:nth-child(2)
+{width: 525px;
+font-size: 14px; line-height: 20px;}
+
+.calender_bot tr:nth-child(5) td:nth-child(2) p
+{margin-left: 10px;
+margin-top: 7px;
+margin-bottom: 10px;}
+
+.freegolf_detail .line02
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 100px;}
+
+/*여행일정*/
+
+.freegolf_detail .travel_plans
+{width: 1340px;
+overflow: hidden;
+margin-bottom: 100px;}
+
+.travel_plans .travel_plans_title
+{width: 1340px; height: 30px;
+margin-bottom: 30px;
+overflow: hidden;}
+
+.travel_plans_title p
+{float: left;
+line-height: 30px;}
+
+.travel_plans_title p:nth-child(1)
+{font-size: 22px;
+font-weight: bold;
+margin-right: 10px;}
+
+.travel_plans_title p:nth-child(2)
+{font-size: 14px;
+color: red;
+margin-right: 10px;}
+
+#travel_plan
+{float: left;
+margin-top: 9px;}
+
+.travel_plans .left_travel
+{width: 648px; height: 240px;
+float: left;
+overflow-y: scroll;
+border-top: 2px solid #333;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-left: 1px solid #ccc;}
+
+.left_travel>table:nth-child(1)
+{width: 630px; height: 30px;
+font-size: 14px;}
+
+.left_travel>table:nth-child(1) tr td
+{width: 630px; height: 210px;}
+
+.left_travel>table:nth-child(1) tr td:nth-child(1)
+{width: 270px; height: 30px;
+line-height: 30px;
+text-indent: 14px;}
+
+.left_travel>table:nth-child(1) tr td:nth-child(2)
+{width: 130px; height: 30px;
+line-height: 30px; text-align: center;}
+
+.left_travel>table:nth-child(1) tr td:nth-child(3)
+{width: 140px; height: 30px;
+line-height: 30px; text-align: center;}
+
+.left_travel>table:nth-child(1) tr td:nth-child(4)
+{width: 90px; height: 30px;}
+
+.left_travel>table:nth-child(1) tr td a
+{width: 40px; height: 20px;
+display: block;
+background-color: #808080; text-align: center;
+color: white;
+margin: 0 auto;}
+
+.left_travel>table:nth-child(1) tr:nth-child(4)
+{background-color: rgba(255, 0, 0, 0.44);}
+
+.left_travel>table:nth-child(1) tr:nth-child(4) a 
+{background-color: red;}
+
+.left_travel>table:nth-child(1) tr:nth-child(1) td
+{border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.left_travel>table:nth-child(1) tr:nth-child(1)
+{background-color: #f3f3f3;
+font-weight: bold; text-align: center;}
+
+.left_travel>table:nth-child(1) tr:nth-child(1) td:nth-child(1)
+{width: 270px; height: 30px;}
+
+.left_travel>table:nth-child(1) tr:nth-child(1) td:nth-child(2)
+{width: 130px; height: 30px;}
+
+.left_travel>table:nth-child(1) tr:nth-child(1) td:nth-child(3)
+{width: 140px; height: 30px;}
+
+.left_travel>table:nth-child(1) tr:nth-child(1) td:nth-child(4)
+{width: 90px; height: 30px;}
+
+
+/*right*/
+
+#chk_day_01 {display: none;}
+#chk_day_02 {display: none;}
+
+.travel_plans .right_travel
+{width: 650px; margin-left: 40px;
+float: left;}
+
+.right_travel .chk_in
+{width: 650px; height: 150px;
+margin-bottom: 50px;}
+
+.right_travel .chk_in table
+{width: 650px; height: 150px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px;}
+
+.chk_in table tr td:nth-child(1)
+{width: 120px; height: 50px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold;
+box-sizing: border-box;}
+
+.chk_in table tr:nth-child(1) td:nth-child(3),.chk_in table tr:nth-child(2) td:nth-child(3),.chk_in table tr:nth-child(3) td:nth-child(3)
+{width: 120px; height: 50px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold;
+box-sizing: border-box;}
+
+.chk_in table tr:nth-child(3) td:nth-child(3)
+{border-bottom: none;}
+
+.chk_in table tr:nth-child(1) td:nth-child(1)
+{width: 120px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.chk_in table tr:nth-child(1) td:nth-child(3)
+{width: 120px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.chk_in table tr:nth-child(3) td:nth-child(1)
+{width: 120px; height: 50px;
+border-bottom: none;
+box-sizing: border-box;}
+
+.chk_in table tr:nth-child(1) td:nth-child(2)
+{width: 205px; height: 50px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+.chk_in table tr:nth-child(1) td:nth-child(4)
+{width: 205px; height: 50px;
+overflow: hidden;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+.chk_in table tr:nth-child(1) td:nth-child(2) .chk_in_day01
+{width: 120px; height: 40px;
+margin-left: 5px;
+line-height: 40px; text-indent: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;} 
+
+.chk_in table tr:nth-child(1) td:nth-child(2) label
+{width: 20px; height: 20px;
+margin-left: 5px;
+margin-top: 20px;
+float: left;}
+
+.chk_in table tr:nth-child(1) td:nth-child(4) .chk_in_day02
+{width: 120px; height: 40px;
+margin-left: 5px;
+line-height: 40px; text-indent: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;} 
+
+.chk_in table tr:nth-child(1) td:nth-child(4) label
+{width: 20px; height: 20px;
+margin-left: 5px;
+margin-top: 20px;
+float: left;}
+
+.chk_in table tr:nth-child(2) td:nth-child(2)
+{width: 205px; height: 50px;
+text-indent: 14px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.chk_in table tr:nth-child(2) td:nth-child(4)
+{width: 205px; height: 50px;
+text-indent: 14px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+color: red;}
+
+.chk_in table tr:nth-child(3) td:nth-child(2)
+{width: 205px; height: 50px;
+text-indent: 14px;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.chk_in table tr:nth-child(3) td:nth-child(4)
+{width: 205px; height: 50px;}
+
+#hotel_chk
+{width: 195px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 5px;}
+
+/*bottom*/
+
+.right_travel .facilities
+{width: 650px;}
+
+.facilities table
+{width: 650px; height: 125px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.facilities table tr:nth-child(1) td
+{width: 650px; height: 25px;
+border-top: 2px solid #333;
+border-bottom: 1px solid #ccc;
+background-color: #f3f3f3;
+font-size: 14px; line-height: 25px; text-align: center; font-weight: bold;
+box-sizing: border-box;}
+
+.facilities table tr:nth-child(2) td
+{width: 650px; height: 55px;}
+
+.facilities table tr:nth-child(2) td .facil_top
+{width: 600px; height: 20px;
+margin-left: 25px;
+margin-bottom: 10px;
+overflow: hidden;}
+
+.facil_top .facil01,.facil_top .facil02,.facil_top .facil03,.facil_top .facil04
+{width: 150px; height: 20px;
+float: left;}
+
+.facil01 div, .facil01 p, .facil02 div, .facil02 p, .facil03 div, .facil03 p, .facil04 div, .facil04 p
+{float: left;}
+
+.facil01 div, .facil02 div, .facil03 div, .facil04 div
+{width: 20px; height: 20px;}
+
+.facil01 p, .facil02 p, .facil03 p, .facil04 p
+{margin-left: 10px;
+font-size: 14px; line-height: 20px;}
+
+.facilities tr:nth-child(2) td .facil_bot
+{width: 600px; height: 20px;
+margin-left: 25px;
+overflow: hidden;}
+
+.facil_bot .facil05,.facil_bot .facil06,.facil_bot .facil07,.facil_bot .facil08
+{width: 150px; height: 20px;
+float: left;}
+
+.facil05 div, .facil05 p, .facil06 div, .facil06 p, .facil07 div, .facil07 p, .facil08 div, .facil08 p
+{float: left;}
+
+.facil05 div, .facil06 div, .facil07 div, .facil08 div
+{width: 20px; height: 20px;}
+
+.facil05 p, .facil06 p, .facil07 p, .facil08 p
+{margin-left: 10px;
+font-size: 14px; line-height: 20px;}
+
+.freegolf_detail .line03
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 100px;}
+
+/*옵션사항*/
+
+.freegolf_detail .option_zon
+{width: 1340px;
+margin-bottom: 100px;
+overflow: hidden;}
+
+.option_zon .option_title
+{width: 1340px; height: 30px;
+margin-bottom: 30px;}
+
+.option_title p
+{font-size: 22px; font-weight: bold;}
+
+.option_zon .option_left
+{width: 648px; height: 240px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #333;
+overflow-y: scroll;
+margin-right: 40px; float: left;}
+
+.option_left table
+{width: 630px;}
+
+.option_left>table:nth-child(1) tr td:nth-child(1)
+{width: 400px; height: 30px;
+line-height: 30px; text-indent: 14px;
+font-size: 14px;}
+
+.option_left>table:nth-child(1) tr td:nth-child(2)
+{width: 140px; height: 30px;
+line-height: 30px; text-align: center;
+font-size: 14px;}
+
+.option_left>table:nth-child(1) tr td:nth-child(3)
+{width: 90px; height: 30px;
+text-align: center;
+font-size: 14px;}
+
+.option_left>table:nth-child(1) tr td:nth-child(3) a
+{width: 40px; height: 20px;
+display: block;
+background-color: #808080; text-align: center;
+color: white;
+margin: 5px auto;}
+
+.option_left>table:nth-child(1) tr:nth-child(4)
+{background-color: rgba(255, 0, 0, 0.44);}
+
+.option_left>table:nth-child(1) tr:nth-child(4) td a 
+{background-color: red;
+color: white;}
+
+.option_left>table:nth-child(1) tr:nth-child(1) td
+{width: 630px; height: 30px;
+background-color: #f3f3f3;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-weight: bold; text-align: center; font-size: 14px;}
+
+.option_left>table:nth-child(1) tr:nth-child(1) td:nth-child(1)
+{width: 400px; height: 30px;}
+
+.option_left>table:nth-child(1) tr:nth-child(1) td:nth-child(2)
+{width: 140px; height: 30px;}
+
+.option_left>table:nth-child(1) tr:nth-child(1) td:nth-child(3)
+{width: 90px; height: 30px;}
+
+#plus_opt {display: none;}
+#opt_left {display: none;}
+#opt_right {display: none;}
+
+.option_zon .option_right
+{width: 650px;
+float: left;}
+
+.option_right .opt_top
+{width: 650px;
+border-top: 2px solid #333;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+.opt_top tr:nth-child(1)>td
+{width: 650px; height: 30px;
+text-align: center; line-height: 30px;
+font-size: 14px; font-weight: bold;
+background-color: #f3f3f3;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_top tr:nth-child(2) td div
+{width: 630px;
+margin-left: 10px; margin-top: 10px; margin-bottom: 10px;
+font-size: 14px; line-height: 20px;}
+
+.opt_top tr:nth-child(2) td span
+{font-weight: bold;}
+
+.option_right .opt_plus
+{width: 180px; height: 20px;
+float: right;
+margin-bottom: 10px;}
+
+.opt_plus p, .otp_plus label
+{float: left;}
+
+.opt_plus>p:nth-child(1)
+{width: 120px; height: 20px;
+line-height: 20px; font-size: 14px;
+color: red;}
+
+.opt_plus label p
+{width: 50px; height: 20px;
+background-color: #595757;
+color: white; font-size: 14px; line-height: 20px; text-align: center;
+margin-left: 10px;}
+
+.option_right .opt_bot
+{width: 650px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px;}
+
+.opt_bot tr td:nth-child(1)
+{width: 125px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold;
+text-align: center; background-color: #f3f3f3;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(1) td:nth-child(1)
+{border-top: 2px solid #f49800;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(1) td:nth-child(2)
+{width: 325px; height: 50px;
+border-top: 2px solid #333;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+overflow: hidden;}
+
+.opt_bot tr:nth-child(1) td:nth-child(2) .opt_chk_left, .opt_bot tr:nth-child(1) td:nth-child(2) .opt_chk_right, .opt_bot tr:nth-child(1) td:nth-child(2)>p
+{float: left;}
+
+.opt_chk_right, .opt_bot tr:nth-child(1) td:nth-child(2)>p
+{line-height: 40px;}
+
+.opt_chk_left div:nth-child(1)
+{width: 100px; height: 40px;
+border: 1px solid #ccc; box-sizing: border-box;
+text-align: center; line-height: 40px;
+margin-left: 5px; margin-right: 5px;
+float: left;}
+
+.opt_chk_left label
+{width: 20px; height: 20px;
+float: left;
+margin-right: 10px;
+margin-top: 20px;}
+
+.opt_chk_right div:nth-child(1)
+{width: 100px; height: 40px;
+border: 1px solid #ccc; box-sizing: border-box;
+margin-right: 10px; margin-left: 10px;
+text-align: center; line-height: 40px;
+float: left;}
+
+.opt_chk_right label
+{width: 20px; height: 20px;
+float: left;
+margin-top: 20px;}
+
+
+.opt_bot tr:nth-child(1) td:nth-child(3)
+{width: 200px; height: 50px;
+line-height: 50px; text-indent: 14px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(2) td:nth-child(1)
+{border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(2) td:nth-child(2)
+{width: 525px; height: 50px;
+text-indent: 14px; line-height: 50px;
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(3) td:nth-child(3)
+{width: 125px; height: 50px;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-weight: bold; text-align: center; line-height: 50px;}
+
+.opt_bot tr:nth-child(3) td:nth-child(2)
+{width: 200px; height: 50px;
+text-indent: 14px; color: red;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(3) td:nth-child(4)
+{width: 200px; height: 50px;}
+
+#opt_num
+{width: 190px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 5px;}
+
+
+.freegolf_detail .line04
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 100px;}
+
+
+/*렌터카*/
+
+.freegolf_detail .car
+{width: 1340px;
+margin: 100px auto;
+overflow: hidden;}
+
+.car .car_title
+{width: 1340px; height: 30px;
+margin-bottom: 30px;
+font-size: 22px; font-weight: bold; line-height: 30px;}
+
+.car .car_left
+{width: 648px; height: 240px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #333;
+overflow-y: scroll;
+margin-right: 40px; float: left;}
+
+
+.car_left>table:nth-child(1) tr td:nth-child(1)
+{width: 400px; height: 30px;
+line-height: 30px; text-indent: 14px;
+font-size: 14px;}
+
+.car_left>table:nth-child(1) tr td:nth-child(2)
+{width: 140px; height: 30px;
+line-height: 30px; text-align: center;
+font-size: 14px;}
+
+.car_left>table:nth-child(1) tr td:nth-child(3)
+{width: 90px; height: 30px;
+text-align: center;
+font-size: 14px;}
+
+.car_left>table:nth-child(1) tr td:nth-child(3) a
+{width: 40px; height: 20px;
+display: block;
+background-color: #808080; text-align: center;
+color: white;
+margin: 5px auto;}
+
+.car_left>table:nth-child(1) tr:nth-child(3)
+{background-color: rgba(255, 0, 0, 0.44);}
+
+.car_left>table:nth-child(1) tr:nth-child(3) td a 
+{background-color: red;
+color: white;}
+
+.car_left>table:nth-child(1) tr:nth-child(1) td
+{width: 630px; height: 30px;
+background-color: #f3f3f3;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-weight: bold; text-align: center; font-size: 14px;}
+
+.car_left>table:nth-child(1) tr:nth-child(1) td:nth-child(1)
+{width: 400px; height: 30px;}
+
+.car_left>table:nth-child(1) tr:nth-child(1) td:nth-child(2)
+{width: 140px; height: 30px;}
+
+.car_left>table:nth-child(1) tr:nth-child(1) td:nth-child(3)
+{width: 90px; height: 30px;}
+
+
+#car_day_01, #car_day_02 {display: none;}
+
+.car .car_right
+{width: 650px;
+float: left;}
+
+.car_right .car_chk_in
+{width: 650px;
+margin-bottom: 50px;}
+
+.car_right .car_chk_in table
+{width: 650px; height: 150px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px;}
+
+.car_chk_in table tr td:nth-child(1)
+{width: 120px; height: 50px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold;
+box-sizing: border-box;}
+
+.car_chk_in table tr:nth-child(1) td:nth-child(3),.car_chk_in table tr:nth-child(2) td:nth-child(3),.car_chk_in table tr:nth-child(3) td:nth-child(3)
+{width: 120px; height: 50px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold;
+box-sizing: border-box;}
+
+.car_chk_in table tr:nth-child(3) td:nth-child(3)
+{border-bottom: none;}
+
+.car_chk_in table tr:nth-child(1) td:nth-child(1)
+{width: 120px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.car_chk_in table tr:nth-child(1) td:nth-child(3)
+{width: 120px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.car_chk_in table tr:nth-child(3) td:nth-child(1)
+{width: 120px; height: 50px;
+border-bottom: none;
+box-sizing: border-box;}
+
+.car_chk_in table tr:nth-child(1) td:nth-child(2)
+{width: 205px; height: 50px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+.car_chk_in table tr:nth-child(1) td:nth-child(4)
+{width: 205px; height: 50px;
+overflow: hidden;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+.car_chk_in table tr:nth-child(1) td:nth-child(2) .car_day01
+{width: 120px; height: 40px;
+margin-left: 5px;
+line-height: 40px; text-indent: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;} 
+
+.car_chk_in table tr:nth-child(1) td:nth-child(2) label
+{width: 20px; height: 20px;
+margin-left: 5px;
+margin-top: 20px;
+float: left;}
+
+.car_chk_in table tr:nth-child(1) td:nth-child(4) .car_day02
+{width: 120px; height: 40px;
+margin-left: 5px;
+line-height: 40px; text-indent: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;} 
+
+.car_chk_in table tr:nth-child(1) td:nth-child(4) label
+{width: 20px; height: 20px;
+margin-left: 5px;
+margin-top: 20px;
+float: left;}
+
+.car_chk_in table tr:nth-child(2) td:nth-child(2)
+{width: 205px; height: 50px;
+text-indent: 14px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.car_chk_in table tr:nth-child(2) td:nth-child(4)
+{width: 205px; height: 50px;
+text-indent: 14px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+color: red;}
+
+.car_chk_in table tr:nth-child(3) td:nth-child(2)
+{width: 205px; height: 50px;
+text-indent: 14px;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.car_chk_in table tr:nth-child(3) td:nth-child(4)
+{width: 205px; height: 50px;}
+
+.car_chk_in table tr:last-child td
+{border-bottom: none;
+border-top: 1px solid #ccc;
+box-sizing: border-box;}
+
+.car_right .car_opt
+{width: 650px;}
+
+.car_opt table
+{width: 650px;
+border: 1px solid #ccc;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+.car_opt table tr:nth-child(1) td
+{width: 650px; height: 30px;
+font-size: 14px; font-weight: bold; text-align: center;
+background-color: #f3f3f3;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.car_opt table tr:nth-child(2) td
+{width: 650px; height: 80px;}
+
+/*선택한 예약항목*/
+
+.freegolf_detail .reservation
+{width: 1340px;
+margin-bottom: 100px;}
+
+.reservation .title_re
+{width: 1340px; height: 54px;
+margin-bottom: 50px;}
+
+.title_re .line_box_re01
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.line_box_re01 div
+{float: left;}
+
+.line_box_re01 div:nth-child(2)
+{width: 180px; height: 2px;
+background-color: #f49800;}
+
+.line_box_re01 div:nth-child(1),.line_box_re01 div:nth-child(3)
+{width: 580px; height: 1px;
+background-color: #ccc;
+margin-top: 1px;}
+
+.title_re>p
+{height: 50px;
+font-size: 22px; font-weight: bold; line-height: 50px;
+text-align: center;}
+
+.title_re .line_box_re02
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.line_box_re02 div
+{float: left;}
+
+.line_box_re02 div:nth-child(2)
+{width: 180px; height: 2px;
+background-color: #f49800;}
+
+.line_box_re02 div:nth-child(1),.line_box_re02 div:nth-child(3)
+{width: 580px; height: 1px;
+background-color: #ccc;}
+
+.reservation .top_re
+{width: 1340px; height: 50px;
+border : 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+.top_re td 
+{border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.reservation .top_re td:nth-child(1),.reservation .top_re td:nth-child(3),.reservation .top_re td:nth-child(5),.reservation .top_re td:nth-child(7)
+{width: 125px; height: 50px;
+border-top: 2px solid #f49800;
+border-right: 1px solid #ccc;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; text-align: center; line-height: 50px;
+background-color: #f3f3f3;}
+
+.reservation .top_re td:nth-child(4),.reservation .top_re td:nth-child(6)
+{width: 125px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box; 
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.reservation .top_re td:nth-child(2)
+{width: 375px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.reservation .top_re td:nth-child(8)
+{width: 215px; height: 50px;
+border-top: 2px solid #333;
+border-right: none;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;
+color: red;}
+
+.reservation .mid_re
+{width: 1340px; height: 100px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+.mid_re tr td 
+{border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.mid_re tr:first-child td:nth-child(1),.mid_re tr:first-child td:nth-child(3),.mid_re tr:first-child td:nth-child(5),.mid_re tr:first-child td:nth-child(7)
+{width: 125px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; text-align: center; line-height: 50px;
+background-color: #f3f3f3;}
+
+.mid_re tr:first-child td:nth-child(1)
+{border-left: none;}
+
+.mid_re tr:first-child td:nth-child(2)
+{width: 375px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.mid_re tr:first-child td:nth-child(4),.mid_re tr:first-child td:nth-child(6)
+{width: 125px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.mid_re tr:first-child td:nth-child(8)
+{width: 215px; height: 50px;
+border-top: 2px solid #333;
+border-right: none;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;
+color: red;}
+
+.mid_re tr:nth-child(2) td:nth-child(1), .mid_re tr:nth-child(2) td:nth-child(3)
+{width: 125px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: none;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold;
+background-color: #f3f3f3;}
+
+.mid_re tr:nth-child(2) td:nth-child(2),.mid_re tr:nth-child(2) td:nth-child(4)
+{width: 125px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: none;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.mid_re tr:nth-child(2) td:nth-child(4) {color: red;}
+
+.mid_re tr:nth-child(2) td:nth-child(5)
+{background-color: #f3f3f3;
+border-bottom: none;
+border-right: none;}
+
+.reservation .bot_re
+{width: 1340px; height: 100px;
+border: 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+.bot_re tr:first-child td
+{border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+
+.bot_re tr:first-child td:nth-child(1),.bot_re tr:first-child td:nth-child(3),.bot_re tr:first-child td:nth-child(5),.bot_re tr:first-child td:nth-child(7)
+{width: 125px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; text-align: center; line-height: 50px;
+background-color: #f3f3f3;}
+
+
+.bot_re tr:first-child td:nth-child(2)
+{width: 375px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.bot_re tr:first-child td:nth-child(4),.bot_re tr:first-child td:nth-child(6)
+{width: 125px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.bot_re tr:first-child td:nth-child(8)
+{width: 215px; height: 50px;
+border-top: 2px solid #333;
+border-right: none;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;
+color: red;}
+
+.bot_re tr:last-child td
+{border-right: 1px solid #ccc;}
+
+.bot_re tr:nth-child(2) td:nth-child(1),.bot_re tr:nth-child(2) td:nth-child(3)
+{width: 125px;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; text-align: center; line-height: 50px;
+background-color: #f3f3f3;}
+
+.bot_re tr:nth-child(2) td:nth-child(4) 
+{border-right: none;}
+
+.bot_re tr:nth-child(2) td:nth-child(2)>div
+{margin-top: 5px; margin-left: 14px; 
+margin-bottom: 5px;
+font-size: 14px; line-height: 20px;}
+
+.bot_re tr:nth-child(2) td:nth-child(2)>div p:nth-child(1)
+{font-weight: bold;}
+
+.bot_re tr:nth-child(2) td:nth-child(4)
+{font-size: 14px; line-height: 20px; text-indent: 14px;}
+
+/*골프장정보*/
+
+.freegolf_detail .golf_detail
+{width: 1340px;
+margin-bottom: 80px;}
+
+.golf_detail .golf_title_d
+{width: 1340px; height: 54px;
+margin-bottom: 30px;}
+
+.golf_title_d .line_box01
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.line_box01 .golf_line01
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
+
+.golf_title_d .golf_line02
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
+
+.golf_title_d>p
+{width: 1340px; height: 50px;
+font-size: 22px; color: #333;
+font-weight: bold; line-height: 50px;}
+
+.golf_title_d .line_box02
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.line_box02 .golf_line03
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
+
+.line_box02 .golf_line04
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
+
+.golf_detail .golf_img_detail
+{width: 1340px;}
+
+.golf_img_detail>p
+{width: 1340px; height: 50px;
+font-size: 32px; font-weight: bold;
+line-height: 50px;
+margin-bottom: 20px;
+font-weight: bold;}
+
+.golf_img_detail .golf_img_d
+{width: 1340px; height: 470px;
+overflow: hidden;}
+
+.golf_img_d div
+{width: 660px; height: 470px;
+float: left;
+background-color: #ccc;}
+
+.golf_img_d div:first-child
+{margin-right: 20px;}
+
+.golf_detail .golf_detail_txt
+{width: 1340px; height: 100px;
+background-color: #f3f3f3;
+margin-top: 30px;}
+
+.golf_detail_txt p
+{width: 1300px; 
+margin-left: 20px; padding-top: 20px;
+line-height: 20px;
+font-size: 14px;}
+
+/*호텔정보*/
+
+.freegolf_detail .hotel_detail
+{width: 1340px;
+margin-bottom: 80px;}
+
+.hotel_detail .hotel_title_d
+{width: 1340px; height: 54px;
+margin-bottom: 30px;}
+
+.hotel_title_d .line_box03
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.hotel_title_d .hotel_line05
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
+
+.hotel_title_d .hotel_line06
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
+
+.hotel_title_d>p
+{width: 1340px; height: 50px;
+font-size: 22px; color: #333;
+font-weight: bold; line-height: 50px;}
+
+.hotel_title_d .line_box04
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.line_box04 .hotel_line07
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
+
+.line_box04 .hotel_line08
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
+
+.hotel_detail .hotel_img_detail
+{width: 1340px;}
+
+.hotel_img_detail>p
+{width: 1340px; height: 50px;
+font-size: 32px; font-weight: bold;
+line-height: 50px;
+margin-bottom: 20px;
+font-weight: bold;}
+
+.hotel_img_detail .hotel_img_d
+{width: 1340px; height: 470px;
+overflow: hidden;}
+
+.hotel_img_d div
+{width: 660px; height: 470px;
+float: left;
+background-color: #ccc;}
+
+.hotel_img_d div:first-child
+{margin-right: 20px;}
+
+.hotel_detail .hotel_detail_txt
+{width: 1340px; height: 100px;
+background-color: #f3f3f3;
+margin-top: 30px;}
+
+.hotel_detail_txt p
+{width: 1300px; 
+margin-left: 20px; padding-top: 20px;
+line-height: 20px;
+font-size: 14px;}
+
+/*옵션정보*/
+
+.freegolf_detail .option_detail
+{width: 1340px;
+margin-bottom: 100px;}
+
+.option_detail .option_title_d
+{width: 1340px; height: 54px;
+margin-bottom: 30px;}
+
+.option_title_d .line_box05
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.option_title_d .option_line09
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
+
+.option_title_d .option_line10
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
+
+.option_title_d>p
+{width: 1340px; height: 50px;
+font-size: 22px; color: #333;
+font-weight: bold; line-height: 50px;}
+
+.optionl_title_d .line_box06
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.line_box06 .option_line11
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
+
+.line_box06 .option_line12
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
+
+.option_detail .option_img_detail
+{width: 1340px;}
+
+.option_img_detail>p
+{width: 1340px; height: 50px;
+font-size: 32px; font-weight: bold;
+line-height: 50px;
+margin-bottom: 20px;
+font-weight: bold;}
+
+.option_img_detail .option_img_d
+{width: 1340px; height: 470px;
+overflow: hidden;}
+
+.option_img_d div
+{width: 660px; height: 470px;
+float: left;
+background-color: #ccc;}
+
+.option_img_d div:first-child
+{margin-right: 20px;}
+
+.option_detail .option_detail_txt
+{width: 1340px; height: 100px;
+background-color: #f3f3f3;
+margin-top: 30px;}
+
+.option_detail_txt p
+{width: 1300px; 
+margin-left: 20px; padding-top: 20px;
+line-height: 20px;
+font-size: 14px;}
+
+/*총이용금액*/
+
+.freegolf_detail .usage_amount
+{width: 1340px;
+position: relative;
+overflow: hidden;}
+
+.usage_amount>p
+{width: 1340px; height: 50px;
+font-size: 22px; font-weight: bold; line-height: 50px;
+margin-bottom: 20px;} 
+
+.usage_amount .amount01
+{width: 1340px; height: 200px;
+border-top: 2px solid #333;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+border-collapse: collapse;
+text-align: center;
+margin-bottom: 50px;}
+
+.usage_amount tr,.usage_amount td
+{border: 1px solid #ccc;}
+
+.usage_amount tr:nth-child(1)
+{width: 1340px; height: 50px;
+background-color: #f3f3f3;
+font-size: 14px; line-height: 50px;}
+
+.usage_amount td 
+{border-right: 1px solid #ccc;
+box-sizing: border-box;
+font-weight: bold;}
+
+.usage_amount td:nth-child(1)
+{width: 250px;}
+
+.usage_amount td:nth-child(2)
+{width: 250px;}
+
+.usage_amount td:nth-child(3)
+{width: 250px;}
+
+.usage_amount td:nth-child(4)
+{width: 250px;}
+
+.usage_amount td:nth-child(5)
+{width: 340px;}
+
+.usage_amount tr:nth-child(2) td
+{font-size: 25px;}
+
+.usage_amount tr:nth-child(2) td:last-child
+{color: red;}
+
+.usage_amount .amount_icon01
+{width: 40px; height: 40px;
+position: absolute;
+top: 175px; left: 230px;}
+
+.usage_amount .amount_icon02
+{width: 40px; height: 40px;
+position: absolute;
+top: 175px; left: 480px;}
+
+.usage_amount .amount_icon03
+{width: 40px; height: 40px;
+position: absolute;
+top: 175px; left: 730px;}
+
+.usage_amount .amount_icon04
+{width: 40px; height: 40px;
+position: absolute;
+top: 175px; right: 320px;}
+
+/*예약자정보*/
+
+.freegolf_detail .booker01
+{width: 1340px;
+margin-bottom: 50px;}
+
+.booker01 .booker_tit01
+{width: 1340px; height: 50px;
+overflow: hidden;
+margin-bottom: 10px;}
+
+.booker_tit01 p
+{float: left;}
+
+.booker_tit01 p:nth-child(1)
+{font-size: 22px; font-weight: bold;
+line-height: 50px;}
+
+.booker_tit01 p:nth-child(2)
+{font-size: 14px;
+color: red;
+line-height: 50px;
+margin-left: 20px;
+margin-right: 10px;}
+
+#booker
+{float: left;
+margin-top: 20px;}
+
+.booker01 .booker_table01
+{width: 1340px; height: 50px;
+overflow: hidden;}
+
+.booker_table01 tr td
+{border: 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;}
+
+.booker_table01 tr td:nth-child(1),.booker_table01 td:nth-child(3),.booker_table01 td:nth-child(5),.booker_table01 td:nth-child(7)
+{width: 125px; height: 50px;
+background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.booker_table01 tr td span {color: red;}
+
+.booker_table01 tr td:nth-child(2)
+{width: 190px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table01 tr td:nth-child(4)
+{width: 150px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+#gender
+{width: 140px; height: 30px;
+margin-right: 10px;}
+
+.booker_table01 tr td:nth-child(6)
+{width: 300px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table01 tr td:nth-child(8)
+{width: 280px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.freegolf_detail .booker_line01
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+/*02*/
+
+.freegolf_detail .booker02
+{width: 1340px;
+margin-bottom: 50px;}
+
+.booker02 .booker_tit02
+{width: 1340px; height: 50px;
+line-height: 50px; font-size: 22px; font-weight: bold;
+margin-bottom: 10px;}
+
+.booker02 .booker_table02
+{width: 1340px; height: 50px;
+overflow: hidden;}
+
+.booker_table02 tr td
+{border: 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;}
+
+.booker_table02 tr td:nth-child(1),.booker_table02 td:nth-child(3),.booker_table02 td:nth-child(5),.booker_table02 td:nth-child(7)
+{width: 125px; height: 50px;
+background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.booker_table02 tr td span {color: red;}
+
+.booker_table02 tr td:nth-child(2)
+{width: 190px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table02 tr td:nth-child(4)
+{width: 150px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table02 tr td:nth-child(6)
+{width: 300px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table02 tr td:nth-child(8)
+{width: 280px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+/*03*/
+
+.freegolf_detail .booker03
+{width: 1340px;
+margin-bottom: 50px;}
+
+.booker03 .booker_tit03
+{width: 1340px; height: 50px;
+line-height: 50px; font-size: 22px; font-weight: bold;
+margin-bottom: 10px;}
+
+.booker03 .booker_table03
+{width: 1340px; height: 50px;
+overflow: hidden;}
+
+.booker_table03 tr td
+{border: 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;}
+
+.booker_table03 tr td:nth-child(1),.booker_table03 td:nth-child(3),.booker_table03 td:nth-child(5),.booker_table03 td:nth-child(7)
+{width: 125px; height: 50px;
+background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.booker_table03 tr td span {color: red;}
+
+.booker_table03 tr td:nth-child(2)
+{width: 190px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table03 tr td:nth-child(4)
+{width: 150px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+
+.booker_table03 tr td:nth-child(6)
+{width: 300px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table03 tr td:nth-child(8)
+{width: 280px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+
+.freegolf_detail .booker_line02
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+/*취소/개인정보*/
+.freegolf_detail .notice
+{width: 1240px;
+overflow: hidden;
+margin: 0 auto;
+margin-bottom: 50px;}
+
+.notice .notice_left
+{width: 600px;
+float: left;
+margin-right: 40px;}
+
+.notice_left>p
+{width: 600px; height: 30px;
+text-align: center; line-height: 30px;
+font-weight: bold;
+margin-bottom: 10px;}
+
+.notice_left .cancellation
+{width: 600px; height: 250px;
+overflow-y: scroll;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 10px;}
+
+.cancellation p
+{font-size: 14px; line-height: 30px;
+text-indent: 14px;}
+
+.notice_left .agree01
+{width: 600px; height: 20px;
+overflow: hidden;}
+
+.agree01 p
+{width: 80px; height: 20px;
+float: left; color: red;
+margin-left: 505px; line-height: 20px;
+font-size: 14px;}
+
+#cancellation_chk
+{width: 15px; height: 15px;
+margin-top: 2.5px;
+float: right;}
+
+.notice .notice_right
+{width: 600px; height: 300px;
+float: left;}
+
+.notice_right>p
+{width: 600px; height: 30px;
+text-align: center; line-height: 30px;
+font-weight: bold;
+margin-bottom: 10px;}
+
+.notice_right .privacy
+{width: 600px; height: 250px;
+overflow-y: scroll;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 10px;}
+
+.privacy p
+{font-size: 14px; line-height: 30px;
+text-indent: 14px;}
+
+.notice_right .agree02
+{width: 600px; height: 20px;
+overflow: hidden;}
+
+.agree02 p
+{width: 80px; height: 20px;
+float: left; color: red;
+margin-left: 505px; line-height: 20px;
+font-size: 14px;}
+
+.freegolf_detail .total
+{width: 1340px; height: 50px;
+overflow: hidden;
+margin-bottom: 50px;}
+
+.total p
+{float: left;}
+
+.total p:nth-child(1)
+{width: 200px; height: 50px;
+line-height: 50px;
+font-size: 22px; font-weight: bold; text-align: center;
+border-bottom: 2px solid #f49800;
+box-sizing: border-box;}
+
+.total p:nth-child(2)
+{width: 1140px; height: 50px;
+line-height: 50px;
+font-size: 22px; font-weight: bold; color: red;
+border-bottom: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.total span
+{color: #333;
+font-size: 16px;}
+
+.freegolf_detail .btn
+{width: 220px; height: 40px;
+margin: 0 auto;
+margin-bottom: 100px;}
+
+#btn01, #btn02
+{width: 100px; height: 40px;
+text-align: center; font-family: SpoqaHanSansNeo;
+border: none;}
+
+#btn01
+{margin-right: 10px;
+background-color: #3b8aff;
+color: white;}
+
+#btn02
+{background-color: #f6f6f6;
+border: 1px solid #ccc;
+box-sizing: border-box;}
+
+@media all and (max-width:768px)
+{   
+    
+    .freegolf_detail_box
+    {display: none;}
+
+    .mobile
+    {width: 100%; height: 100vh;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;}
+    
+    .rout_m
+    {width: 95%; height: 40px;
+    overflow: hidden;
+    margin: 0 auto;}
+    
+    .rout_m>a:nth-child(1)
+    {width: 30px; height: 30px;
+    text-align: center; line-height: 30px; font-size: 18px;
+    margin-top: 5px; margin-right: 5px;
+    color: #0d75bc;
+    float: left;}
+    
+    .rout_m p:nth-child(2)
+    {font-weight: bold;
+    line-height: 40px;
+    float: left;}
+    
+    .rout_m .rout_icon_m
+    {width: 65px; height: 30px;
+    float: right;}
+    
+    .rout_icon_m>a
+    {width: 30px; height: 30px;
+    margin-top: 5px;
+    float: left;}
+    
+    .rout_icon_m a:nth-child(1)
+    {margin-right: 5px;}
+    
+    .rout_icon_m a img
+    {width: 100%; height: 100%;}
+    
+    .detail_line_01_m
+    {width: 100%; height: 1px;
+    background-color: #ccc;
+    margin-bottom: 10px;}
+    
+    .product_tit_m
+    {width: 95%;
+    margin: 0 auto;
+    font-weight: bold; line-height: 20px;
+    margin-bottom: 5px;}
+    
+    .detail_line_box_m
+    {width: 95%; height: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 5px;}
+    
+    .detail_line_box_m div:nth-child(1)
+    {width: 30%; height: 2px;
+    background-color: #f49800;
+    float: left;}
+    
+    .detail_line_box_m div:nth-child(2)
+    {width: 70%; height: 2px;
+    background-color: #ccc;
+    float: left;}
+    
+    #link_mobile
+    {display: none;}
+    
+    .popup_box
+    {width: 95%; height: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 5px;}
+    
+    .popup_box>div
+    {width: 95px; height: 20px;
+    float: right;}
+    
+    .popup_box div a 
+    {width: 20px; height: 20px;
+    margin-right: 5px;
+    float: left;}
+    
+    .popup_box div a:last-child {margin-right: 0;}
+    
+    .popup_box div label 
+    {width: 20px; height: 20px;
+    margin-right: 5px;
+    float: left;}
+    
+    .popup_box div a img 
+    {width: 100%; height: 100%;}
+    
+    .popup_box div label img
+    {width: 100%; height: 100%;}
+    
+    /*popup*/
+    
+    #link_mobile:checked ~ .back_m {display: block;}
+    
+    
+    .back_m
+    {width: 100%; height: 100vh;
+    position: absolute;
+    top: 41px;
+    background-color: rgba(0, 0, 0, 0.44);
+    display: none;}
+    
+    .link_box_m
+    {width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+    
+    .link_box_m div
+    {width: 115px;
+    float: right;}
+    
+    .link_box_m div label
+    {width: 55px;
+    margin-right: 5px;
+    float: left;}
+    
+    .link_box_m div a 
+    {width: 55px;
+    float: left;}
+    
+    .link_box_m label img 
+    {width: 100%; height: auto;}
+    
+    .link_box_m a img 
+    {width: 100%; height: auto;}
+    
+    
+    .sns_box_m
+    {width: 132px; height: 135px;
+    border: 1px solid #333;
+    background-color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    top: calc(50% - 65px); left: calc(50% - 65px);}
+    
+    .sns_box_m label img
+    {width: 15px; height: 15px;
+    margin-top: 5px; margin-left: calc(100% - 20px);}
+    
+    .sns_box_m>p:nth-child(2)
+    {width: 100%; height: 20px;
+    font-size: 14px; font-weight: bold; text-align: center; line-height: 20px;
+    margin-bottom: 10px;}
+    
+    .sns_box_m a
+    {width: 30px; height: 30px;
+    margin-right: 10px;
+    float: left;}
+    
+    .sns_box_m a:nth-child(3)
+    {margin-left: 10px;
+    margin-bottom: 10px;}
+    
+    .sns_box_m a:nth-child(4)
+    {margin-bottom: 10px;}
+    
+    .sns_box_m a:nth-child(5)
+    {margin-bottom: 10px;}
+    
+    .sns_box_m a:nth-child(6)
+    {margin-left: 10px;}
+    
+    .sns_box_m a img 
+    {width: 100%; height: 100%;}
+    
+    
+    /*img_box*/
+    
+    .detail_img_box
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+    
+    .detail_img_box>div:nth-child(1)
+    {width: 100%;
+    margin-bottom: 5px;}
+    
+    .detail_img_box>div:nth-child(1) img 
+    {width: 100%; height: auto;}
+    
+    .detail_img_box>div:nth-child(2)
+    {width: 100%;
+    overflow: hidden;}
+    
+    .detail_img_box>div:nth-child(2) div
+    {width: 19.2%;
+    float: left;}
+    
+    .detail_img_box>div:nth-child(2) div img 
+    {width: 100%; height: auto;}
+    
+    .detail_img_box>div:nth-child(2) div:nth-child(2), .detail_img_box>div:nth-child(2) div:nth-child(4)
+    {margin-left: 1%; margin-right: 1%;}
+    
+    /*달력*/
+    
+    #day01_m, #day02_m, #day03_m, #day04_m, #day05_m, #day06_m, #day07_m, #day08_m, #day09_m, #day10_m {display: none;}
+    #day11_m, #day12_m, #day13_m, #day14_m, #day15_m, #day16_m, #day17_m, #day18_m, #day19_m, #day20_m {display: none;}
+    #day21_m, #day22_m, #day23_m, #day24_m, #day25_m, #day26_m, #day27_m, #day28_m, #day29_m, #day30_m {display: none;}
+    #day31_m {display: none;}
+    
+    .day_m
+    {width: 100%;}
+    
+    .day_m .day_chk_m
+    {width: 115px; height: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    overflow: hidden;}
+    
+    #left_m, #right_m {display: none;}
+    
+    .day_chk_m>label
+    {width: 20px; height: 20px;
+    float: left;}
+    
+    .day_chk_m>p:nth-child(2)
+    {font-size: 16px; line-height: 20px;
+    font-weight: bold;
+    margin-left: 5px; margin-right: 5px;
+    float: left;}
+    
+    .day_chk_m>label img 
+    {width: 20px; height: 20px;}
+     
+    .day_m table
+    {width: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1px;}
+    
+    .day_m table tr td 
+    {border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .day_m table tr td:last-child
+    {border-right: none;}
+    
+    .day_m table tr:last-child td
+    {border-bottom: none;}
+    
+    .day_m table tr td>label>p
+    {font-size: 1px;}
+    
+    .day_m table tr td>label>p:nth-child(1)
+    {text-align: right;
+    font-weight: bold;
+    margin-right: 2px; margin-top: 5px; margin-bottom: 2px;
+    font-family: SpoqaHanSansNeo;}
+    
+    .day_m table tr td>label>p:nth-child(2)
+    {text-align: center;
+    color: red;
+    margin-bottom: 5px;
+    font-family: sans-serif;}
+    
+    .day_m table tr:nth-child(1) td
+    {height: 20px;
+    text-align: center;
+    color: white;
+    background-color: #0d75bc;
+    font-size: 12px;
+    font-family: SpoqaHanSansNeo;}
+    
+    .day_m table tr:nth-child(5) td:nth-child(4)
+    {background-color: rgba(13, 117, 186, 0.53);}
+    
+    
+    /*이용일 추가*/
+    .use_day_m
+    {width: 95%;
+    margin: 10px auto;}
+    
+    .use_day_m .detail_btn_01
+    {width: 100%; height: 20px;
+    overflow: hidden;
+    margin-bottom: 5px;}
+    
+    .detail_btn_01>div:nth-child(1)
+    {float: right;}
+    
+    .detail_btn_01>div:nth-child(1)>p:nth-child(1)
+    {font-size: 12px; line-height: 20px;
+    float: left;
+    margin-right: 10px;
+    color: red;}
+    
+    #btn_m_01
+    {width: 50px; height: 20px;
+    background-color: #333; color: white;
+    float: left;
+    font-size: 12px; font-family: SpoqaHanSansNeo;
+    border: none;}
+    
+    .use_day_m>table:nth-child(2)
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .use_day_m>table:nth-child(2) tr td 
+    {border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .use_day_m>table:nth-child(2) tr:last-child td
+    {border-bottom: none;} 
+    
+    .use_day_m>table:nth-child(2) tr td:nth-child(1)
+    {width: 30%;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    font-weight: bold; text-align: center;}
+    
+    .use_day_m>table:nth-child(2) tr td:nth-child(2)
+    {width: 70%;}
+    
+    .use_day_m>table:nth-child(2) tr td:nth-child(2) p
+    {width: calc(100% - 10px);
+    margin-left: 5px; margin-right: 5px;}
+    
+    .use_day_m>table:nth-child(2) tr td p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .use_day_m>table:nth-child(2) tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;
+    background-color: #f3f3f3;}
+    
+    .use_day_m>table:nth-child(2) tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    #select_m_01
+    {width: calc(100% - 10px); height: 20px;
+    margin: 5px 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .use_day_m>table:nth-child(3)
+    {width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-top: 2px solid #333;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .use_day_m>table:nth-child(3) tr td
+    {border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .use_day_m>table:nth-child(3) tr:last-child td
+    {border-bottom: none;}
+    
+    .use_day_m>table:nth-child(3) tr td:nth-child(1)
+    {width: 30%;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    font-weight: bold; text-align: center;}
+    
+    .use_day_m>table:nth-child(3) tr td:nth-child(2)
+    {width: 70%;}
+    
+    .use_day_m>table:nth-child(3) tr td:nth-child(2) p 
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    .use_day_m>table:nth-child(3) tr:nth-child(1) td
+    {background-color: #f3f3f3;}
+    
+    .use_day_m>table:nth-child(3) tr:nth-child(1) td p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    /*여행일정*/
+    .routine_m
+    {width: 95%;
+    margin: 20px auto;}
+    
+    .routine_m .routine_title_m
+    {width: 100%; height: 15px;
+    overflow: hidden;
+    margin-bottom: 5px;}
+    
+    .routine_title_m>p:nth-child(1)
+    {font-size: 14px; line-height: 15px;
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;}
+    
+    .routine_title_m>div:nth-child(2)
+    {float: left;}
+    
+    .routine_title_m>div:nth-child(2) p 
+    {font-size: 12px;
+    color: red;
+    float: left;
+    margin-right: 2px;}
+    
+    #routine_m_01
+    {width: 12px; height: 12px;
+    margin-top: 1.5px;
+    float: left;}
+    
+    /*01 테이블*/
+    .routine_m>div:nth-child(2)
+    {width: 100%; height: 120px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-top: 2px solid #333;
+    box-sizing: border-box;
+    margin-bottom: 5px;}
+    
+    .routine_m>div:nth-child(2) .routine_t_01
+    {width: 100%;
+    font-size: 11px;}
+    
+    .routine_t_01 tr:nth-child(1) td
+    {font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f3f3f3;}
+    
+    .routine_t_01 tr td:nth-child(1)
+    {width: 37%;}
+    
+    .routine_t_01 tr td:nth-child(2)
+    {width: 15%;}
+    
+    .routine_t_01 tr td:nth-child(3)
+    {width: 30%;}
+    
+    .routine_t_01 tr td:nth-child(4)
+    {width: 18%;}
+    
+    .routine_t_01 tr td:nth-child(1)>p
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    .routine_t_01 tr td:nth-child(2)>p
+    {font-size: 5px;
+    text-align: center;}
+    
+    .routine_t_01 tr td:nth-child(3)>p
+    {text-align: center;}
+    
+    .routine_t_01 tr td:nth-child(4) a p 
+    {width: calc(100% - 10px); height: 20px;
+    margin: 0 auto;
+    text-align: center; line-height: 20px;
+    background-color: #333;
+    color: white;}
+    
+    .routine_t_01 tr:nth-child(1) td:nth-child(1)
+    {width: 37%; height: 20px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .routine_t_01 tr:nth-child(1) td:nth-child(2)
+    {width: 15%; height: 20px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .routine_t_01 tr:nth-child(1) td:nth-child(2) p
+    {font-size: 11px;}
+    
+    .routine_t_01 tr:nth-child(1) td:nth-child(3)
+    {width: 30%; height: 20px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .routine_t_01 tr:nth-child(1) td:nth-child(4)
+    {width: 18%; height: 20px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .routine_t_01 tr:nth-child(4)
+    {background-color: rgba(255, 0, 0, 0.44);}
+    
+    .routine_t_01 tr:nth-child(4) td:last-child a p 
+    {background-color: red;}
+    
+    /*테이블02*/
+    .routine_m .routine_t_02
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-sizing: border-box;
+    font-size: 12px;
+    margin-bottom: 5px;}
+    
+    #calendar_m_01, #calendar_m_02
+    {display: none;}
+    
+    .routine_t_02 tr td
+    {border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .routine_t_02 tr:last-child td
+    {border-bottom: none;}
+    
+    .routine_t_02 tr td:nth-child(1)
+    {width: 30%; height: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .routine_t_02 tr td:nth-child(2)
+    {width: 70%; height: 30px;}
+    
+    .routine_t_02 tr td:nth-child(2) p 
+    {width: calc(100% - 10px);
+    margin: 0 auto;}
+    
+    .routine_t_02 tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .routine_t_02 tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .routine_t_02 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)
+    {width: calc(100% - 10px); height: 30px;
+    margin: 0 auto;
+    overflow: hidden;}
+    
+    .routine_t_02 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>div:nth-child(1)
+    {width: 90px; height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: left;}
+    
+    .routine_t_02 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>div:nth-child(1) p 
+    {text-align: center;
+    line-height: 20px;}
+    
+    .routine_t_02 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>label:nth-child(2)
+    {width: 20px; height: 20px;
+    float: left;
+    margin-top: 5px;}
+    
+    .routine_t_02 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>label:nth-child(2) img 
+    {width: 100%; height: 100%;}
+    
+    .routine_t_02 tr:nth-child(2) td:nth-child(2)>div:nth-child(1)
+    {width: calc(100% - 10px); height: 30px;
+    margin: 0 auto;
+    overflow: hidden;}
+    
+    .routine_t_02 tr:nth-child(2) td:nth-child(2)>div:nth-child(1)>div:nth-child(1)
+    {width: 90px; height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: left;}
+    
+    .routine_t_02 tr:nth-child(2) td:nth-child(2)>div:nth-child(1)>div:nth-child(1) p 
+    {text-align: center;
+    line-height: 20px;}
+    
+    .routine_t_02 tr:nth-child(2) td:nth-child(2)>div:nth-child(1)>label:nth-child(2)
+    {width: 20px; height: 20px;
+    float: left;
+    margin-top: 5px;}
+    
+    .routine_t_02 tr:nth-child(2) td:nth-child(2)>div:nth-child(1)>label:nth-child(2) img 
+    {width: 100%; height: 100%;}
+    
+    #room_m_chk
+    {width: calc(100% - 10px); height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 5px 5px;
+    font-size: 12px;}
+    
+    /*03*/
+    .routine_m .routine_t_03
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: 2px solid #333;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .routine_t_03 tr:nth-child(1) td
+    {width: 100%; height: 30px;
+    font-weight: bold; text-align: center;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .routine_t_03 tr:nth-child(2) td>div
+    {width: calc(100% - 10px);
+    margin: 0 auto;}
+    
+    .routine_t_03 tr:nth-child(2) td>div>div
+    {width: 33.333333%; height: 15px;
+    float: left;}
+    
+    .routine_t_03 tr:nth-child(2) td>div>div:nth-child(1), .routine_t_03 tr:nth-child(2) td>div>div:nth-child(2), .routine_t_03 tr:nth-child(2) td>div>div:nth-child(3)
+    {margin-top: 5px;}
+    
+    .routine_t_03 tr:nth-child(2) td>div>div:nth-child(4), .routine_t_03 tr:nth-child(2) td>div>div:nth-child(5), .routine_t_03 tr:nth-child(2) td>div>div:nth-child(6)
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .routine_t_03 tr:nth-child(2) td>div>div:nth-child(7)
+    {margin-bottom: 5px;}
+    
+    .routine_t_03 tr:nth-child(2) td>div>div>div:nth-child(1)
+    {width: 12px; height: 12px;
+    margin-top: 1.5px; margin-right: 5px;
+    float: left;}
+    
+    .routine_t_03 tr:nth-child(2) td>div>div>div:nth-child(1) img 
+    {width: 100%; height: 100%;}
+    
+    .routine_t_03 tr:nth-child(2) td>div>div>p:nth-child(2)
+    {float: left;
+    line-height: 15px;
+    font-size: 10px;}
+    
+    /*옵션*/
+    .option_m
+    {width: 95%;
+    margin: 20px auto;}
+    
+    .option_m>div:nth-child(1)
+    {width: 100%; height: 15px;
+    margin-bottom: 5px;}
+    
+    .option_m>div:nth-child(1)>p
+    {font-size: 14px; line-height: 15px;
+    font-weight: bold;}
+    
+    /*01*/
+    .option_m>div:nth-child(2)
+    {width: 100%; height: 120px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-top: 2px solid #333;
+    box-sizing: border-box;
+    overflow-y: scroll;}
+    
+    .option_m>div:nth-child(2) .option_t_01
+    {width: 100%;
+    font-size: 11px;}
+    
+    .option_t_01 tr td:nth-child(1)
+    {width: 52%;}
+    
+    .option_t_01 tr td:nth-child(2)
+    {width: 30%;}
+    
+    .option_t_01 tr td:nth-child(3)
+    {width: 18%;}
+    
+    .option_t_01 tr:nth-child(2) td:nth-child(1) p 
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    .option_t_01 tr:nth-child(3) td:nth-child(1) p 
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    .option_t_01 tr:nth-child(4) td:nth-child(1) p 
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    .option_t_01 tr:nth-child(5) td:nth-child(1) p 
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    .option_t_01 tr:nth-child(2) td:nth-child(2) p 
+    {text-align: center;}
+    
+    .option_t_01 tr:nth-child(3) td:nth-child(2) p 
+    {text-align: center;}
+    
+    .option_t_01 tr:nth-child(4) td:nth-child(2) p 
+    {text-align: center;}
+    
+    .option_t_01 tr:nth-child(5) td:nth-child(2) p 
+    {text-align: center;}
+    
+    .option_t_01 tr td:last-child a p
+    {width: calc(100% - 10px); height: 20px;
+    margin: 0 auto;
+    text-align: center; line-height: 20px;
+    background-color: #333;
+    color: white;}
+    
+    .option_t_01 tr:nth-child(1) td 
+    {height: 20px;
+    font-weight: bold; text-align: center;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .option_t_01 tr:nth-child(1) td:last-child
+    {border-right: none;}
+    
+    .option_t_01 tr:nth-child(4)
+    {background-color: rgba(255, 0, 0, 0.44);}
+    
+    .option_t_01 tr:nth-child(4) td:last-child a p 
+    {background-color: red;}
+    
+    /*02*/
+    .option_m .option_t_02
+    {width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-top: 2px solid #333;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .option_t_02 tr:nth-child(1) td
+    {width: 100%; height: 25px;
+    font-weight: bold; text-align: center;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f3f3f3;}
+    
+    .option_t_02 tr:nth-child(2) td p 
+    {width: calc(100% - 10px);
+    margin: 5px auto;
+    line-height: 15px;}
+    
+    .option_t_02 tr:nth-child(2) td p span
+    {font-weight: bold;}
+    
+    /*03*/
+    
+    #opt_day_m_01, #opt_day_m_02 {display: none;}
+    
+    .option_m .option_chk_m
+    {width: 100%; height: 20px;
+    margin-bottom: 5px;
+    overflow: hidden;}
+    
+    .option_chk_m>div:nth-child(1)
+    {float: right;}
+    
+    .option_chk_m>div:nth-child(1)>p:nth-child(1)
+    {font-size: 12px; line-height: 20px;
+    color: red;
+    float: left;
+    margin-right: 5px;}
+    
+    #opt_m_01
+    {width: 50px; height: 20px;
+    background-color: #333; color: white;
+    float: left;
+    font-size: 12px; font-family: SpoqaHanSansNeo;
+    border: none;}
+    
+    .option_m .option_t_03
+    {width: 100%; 
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .option_t_03 tr td
+    {border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .option_t_03 tr:last-child td
+    {border-bottom: none;}
+    
+    .option_t_03 tr td:nth-child(1)
+    {width: 30%; height: 25px;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    font-weight: bold; text-align: center;}
+    
+    .option_t_03 tr td:nth-child(2)
+    {width: 70%;}
+    
+    .option_t_03 tr:nth-child(2) td:nth-child(1)
+    {background-color: white;
+    height: 30px;
+    border-right: none;}
+    
+    .option_t_03 tr:nth-child(2) td:nth-child(1) p
+    {width: calc(100% - 10px);
+    margin: 0 auto;
+    font-weight: normal;}
+    
+    .option_t_03 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)
+    {width: calc(100% - 10px);
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    .option_t_03 tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .option_t_03 tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .option_t_03 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>div:nth-child(1)
+    {float: left;}
+    
+    .option_t_03 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>div:nth-child(3)
+    {float: left;}
+    
+    .option_t_03 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>p:nth-child(2)
+    {float: left;
+    margin-left: 1px;
+    margin-right: 1px;
+    line-height: 20px;}
+    
+    .option_t_03 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>div>div:nth-child(1)
+    {width: 69px; height: 20px;
+    line-height: 20px; text-align: center;
+    font-size: 11px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;}
+    
+    .option_t_03 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>div>label:nth-child(2)
+    {width: 12px; height: 12px;
+    margin-left: 2px; margin-top: 4px;
+    float: left;}
+    
+    .option_t_03 tr:nth-child(1) td:nth-child(2)>div:nth-child(1)>div>label:nth-child(2) img 
+    {width: 100%; height: 100%;}
+    
+    .option_t_03 tr:nth-child(3) td:nth-child(2) p, .option_t_03 tr:nth-child(4) td:nth-child(2) p
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    #opt_c_m_01
+    {width: calc(100% - 10px); height: 20px;
+    margin: 5px 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    
+    /*차량*/
+    
+    #car_m_01, #car_m_02 {display: none;}
+    
+    .car_m
+    {width: 95%;
+    margin: 20px auto;}
+    
+    .car_m>p:nth-child(1)
+    {width: 100%; height: 15px;
+    margin-bottom: 5px;
+    font-size: 14px; line-height: 15px; font-weight: bold;}
+    
+    .car_m>div:nth-child(2)
+    {width: 100%; height: 120px;
+    margin-bottom: 5px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-top: 2px solid #333;
+    box-sizing: border-box;
+    font-size: 11px;}
+    
+    .car_m>div:nth-child(2) .car_t_01
+    {width: 100%;}
+    
+    .car_t_01 tr td:nth-child(1)
+    {width: 52%;}
+    
+    .car_t_01 tr td:nth-child(2)
+    {width: 30%;}
+    
+    .car_t_01 tr td:nth-child(3)
+    {width: 18%;}
+    
+    .car_t_01 tr:nth-child(1) td 
+    {height: 20px;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 11px; font-weight: bold; text-align: center;}
+    
+    .car_t_01 tr:nth-child(1) td:last-child
+    {border-right: none;}
+    
+    .car_t_01 tr:nth-child(2) td:nth-child(1) p
+    {width: calc(100% - 10px);
+    margin: 5px auto;}  
+    
+    .car_t_01 tr:nth-child(3) td:nth-child(1) p
+    {width: calc(100% - 10px);
+    margin: 5px auto;}  
+    
+    .car_t_01 tr:nth-child(4) td:nth-child(1) p
+    {width: calc(100% - 10px);
+    margin: 5px auto;}  
+    
+    .car_t_01 tr:nth-child(2) td:nth-child(2) 
+    {text-align: center;}  
+    
+    .car_t_01 tr:nth-child(3) td:nth-child(2) 
+    {text-align: center;}  
+    
+    .car_t_01 tr:nth-child(4) td:nth-child(2) 
+    {text-align: center;}  
+    
+    .car_t_01 tr td a p 
+    {width: calc(100% - 10px); height: 20px;
+    margin: 0 auto;
+    text-align: center; line-height: 20px;
+    background-color: #333;
+    color: white;}
+    
+    .car_t_01 tr:nth-child(3)
+    {background-color: rgba(255, 0, 0, 0.44);}
+    
+    .car_t_01 tr:nth-child(3) td:last-child a p 
+    {background-color: red;}
+    
+    /*02*/
+    .car_m .car_t_02
+    {width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 12px;}
+    
+    .car_t_02 tr td
+    {border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .car_t_02 tr:last-child td
+    {border-bottom: none;}
+    
+    .car_t_02 tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .car_t_02 tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .car_t_02 tr td:nth-child(1)
+    {width: 30%; height: 30px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .car_t_02 tr td:nth-child(2)
+    {width: 70%; height: 30px;}
+    
+    .car_t_02 tr:nth-child(1) td:nth-child(2)>div
+    {width: calc(100% - 10px); height: 20px;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    .car_t_02 tr:nth-child(1) td:nth-child(2)>div>div:nth-child(1)
+    {width: 90px; height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    line-height: 20px; text-align: center;
+    margin-right: 5px;
+    float: left;}
+    
+    .car_t_02 tr:nth-child(1) td:nth-child(2)>div>label:nth-child(2)
+    {width: 20px; height: 20px;
+    float: left;}
+    
+    .car_t_02 tr:nth-child(1) td:nth-child(2)>div>label:nth-child(2) img 
+    {width: 100%; height: 100%;}
+    
+    .car_t_02 tr:nth-child(2) td:nth-child(2)>div
+    {width: calc(100% - 10px); height: 20px;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    .car_t_02 tr:nth-child(2) td:nth-child(2)>div>div:nth-child(1)
+    {width: 90px; height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    line-height: 20px; text-align: center;
+    margin-right: 5px;
+    float: left;}
+    
+    .car_t_02 tr:nth-child(2) td:nth-child(2)>div>label:nth-child(2)
+    {width: 20px; height: 20px;
+    float: left;}
+    
+    .car_t_02 tr:nth-child(2) td:nth-child(2)>div>label:nth-child(2) img 
+    {width: 100%; height: 100%;}
+    
+    .car_t_02 tr td:nth-child(1)
+    {background-color: #f3f3f3;
+    font-weight: bold; text-align: center;}
+    
+    /*03*/
+    .car_m .car_t_03
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: 2px solid #333;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .car_t_03 tr:nth-child(1) td
+    {width: 100%; height: 25px;
+    background-color: #f3f3f3;
+    font-weight: bold; text-align: center;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .car_t_03 tr:nth-child(2) td
+    {height: 60px;}
+    
+    .car_t_03 tr:nth-child(2) td p 
+    {width: calc(100% - 10px); 
+    margin: 5px auto;}
+    
+    /*예약항목*/
+    
+    .appointment_m
+    {width: 95%;
+    margin: 20px auto;}
+    
+    .appointment_m .appo_m_line_01
+    {width: 100%; height: 2px;
+    overflow: hidden;}
+    
+    .appo_m_line_01 div:nth-child(1)
+    {width: 30%; height: 2px;
+    float: left;
+    background-color: #f49800;}
+    
+    .appo_m_line_01 div:nth-child(2)
+    {width: 70%; height: 2px;
+    float: left;
+    background-color: #ccc;}
+    
+    .appointment_m .appo_m_title
+    {width: 100%; height: 20px;
+    line-height: 20px; font-weight: bold; font-size: 14px;}
+    
+    .appointment_m .appo_m_line_02
+    {width: 100%; height: 2px;
+    overflow: hidden;}
+    
+    .appo_m_line_02 div:nth-child(1)
+    {width: 30%; height: 2px;
+    float: left;
+    background-color: #f49800;}
+    
+    .appo_m_line_02 div:nth-child(2)
+    {width: 70%; height: 2px;
+    float: left;
+    background-color: #ccc;}
+    
+    .appointment_m .appo_t_01
+    {width: 100%;
+    margin-top: 10px; margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 12px;}
+    
+    .appo_t_01 tr td
+    {border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .appo_t_01 tr:last-child td
+    {border-bottom: none;}
+    
+    .appo_t_01 tr td:nth-child(1)
+    {width: 30%;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center; font-weight: bold;}
+    
+    .appo_t_01 tr td:nth-child(2)
+    {width: 70%;}
+    
+    .appo_t_01 tr td:nth-child(2) p 
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    .appo_t_01 tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .appo_t_01 tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .appo_t_01 tr:nth-child(4) td:nth-child(2) p
+    {color: red;}
+    
+    /*02*/
+    
+    .appointment_m .appo_t_02 
+    {width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .appo_t_02 tr td
+    {border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .appo_t_02 tr:last-child td
+    {border-bottom: none;}
+    
+    .appo_t_02 tr td:nth-child(1)
+    {width: 30%;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .appo_t_02 tr td:nth-child(2)
+    {width: 70%;}
+    
+    .appo_t_02 tr td:nth-child(2) p
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    .appo_t_02 tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .appo_t_02 tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .appo_t_02 tr:nth-child(5) td:nth-child(2) p
+    {color: red;}
+    
+    .appo_t_02 tr:nth-child(6) td:nth-child(2) p
+    {color: red;}
+    
+    /*03*/
+    
+    .appointment_m .appo_t_03 
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .appo_t_03 tr td
+    {border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .appo_t_03 tr:last-child td
+    {border-bottom: none;}
+    
+    .appo_t_03 tr td:nth-child(1)
+    {width: 30%;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .appo_t_03 tr td:nth-child(2)
+    {width: 70%;}
+    
+    .appo_t_03 tr td:nth-child(2) p
+    {width: calc(100% - 10px);
+    margin: 5px auto;}
+    
+    .appo_t_03 tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .appo_t_03 tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .appo_t_03 tr:nth-child(6) td:nth-child(2) p
+    {color: red;}
+    
+    .appo_t_03 tr:nth-child(4) td:nth-child(2) p
+    {line-height: 15px;}
+    
+    .appo_t_03 tr:nth-child(4) td:nth-child(2) p span
+    {font-weight: bold;}
+    
+    /*골프장 정보*/
+    
+    .golf_m_01
+    {width: 95%;
+    margin: 10px auto;}
+    
+    .golf_m_01 .golf_m_01_line
+    {width: 100%; height: 2px;
+    overflow: hidden;}
+    
+    .golf_m_01_line div:nth-child(1)
+    {width: 30%; height: 2px;
+    float: left;
+    background-color: #f49800;}
+    
+    .golf_m_01_line div:nth-child(2)
+    {width: 70%; height: 2px;
+    float: left;
+    background-color: #ccc;}
+    
+    .golf_m_01 .golf_m_p
+    {width: 100%; height: 20px;
+    line-height: 20px; font-weight: bold; font-size: 14px;}
+    
+    .golf_m_01 .golf_m_02_line
+    {width: 100%; height: 2px;
+    overflow: hidden;}
+    
+    .golf_m_02_line div:nth-child(1)
+    {width: 30%; height: 2px;
+    float: left;
+    background-color: #f49800;}
+    
+    .golf_m_02_line div:nth-child(2)
+    {width: 70%; height: 2px;
+    float: left;
+    background-color: #ccc;}
+    
+    .golf_m_01 .golf_m_name
+    {width: 100%; 
+    line-height: 20px; font-weight: bold; font-size: 14px;
+    margin-top: 5px;}
+    
+    .golf_m_01 .golf_m_img
+    {width: 100%;
+    margin-top: 5px; margin-bottom: 5px;
+    overflow: hidden;}
+    
+    .golf_m_img div 
+    {width: 49.5%;
+    float: left;}
+    
+    .golf_m_img div:nth-child(1)
+    {margin-right: 1%;}
+    
+    .golf_m_img div img
+    {width: 100%; height: auto;}
+    
+    .golf_m_01 .golf_m_txt
+    {width: 100%;
+    background-color: #f3f3f3;}
+    
+    .golf_m_txt div
+    {width: 95%;
+    margin: 0 auto;
+    padding-top: 5px; padding-bottom: 5px;}
+    
+    .golf_m_txt div p 
+    {font-size: 10px;
+    line-height: 15px;
+    text-align: justify;}
+    
+    /*호텔 정보*/
+    
+    .hotel_m_01
+    {width: 95%;
+    margin: 10px auto;}
+    
+    .hotel_m_01 .hotel_m_01_line
+    {width: 100%; height: 2px;
+    overflow: hidden;}
+    
+    .hotel_m_01_line div:nth-child(1)
+    {width: 30%; height: 2px;
+    float: left;
+    background-color: #f49800;}
+    
+    .hotel_m_01_line div:nth-child(2)
+    {width: 70%; height: 2px;
+    float: left;
+    background-color: #ccc;}
+    
+    .hotel_m_01 .hotel_m_p
+    {width: 100%; height: 20px;
+    line-height: 20px; font-weight: bold; font-size: 14px;}
+    
+    .hotel_m_01 .hotel_m_02_line
+    {width: 100%; height: 2px;
+    overflow: hidden;}
+    
+    .hotel_m_02_line div:nth-child(1)
+    {width: 30%; height: 2px;
+    float: left;
+    background-color: #f49800;}
+    
+    .hotel_m_02_line div:nth-child(2)
+    {width: 70%; height: 2px;
+    float: left;
+    background-color: #ccc;}
+    
+    .hotel_m_01 .hotel_m_name
+    {width: 100%;
+    line-height: 20px; font-weight: bold; font-size: 14px;
+    margin-top: 5px;}
+    
+    .hotel_m_01 .hotel_m_img
+    {width: 100%;
+    margin-top: 5px; margin-bottom: 5px;
+    overflow: hidden;}
+    
+    .hotel_m_img div 
+    {width: 49.5%;
+    float: left;}
+    
+    .hotel_m_img div:nth-child(1)
+    {margin-right: 1%;}
+    
+    .hotel_m_img div img
+    {width: 100%; height: auto;}
+    
+    .hotel_m_01 .hotel_m_txt
+    {width: 100%;
+    background-color: #f3f3f3;}
+    
+    .hotel_m_txt div
+    {width: 95%;
+    margin: 0 auto;
+    padding-top: 5px; padding-bottom: 5px;}
+    
+    .hotel_m_txt div p 
+    {font-size: 10px;
+    line-height: 15px;
+    text-align: justify;}
+    
+    /*옵션 정보*/
+    
+    .option_detail_01_m
+    {width: 95%;
+    margin: 10px auto;
+    margin-bottom: 20px;}
+    
+    .option_detail_01_m .option_detail_01_line_m
+    {width: 100%; height: 2px;
+    overflow: hidden;}
+    
+    .option_detail_01_line_m div:nth-child(1)
+    {width: 30%; height: 2px;
+    float: left;
+    background-color: #f49800;}
+    
+    .option_detail_01_line_m div:nth-child(2)
+    {width: 70%; height: 2px;
+    float: left;
+    background-color: #ccc;}
+    
+    .option_detail_01_m .option_detail_p_m
+    {width: 100%; height: 20px;
+    line-height: 20px; font-weight: bold; font-size: 14px;}
+    
+    .option_detail_01_m .option_detail_02_line_m
+    {width: 100%; height: 2px;
+    overflow: hidden;}
+    
+    .option_detail_02_line_m div:nth-child(1)
+    {width: 30%; height: 2px;
+    float: left;
+    background-color: #f49800;}
+    
+    .option_detail_02_line_m div:nth-child(2)
+    {width: 70%; height: 2px;
+    float: left;
+    background-color: #ccc;}
+    
+    .option_detail_01_m .option_detail_name_m
+    {width: 100%; 
+    line-height: 20px; font-weight: bold; font-size: 14px;
+    margin-top: 5px;}
+    
+    .option_detail_01_m .option_detail_img_m
+    {width: 100%;
+    margin-top: 5px; margin-bottom: 5px;
+    overflow: hidden;}
+    
+    .option_detail_img_m div 
+    {width: 49.5%;
+    float: left;}
+    
+    .option_detail_img_m div:nth-child(1)
+    {margin-right: 1%;}
+    
+    .option_detail_img_m div img
+    {width: 100%; height: auto;}
+    
+    .option_detail_01_m .option_detail_txt_m
+    {width: 100%;
+    background-color: #f3f3f3;}
+    
+    .option_detail_txt_m div
+    {width: 95%;
+    margin: 0 auto;
+    padding-top: 5px; padding-bottom: 5px;}
+    
+    .option_detail_txt_m div p 
+    {font-size: 10px;
+    line-height: 15px;
+    text-align: justify;}
+    
+    /*총 이용금액*/
+    
+    .total_money_m
+    {width: 95%;
+    margin: 20px auto;}
+    
+    .total_money_m>p:nth-child(1)
+    {width: 100%; height: 15px;
+    font-size: 14px; font-weight: bold;
+    line-height: 15px;
+    margin-bottom: 5px;}
+    
+    .total_money_m .money_m_box
+    {width: 100%;
+    position: relative;
+    overflow: hidden;}
+    
+    .money_m_box .money_m_01
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: 2px solid #333;
+    box-sizing: border-box;
+    font-size: 10px;}
+    
+    .money_m_01 tr td 
+    {width: 20%;}
+    
+    .money_m_01 tr:nth-child(1) td
+    {width: 20%; height: 30px;
+    background-color: #f3f3f3;
+    text-align: center; font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;} 
+    
+    .money_m_01 tr:nth-child(1) td:last-child
+    {border-right: none;}
+    
+    .money_m_01 tr:nth-child(2) td
+    {width: 20%; height: 50px;
+    text-align: center; font-weight: bold;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;} 
+    
+    .money_m_01 tr:nth-child(2) td:last-child
+    {border-right: none;}
+    
+    .money_m_01 tr:last-child td:last-child p
+    {color: red;}
+    
+    .money_m_box .money_icon_m_01
+    {width: 10px; height: 10px;
+    position: absolute;
+    top: 50px; left: calc(100% - 80% - 5px);}
+    
+    .money_icon_m_01 img 
+    {width: 100%; height: 100%;}
+    
+    .money_m_box .money_icon_m_02
+    {width: 10px; height: 10px;
+    position: absolute;
+    top: 50px; left: calc(100% - 60% - 5px);}
+    
+    .money_icon_m_02 img 
+    {width: 100%; height: 100%;}
+    
+    .money_m_box .money_icon_m_03
+    {width: 10px; height: 10px;
+    position: absolute;
+    top: 50px; left: calc(100% - 40% - 5px);}
+    
+    .money_icon_m_03 img 
+    {width: 100%; height: 100%;}
+    
+    .money_m_box .money_icon_m_04
+    {width: 10px; height: 10px;
+    position: absolute;
+    top: 50px; left: calc(100% - 20% - 5px);}
+    
+    .money_icon_m_04 img 
+    {width: 100%; height: 100%;}
+    
+    /*이용자*/
+    .box_m_01
+    {width: 95%;
+    margin: 10px auto;}
+    
+    .box_m_01 .person_m_01
+    {width: 100%; height: 15px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    font-size: 14px;}
+    
+    .person_m_01>p:nth-child(1)
+    {font-weight: bold;
+    margin-right: 5px; line-height: 15px;
+    float: left;}
+    
+    .person_m_01>div:nth-child(2)
+    {float: left;}
+    
+    .person_m_01>div:nth-child(2)>p
+    {font-size: 12px; line-height: 15px;
+    color: red; margin-right: 5px;
+    float: left;}
+    
+    #person_m_01
+    {width: 12px; height: 12px;
+    margin-top: 1.5px;
+    box-sizing: border-box;}
+    
+    .box_m_01 table
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 12px;}
+    
+    .box_m_01 table span
+    {color: red;}
+    
+    .box_m_01 table tr td:nth-child(1)
+    {width: 25%; height: 20px;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .box_m_01 table tr:nth-child(1) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_01 table tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .box_m_01 table tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .box_m_01 table tr:nth-child(1) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_01 table tr:nth-child(2) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_01 table tr td:nth-child(2)
+    {width: 75%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    #gender_m_01
+    {width: 100px; height: 20px;
+    box-sizing: border-box;
+    margin-top: 5px; margin-bottom: 5px; margin-left: 5px;}
+    
+    .box_m_01 table tr:nth-child(3) td:nth-child(2) p, .box_m_01 table tr:nth-child(4) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_01 table tr:nth-child(3) td:nth-child(1) p, .box_m_01 table tr:nth-child(4) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_01 table tr:last-child td 
+    {border-bottom: none;}
+    
+    /**/
+    
+    .box_m_02
+    {width: 95%;
+    margin: 10px auto;}
+    
+    .box_m_02>p:nth-child(1)
+    {width: 100%; height: 15px;
+    font-size: 14px;
+    font-weight: bold; line-height: 15px;
+    margin-bottom: 5px;}
+    
+    .box_m_02 table
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 12px;}
+    
+    .box_m_02 table span
+    {color: red;}
+    
+    .box_m_02 table tr td:nth-child(1)
+    {width: 25%; height: 20px;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .box_m_02 table tr:nth-child(1) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_02 table tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .box_m_02 table tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .box_m_02 table tr:nth-child(1) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_02 table tr:nth-child(2) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_02 table tr td:nth-child(2)
+    {width: 75%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    #gender_m_02
+    {width: 100px; height: 20px;
+    box-sizing: border-box;
+    margin-top: 5px; margin-bottom: 5px; margin-left: 5px;}
+    
+    .box_m_02 table tr:nth-child(3) td:nth-child(2) p, .box_m_02 table tr:nth-child(4) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_02 table tr:nth-child(3) td:nth-child(1) p, .box_m_02 table tr:nth-child(4) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_02 table tr:last-child td 
+    {border-bottom: none;}
+    
+    /**/
+    
+    .box_m_03
+    {width: 95%;
+    margin: 10px auto;
+    margin-bottom: 20px;}
+    
+    .box_m_03>p:nth-child(1)
+    {width: 100%; height: 15px;
+    font-size: 14px;
+    font-weight: bold; line-height: 15px;
+    margin-bottom: 5px;}
+    
+    .box_m_03 table
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 12px;}
+    
+    .box_m_03 table span
+    {color: red;}
+    
+    .box_m_03 table tr td:nth-child(1)
+    {width: 25%; height: 20px;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .box_m_03 table tr:nth-child(1) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_03 table tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .box_m_03 table tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .box_m_03 table tr:nth-child(1) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_03 table tr:nth-child(2) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_03 table tr td:nth-child(2)
+    {width: 75%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    #gender_m_03
+    {width: 100px; height: 20px;
+    box-sizing: border-box;
+    margin-top: 5px; margin-bottom: 5px; margin-left: 5px;}
+    
+    .box_m_03 table tr:nth-child(3) td:nth-child(2) p, .box_m_03 table tr:nth-child(4) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_03 table tr:nth-child(3) td:nth-child(1) p, .box_m_03 table tr:nth-child(4) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_03 table tr:last-child td 
+    {border-bottom: none;}
+    
+    /*취소*/
+    .cancel_m
+    {width: 95%;
+    margin: 10px auto;}
+    
+    .cancel_m>p:nth-child(1)
+    {width: 100%; height: 15px;
+    font-size: 14px; line-height: 15px; font-weight: bold;
+    margin-bottom: 5px;}
+    
+    .cancel_m>div:nth-child(2)
+    {width: 100%; height: 100px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow-y: scroll;}
+    
+    .cancel_m>div:nth-child(2) p 
+    {width: 98%;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 20px;}
+    
+    .cancel_m>div:nth-child(2)>p:nth-child(1)
+    {margin-top: 5px;}
+    
+    .cancel_m>div:nth-child(2)>p:last-child
+    {margin-bottom: 5px;}
+    
+    .cancel_m>div:nth-child(3)
+    {width: 100%; height: 15px;
+    overflow: hidden;}
+    
+    .cancel_m>div:nth-child(3)>div
+    {float: right;}
+    
+    .cancel_m>div:nth-child(3)>div>p:nth-child(1)
+    {font-size: 12px; line-height: 15px;
+    margin-right: 5px;
+    color: red;
+    float: left;}
+    
+    #cancel_m_01
+    {width: 12px; height: 12px;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 1.5px;}
+    
+    .information_m
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+    
+    .information_m>p:nth-child(1)
+    {width: 100%; height: 15px;
+    font-size: 14px; line-height: 15px; font-weight: bold;
+    margin-bottom: 5px;}
+    
+    .information_m>div:nth-child(2)
+    {width: 100%; height: 100px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow-y: scroll;}
+    
+    .information_m>div:nth-child(2) p 
+    {width: 98%;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 20px;}
+    
+    .information_m>div:nth-child(2)>p:nth-child(1)
+    {margin-top: 5px;}
+    
+    .information_m>div:nth-child(2)>p:last-child
+    {margin-bottom: 5px;}
+    
+    .information_m>div:nth-child(3)
+    {width: 100%; height: 15px;
+    overflow: hidden;}
+    
+    .information_m>div:nth-child(3)>div
+    {float: right;}
+    
+    .information_m>div:nth-child(3)>div>p:nth-child(1)
+    {font-size: 12px; line-height: 15px;
+    margin-right: 5px;
+    color: red;
+    float: left;}
+    
+    #information_m_01
+    {width: 12px; height: 12px;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 1.5px;}
+    
+    .total_m
+    {width: 95%; height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    overflow: hidden;}
+    
+    .total_m p:nth-child(1)
+    {width: 35%; height: 40px;
+    text-align: center; line-height: 40px; font-weight: bold; font-size: 15px;
+    border-bottom: 2px solid #f49800;
+    box-sizing: border-box;
+    float: left;}
+    
+    .total_m p:nth-child(2)
+    {width: 65%; height: 40px;
+    line-height: 40px; font-weight: bold; font-size: 12px;
+    border-bottom: 2px solid #333;
+    text-indent: 5px;
+    box-sizing: border-box;
+    float: left;}
+    
+    .total_m p:nth-child(2) span
+    {font-size: 15px;
+    margin-right: 3px;
+    color: red;}
+    
+    .mobile_btn
+    {width: 170px; height: 30px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    overflow: hidden;}
+    
+    #submit_m
+    {width: 80px; height: 30px;
+    font-size: 12px; color: white;
+    border: none;
+    background-color: #3b8aff;
+    float: left;
+    margin-right: 10px;}
+    
+    #reset_m
+    {width: 80px; height: 30px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    float: left;} 
+}
+
+@media all and (min-width:601px) and (max-width:768px)
+{   
+    .day_m table
+    {width: 95%;
+    margin: 0 auto;}
+
+    .day_m table tr td>label>p
+    {font-size: 14px;}  
+
+    .day_m table tr td>label>p:nth-child(1)
+    {margin-top: 15px;
+    margin-right: 5px;}
+
+    .day_m table tr td>label>p:nth-child(2)
+    {margin-bottom: 15px;}
+}

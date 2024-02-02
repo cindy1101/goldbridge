@@ -1,0 +1,62 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body
+{font-family: SpoqaHanSansNeo;}
+
+.mobile
+{width: 100%; height: 100vh;
+overflow: hidden;
+overflow-y: scroll;}
+
+.privacy_m_top
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.privacy_m_top a, .privacy_m_top p 
+{float: left;}
+
+.privacy_m_top a:nth-child(1) p 
+{width: 30px; height: 30px;
+line-height: 30px; font-size: 18px; text-align: center;
+margin-top: 5px;
+margin-right: 5px;
+color: #0d75bc;}
+
+.privacy_m_top>p:nth-child(2)
+{line-height: 40px;
+font-weight: bold;}
+
+.privacy_m_top a:nth-child(3)
+{width: 30px; height: 30px;
+float: right;
+margin-top: 5px;
+margin-right: 5px;}
+
+.privacy_m_top a:nth-child(3) img 
+{width: 100%; height: 100%;}
+
+.privacy_line_m_01
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-bottom: 20px;}
+
+.privacy_txt_m
+{width: 95%;
+margin: 0 auto;
+font-size: 12px; line-height: 20px;}
+
+.privacy_txt_m p:nth-child(1), .privacy_txt_m p:nth-child(3), .privacy_txt_m p:nth-child(5), .privacy_txt_m p:nth-child(7)
+{font-weight: bold;
+font-size: 14px;
+margin-bottom: 5px;}
+
+.privacy_txt_m p:nth-child(2), .privacy_txt_m p:nth-child(4), .privacy_txt_m p:nth-child(6), .privacy_txt_m p:nth-child(8)
+{margin-bottom: 10px;}

@@ -1,0 +1,1559 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+.mobile {display: none;}
+
+.web
+{width: 100%; max-width: 1920px; min-width: 1340px;
+margin: 0 auto;}
+
+.reservation
+{width: 1340px;
+margin: 0 auto;
+margin-top: 50px;}
+
+.reservation .rout_re
+{width: 1340px; height: 20px;
+font-weight: bold;
+margin-bottom: 50px;}
+
+.rout_re a, .rout_re p 
+{float: left;
+margin-right: 5px;}
+
+.rout_re p 
+{font-size: 14px; line-height: 20px;}
+
+.rout_re>a:nth-child(1)
+{width: 20px; height: 20px;}
+
+.rout_re a {color: #333;}
+
+.rout_re>p:last-child {color: #e5004f;}
+
+.reservation>p
+{width: 1340px; height: 30px;
+font-size: 24px; line-height: 30px;
+margin-bottom: 5px;
+font-weight: bold;
+color: #3e3a39;}
+
+.reservation .line01
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+.reservation .process
+{width: 1311px; height: 370px;
+margin: 0 auto;
+margin-bottom: 100px;}
+
+.process div:nth-child(1)
+{width: 1311px; height: 262px;
+margin-bottom: 40px;}
+
+.process div:nth-child(2)
+{width: 1111px; height: 68px;
+margin: 0 auto;}
+
+/*달력*/
+
+#left_btn, #right_btn {display: none;}
+
+.reservation .calendar
+{width: 1240px;
+overflow: hidden;
+margin: 0 auto;
+margin-bottom: 100px;}
+
+.calendar .calendar_txt
+{width: 320px; height: 30px;
+margin: 0 auto;
+margin-bottom: 30px;
+font-size: 22px; font-weight: bold;
+line-height: 30px;
+overflow: hidden;}
+
+.calendar_txt label, .calendar_txt p {float: left;}
+
+.calendar_txt label
+{width: 20px; height: 20px;}
+
+.calendar_txt label:nth-child(1)
+{margin-right: 20px;
+margin-top: 5px;}
+
+.calendar_txt label:nth-child(3)
+{margin-left: 20px;
+margin-top: 5px;}
+
+
+#day01_6, #day02_6, #day03_6, #day04_6, #day05_6, #day06_6, #day07_6, #day08_6, #day09_6, #day10_6
+{display: none;}
+
+#day11_6, #day12_6, #day13_6, #day14_6, #day15_6, #day16_6, #day17_6, #day18_6, #day19_6, #day20_6
+{display: none;}
+
+#day21_6, #day22_6, #day23_6, #day24_6, #day25_6, #day26_6, #day27_6, #day28_6, #day29_6, #day30_6
+{display: none;}
+
+#day31_6, #day32_6, #day33_6, #day34_6, #day35_6, #day36_6, #day37_6, #day38_6, #day39_6, #day40_6
+{display: none;}
+
+#day41_6, #day42_6
+{display: none;}
+
+#day01_7, #day02_7, #day03_7, #day04_7, #day05_7, #day06_7, #day07_7, #day08_7, #day09_7, #day10_7
+{display: none;}
+
+#day11_7, #day12_7, #day13_7, #day14_7, #day15_7, #day16_7, #day17_7, #day18_7, #day19_7, #day20_7
+{display: none;}
+
+#day21_7, #day22_7, #day23_7, #day24_7, #day25_7, #day26_7, #day27_7, #day28_7, #day29_7, #day30_7
+{display: none;}
+
+#day31_7, #day32_7, #day33_7, #day34_7, #day35_7, #day36_7, #day37_7, #day38_7, #day39_7, #day40_7
+{display: none;}
+
+#day41_7, #day42_7
+{display: none;}
+
+
+
+
+.calendar .calendar_left
+{width: 595px;
+float: left;
+margin-right: 46px;}
+
+.calendar_left>p:nth-child(1)
+{width: 595px; height: 30px;
+font-size: 18px; line-height: 30px;
+font-weight: bold; text-align: center;
+margin-bottom: 10px;}
+
+.calendar_left table
+{width: 595px;}
+
+.calendar_left table tr td
+{width: 85px; height: 75px;}
+
+.calendar_left table tr:nth-child(1) td
+{width: 85px; height: 40px;
+background-color: #0d75bc;
+font-weight: bold; text-align: center; line-height: 40px;
+color: white;
+border-right: 1px solid white;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(1) td:last-child
+{border-right: none;}
+
+.calendar_left table tr:nth-child(2) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(3) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(4) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(5) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(6) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(7) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(2) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(3) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(4) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(5) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(6) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr:nth-child(7) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_left table tr>td>label>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
+
+.calendar_left table tr>td>label>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333; font-weight: bold; font-weight: bold;}
+
+.calendar_left table .no_w p:nth-child(2)
+{color: #ccc;
+text-decoration: line-through;}
+
+
+
+/*right*/
+
+.calendar .calendar_right
+{width: 595px;
+float: left;}
+
+.calendar_right>p:nth-child(1)
+{width: 595px; height: 30px;
+font-size: 18px; line-height: 30px;
+font-weight: bold; text-align: center;
+margin-bottom: 10px;}
+
+.calendar_right table
+{width: 595px;}
+
+.calendar_right table tr td
+{width: 85px; height: 75px;}
+
+.calendar_right table tr:nth-child(1) td
+{width: 85px; height: 40px;
+background-color: #0d75bc;
+font-weight: bold; text-align: center; line-height: 40px;
+color: white;
+border-right: 1px solid white;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(1) td:last-child
+{border-right: none;}
+
+.calendar_right table tr:nth-child(2) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(3) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(4) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(5) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(6) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(7) td
+{width: 85px; height: 70px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(2) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(3) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(4) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(5) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(6) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr:nth-child(7) td:nth-child(1)
+{width: 85px; height: 70px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calendar_right table tr>td>label>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
+
+.calendar_right table tr>td>label>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333; font-weight: bold; font-weight: bold;}
+
+
+/*선택항목*/
+
+.reservation .select
+{width: 1340px;
+margin-bottom: 50px;}
+
+.select>p:nth-child(1)
+{width: 1340px; height: 30px;
+font-size: 22px; font-weight: bold; line-height: 30px;
+margin-bottom: 10px;}
+
+.select table
+{width: 1340px;
+border-right: 1px solid #ccc;
+border-left: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.select table tr:nth-child(1) td:nth-child(1),.select table tr:nth-child(1) td:nth-child(3)
+{width: 120px; height: 50px;
+background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.select table tr:nth-child(1) td:nth-child(3)
+{border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.select table tr:nth-child(1) td:nth-child(5)
+{width: 265px; height: 50px;
+background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+border-left: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.select table tr:nth-child(1) td:nth-child(2),.select table tr:nth-child(1) td:nth-child(4)
+{width: 327.5px; height: 50px;
+border-top: 2px solid #333;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.select table tr:nth-child(2) td:nth-child(1),.select table tr:nth-child(2) td:nth-child(3)
+{width: 120px; height: 50px;
+background-color: #f3f3f3;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.select table tr:nth-child(2) td:nth-child(3)
+{border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.select table tr:nth-child(2) td:nth-child(2),.select table tr:nth-child(2) td:nth-child(4)
+{width: 327.5px; height: 50px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px;  line-height: 50px;}
+
+.select table tr:nth-child(2) td:nth-child(2)
+{text-indent: 14px;}
+
+.select table tr:nth-child(2) td:nth-child(5)
+{width: 265px; 
+border-left: 1px solid #ccc;
+border-top: 1px solid #ccc;
+box-sizing: border-box;
+font-weight: bold; text-align: center;}
+
+.select table tr:nth-child(2) td:nth-child(5) p:nth-child(1)
+{font-size: 20px; color: red;}
+
+.select table tr:nth-child(2) td:nth-child(5) p:nth-child(2)
+{font-size: 15px; color: #333;}
+
+#num01
+{width: 100px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 10px;
+text-indent: 14px;}
+
+.select table tr:nth-child(3) td:nth-child(1)
+{width: 120px; 
+background-color: #f3f3f3;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.select table tr:nth-child(3) td:nth-child(3)
+{width: 120px; height: 50px;
+background-color: #f3f3f3;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-left: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.select table tr:nth-child(3) td:nth-child(2)
+{width: 327.5px; height: 50px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.select table tr:nth-child(3) td:nth-child(4)
+{width: 327.5px; height: 50px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.select table tr:nth-child(3) td:nth-child(2) .chk01
+{overflow: hidden;}
+
+.chk01 p
+{float: left;
+font-size: 14px; line-height: 50px;}
+
+#checkbox01
+{width: 12px; height: 12px;
+float: left;
+margin-left: 14px; margin-top: 19px;}
+
+.select table tr:nth-child(4) td:nth-child(1)
+{width: 327.5px; height: 50px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.select table tr:nth-child(4) td:nth-child(2)
+{width: 120px; height: 50px;
+background-color: #f3f3f3;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-left: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.select table tr:nth-child(4) td:nth-child(3)
+{width: 327.5px; height: 50px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.select table tr:nth-child(4) td:nth-child(1) .chk02
+{overflow: hidden;}
+
+.chk02 p
+{float: left;
+font-size: 14px; line-height: 50px;}
+
+#checkbox02
+{width: 12px; height: 12px;
+float: left;
+margin-left: 14px;
+margin-top: 19px;}
+
+.select table tr:nth-child(5) td:nth-child(1)
+{width: 327.5px; height: 50px;
+box-sizing: border-box;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.select table tr:nth-child(5) td:nth-child(2)
+{width: 120px; height: 50px;
+background-color: #f3f3f3;
+border-right: 1px solid #ccc;
+border-left: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.select table tr:nth-child(5) td:nth-child(3)
+{width: 327.5px; height: 50px;
+box-sizing: border-box;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.select table tr:nth-child(5) td:nth-child(1) .chk02
+{overflow: hidden;}
+
+.chk03 p
+{float: left;
+font-size: 14px; line-height: 50px;}
+
+#checkbox03
+{width: 12px; height: 12px;
+float: left;
+margin-left: 14px; margin-top: 19px;}
+
+
+/*여행자정보*/
+
+.reservation .information
+{width: 1340px;
+margin-bottom: 100px;}
+
+.information .information01
+{width: 1340px;
+margin-bottom: 80px;}
+
+.information01 .title01_inf
+{width: 1340px; height: 30px;
+margin-bottom: 10px;
+overflow: hidden;}
+
+.title01_inf>p, .title01_inf .chk_inf
+{float: left;}
+
+.title01_inf>p
+{font-size: 22px; font-weight: bold;
+line-height: 30px; margin-right: 20px;}
+
+.chk_inf p 
+{float: left;
+font-size: 14px; line-height: 30px;
+margin-right: 10px;
+color: red;}
+
+#infor01 
+{float: left;
+margin-top: 9px;}
+
+.information01 table
+{width: 1340px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+background-color: white;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;}
+
+.information01 table td:nth-child(1), .information01 table td:nth-child(3), .information01 table td:nth-child(5), .information01 table td:nth-child(7)
+{width: 120px; height: 50px;
+border-top: 2px solid #f49800;
+border-right: 1px solid #ccc;
+border-left: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center; font-weight: bold;
+background-color: #f3f3f3;}
+
+.information01 table td:nth-child(1)
+{border-left: none;}
+
+.information01 table td span {color: red;}
+
+.information01 table td:nth-child(2)
+{width: 190px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.information01 table td:nth-child(4)
+{width: 150px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+#gender01
+{width: 140px; height: 40px;
+border: 1px solid #ccc;
+margin-left: 4px; margin-bottom: 4px;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.information01 table td:nth-child(6)
+{width: 300px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.information01 table td:nth-child(8)
+{width: 220px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+/*02*/
+
+.information .information02
+{width: 1340px;
+margin-bottom: 50px;}
+
+.information02>p
+{width: 1340px; height: 30px;
+font-size: 22px; font-weight: bold; line-height: 30px;
+margin-bottom: 10px;}
+
+.information02 table
+{width: 1340px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+background-color: white;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;}
+
+.information02 table td:nth-child(1), .information02 table td:nth-child(3), .information02 table td:nth-child(5), .information02 table td:nth-child(7)
+{width: 120px; height: 50px;
+border-top: 2px solid #f49800;
+border-right: 1px solid #ccc;
+border-left: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center; font-weight: bold;
+background-color: #f3f3f3;}
+
+.information02 table td:nth-child(1)
+{border-left: none;}
+
+.information02 table td span {color: red;}
+
+.information02 table td:nth-child(2)
+{width: 190px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.information02 table td:nth-child(4)
+{width: 150px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+#gender02
+{width: 140px; height: 40px;
+border: 1px solid #ccc;
+margin-left: 4px; margin-bottom: 4px;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.information02 table td:nth-child(6)
+{width: 300px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+#last_name01
+{width: 110px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 4px;
+margin-right: 4px;
+float: left;
+text-indent: 14px;}
+
+#name01
+{width: 177px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-right: 4px;
+float: left;
+text-indent: 14px;}
+
+.information02 table td:nth-child(8)
+{width: 220px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+/*03*/
+
+.information .information03
+{width: 1340px;}
+
+.information03>p
+{width: 1340px; height: 30px;
+font-size: 22px; font-weight: bold; line-height: 30px;
+margin-bottom: 10px;}
+
+.information03 table
+{width: 1340px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+background-color: white;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;}
+
+.information03 table td:nth-child(1), .information03 table td:nth-child(3), .information03 table td:nth-child(5), .information03 table td:nth-child(7)
+{width: 120px; height: 50px;
+border-top: 2px solid #f49800;
+border-right: 1px solid #ccc;
+border-left: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center; font-weight: bold;
+background-color: #f3f3f3;}
+
+.information03 table td:nth-child(1)
+{border-left: none;}
+
+.information03 table td span {color: red;}
+
+.information03 table td:nth-child(2)
+{width: 190px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.information03 table td:nth-child(4)
+{width: 150px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+#gender03
+{width: 140px; height: 40px;
+border: 1px solid #ccc;
+margin-left: 4px; margin-bottom: 4px;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.information03 table td:nth-child(6)
+{width: 300px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+#last_name02
+{width: 110px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 4px;
+margin-right: 4px;
+float: left;
+text-indent: 14px;}
+
+#name02
+{width: 177px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-right: 4px;
+float: left;
+text-indent: 14px;}
+
+.information03 table td:nth-child(8)
+{width: 220px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+/*취소/개인정보*/
+
+.reservation .notice
+{width: 1240px;
+overflow: hidden;
+margin: 0 auto;
+margin-bottom: 80px;}
+
+.notice .notice_left
+{width: 600px;
+float: left;
+margin-right: 40px;}
+
+.notice_left>p
+{width: 600px; height: 30px;
+text-align: center; line-height: 30px;
+font-weight: bold;
+margin-bottom: 10px;}
+
+.notice_left .cancellation
+{width: 600px; height: 250px;
+overflow-y: scroll;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 10px;}
+
+.cancellation p
+{font-size: 14px; line-height: 30px;
+text-indent: 14px;}
+
+.notice_left .agree01
+{width: 600px; height: 20px;
+overflow: hidden;}
+
+.agree01 p
+{width: 80px; height: 20px;
+float: left; color: red;
+margin-left: 505px; line-height: 20px;
+font-size: 14px;}
+
+#cancellation_chk
+{width: 15px; height: 15px;
+margin-top: 2.5px;
+float: right;}
+
+.notice .notice_right
+{width: 600px; height: 300px;
+float: left;}
+
+.notice_right>p
+{width: 600px; height: 30px;
+text-align: center; line-height: 30px;
+font-weight: bold;
+margin-bottom: 10px;}
+
+.notice_right .privacy
+{width: 600px; height: 250px;
+overflow-y: scroll;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 10px;}
+
+.privacy p
+{font-size: 14px; line-height: 30px;
+text-indent: 14px;}
+
+.notice_right .agree02
+{width: 600px; height: 20px;
+overflow: hidden;}
+
+.agree02 p
+{width: 80px; height: 20px;
+float: left; color: red;
+margin-left: 505px; line-height: 20px;
+font-size: 14px;}
+
+.reservation .total
+{width: 1340px; height: 50px;
+overflow: hidden;
+margin-bottom: 50px;}
+
+.total p
+{float: left;}
+
+.total p:nth-child(1)
+{width: 200px; height: 50px;
+line-height: 50px;
+font-size: 22px; font-weight: bold; text-align: center;
+border-bottom: 2px solid #f49800;
+box-sizing: border-box;}
+
+.total p:nth-child(2)
+{width: 1140px; height: 50px;
+line-height: 50px;
+font-size: 22px; font-weight: bold; color: red;
+border-bottom: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.total span
+{color: #333;
+font-size: 16px;}
+
+.reservation .btn
+{width: 220px; height: 40px;
+margin: 0 auto;
+margin-bottom: 100px;}
+
+#btn01, #btn02
+{width: 100px; height: 40px;
+text-align: center; font-family: SpoqaHanSansNeo;
+border: none;}
+
+#btn01
+{margin-right: 10px;
+background-color: #3b8aff;
+color: white;}
+
+#btn02
+{background-color: #f6f6f6;
+border: 1px solid #ccc;
+box-sizing: border-box;}
+
+@media all and (max-width:768px)
+{   
+    .web {display: none;}
+    
+    .mobile
+    {width: 100%; height: 100vh;
+    display: block;
+    overflow-y: scroll;}
+    
+    .rout_m
+    {width: 95%; height: 40px;
+    overflow: hidden;
+    margin: 0 auto;}
+    
+    .rout_m>a:nth-child(1)
+    {width: 30px; height: 30px;
+    text-align: center; line-height: 30px; font-size: 18px;
+    margin-top: 5px; margin-right: 5px;
+    color: #0d75bc;
+    float: left;}
+    
+    .rout_m p:nth-child(2)
+    {font-weight: bold;
+    line-height: 40px;
+    float: left;}
+    
+    .rout_m .rout_icon_m
+    {width: 65px; height: 30px;
+    float: right;}
+    
+    .rout_icon_m>a
+    {width: 30px; height: 30px;
+    margin-top: 5px;
+    float: left;}
+    
+    .rout_icon_m a:nth-child(1)
+    {margin-right: 5px;}
+    
+    .rout_icon_m a img
+    {width: 100%; height: 100%;}
+    
+    .detail_line_01_m
+    {width: 100%; height: 1px;
+    background-color: #ccc;
+    margin-bottom: 10px;}
+    
+    .product_tit_m
+    {width: 95%;
+    margin: 0 auto;
+    font-weight: bold; line-height: 20px;
+    margin-bottom: 5px;}
+    
+    .detail_line_box_m
+    {width: 95%; height: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 5px;}
+    
+    .detail_line_box_m div:nth-child(1)
+    {width: 30%; height: 2px;
+    background-color: #f49800;
+    float: left;}
+    
+    .detail_line_box_m div:nth-child(2)
+    {width: 70%; height: 2px;
+    background-color: #ccc;
+    float: left;}
+    
+    .res_img_01
+    {width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;}
+    
+    .res_img_01 img 
+    {width: 100%; height: auto;}
+    
+    .res_img_02
+    {width: 90%;
+    margin: 0 auto;
+    margin-top: 5px;}
+    
+    .res_img_02 img 
+    {width: 100%; height: auto;}
+    
+    .box_m_01
+    {width: 95%;
+    margin: 20px auto;
+    font-size: 12px;}
+    
+    .box_m_01>p:nth-child(1)
+    {width: 100%; height: 15px;
+    margin-bottom: 5px;
+    font-size: 14px; font-weight: bold; line-height: 15px;}
+    
+    .box_m_01 table
+    {width: 100%;
+    border: 1px solid #ccc;}
+    
+    .box_m_01 table tr td
+    {width: 25%; height: 20px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .box_m_01 table tr td:nth-child(1)
+    {text-align: center; font-weight: bold;
+    background-color: #f3f3f3;}
+    
+    .box_m_01 table tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .box_m_01 table tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .box_m_01 table tr:nth-child(1) td p 
+    {margin-top: 5px; margin-bottom: 5px;}
+    
+    .box_m_01 table tr:nth-child(1) td:nth-child(2) p
+    {text-indent: 5px;} 
+    
+    .box_m_01 table tr:nth-child(2) td p 
+    {margin-top: 5px; margin-bottom: 5px;}
+    
+    .box_m_01 table tr:nth-child(2) td:nth-child(2) p
+    {text-indent: 5px;} 
+    
+    .box_m_01 table tr:nth-child(3) td p 
+    {margin-top: 5px; margin-bottom: 5px;}
+    
+    .box_m_01 table tr:nth-child(3) td:nth-child(2) p
+    {text-indent: 5px;} 
+    
+    .box_m_01 table tr td:last-child
+    {border-right: none;}
+    
+    #mum_m_01
+    {width: 120px; height: 20px;
+    box-sizing: border-box;
+    margin-top: 5px; margin-bottom: 5px;
+    margin-left: 5px;}
+    
+    .box_m_01 table tr:nth-child(5) td
+    {width: 50%; height: 30px;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;}
+    
+    .box_m_01 table tr:nth-child(6) td
+    {width: 50%;
+    background-color: white;
+    font-weight: normal;
+    text-align: left;}
+    
+    .box_m_01 table tr:nth-child(7) td
+    {width: 50%;
+    background-color: white;
+    font-weight: normal;
+    text-align: left;}
+    
+    .box_m_01 table tr:nth-child(8) td
+    {width: 50%;
+    background-color: white;
+    font-weight: normal;
+    text-align: left;}
+    
+    .box_m_01 table tr:nth-child(6) td:nth-child(1) div 
+    {width: 95%;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    .box_m_01 table tr:nth-child(7) td:nth-child(1) div 
+    {width: 95%;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    .box_m_01 table tr:nth-child(8) td:nth-child(1) div 
+    {width: 95%;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    .box_m_01 table tr:nth-child(6) td:nth-child(2) p
+    {text-align: center;
+    height: 30px;}
+    
+    .box_m_01 table tr:nth-child(7) td:nth-child(2) p
+    {text-align: center;}
+    
+    .box_m_01 table tr:nth-child(8) td:nth-child(2) p
+    {text-align: center;}
+    
+    #chk_m_01, #chk_m_02, #chk_m_03
+    {width: 12px; height: 12px;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 5px; margin-top: 1.5px;}
+    
+    .box_m_01 table tr:nth-child(6) td:nth-child(1) div p:nth-child(2)
+    {width: calc(100% - 12px - 5px);
+    line-height: 15px;
+    float: left;}
+    
+    .box_m_01 table tr:nth-child(7) td:nth-child(1) div p:nth-child(2)
+    {width: calc(100% - 12px - 5px);
+    line-height: 15px;
+    float: left;}
+    
+    .box_m_01 table tr:nth-child(8) td:nth-child(1) div p:nth-child(2)
+    {width: calc(100% - 12px - 5px);
+    line-height: 15px;
+    float: left;}
+    
+    .box_m_01 table tr:nth-child(9) td:nth-child(1)
+    {height: 25px;
+    border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .box_m_01 table tr:nth-child(10) td:nth-child(1)
+    {border-bottom: none;
+    background-color: white;}
+    
+    .box_m_01 table tr:nth-child(10) td:nth-child(1) div
+    {margin-top: 10px; margin-bottom: 10px;
+    background-color: white;}
+    
+    .box_m_01 table tr:nth-child(10) td:nth-child(1) div p:nth-child(1)
+    {font-size: 18px; line-height: 20px;
+    margin-bottom: 5px;
+    color: red;}
+    
+    .box_m_02
+    {width: 95%;
+    margin: 10px auto;}
+    
+    .box_m_02 .person_m_01
+    {width: 100%; height: 15px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    font-size: 14px;}
+    
+    .person_m_01>p:nth-child(1)
+    {font-weight: bold;
+    margin-right: 5px; line-height: 15px;
+    float: left;}
+    
+    .person_m_01>div:nth-child(2)
+    {float: left;}
+    
+    .person_m_01>div:nth-child(2)>p
+    {font-size: 12px; line-height: 15px;
+    color: red; margin-right: 5px;
+    float: left;}
+    
+    #person_m_01
+    {width: 12px; height: 12px;
+    margin-top: 1.5px;
+    box-sizing: border-box;
+    float: left;}
+    
+    .box_m_02 table
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 12px;}
+    
+    .box_m_02 table span
+    {color: red;}
+    
+    .box_m_02 table tr td:nth-child(1)
+    {width: 25%; height: 20px;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .box_m_02 table tr:nth-child(1) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_02 table tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .box_m_02 table tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .box_m_02 table tr:nth-child(1) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_02 table tr:nth-child(2) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_02 table tr td:nth-child(2)
+    {width: 75%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    #gender_m_01
+    {width: 100px; height: 20px;
+    box-sizing: border-box;
+    margin-top: 5px; margin-bottom: 5px; margin-left: 5px;}
+    
+    .box_m_02 table tr:nth-child(3) td:nth-child(2) p, .box_m_02 table tr:nth-child(4) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_02 table tr:nth-child(3) td:nth-child(1) p, .box_m_02 table tr:nth-child(4) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_02 table tr:last-child td 
+    {border-bottom: none;}
+    
+    /**/
+    
+    .box_m_03
+    {width: 95%;
+    margin: 10px auto;}
+    
+    .box_m_03>p:nth-child(1)
+    {width: 100%; height: 15px;
+    font-size: 14px;
+    font-weight: bold; line-height: 15px;
+    margin-bottom: 5px;}
+    
+    .box_m_03 table
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 12px;}
+    
+    .box_m_03 table span
+    {color: red;}
+    
+    .box_m_03 table tr td:nth-child(1)
+    {width: 25%; height: 20px;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .box_m_03 table tr:nth-child(1) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_03 table tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .box_m_03 table tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .box_m_03 table tr:nth-child(1) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_03 table tr:nth-child(2) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_03 table tr td:nth-child(2)
+    {width: 75%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    #gender_m_02
+    {width: 100px; height: 20px;
+    box-sizing: border-box;
+    margin-top: 5px; margin-bottom: 5px; margin-left: 5px;}
+    
+    .box_m_03 table tr:nth-child(3) td:nth-child(2)>div
+    {width: calc(100% - 10px);
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    #name_m_01
+    {width: 39%; height: 20px;
+    float: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 1%;
+    font-size: 12px;}
+    
+    #name_m_02
+    {width: 60%; height: 20px;
+    float: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .box_m_03 table tr:nth-child(4) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_03 table tr:nth-child(4) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_03 table tr:nth-child(4) td
+    {border-bottom: none;}
+    
+    /**/
+    
+    .box_m_04
+    {width: 95%;
+    margin: 10px auto;
+    margin-bottom: 20px;}
+    
+    .box_m_04>p:nth-child(1)
+    {width: 100%; height: 15px;
+    font-size: 14px;
+    font-weight: bold; line-height: 15px;
+    margin-bottom: 5px;}
+    
+    .box_m_04 table
+    {width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 12px;}
+    
+    .box_m_04 table span
+    {color: red;}
+    
+    .box_m_04 table tr td:nth-child(1)
+    {width: 25%; height: 20px;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .box_m_04 table tr:nth-child(1) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_04 table tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .box_m_04 table tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .box_m_04 table tr:nth-child(1) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_04 table tr:nth-child(2) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_04 table tr td:nth-child(2)
+    {width: 75%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    #gender_m_03
+    {width: 100px; height: 20px;
+    box-sizing: border-box;
+    margin-top: 5px; margin-bottom: 5px; margin-left: 5px;}
+    
+    .box_m_04 table tr:nth-child(3) td:nth-child(2)>div
+    {width: calc(100% - 10px);
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    #name_m_03
+    {width: 39%; height: 20px;
+    float: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 1%;
+    font-size: 12px;}
+    
+    #name_m_04
+    {width: 60%; height: 20px;
+    float: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 12px;}
+    
+    .box_m_04 table tr:nth-child(4) td:nth-child(2) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 5px;}
+    
+    .box_m_04 table tr:nth-child(4) td:nth-child(1) p 
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .box_m_04 table tr:nth-child(4) td
+    {border-bottom: none;}
+    
+    .cancel_m
+    {width: 95%;
+    margin: 10px auto;}
+    
+    .cancel_m>p:nth-child(1)
+    {width: 100%; height: 15px;
+    font-size: 14px; line-height: 15px; font-weight: bold;
+    margin-bottom: 5px;}
+    
+    .cancel_m>div:nth-child(2)
+    {width: 100%; height: 100px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow-y: scroll;}
+    
+    .cancel_m>div:nth-child(2) p 
+    {width: 98%;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 20px;}
+    
+    .cancel_m>div:nth-child(2)>p:nth-child(1)
+    {margin-top: 5px;}
+    
+    .cancel_m>div:nth-child(2)>p:last-child
+    {margin-bottom: 5px;}
+    
+    .cancel_m>div:nth-child(3)
+    {width: 100%; height: 15px;
+    overflow: hidden;}
+    
+    .cancel_m>div:nth-child(3)>div
+    {float: right;}
+    
+    .cancel_m>div:nth-child(3)>div>p:nth-child(1)
+    {font-size: 12px; line-height: 15px;
+    margin-right: 5px;
+    color: red;
+    float: left;}
+    
+    #cancel_m_01
+    {width: 12px; height: 12px;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 1.5px;}
+    
+    .information_m
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+    
+    .information_m>p:nth-child(1)
+    {width: 100%; height: 15px;
+    font-size: 14px; line-height: 15px; font-weight: bold;
+    margin-bottom: 5px;}
+    
+    .information_m>div:nth-child(2)
+    {width: 100%; height: 100px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow-y: scroll;}
+    
+    .information_m>div:nth-child(2) p 
+    {width: 98%;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 20px;}
+    
+    .information_m>div:nth-child(2)>p:nth-child(1)
+    {margin-top: 5px;}
+    
+    .information_m>div:nth-child(2)>p:last-child
+    {margin-bottom: 5px;}
+    
+    .information_m>div:nth-child(3)
+    {width: 100%; height: 15px;
+    overflow: hidden;}
+    
+    .information_m>div:nth-child(3)>div
+    {float: right;}
+    
+    .information_m>div:nth-child(3)>div>p:nth-child(1)
+    {font-size: 12px; line-height: 15px;
+    margin-right: 5px;
+    color: red;
+    float: left;}
+    
+    #information_m_01
+    {width: 12px; height: 12px;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 1.5px;}
+    
+    .total_m
+    {width: 95%; height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    overflow: hidden;}
+    
+    .total_m p:nth-child(1)
+    {width: 35%; height: 40px;
+    text-align: center; line-height: 40px; font-weight: bold; font-size: 15px;
+    border-bottom: 2px solid #f49800;
+    box-sizing: border-box;
+    float: left;}
+    
+    .total_m p:nth-child(2)
+    {width: 65%; height: 40px;
+    line-height: 40px; font-weight: bold; font-size: 12px;
+    border-bottom: 2px solid #333;
+    text-indent: 5px;
+    box-sizing: border-box;
+    float: left;}
+    
+    .total_m p:nth-child(2) span
+    {font-size: 15px;
+    margin-right: 3px;
+    color: red;}
+    
+    .mobile_btn
+    {width: 170px; height: 30px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    overflow: hidden;}
+    
+    #submit_m
+    {width: 80px; height: 30px;
+    font-size: 12px; color: white;
+    border: none;
+    background-color: #3b8aff;
+    float: left;
+    margin-right: 10px;}
+    
+    #reset_m
+    {width: 80px; height: 30px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    float: left;}
+}

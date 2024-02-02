@@ -1,0 +1,87 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+.web
+{width: 550px; height: 670px;
+margin: 0 auto;
+background-color: white;}
+
+.advertisement_agree
+{width: 450px;
+margin: 0 auto;}
+
+.advertisement_agree>p
+{width: 450px; height: 100px;
+font-size: 24px; font-weight: bold; color: #333;
+text-align: center; line-height: 100px;}
+
+.advertisement_agree .box01
+{width: 450px; height: 410px;
+background-color: #f7f7f7;
+border-top: 2px solid #ccc;
+border-bottom: 2px solid #ccc;
+box-sizing: border-box;
+margin: 0 auto;
+margin-bottom: 50px;}
+
+.box01>p
+{width: 450px; height: 50px;
+font-size: 14px; font-weight: bold;
+line-height: 50px; text-indent: 20px;
+margin-bottom: 5px;}
+
+.box01 .box02
+{width: 410px; height: 330px;
+border-bottom: 1px solid #ccc;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+background-color: white;
+margin: 0 auto;}
+
+.box02 .txt01
+{width: 390px;
+margin-left: 10px; margin-top: 10px; margin-bottom: 20px;
+text-align: justify;
+font-size: 14px; line-height: 20px;}
+
+.txt01 span 
+{text-decoration: underline;
+font-weight: bold;}
+
+.box02 .txt02
+{width: 390px;
+margin-left: 10px; margin-top: 10px; margin-bottom: 20px;
+text-align: justify;
+font-size: 14px; line-height: 20px;}
+
+.box02 .txt03
+{width: 390px;
+margin-left: 10px; margin-top: 10px;
+text-align: justify;
+font-size: 14px; line-height: 20px;}
+
+.txt03 p:nth-child(1)
+{margin-bottom: 20px;}
+
+.txt03 span 
+{text-decoration: underline;
+font-weight: bold;}
+
+#close
+{width: 450px; height: 60px;
+background-color: #444444;
+color: white; font-size: 18px; font-family: SpoqaHanSansNeo;
+color: white;}

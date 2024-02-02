@@ -1,0 +1,59 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+.mobile
+{width: 100%; height: 100vh;
+overflow: hidden;
+background-color: rgba(0, 0, 0, 0.34);
+display: block;
+display: flex;
+justify-content: center;
+align-items: center;}
+
+.email_m
+{width: 95%;
+background-color: white;
+border-radius: 10px;}
+
+.email_m .icon_m
+{width: 75px; height: 56px;
+margin: 0 auto;
+margin-top: 20px;
+margin-bottom: 20px;}
+
+.icon_m img
+{width: 100%; height: auto;}
+
+.email_m>p:nth-child(2)
+{width: 100%; 
+font-size: 14px; text-align: center; 
+line-height: 20px; font-weight: bold;
+margin-bottom: 20px;}
+
+.email_m>p:nth-child(3)
+{width: 95%;
+margin: 0 auto;
+line-height: 20px; font-size: 12px;
+margin-bottom: 20px;}
+
+#email_m_btn
+{width: 95%; height: 40px;
+background-color: #333;
+border: none;
+font-size: 14px;
+font-family: SpoqaHanSansNeo;
+color: white;
+margin-bottom: 20px; margin-left: 2.5%;
+border-radius: 5px;}
+

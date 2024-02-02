@@ -1,0 +1,109 @@
+*{margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+
+.join_box .pop_up_ex
+{width: 480px; height: 524px;
+background-color: white;
+border: 1px solid #ccc;
+box-sizing: border-box;
+position: absolute;
+top: 50%; left: 50%;
+margin-top: -262px; margin-left: -240px;
+overflow: hidden;
+display: none;}
+
+
+#btn01, #btn02, #btn03, #btn04 {display: none;}
+#btn05, #btn06, #btn07, #btn08 {display: none;}
+#btn09, #btn10, #btn11, #btn12 {display: none;}
+#btn13, #btn14, #btn15, #btn16 {display: none;}
+
+
+.pop_up_ex .pop_up
+{width: 400px;
+margin: 0 auto;}
+
+.pop_up>p:nth-child(1)
+{width: 400px; height: 80px;
+font-size: 32px; font-weight: bold;
+text-align: center; line-height: 80px;}
+
+.pop_up>p:nth-child(2)
+{width: 400px; height: 20px;
+font-size: 14px; line-height: 20px;
+margin-bottom: 10px;}
+
+.pop_up .line03
+{width: 410px; height: 2px;
+background-color: #ccc;}
+
+.pop_up .character_box
+{width: 410px; height: 320px;
+background-color: #f7f7f7;
+overflow: auto;}
+
+.character_box .line_c_01
+{width: 380px; height: 80px;
+overflow: hidden;
+margin-left: 8px;
+margin-top: 20px;
+margin-bottom: 20px;}
+
+.line_c_01 label 
+{width: 80px; height: 80px;
+float: left;
+margin-right: 20px;}
+
+.line_c_01 label:last-child
+{margin-right: 0;}
+
+.character_box .line_c_02
+{width: 380px; height: 80px;
+margin-left: 8px;
+overflow: hidden;
+margin-bottom: 20px;}
+
+.line_c_02 label
+{width: 80px; height: 80px;
+float: left;
+margin-right: 20px;}
+
+.line_c_02 label:last-child
+{margin-right: 0;}
+
+.character_box .line_c_03,.character_box .line_c_04
+{width: 380px; height: 80px;
+margin-left: 8px;
+overflow: hidden;
+margin-bottom: 20px;}
+
+.line_c_03 label, .line_c_04 label
+{width: 80px; height: 80px;
+float: left;
+margin-right: 20px;}
+
+.line_c_03 label:last-child, .line_c_04 label:last-child
+{margin-right: 0;}
+
+.character_box .line_c_03,.character_box .line_c_04
+{width: 380px; height: 80px;
+overflow: hidden;
+margin-bottom: 20px;}
+
+.line_c_03 label:last-child, .line_c_04 label:last-child
+{margin-right: 0;}
+
+.pop_up .line04
+{width: 410px; height: 2px;
+background-color: #ccc;
+margin-bottom: 20px;}
+
+#btn_c
+{width: 410px; height: 50px;
+background-color: #333; color: white;
+margin-bottom: 20px;
+text-align: center; font-size: 18px; line-height: 50px;
+font-weight: bold;}

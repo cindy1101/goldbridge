@@ -1,0 +1,120 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body
+{font-family: SpoqaHanSansNeo;}
+
+.mobile
+{width: 100%; height: 100vh;
+overflow: hidden;}
+
+.find_id_m_top
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.find_id_m_top a:nth-child(1)
+{width: 30px; height: 30px;
+text-align: center; line-height: 30px; font-size: 18px;
+margin-top: 5px; margin-right: 5px;
+color: #0d75bc;
+float: left;}
+
+.find_id_m_top>p:nth-child(2)
+{font-weight: bold; line-height: 40px;
+float: left;}
+
+.find_id_m_top a:nth-child(3)
+{width: 30px; height: 30px;
+margin-top: 5px; margin-right: 5px;
+float: right;}
+
+.find_id_m_top a:nth-child(3) img 
+{width: 100%; height: 100%;}
+
+.find_id_line_m
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-bottom: 20px;}
+
+.find_id_menu_m
+{width: 95%; height: 40px;
+margin: 0 auto;
+overflow: hidden;
+font-size: 14px; text-align: center; line-height: 40px;
+margin-bottom: 20px;}
+
+.find_id_menu_m a p 
+{width: 50%; height: 40px;
+float: left;
+border-bottom: 2px solid #ccc;
+box-sizing: border-box;
+color: #333;}
+
+.find_id_menu_m a:nth-child(1) p
+{border-bottom: 2px solid #333;
+box-sizing: border-box;
+font-weight: bold;} 
+
+.mobile>p
+{width: 95%; height: 15px;
+font-size: 12px; line-height: 15px;
+margin: 0 auto;
+margin-bottom: 10px;}
+
+.find_id_box_m_01
+{width: 95%; height: 40px;
+margin: 0 auto;
+overflow: hidden;
+margin-bottom: 5px;}
+
+#korea_m
+{width: 29%; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;
+margin-right: 1%;}
+
+#phone_num_m
+{width: 70%; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;
+text-indent: 14px;}
+
+.find_id_box_m_02
+{width: 95%; height: 40px;
+margin: 0 auto;
+overflow: hidden;
+margin-bottom: 50px;}
+
+#certification_m
+{width: 60%; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;
+margin-right: 1%;
+text-indent: 14px;}
+
+#certification_btn_m
+{width: 39%; height: 40px;
+background-color: #333;
+border: none;
+color: white;
+font-size: 14px; text-align: center; line-height: 40px;
+font-family: SpoqaHanSansNeo;
+float: left;}
+
+#find_id_m
+{width: 95%; height: 40px;
+margin-left: 2.5%;
+background-color: #333;
+font-family: SpoqaHanSansNeo;
+border: none;
+color: white; font-size: 14px; line-height: 40px;}

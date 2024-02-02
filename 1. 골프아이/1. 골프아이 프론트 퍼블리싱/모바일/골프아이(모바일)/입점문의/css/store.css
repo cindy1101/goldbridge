@@ -1,0 +1,195 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body
+{font-family: SpoqaHanSansNeo;}
+
+.mobile
+{width: 100%; height: 100vh;
+overflow: hidden;
+overflow-y: scroll;}
+
+.store_m_top
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.store_m_top a:nth-child(1)
+{width: 30px; height: 30px;
+text-align: center; line-height: 30px; font-size: 18px;
+margin-top: 5px; margin-right: 5px;
+color: #0d75bc;
+float: left;}
+
+.store_m_top>p:nth-child(2)
+{font-weight: bold; line-height: 40px;
+float: left;}
+
+.store_m_top a:nth-child(3)
+{width: 30px; height: 30px;
+margin-top: 5px; margin-right: 5px;
+float: right;}
+
+.store_m_top a:nth-child(3) img 
+{width: 100%; height: 100%;}
+
+.store_line01
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-bottom: 10px;}
+
+.store_img
+{width: 95%;
+margin: 0 auto;
+margin-bottom: 10px;}
+
+.store_img img
+{width: 100%; height: auto;}
+
+.store_txt_m_01
+{width: 95%;
+margin: 0 auto;
+background-color: #f3f3f3;
+margin-bottom: 20px;}
+
+.store_txt_m_01 div
+{width: 95%;
+margin: 0 auto;
+padding-top: 10px; padding-bottom: 10px;
+font-size: 12px; line-height: 20px; text-align: justify;}
+
+.store_txt_m_02
+{width: 95%;
+margin: 0 auto;
+margin-bottom: 20px;}
+
+.store_txt_m_02>p:nth-child(1)
+{width: 100%; height: 20px;
+line-height: 20px; text-align: center;
+margin-bottom: 5px;
+font-size: 14px; font-weight: bold;}
+
+.store_txt_m_02 .agree_m_01
+{width: 100%;
+border-top: 2px solid #f49800;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.agree_m_01 p 
+{width: 95%;
+margin: 0 auto;
+font-size: 12px; line-height: 20px; text-align: justify;}
+
+.agree_chk_m_01
+{width: 100%; height: 15px;
+overflow: hidden;
+margin-top: 10px;}
+
+.agree_chk_m_01 p 
+{float: left;
+font-size: 12px;
+line-height: 15px;}
+
+#agree_chk_m
+{width: 12px; height: 12px;
+margin-top: 1.5px; margin-right: 5px;
+float: left;}
+
+.typing_m_01
+{width: 95%;
+margin: 0 auto;
+margin-bottom: 20px;}
+
+.typing_m_01>p:nth-child(1)
+{width: 100%; height: 15px;
+font-size: 12px; color: red; text-align: right;
+line-height: 15px;
+margin-bottom: 5px;}
+
+.typing_m_01 table
+{width: 100%;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.typing_m_01 table span 
+{color: red;}
+
+
+.typing_m_01 table tr td:nth-child(1)
+{width: 30%; height: 30px;
+text-indent: 10px;
+font-size: 12px; line-height: 30px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.typing_m_01 table tr td:nth-child(2)
+{width: 70%; height: 30px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.typing_m_01 table tr:last-child td:nth-child(1)
+{border: none;}
+
+.typing_m_01 table tr:last-child td:nth-child(2)
+{border: none;}
+
+#typing01, #typing02, #typing03, #typing04, #typing05, #typing06, #typing07, #typing08
+{width: 90%; height: 20px;
+box-sizing: border-box;
+margin-bottom: 2.5px;}
+
+.typing_m_01 table tr:nth-child(9) td:nth-child(1)
+{height: 50px;}
+
+.typing_m_01 table tr:nth-child(9) td:nth-child(2)
+{width: 70%; height: 60px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+#typing09
+{width: 90%; height: 50px;
+box-sizing: border-box;
+margin-top: 5px;
+overflow-y: scroll;}
+
+
+.typing_m_01 table tr:nth-child(10) td:nth-child(2) .file_m
+{width: 90%;
+overflow: hidden;
+margin-top: 5px;
+margin-bottom: 5px;}
+
+.file_m a, .file_m p
+{float: left;
+font-size: 12px; line-height: 20px;}
+
+.file_m a p 
+{width: 60px; height: 20px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;
+margin-right: 5px;
+color: #333;}
+
+.file_m>p:last-child
+{width: 100%;
+font-size: 12px; line-height: 20px;
+color: red;}
+
+#inquiry_m
+{width: 60%; height: 40px;
+margin-left: 20%;
+margin-bottom: 20px;
+border: none;
+font-family: SpoqaHanSansNeo;
+font-size: 14px; color: white;
+background-color: #eb3544;}

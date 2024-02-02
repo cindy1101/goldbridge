@@ -1,0 +1,899 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body {font-family: SpoqaHanSansNeo;}
+
+.mobile {display: none;}
+
+section:nth-child(1)
+{width: 100%; max-width: 1920px; min-width: 1340px;
+margin: 0 auto;}
+
+.membership_detail
+{width: 1340px;
+margin: 0 auto;
+margin-top: 50px;}
+
+.membership_detail .route_md
+{width: 1340px; height: 20px;
+font-size: 14px; line-height: 20px;
+margin-bottom: 50px; font-weight: bold;
+overflow: hidden;}
+
+.route_md a, .route_md p
+{float: left;}
+
+.route_md a:nth-child(1)
+{width: 20px; height: 20px;
+margin-right: 5px;}
+
+.route_md p {margin-right: 5px;}
+
+.membership_detail>p:nth-child(2)
+{width: 1340px; height: 30px;
+font-size: 24px; font-weight: bold; line-height: 30px;
+margin-bottom: 5px;}
+
+.membership_detail .line01
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+.membership_detail .title_md
+{width: 1340px; height: 50px;
+border-top: 2px solid #f49800;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 50px;}
+
+.title_md>p
+{font-size: 14px; line-height: 50px;
+text-indent: 20px; font-weight: bold;}
+
+.title_md span
+{color: #0d75bc;}
+
+.membership_detail .golf_course
+{width: 1340px;
+margin-bottom: 50px;}
+
+.golf_course>p:nth-child(1)
+{width: 1340px; height: 20px;
+font-size: 18px; line-height: 20px; font-weight: bold; margin-bottom: 20px;}
+
+.golf_course table
+{width: 1340px;}
+
+.golf_course table tr:nth-child(1) td
+{width: 555px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;}
+
+.golf_course table tr:nth-child(1) td:nth-child(1), .golf_course table tr:nth-child(1) td:nth-child(3)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(1) td:nth-child(2)
+{border-right: none;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 20px;}
+
+.golf_course table tr:nth-child(1) td:nth-child(4)
+{text-indent: 20px;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+.golf_course table tr:nth-child(2) td:nth-child(1), .golf_course table tr:nth-child(2) td:nth-child(3)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(2) td:nth-child(2)
+{width: 555px; height: 50px;
+border-right: none;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;
+text-indent: 20px;}
+
+.golf_course table tr:nth-child(2) td:nth-child(4)
+{width: 555px; height: 50px;
+border-right: none;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;
+text-indent: 20px;}
+
+
+.golf_course table tr:nth-child(3) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(3) td:nth-child(2)
+{width: 1110px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+line-height: 50px; font-size: 14px;} 
+
+.golf_course table tr:nth-child(3) td:nth-child(2) .map
+{width: 1070px; height: 50px;
+margin-left: 20px;
+overflow: hidden;}
+
+.map>p, .map>a
+{float: left;}
+
+.map>p {margin-right: 20px;}
+
+.map>a p
+{width: 80px; height: 30px;
+background-color: #999999;
+line-height: 30px; text-align: center;
+border-radius: 40px;
+margin-top: 10px; color: white;}
+
+.golf_course table tr:nth-child(4) td:nth-child(1), .golf_course table tr:nth-child(4) td:nth-child(3)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(4) td:nth-child(2)
+{width: 555px; height: 50px;
+border-right: none;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;
+text-indent: 20px;}
+
+.golf_course table tr:nth-child(4) td:nth-child(4)
+{width: 555px; height: 50px;
+border-right: none;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;
+text-indent: 20px;}
+
+.golf_course table tr:nth-child(5) td:nth-child(1)
+{width: 115px; 
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(5) td:nth-child(2)
+{width: 1110px; 
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 20px;} 
+
+.golf_course table tr:nth-child(5) td:nth-child(2) .introduce
+{width: 1070px;
+margin-left: 20px; margin-top: 20px; margin-bottom: 20px;}
+
+.golf_course table tr:nth-child(6) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(6) td:nth-child(2)
+{width: 1110px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+line-height: 50px; font-size: 14px;} 
+
+.golf_course table tr:nth-child(6) td:nth-child(2) p
+{width: 1070px; height: 40px;
+margin-top: 20px; margin-bottom: 20px; margin-left: 20px;}
+
+.golf_course table tr:nth-child(7) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(7) td:nth-child(2)
+{width: 1110px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+line-height: 50px; font-size: 14px;} 
+
+.golf_course table tr:nth-child(7) td:nth-child(2) .web
+{width: 1070px; height: 50px;
+margin-left: 20px;
+overflow: hidden;}
+
+.web>p, .web>a
+{float: left;}
+
+.web>p {margin-right: 20px;}
+
+.web>a p 
+{width: 80px; height: 30px;
+border-radius: 40px;
+line-height: 30px; text-align: center;
+background-color: #999999; color: white;
+margin-top: 10px;}
+
+.membership_detail .fee
+{width: 1340px;
+margin-bottom: 100px;}
+
+.fee>p:nth-child(1)
+{width: 1340px; height: 20px;
+font-size: 18px; line-height: 20px; font-weight: bold; margin-bottom: 20px;}
+
+.fee table
+{width: 1340px;}
+
+.fee table tr:nth-child(1) td
+{width: 175px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;
+background-color: #f3f3f3;}
+
+.fee table tr:nth-child(1) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.fee table tr:nth-child(2) td
+{width: 175px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px;}
+
+.fee table tr:nth-child(2) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold;}
+
+.fee table tr:nth-child(3) td
+{width: 175px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px;}
+
+.fee table tr:nth-child(3) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold;}
+
+.fee table tr:nth-child(4) td
+{width: 175px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px;}
+
+.fee table tr:nth-child(4) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold;}
+
+
+.fee table tr:nth-child(5) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold; text-align: center; font-size: 14px;}
+
+.fee table tr:nth-child(5) td:nth-child(2)
+{width: 1225px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.fee table tr:nth-child(5) td:nth-child(2)>div
+{width: 1185px; 
+margin-left: 20px; margin-top: 20px; margin-bottom: 20px;
+font-size: 14px; line-height: 20px;}
+
+.fee table tr:nth-child(6) td:nth-child(1),.fee table tr:nth-child(6) td:nth-child(3)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold; text-align: center; font-size: 14px;}
+
+.fee table tr:nth-child(6) td:nth-child(2),.fee table tr:nth-child(6) td:nth-child(4)
+{width: 535px; height: 50px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-indent: 20px; line-height: 50px;}
+
+.fee table tr:nth-child(6) td:nth-child(4)
+{border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.membership_detail .btn
+{width: 240px; height: 40px;
+margin: 0 auto;
+margin-bottom: 100px;
+overflow: hidden;}
+
+.btn a {float: left;}
+
+.btn a p 
+{width: 110px; height: 40px;
+background-color: #ff1626;
+color: white; font-size: 14px; line-height: 40px; text-align: center;}
+
+.btn a:nth-child(2) p
+{margin-left: 20px;
+background-color: #3b8aff;} 
+
+
+@media all and (max-width:768px)
+{
+
+section:nth-child(1) {display: none;}
+
+.mobile
+{width: 100%; height: 100vh;
+display: block;
+overflow-y: scroll;}
+
+.rout_mobile
+{width: 95%; height: 40px;
+overflow: hidden;
+margin: 0 auto;}
+
+.rout_mobile>a:nth-child(1)
+{width: 30px; height: 30px;
+text-align: center; line-height: 30px; font-size: 18px;
+margin-top: 5px; margin-right: 5px;
+color: #0d75bc;
+float: left;}
+
+.rout_mobile p:nth-child(2)
+{font-weight: bold;
+line-height: 40px;
+float: left;}
+
+.rout_mobile .rout_icon_m
+{width: 65px; height: 30px;
+float: right;}
+
+.rout_icon_m>a
+{width: 30px; height: 30px;
+margin-top: 5px;
+float: left;}
+
+.rout_icon_m a:nth-child(1)
+{margin-right: 5px;}
+
+.rout_icon_m a img
+{width: 100%; height: 100%;}
+
+.detail_line_01
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-bottom: 10px;}
+
+.detail_txt_m_01
+{width: 95%; height: 20px;
+margin: 0 auto;
+margin-bottom: 10px;}
+
+.detail_txt_m_01 p 
+{font-weight: bold;
+line-height: 20px; text-align: center;}
+
+.detail_line_02
+{width: 100%; height: 2px;
+background-color: #f49800;
+margin-bottom: 5px;}
+
+.detail_txt_m_02
+{width: 95%;
+margin: 0 auto;}
+
+.detail_txt_m_02 p 
+{font-size: 12px;
+font-weight: bold;
+line-height: 15px;}
+
+.detail_txt_m_02 span {color: #0d75bc;}
+
+.detail_line_03
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-top: 5px;
+margin-bottom: 10px;}
+
+/*골프장 및 회원권 정보*/
+
+.member_m_box
+{width: 95%;
+margin: 0 auto;
+margin-bottom: 20px;}
+
+.member_m_box>p:nth-child(1)
+{width: 100%; height: 15px; line-height: 15px;
+font-size: 14px; font-weight: bold;
+margin-bottom: 10px;}
+
+.member_m_box table
+{width: 100%;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.member_m_box table tr td {font-size: 11px;}
+
+.member_m_box table tr td:nth-child(1)
+{background-color: #f3f3f3;
+font-weight: bold;}
+
+.member_m_box table tr:nth-child(1) td:nth-child(1)
+{width: 20%; height: 30px;
+border-top: 2px solid #f49800;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;}
+
+.member_m_box table tr:nth-child(1) td:nth-child(2)
+{width: 80%; height: 30px;
+border-top: 2px solid #f49800;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+text-indent: 5px;}
+
+.member_m_box table tr:nth-child(2) td:nth-child(1)
+{width: 20%; height: 30px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;}
+
+.member_m_box table tr:nth-child(2) td:nth-child(2)
+{width: 20%; height: 30px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-indent: 5px;}
+
+.member_m_box table tr:nth-child(2) td:nth-child(3)
+{width: 20%; height: 30px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;
+background-color: #f3f3f3;
+font-weight: bold;}
+
+.member_m_box table tr:nth-child(2) td:nth-child(4)
+{width: 40%; height: 30px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+text-indent: 5px;}
+
+.member_m_box table tr:nth-child(3) td:nth-child(1)
+{width: 20%; height: 30px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;}
+
+.member_m_box table tr:nth-child(3) td:nth-child(2)
+{width: 80%; height: 30px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+text-indent: 5px;}
+
+.member_m_box table tr:nth-child(4) td:nth-child(1)
+{width: 20%; height: 30px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;}
+
+.member_m_box table tr:nth-child(4) td:nth-child(2)
+{width: 80%; height: 30px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.member_m_box table tr:nth-child(4) td:nth-child(2) div 
+{margin: 5px 5px;}
+
+.member_m_box table tr:nth-child(4) td:nth-child(2) div p:nth-child(1)
+{line-height: 15px;
+margin-bottom: 5px;}
+
+.member_m_box table tr:nth-child(4) td:nth-child(2) div a:nth-child(2) p
+{width: 70px; height: 20px; line-height: 20px; color: #333;
+background-color: #ccc; text-align: center;
+border-radius: 10px;}
+
+.member_m_box table tr:nth-child(5) td:nth-child(1)
+{width: 20%; height: 40px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;}
+
+.member_m_box table tr:nth-child(5) td:nth-child(2)
+{width: 30%; height: 40px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-indent: 5px;}
+
+.member_m_box table tr:nth-child(5) td:nth-child(3)
+{width: 20%; height: 40px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;
+background-color: #f3f3f3;
+font-weight: bold;}
+
+.member_m_box table tr:nth-child(5) td:nth-child(4)
+{width: 30%; height: 40px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+text-indent: 5px;}
+
+.member_m_box table tr:nth-child(6) td:nth-child(1)
+{width: 20%; height: 30px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;}
+
+.member_m_box table tr:nth-child(6) td:nth-child(2)
+{width: 80%; height: 30px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.member_m_box table tr:nth-child(6) td:nth-child(2) div 
+{margin: 5px 5px;}
+
+.member_m_box table tr:nth-child(6) td:nth-child(2) div p:nth-child(1)
+{line-height: 15px;
+text-align: justify;}
+
+
+.member_m_box table tr:nth-child(7) td:nth-child(1)
+{width: 20%; height: 40px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;}
+
+.member_m_box table tr:nth-child(7) td:nth-child(2)
+{width: 80%; height: 40px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.member_m_box table tr:nth-child(7) td:nth-child(2) div 
+{margin: 5px 5px;}
+
+.member_m_box table tr:nth-child(7) td:nth-child(2) div p:nth-child(1)
+{line-height: 15px;}
+
+.member_m_box table tr:nth-child(8) td:nth-child(1)
+{width: 20%; height: 30px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;}
+
+.member_m_box table tr:nth-child(8) td:nth-child(2)
+{width: 80%; height: 30px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.member_m_box table tr:nth-child(8) td:nth-child(2) div 
+{margin: 5px 5px;}
+
+.member_m_box table tr:nth-child(8) td:nth-child(2) div p:nth-child(1)
+{line-height: 15px;
+margin-bottom: 5px;}
+
+.member_m_box table tr:nth-child(8) td:nth-child(2) div a:nth-child(2) p
+{width: 70px; height: 20px; line-height: 20px; color: #333;
+background-color: #ccc; text-align: center;
+border-radius: 10px;}
+
+/*골프장 및 회원권 정보*/
+
+.greenfee_mobile
+{width: 95%;
+margin: 0 auto;
+margin-bottom: 20px;}
+
+.greenfee_mobile>p:nth-child(1)
+{width: 100%; height: 15px; line-height: 15px;
+font-size: 14px; font-weight: bold;
+margin-bottom: 10px;}
+
+.greenfee_mobile table
+{width: 100%;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.greenfee_mobile table tr td {font-size: 11px;}
+
+.greenfee_mobile table tr td:nth-child(1)
+{width: 20%; height: 30px;
+text-align: center;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+font-weight: bold;
+background-color: #f3f3f3;}
+
+.greenfee_mobile table tr td:nth-child(2)
+{width: 26.666666%; height: 30px;
+text-align: center;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.greenfee_mobile table tr td:nth-child(3)
+{width: 26.666666%; height: 30px;
+text-align: center;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.greenfee_mobile table tr td:nth-child(4)
+{width: 26.666666%; height: 30px;
+text-align: center;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.greenfee_mobile table tr:nth-child(1) td:nth-child(1)
+{width: 20%; height: 40px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.greenfee_mobile table tr:nth-child(1) td:nth-child(2)
+{width: 26.666666%; height: 40px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-weight: bold;
+background-color: #f3f3f3;}
+
+.greenfee_mobile table tr:nth-child(1) td:nth-child(3)
+{width: 26.666666%; height: 40px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-weight: bold;
+background-color: #f3f3f3;}
+
+.greenfee_mobile table tr:nth-child(1) td:nth-child(4)
+{width: 26.666666%; height: 40px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-weight: bold;
+background-color: #f3f3f3;}
+
+.greenfee_mobile table tr:nth-child(7) td:nth-child(1)
+{width: 26.666666%; height: 40px;}
+
+.greenfee_mobile table tr:nth-child(8) td:nth-child(1)
+{width: 26.666666%; height: 40px;}
+
+.greenfee_mobile table tr:nth-child(9) td:nth-child(2)
+{border-right: none;}
+
+.greenfee_mobile table tr:nth-child(9) td:nth-child(2) div
+{margin: 5px 5px;
+text-align: justify;
+line-height: 15px;}
+
+.greenfee_mobile table tr:nth-child(10) td:nth-child(3)
+{width: 20%;
+background-color: #f3f3f3;
+font-weight: bold;}
+
+
+
+/*btn*/
+.detail_m_btn
+{width: 50%; height: 30px;
+overflow: hidden;
+margin: 0 auto;}
+
+.detail_m_btn a 
+{width: 49%; height: 30px;
+font-size: 12px; line-height: 30px; text-align: center;
+float: left;
+background-color: #0d75bc;}
+
+.detail_m_btn a:nth-child(1)
+{margin-right: 2%;
+background-color: #ff1626;
+color: white;}
+
+.detail_m_btn a:nth-child(2)
+{background-color: #3b8aff;
+color: white;}
+
+
+
+.footer_m
+{width: 100%;
+margin-top: 20px;}
+
+.footer_m .footer_top_m
+{width: 100%; height: 40px;
+background-color: #333;}
+
+.footer_top_m .sns_m
+{width: 150px; height: 30px;
+margin: 0 auto;
+padding-top: 5px;}
+
+.sns_m a 
+{width: 30px; height: 30px;
+float: left;
+margin-right: 10px;}
+
+.sns_m a:last-child {margin-right: 0;}
+
+.sns_m a img
+{width: 100%; height: 100%;}
+
+.footer_m .footer_mid_m
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.footer_mid_m ul
+{overflow: hidden;}
+
+.footer_mid_m ul a li
+{height: 20px; line-height: 20px;
+float: left; color: #333; font-weight: bold;
+font-size: 10px;}
+
+.footer_mid_m ul a:nth-child(1) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(2) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(3) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(4) li
+{color: red;
+margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(5) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(6) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(7) li
+{margin-right: 5px;}
+
+
+.footer_m .footer_line_m_02
+{width: 100%; height: 1px;
+background-color: #ccc;}
+
+.footer_m .footer_bottom_ex_m
+{width: 100%;
+background-color: #f3f3f3;
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 12px;
+line-height: 20px;}
+
+.footer_bottom_ex_m .footer_bottom_m
+{width: 95%;
+margin: 0 auto;}
+
+.footer_bottom_m a {color:#333; font-weight: bold;}
+
+.footer_bottom_m>p:nth-child(1)
+{font-size: 18px;
+font-weight: bold;
+margin-bottom: 5px;}
+
+.footer_bottom_m .footer_box01
+{width: 100%;}
+
+.footer_box01>p
+{float: left;}
+
+.footer_box01>p:nth-child(1)
+{margin-right: 2px;}
+
+.footer_bottom_m .footer_box02
+{width: 100%;}
+
+.footer_box02>p
+{float: left;}
+
+.footer_box02>p:nth-child(1)
+{margin-right: 2px;}
+
+.footer_bottom_ex_m>a p
+{width: 200px; height: 30px;
+border: 1px solid #333;
+background-color: white;
+margin: 0 auto;
+margin-top: 10px;
+font-size: 14px; line-height: 30px; text-align: center;
+color: #333;}
+
+.footer_bottom_ex_m>a span
+{color: #0d75bc;
+font-weight: bold;}
+
+}
+
+@media all and (min-width:601px) and (max-width:768px)
+{
+    .footer_m .footer_mid_m
+    {width: 95%; height: 20px;
+    margin: 5px auto;}
+
+}

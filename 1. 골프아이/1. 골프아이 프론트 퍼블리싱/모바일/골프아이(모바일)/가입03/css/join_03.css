@@ -1,0 +1,94 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body
+{font-family: SpoqaHanSansNeo;}
+
+.mobile
+{width: 100%; height: 100vh;
+overflow: hidden;}
+
+.join_m_top
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.join_m_top a:nth-child(1)
+{width: 30px; height: 30px;
+text-align: center; line-height: 30px; font-size: 18px;
+margin-top: 5px; margin-right: 5px;
+color: #0d75bc;
+float: left;}
+
+
+.join_m_top a:nth-child(2)
+{width: 30px; height: 30px;
+margin-top: 5px; margin-right: 5px;
+float: right;}
+
+.join_m_top a:nth-child(2) img 
+{width: 100%; height: 100%;}
+
+.join_line01
+{width: 100%; height: 1px;
+background-color: #ccc;}
+
+.img
+{width: 95%; height: 50px;
+margin: 0 auto;
+margin-top: 50px;
+margin-bottom: 20px;}
+
+.img img
+{width: 50px; height: 50px;
+margin: 0 auto;}
+
+.mobile>p
+{width: 95%;
+margin: 0 auto;
+text-align: center;
+margin-bottom: 20px;}
+
+.mobile span
+{font-weight: bold;}
+
+.txt_box_m_ex
+{width: 95%; height: 60px;
+margin: 0 auto;
+border: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+margin-bottom: 20px;}
+
+.txt_box_m_ex .txt_box_m
+{width: 90%; height: 40px;
+margin: 10px auto;
+font-size: 14px; line-height: 20px;}
+
+
+.information_m
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.information_m a p 
+{width: 49%; height: 40px;
+color: #333;
+border: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+font-size: 14px; text-align: center; line-height: 40px;
+float: left;}
+
+.information_m a:nth-child(1) p
+{margin-right: 1%;}
+
+.information_m a:nth-child(2) p
+{background-color: #333;
+color: white;
+border: none;}

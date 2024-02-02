@@ -1,0 +1,169 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+.mobile
+{width: 100%; height: 100vh;
+display: block;
+overflow: hidden;
+overflow-y: scroll;}
+
+.consulting_m_top
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.consulting_m_top a:nth-child(1)
+{width: 30px; height: 30px;
+text-align: center; line-height: 30px; font-size: 18px;
+margin-top: 5px; margin-right: 5px;
+color: #0d75bc;
+float: left;}
+
+.consulting_m_top>p:nth-child(2)
+{font-weight: bold; line-height: 40px;
+float: left;}
+
+.consulting_m_top a:nth-child(3)
+{width: 30px; height: 30px;
+margin-top: 5px; margin-right: 5px;
+float: right;}
+
+.consulting_m_top a:nth-child(3) img 
+{width: 100%; height: 100%;}
+
+.consulting_m_line01
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-bottom: 10px;}
+
+.txt_con_m_01
+{width: 95%;
+margin: 0 auto;
+background-color: #f3f3f3;
+margin-bottom: 10px;}
+
+.txt_con_m_01 div
+{width: 95%;
+margin: 0 auto;
+padding-top: 10px; padding-bottom: 10px;}
+
+.txt_con_m_01 div p 
+{font-size: 12px; line-height: 20px;}
+
+.agree_m_01
+{width: 95%;
+margin: 0 auto;
+margin-bottom: 10px;}
+
+.agree_m_01>p:nth-child(1)
+{text-align: center;
+font-size: 14px; font-weight: bold; line-height: 20px;
+margin-bottom: 5px;}
+
+.agree_m_01 .agree_txt_m_01
+{width: 100%;
+border-top: 2px solid #f49800;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 10px;}
+
+.agree_txt_m_01 div
+{width: 95%;
+margin: 0 auto;
+padding-top: 5px;
+padding-bottom: 5px;}
+
+.agree_txt_m_01 div p
+{font-size: 12px; line-height: 20px;}
+
+.agree_m_01 .agree_chk_m
+{width: 100%; height: 20px;
+margin-top: 5px;
+overflow: hidden;}
+
+.agree_chk_m p
+{font-size: 12px; line-height: 20px;
+float: left;}
+
+#agree_chk_m
+{width: 12px; height: 12px;
+margin-top: 4px; margin-right: 5px;
+float: left;}
+
+.agree_m_02
+{width: 95%;
+margin: 0 auto;
+margin-bottom: 10px;}
+
+.agree_m_02>p:nth-child(1)
+{width: 100%;
+font-size: 12px;
+margin-bottom: 5px;
+color: red;
+line-height: 20px;}
+
+#select_m
+{width: 100%; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.agree_m_03
+{width: 95%;
+margin: 0 auto;
+margin-bottom: 20px;}
+
+.agree_m_03>p
+{width: 100%;
+font-size: 12px; line-height: 20px;
+color: red;
+margin-bottom: 5px;}
+
+.agree_m_03 div:nth-child(2), .agree_m_03 div:nth-child(3), .agree_m_03 div:nth-child(4), .agree_m_03 div:nth-child(5)
+{width: 100%; height: 30px;
+margin-bottom: 5px;
+overflow: hidden;}
+
+.agree_m_03 div p 
+{width: 29%;
+font-size: 12px; line-height: 30px;
+margin-right: 1%;
+float: left;}
+
+.agree_m_03 div span {color: red;}
+
+#call_m_01, #call_m_02, #call_m_03, #call_m_04
+{width: 70%; height: 30px;
+float: left;
+box-sizing: border-box;}
+
+.agree_m_03 div:nth-child(6)
+{width: 100%; height: 60px;
+overflow: hidden;}
+
+.agree_m_03 div:nth-child(6) p
+{width: 29%; height: 60px; 
+line-height: 60px;}
+
+#call_m_05
+{width: 70%; height: 60px;
+float: left;
+box-sizing: border-box;}
+
+#consulting_m_btn
+{width: 95%; height: 40px;
+background-color: #0d75bc;
+margin-left: 2.5%;
+font-size: 14px; font-family: SpoqaHanSansNeo;
+color: white; border: none;}

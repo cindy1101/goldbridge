@@ -1,0 +1,179 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body {font-family: SpoqaHanSansNeo;}
+
+.mobile
+{width: 100%; height: 100vh;
+display: block;
+overflow: hidden;
+overflow-y: scroll;}
+
+.name_m_top
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.name_m_top a:nth-child(1)
+{width: 30px; height: 30px;
+text-align: center; line-height: 30px; font-size: 18px;
+margin-top: 5px; margin-right: 5px;
+color: #0d75bc;
+float: left;}
+
+.name_m_top>p:nth-child(2)
+{font-weight: bold; line-height: 40px;
+float: left;}
+
+.name_m_top a:nth-child(3)
+{width: 30px; height: 30px;
+margin-top: 5px; margin-right: 5px;
+float: right;}
+
+.name_m_top a:nth-child(3) img 
+{width: 100%; height: 100%;}
+
+.name_line_m_01
+{width: 100%; height: 1px;
+background-color: #ccc;
+margin-bottom: 10px;}
+
+.name_m_box_ex
+{width: 95%;
+margin: 0 auto;
+margin-bottom: 30px;}
+
+.name_m_box_ex>p:nth-child(1)
+{width: 100%;
+line-height: 20px; font-size: 12px;
+margin-bottom: 5px;}
+
+#name_m_01
+{width: 100%; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+text-indent: 5px;
+margin-bottom: 5px;}
+
+#man_m, #woman_m
+{display: none;}
+
+.name_m_box_ex .namebox01
+{width: 100%; height: 30px;
+overflow: hidden;
+margin-bottom: 5px;}
+
+#name_m_02
+{width: 39%; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-right: 2%;
+float: left;}
+
+.namebox01 .gender_mobile_box
+{width: 59%; height: 30px;
+float: left;}
+
+#man_m:checked ~ .gender_mobile_box label:nth-child(1) p 
+{background-color: #0d75bc; color: white;
+border: none;}
+
+#woman_m:checked ~ .gender_mobile_box label:nth-child(2) p 
+{background-color: #0d75bc; color: white;
+border: none;}
+
+.gender_mobile_box label p
+{width: 40px; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 12px; text-align: center; line-height: 30px; float: left;}
+
+.gender_mobile_box label:nth-child(1) p
+{margin-right: 5px;}
+
+#certification_m
+{width: 100%; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+text-indent: 5px;}
+
+.name_m_box_ex .namebox02
+{width: 100%; height: 30px;
+overflow: hidden;
+margin-bottom: 5px;}
+
+.namebox02>p
+{width: 29%; height: 30px;
+font-size: 14px;
+text-indent: 5px; line-height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-right: 2%;
+float: left;}
+
+.namebox02 .day_m
+{width: 69%; height: 30px;
+float: left;}
+
+.day_m div 
+{width: 33.33333%; height: 30px;
+float: left;
+font-size: 12px;}
+
+#day_text_01, #day_text_02, #day_text_03
+{width: calc(100% - 15px); height: 30px;
+float: left;
+border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.day_m div>p 
+{width: 15px; height: 30px;
+line-height: 30px; text-align: center;
+float: left;}
+
+.name_m_box_ex .namebox03
+{width: 100%; height: 30px;
+overflow: hidden;
+margin-bottom: 5px;}
+
+#name_m_03
+{width: 29%; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-right: 2%;
+float: left;}
+
+.namebox03 .phonenum_box_m
+{width: 69%; height: 30px;
+float: left;}
+
+#phonenum_m
+{width: 59%; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-right: 2%;
+float: left;
+text-indent: 5px;}
+
+#certi_m_btn
+{width: 39%; height: 30px;
+border: none;
+background-color: #0d75bc;
+color: white; font-size: 12px;}
+
+#change_m
+{width: 95%; height: 40px;
+background-color: #333;
+box-sizing: border-box;
+margin-left: 2.5%;
+color: white; font-size: 14px;
+font-family: SpoqaHanSansNeo;
+border: none;}
+

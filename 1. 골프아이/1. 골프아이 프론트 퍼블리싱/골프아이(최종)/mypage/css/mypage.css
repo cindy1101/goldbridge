@@ -1,0 +1,1020 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body {font-family: SpoqaHanSansNeo;}
+
+.mobile {display: none;}
+
+.web
+{width: 100%; max-width: 1920px; min-width: 1340px;
+margin: 0 auto;}
+
+.web .mypage
+{width: 1340px;
+margin: 0 auto; margin-top: 50px;
+overflow: hidden;}
+
+.mypage .mypage_left
+{width: 240px; height: 260px;
+margin-right: 60px;
+float: left;}
+
+.mypage_left .mypage_title01
+{width: 240px; height: 50px;
+margin-bottom: 10px;
+border: 1px solid #0d75bc;
+background-color: white;
+box-sizing: border-box;
+overflow: hidden;}
+
+.mypage_title01 p
+{float: left;
+line-height: 50px; text-indent: 20px;
+font-size: 20px; font-weight: bold;
+color: #0d75bc;}
+
+.mypage_title01 div
+{width: 20px; height: 20px;
+float: right; margin-right: 20px;
+margin-top: 15px;}
+
+.mypage_right .mypage_menu
+{width: 240px; height: 200px;}
+
+.mypage_menu a li
+{width: 240px; height: 50px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+overflow: hidden;
+color: #333;
+font-weight: bold;}
+
+.mypage_menu a li
+{border-bottom: none;}
+
+.mypage_menu a:nth-child(4) li
+{border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.mypage_menu a:nth-child(1) li
+{background-color: #0d75bc;
+color: white;}
+
+.mypage_menu a li p:nth-child(1)
+{float: left;
+text-indent: 20px;
+line-height: 50px;}
+
+.mypage_menu a li p:nth-child(2)
+{float: right;
+margin-right: 20px;
+line-height: 50px;}
+
+.mypage .mypage_right
+{width: 1040px; 
+float: left;
+margin-bottom: 100px;}
+
+.mypage_right .mypage_rout
+{width: 1040px; height: 20px;
+overflow: hidden;
+margin-bottom: 50px;}
+
+.mypage_rout div, .mypage_rout p
+{float: left;
+font-size: 14px; line-height: 20px;
+margin-right: 5px; font-weight: bold;}
+
+.mypage_rout div 
+{width: 20px; height: 20px;}
+
+.mypage_rout p:nth-child(5)
+{color: #e5004f;}
+
+.mypage_right>p
+{font-size: 24px;
+font-weight: bold;
+color: #0d75bc;
+margin-bottom: 10px;}
+
+.mypage_right .line01
+{width: 1040px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+.mypage_right .profile_box
+{width: 1040px;
+margin-bottom: 100px;}
+
+.profile_box table
+{width: 1040px;
+border-bottom: 1px solid #ccc;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 50px;}
+
+.profile_box table tr td:nth-child(1)
+{width: 120px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center; line-height: 50px;
+font-size: 14px; font-weight: bold;
+background-color: #f3f3f3;}
+
+.profile_box table tr td:nth-child(2)
+{width: 520px; 
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.profile_box table tr:nth-child(1) td:nth-child(2)
+{width: 520px; 
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+.profile_box table tr:nth-child(5) td:nth-child(2)
+{border-bottom: none;}
+
+.profile_box table tr td:nth-child(3)
+{width: 120px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center; line-height: 50px;
+font-size: 14px; font-weight: bold;
+background-color: #f3f3f3;}
+
+.profile_box table tr:nth-child(5) td:nth-child(3)
+{border-bottom: none;}
+
+.profile_box table tr:nth-child(5) td:nth-child(1)
+{border-bottom: none;}
+
+.profile_box table tr:nth-child(1) td:nth-child(1)
+{border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.profile_box table tr:nth-child(1) td:nth-child(3)
+{border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.profile_box table tr:nth-child(5) td:nth-child(2)
+{border-right: none;}
+
+.profile_box table tr:nth-child(3) td:nth-child(3)
+{border-right: none;}
+
+.profile_box table tr td:nth-child(4)
+{width: 280px; 
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.profile_box table tr:nth-child(1) td:nth-child(4)
+{width: 280px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+.profile_box table tr:nth-child(1) td:nth-child(2) .id
+{width: 520px; height: 50px;
+overflow: hidden;}
+
+.id p
+{width: 425px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 40px; text-indent: 14px;
+margin-left: 5px; margin-top: 5px;
+float: left;}
+
+.id a
+{width: 80px; height: 40px;
+float: right;
+background-color: #3b8aff;
+text-align: center; line-height: 40px; color: white;
+font-size: 14px;
+margin-top: 5px; margin-left: 5px; margin-right: 5px;}
+
+.profile_box table tr:nth-child(1) td:nth-child(4) .birthday
+{width: 270px; height: 40px;
+margin-left: 5px; font-size: 14px; line-height: 40px;
+overflow: hidden;}
+
+.birthday p
+{float: left;
+line-height: 50px;
+margin-right: 5px;}
+
+#birthday01
+{width: 85px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;
+margin-right: 5px;
+text-indent: 14px;}
+
+#birthday02, #birthday03
+{width: 40px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;
+margin-right: 5px;
+text-indent: 14px;}
+
+
+
+.profile_box table tr:nth-child(2) td:nth-child(2) .name
+{width: 510px; height: 40px;
+margin-left: 5px;
+overflow: hidden;
+font-size: 14px; line-height: 40px;}
+
+.name p
+{float: left;}
+
+.name>p:nth-child(1)
+{width: 160px; height: 40px;
+margin-right: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.name a 
+{width: 80px; height: 40px;
+margin-left: 5px; text-align: center;
+background-color: #3b8aff; color: white;
+float: right;}
+
+#man,#woman {display: none;}
+
+#man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
+{background-color: #3b8aff;
+color: white;}
+
+#man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
+{background-color: white;
+color: #333;}
+
+#woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
+{background-color: white;
+color: #333;}
+
+#woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
+{background-color: #3b8aff;
+color: white;}
+
+
+
+.profile_box table tr:nth-child(2) td:nth-child(4) .gender
+{width: 270px; height: 40px;
+margin-left: 5px;
+overflow: hidden;
+font-size: 14px; line-height: 40px;}
+
+.gender label
+{width: 60px; height: 40px;
+margin-right: 5px;
+border: 1px solid #ccc;
+background-color: white;
+box-sizing: border-box;
+float: left;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.profile_box table tr:nth-child(3) td:nth-child(2) .phone
+{width: 510px; height: 40px;
+margin-left: 5px;
+overflow: hidden;
+font-size: 14px; line-height: 40px;}
+
+.phone a
+{width: 80px; height: 40px;
+background-color: #3b8aff;
+color: white; text-align: center;
+float: right;}
+
+.phone p
+{width: 160px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;}
+
+
+.profile_box table tr:nth-child(4) td:nth-child(2)
+{width: 520px; height: 110px;}
+
+.profile_box table tr:nth-child(4) td:nth-child(2) .password
+{width: 510px; height: 100px;
+margin-left: 5px;}
+
+.password .password01
+{width: 510px; height: 30px;
+margin-bottom: 5px;
+font-size: 14px; line-height: 30px;}
+
+.password01 p
+{float: left;
+width: 120px; height: 30px;
+text-align: right;
+margin-right: 10px;}
+
+#pw01
+{width: 160px; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;}
+
+.password .password02
+{width: 510px; height: 30px;
+margin-bottom: 5px;
+font-size: 14px; line-height: 30px;}
+
+.password02 p
+{float: left;
+width: 120px; height: 30px;
+text-align: right; margin-right: 10px;}
+
+#pw02
+{width: 160px; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;}
+
+.password .password03
+{width: 510px; height: 30px;
+font-size: 14px; line-height: 30px;}
+
+.password03 p
+{float: left;
+width: 120px; height: 30px;
+text-align: right; margin-right: 10px;}
+
+#pw03
+{width: 160px; height: 30px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;}
+
+.profile_box table tr:nth-child(4) td:nth-child(4) .character div
+{width: 100px; height: 100px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 5px;
+float: left;}
+
+.character a 
+{width: 80px; height: 40px;
+float: right;
+margin-right: 20px; margin-top: 30px;
+background-color: #3b8aff; color: white;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.profile_box table tr:nth-child(5) td:nth-child(2)
+{height: 60px;}
+
+.profile_box table tr:nth-child(5) td:nth-child(2) .reception
+{width: 910px; height: 45px;
+margin-left: 5px;
+font-size: 14px;}
+
+.reception .reception01
+{width: 910px; height: 20px;
+margin-bottom: 5px;
+overflow: hidden;}
+
+.reception01 p, .reception a 
+{float: left;
+line-height: 20px;}
+
+.reception a
+{font-weight: bold;}
+
+.reception .reception02
+{width: 910px; height: 20px;
+line-height: 20px;
+overflow: hidden;}
+
+.reception02 p, .reception02 a
+{float: left;}
+
+
+.profile_box .button
+{width: 340px; height: 40px;
+margin: 0 auto;
+overflow: hidden;}
+
+.button>a
+{width: 100px; height: 40px;
+float: left; 
+background-color: red;
+color: white;
+text-align: center; font-size: 14px; line-height: 40px;}
+
+#reservation, #cancellation
+{width: 100px; height: 40px;
+float: left;
+text-align: center; font-size: 14px; line-height: 40px;}
+
+#reservation
+{background-color: #3b8aff;
+color: white; font-family: SpoqaHanSansNeo;
+border: none; margin-right: 10px;}
+
+#cancellation
+{border: 1px solid #ccc;
+box-sizing: border-box; font-family: SpoqaHanSansNeo;
+background-color: #f6f6f6;
+margin-right: 10px;}
+
+.mypage_right .golf_course
+{width: 1040px;
+overflow: hidden;}
+
+.golf_course .course_title
+{width: 1040px;
+margin-bottom: 30px;
+text-align: center;}
+
+.course_title>p:nth-child(1)
+{font-weight: bold;
+font-size: 28px;
+color: #333;
+margin-bottom: 10px;}
+
+.course_title span
+{color: #0d75bc;
+font-size: 32px;}
+
+.golf_course a 
+{width: 330px; height: 230px;
+float: left;}
+
+.golf_course a:nth-child(3)
+{margin-right: 25px;
+margin-left: 25px;}
+
+@media all and (max-width:768px)
+{   
+
+    .web {display: none;}
+
+
+    .mobile
+    {width: 100%; height: 100vh;
+    display: block;
+    overflow-y: scroll;}
+    
+    
+    .header_m
+    {width: 100%; height: 40px;
+    position: relative;}
+    
+    #menu_m {display: none;}
+    
+    .header_m .menu_m
+    {width: 50px; height: 40px;
+    float: left;}
+    
+    .menu_m img
+    {width: 30px; height: 30px;
+    margin: 0 auto;
+    margin-top: 5px;}
+    
+    .header_m .rout_m
+    {float: left;}
+    
+    .rout_m p 
+    {font-weight: bold;
+    line-height: 40px;}
+    
+    .logo_m img {width: 100%; height: auto;}
+    
+    .header_m .header_button
+    {width: 80px; height: 40px;
+    float: right;}
+    
+    .header_button .main_m, .header_button .login_m
+    {width: 40px; height: 40px;
+    float: left;}
+    
+    .main_m img, .login_m img
+    {width: 30px; height: 30px;
+    margin-top: 5px;}
+    
+    #menu_m:checked ~ .header_m .lnb_mobile
+    {left: 0;}
+    
+    .header_m .lnb_mobile
+    {width: 90%; height: 100vh;
+    position: absolute;
+    top: 40px; left: -100%;
+    background-color: bisque;
+    transition: all 0.3s;}
+    
+    .lnb_mobile .gnb_mobile
+    {width: 100%; height: 40px;
+    background-color: #0d75bc;
+    overflow: hidden;}
+    
+    .gnb_mobile ul
+    {width: calc(100% - 40px - 5px); height: 40px;
+    float: left;
+    margin-left: 5px;}
+    
+    .gnb_mobile label
+    {width: 40px; 
+    line-height: 40px; font-size: 12px; text-align: center;
+    color: white;
+    float: right;}
+    
+    .gnb_mobile ul li 
+    {float: left;
+    line-height: 40px;
+    font-size: 10px;
+    margin-right: 5px;}
+    
+    .gnb_mobile ul li a {color: white;}
+    
+    .gnb_mobile ul li:nth-child(2), .gnb_mobile ul li:nth-child(4), .gnb_mobile ul li:nth-child(6)
+    {width: 1px; height: 10px;
+    background-color: white;
+    margin-top: 15px;}
+    
+    #submenu01, #submenu02, #submenu03, #submenu04, #submenu05, #submenu06
+    {display: none;}
+    
+    .lnb_mobile .menu_mobile
+    {width: 100%; 
+    overflow-y: scroll;
+    background-color: white;
+    overflow: hidden;}
+    
+    .menu_mobile .menu_left_mobile
+    {width: 40%; 
+    float: left;}
+    
+    .menu_left_mobile label p
+    {width: 100%; height: 50px;
+    text-align: center; line-height: 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    color: #333;}
+    
+    #submenu01:checked ~ .menu_mobile label:nth-child(1) p 
+    {background-color: white;
+    color: #0d75bc;
+    border-right: none;}
+    
+    #submenu02:checked ~ .menu_mobile label:nth-child(2) p 
+    {background-color: white;
+    color: #0d75bc;
+    border-right: none;}
+    
+    #submenu03:checked ~ .menu_mobile label:nth-child(3) p 
+    {background-color: white;
+    color: #0d75bc;
+    border-right: none;}
+    
+    #submenu04:checked ~ .menu_mobile label:nth-child(4) p 
+    {background-color: white;
+    color: #0d75bc;
+    border-right: none;}
+    
+    #submenu05:checked ~ .menu_mobile label:nth-child(5) p 
+    {background-color: white;
+    color: #0d75bc;
+    border-right: none;}
+    
+    #submenu06:checked ~ .menu_mobile label:nth-child(6) p 
+    {background-color: white;
+    color: #0d75bc;
+    border-right: none;}
+    
+    #submenu01:checked ~ .menu_mobile .menu_right_mobile .japan_m {display: block;}
+    #submenu02:checked ~ .menu_mobile .menu_right_mobile .japan_m {display: none;}
+    #submenu03:checked ~ .menu_mobile .menu_right_mobile .japan_m {display: none;}
+    #submenu04:checked ~ .menu_mobile .menu_right_mobile .japan_m {display: none;}
+    #submenu05:checked ~ .menu_mobile .menu_right_mobile .japan_m {display: none;}
+    #submenu06:checked ~ .menu_mobile .menu_right_mobile .japan_m {display: none;}
+    
+    #submenu01:checked ~ .menu_mobile .menu_right_mobile .thailand_m {display: none;}
+    #submenu02:checked ~ .menu_mobile .menu_right_mobile .thailand_m {display: block;}
+    #submenu03:checked ~ .menu_mobile .menu_right_mobile .thailand_m {display: none;}
+    #submenu04:checked ~ .menu_mobile .menu_right_mobile .thailand_m {display: none;}
+    #submenu05:checked ~ .menu_mobile .menu_right_mobile .thailand_m {display: none;}
+    #submenu06:checked ~ .menu_mobile .menu_right_mobile .thailand_m {display: none;}
+    
+    #submenu01:checked ~ .menu_mobile .menu_right_mobile .vietnam_m {display: none;}
+    #submenu02:checked ~ .menu_mobile .menu_right_mobile .vietnam_m {display: none;}
+    #submenu03:checked ~ .menu_mobile .menu_right_mobile .vietnam_m {display: block;}
+    #submenu04:checked ~ .menu_mobile .menu_right_mobile .vietnam_m {display: none;}
+    #submenu05:checked ~ .menu_mobile .menu_right_mobile .vietnam_m {display: none;}
+    #submenu06:checked ~ .menu_mobile .menu_right_mobile .vietnam_m {display: none;}
+    
+    #submenu01:checked ~ .menu_mobile .menu_right_mobile .taiwan_m {display: none;}
+    #submenu02:checked ~ .menu_mobile .menu_right_mobile .taiwan_m {display: none;}
+    #submenu03:checked ~ .menu_mobile .menu_right_mobile .taiwan_m {display: none;}
+    #submenu04:checked ~ .menu_mobile .menu_right_mobile .taiwan_m {display: block;}
+    #submenu05:checked ~ .menu_mobile .menu_right_mobile .taiwan_m {display: none;}
+    #submenu06:checked ~ .menu_mobile .menu_right_mobile .taiwan_m {display: none;}
+    
+    #submenu01:checked ~ .menu_mobile .menu_right_mobile .event_m {display: none;}
+    #submenu02:checked ~ .menu_mobile .menu_right_mobile .event_m {display: none;}
+    #submenu03:checked ~ .menu_mobile .menu_right_mobile .event_m {display: none;}
+    #submenu04:checked ~ .menu_mobile .menu_right_mobile .event_m {display: none;}
+    #submenu05:checked ~ .menu_mobile .menu_right_mobile .event_m {display: block;}
+    #submenu06:checked ~ .menu_mobile .menu_right_mobile .event_m {display: none;}
+    
+    #submenu01:checked ~ .menu_mobile .menu_right_mobile .academy_m {display: none;}
+    #submenu02:checked ~ .menu_mobile .menu_right_mobile .academy_m {display: none;}
+    #submenu03:checked ~ .menu_mobile .menu_right_mobile .academy_m {display: none;}
+    #submenu04:checked ~ .menu_mobile .menu_right_mobile .academy_m {display: none;}
+    #submenu05:checked ~ .menu_mobile .menu_right_mobile .academy_m {display: none;}
+    #submenu06:checked ~ .menu_mobile .menu_right_mobile .academy_m {display: block;}
+    
+    
+    .menu_mobile .menu_right_mobile
+    {width:60%; height: 100vh;
+    float: left;}
+    
+    .menu_right_mobile .japan_m
+    {width: 100%;}
+    
+    .japan_m a li 
+    {width: 100%; height: 50px;
+    font-size: 14px; line-height: 50px;
+    text-align: center;
+    color: #333;}
+    
+    .menu_right_mobile .thailand_m
+    {width: 100%;}
+    
+    .thailand_m a li 
+    {width: 100%; height: 50px;
+    font-size: 14px; line-height: 50px;
+    text-align: center;
+    color: #333;}
+    
+    .menu_right_mobile .vietnam_m
+    {width: 100%;}
+    
+    .vietnam_m a li 
+    {width: 100%; height: 50px;
+    font-size: 14px; line-height: 50px;
+    text-align: center;
+    color: #333;}
+    
+    .menu_right_mobile .taiwan_m
+    {width: 100%;}
+    
+    .taiwan_m a li 
+    {width: 100%; height: 50px;
+    font-size: 14px; line-height: 50px;
+    text-align: center;
+    color: #333;}
+    
+    .menu_right_mobile .event_m
+    {width: 100%;}
+    
+    .event_m a li 
+    {width: 100%; height: 50px;
+    font-size: 14px; line-height: 50px;
+    text-align: center;
+    color: #333;}
+    
+    .menu_right_mobile .academy_m
+    {width: 100%;}
+    
+    .academy_m a li 
+    {width: 100%; height: 50px;
+    font-size: 14px; line-height: 50px;
+    text-align: center;
+    color: #333;}
+    
+    .profile_line_m_01
+    {width: 100%; height: 1px;
+    background-color: #ccc;
+    margin-bottom: 10px;}
+    
+    .profile_menu_m
+    {width: 95%; height: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+    
+    .profile_menu_m a p 
+    {width: 25%; height: 30px;
+    font-size: 10px; text-align: center; line-height: 30px;
+    float: left;
+    border: 1px solid #ccc;
+    border-right: none;
+    box-sizing: border-box;
+    color: #333;}
+    
+    .profile_menu_m a:nth-child(1) p
+    {background-color: #0d75bc;
+    border: none;
+    color: white;}
+
+    .profile_menu_m a:nth-child(4) p
+    {border-right: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .profile_title_m
+    {width: 95%; height: 16px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    font-weight: bold; line-height: 16px;}
+    
+    .profile_line_m_02
+    {width: 95%; height: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 5px;}
+    
+    .profile_line_m_02 div:nth-child(1)
+    {width: 30%; height: 2px;
+    background-color: #f49800;
+    float: left;}
+    
+    .profile_line_m_02 div:nth-child(2)
+    {width: 70%; height: 2px;
+    background-color: #ccc;
+    float: left;}
+    
+    .mobile table
+    {width: 95%;
+    margin: 10px auto;
+    font-size: 12px;}
+    
+    .mobile table tr td:nth-child(1)
+    {width: 20%;
+    text-align: center; font-weight: bold;
+    background-color: #f3f3f3;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .mobile table tr td:nth-child(2)
+    {width: 80%;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .mobile table tr:nth-child(1) td:nth-child(1)
+    {border-top: 2px solid #f49800;
+    box-sizing: border-box;}
+    
+    .mobile table tr:nth-child(1) td:nth-child(2)
+    {border-top: 2px solid #333;
+    box-sizing: border-box;}
+    
+    .mobile table tr:nth-child(1) td:nth-child(2) div
+    {width: 95%;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    .mobile table tr:nth-child(1) td:nth-child(2) div>p:nth-child(1)
+    {width: 70%; height: 20px;
+    border: 1px solid #ccc;
+    text-indent: 5px; line-height: 20px;
+    box-sizing: border-box;
+    margin-right: 2%;
+    float: left;}
+    
+    .mobile table tr:nth-child(1) td:nth-child(2) div>a:nth-child(2) p
+    {width: 28%; height: 20px;
+    background-color: #0d75bc;
+    color: white; text-align: center; line-height: 20px;
+    float: left;}
+    
+    .mobile table tr:nth-child(2) td:nth-child(2) div
+    {width: 95%;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    #profile01_m
+    {width: 50%; height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 22%;
+    margin-bottom: 5px;}
+    
+    .mobile table tr:nth-child(2) td:nth-child(2) div>a:nth-child(2) p
+    {width: 28%; height: 20px;
+    background-color: #0d75bc;
+    color: white; text-align: center; line-height: 20px;
+    float: left;
+    margin-bottom: 5px;}
+    
+    .mobile table tr:nth-child(3) td:nth-child(2) div
+    {width: 95%;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    #profile02_m
+    {width: 50%; height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 22%;}
+    
+    .mobile table tr:nth-child(3) td:nth-child(2) div>a:nth-child(2) p
+    {width: 28%; height: 20px;
+    background-color: #0d75bc;
+    color: white; text-align: center; line-height: 20px;
+    float: left;}
+    
+    .mobile table tr:nth-child(4) td:nth-child(2) div
+    {width: 95%;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    #day01_m
+    {width: 30%; height: 20px;
+    float: left;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    #day02_m
+    {width: 15%; height: 20px;
+    float: left;
+    margin-right: 5px; margin-left: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    #day03_m
+    {width: 15%; height: 20px;
+    float: left;
+    margin-right: 5px; margin-left: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .mobile table tr:nth-child(4) td:nth-child(2) div p 
+    {line-height: 20px;
+    float: left;}
+    
+    .mobile table tr:nth-child(5) td:nth-child(2) div
+    {width: 95%;
+    margin: 5px auto;
+    overflow: hidden;}
+    
+    .box05_m label 
+    {width: 20%; height: 20px;
+    float: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    line-height: 18px; text-align: center;}
+    
+    .box05_m label:nth-child(1) 
+    {margin-right: 2%;}
+    
+    #man_m, #woman_m {display: none;}
+    
+    #man_m:checked ~ table tr:nth-child(5) .box05_m label:nth-child(1)
+    {background-color: #0d75bc;
+    border: none;
+    line-height: 20px;
+    color: white;}
+    
+    #woman_m:checked ~ table tr:nth-child(5) .box05_m label:nth-child(2)
+    {background-color: #0d75bc;
+    border: none;
+    line-height: 20px;
+    color: white;}
+    
+    .mobile table tr:nth-child(6) td:nth-child(2) div
+    {width: 95%;
+    margin: 10px auto;
+    overflow: hidden;}
+    
+    .mobile table tr:nth-child(6) td:nth-child(2) div>p:nth-child(1)
+    {width: 100%; height: 12px;
+    line-height: 12px;
+    margin-bottom: 5px;}
+    
+    #pw_m_01, #pw_m_02, #pw_m_03
+    {width: 90%; height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;}
+    
+    .mobile table tr:nth-child(7) td:nth-child(2)>div
+    {width: 95%;
+    margin: 10px auto;
+    overflow: hidden;}
+    
+    .mobile table tr:nth-child(7) td:nth-child(2)>div>div:nth-child(1)
+    {width: 90px; height: 90px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;}
+    
+    .mobile table tr:nth-child(7) td:nth-child(2)>div>a:nth-child(2) p 
+    {width: 28%; height: 20px;
+    margin-top: 30px;
+    background-color: #0d75bc; color: white;
+    text-align: center; line-height: 20px;
+    float: right;}
+    
+    .mobile table tr:nth-child(8) td:nth-child(2)>div
+    {width: 95%;
+    margin: 0 auto;
+    overflow: hidden;}
+    
+    .mobile table tr:nth-child(8) td:nth-child(2)>div:nth-child(1)
+    {margin-top: 5px;
+    margin-bottom: 5px;}
+    
+    .mobile table tr:nth-child(8) td:nth-child(2)>div:nth-child(2)
+    {margin-bottom: 5px;}
+    
+    .mobile table tr:nth-child(8) td:nth-child(2)>div p
+    {line-height: 20px;}
+    
+    .mobile table tr:nth-child(8) td:nth-child(2)>div span a 
+    {font-weight: bold;
+    color: #333;}
+    
+    #sns_m, #mms_m, #email_m, #push_m
+    {width: 12px; height: 12px;
+    box-sizing: border-box;
+    margin-top: 4px;}
+    
+    .mobile_btn
+    {width: 60%; height: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 20px;}
+    
+    #btn_m_01
+    {width: 28%; height: 30px;
+    float: left;
+    border: none;
+    background-color: #3b8aff; color: white;
+    font-size: 12px; font-family: SpoqaHanSansNeo;}
+    
+    #btn_m_02
+    {width: 28%; height: 30px;
+    float: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    margin-left: 2%; margin-right: 2%;
+    font-size: 12px; font-family: SpoqaHanSansNeo;}
+    
+    .mobile_btn a p 
+    {width: 40%; height: 30px;
+    float: left;
+    background-color: red; color: white;
+    text-align: center; line-height: 30px; font-size: 12px;}
+    
+    .golf_m_box
+    {width: 95%;
+    margin: 20px auto;}
+    
+    .golf_m_box>div:nth-child(1)
+    {width: 100%;
+    margin-bottom: 10px;}
+    
+    .golf_m_box>div:nth-child(1) p:nth-child(1)
+    {width: 100%; height: 20px;
+    text-align: center; line-height: 20px; font-weight: bold;}
+    
+    .golf_m_box>div:nth-child(1) p:nth-child(1) span
+    {color: #0d75bc;
+    font-size: 18px;}
+    
+    .golf_m_box>div:nth-child(1) p:nth-child(2)
+    {font-size: 12px;
+    margin-top: 5px;
+    line-height: 15px; text-align: center;}
+    
+    .golf_m_box>div:nth-child(2)
+    {width: 100%;
+    overflow: hidden;}
+    
+    .golf_m_box>div:nth-child(2) a 
+    {width: 32.666666%;
+    float: left;}
+    
+    .golf_m_box>div:nth-child(2) a:nth-child(2)
+    {margin-left: 1%;
+    margin-right: 1%;}
+    
+    .golf_m_box>div:nth-child(2) a img 
+    {width: 100%; height: auto;}
+}

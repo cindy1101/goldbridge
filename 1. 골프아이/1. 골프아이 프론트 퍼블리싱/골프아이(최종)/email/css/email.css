@@ -1,0 +1,42 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+.web
+{width: 500px; height: 266px;
+margin: 0 auto;
+background-color: white;}
+
+.title
+{width: 500px; height: 50px;
+margin-bottom: 20px;
+background-color: #0d75bc;
+color: white; font-weight: bold;
+text-align: center; line-height: 50px;}
+
+.email
+{width: 75px; height: 56px;
+margin: 0 auto;
+margin-bottom: 20px;}
+
+.txt
+{width: 500px;}
+
+.txt p:nth-child(1)
+{width: 500px; height: 20px;
+line-height: 20px; color: #0d75bc; text-align: center; font-weight: bold;
+margin-bottom: 20px;}
+
+.txt p:nth-child(2)
+{text-align: center; line-height: 20px;
+font-size: 14px;}

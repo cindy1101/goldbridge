@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>name_change</title>
+    <link href="css/name_change.css" rel="stylesheet">
+</head>
+<body>
+
+    <input type="radio" name="gender" id="woman">
+    <input type="radio" name="gender" id="man">
+
+    <section class="web">
+
+        <div class="name_change">
+
+            <p>이름변경</p>
+
+            <div class="box_name">
+
+                <p>인증받은 휴대전화 번호는 내 회원정보에 등록하겠습니다.</p>
+
+                <input type="text" placeholder="이름" size="12" maxlength="12" id="name">
+
+                <div class="gender">
+
+                    <select id="local">
+
+                        <option>내국인</option>
+
+                        <option>외국인</option>
+
+                    </select>
+
+                    <div class="box_gender">
+
+
+                            <label for="man">
+                                <p>남성</p>
+                            </label>
+
+                            <label for="woman">
+                                <p>여성</p>
+                            </label>
+
+
+                    </div>
+
+                </div>
+
+                <div class="birthday">
+
+                    <p>생년월일</p>
+
+                    <div class="birthday_box">
+
+                        <input type="text" size="4" maxlength="4" id="day01">
+
+                        <p>년</p>
+
+                        <input type="text" size="2" maxlength="2" id="day02">
+
+                        <p>월</p>
+
+                        <input type="text" size="2" maxlength="2" id="day03">
+
+                        <p>일</p>
+
+                    </div>
+
+                </div>
+
+                <div class="phone">
+
+                    <select id="agency">
+
+                        <option>SKT</option>
+                        <option>KT</option>
+                        <option>LG</option>
+
+                    </select>
+
+                    <input type="text" size="11" maxlength="11" id="phone_num" placeholder="전화번호">
+
+                    <a href="#">
+                        <p>인증요청</p>
+                    </a> 
+
+
+                </div>
+
+                <input type="text" size="6" maxlength="6" id="certification_number" placeholder="인증번호 입력">
+
+            </div>
+
+            <input type="button" id="btn01" value="변경하기">
+
+        </div><!--name_change-->
+
+    </section>
+
+ 
+    
+</body>
+</html>

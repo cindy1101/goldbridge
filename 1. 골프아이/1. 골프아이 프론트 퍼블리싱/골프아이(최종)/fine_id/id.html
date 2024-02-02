@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>find_id</title>
+    <link href="css/find_id.css" rel="stylesheet">
+</head>
+<body>
+    
+    
+    <div class="id_find_box">
+
+        <div class="id_find">
+            
+            <p>아이디/비밀번호찾기</p>
+
+            <div class="find_box">
+
+                <a href="id.html">
+                <div class="id_f">
+                    아이디 찾기
+                </div>
+                </a>
+
+                <a href="../password_find/password_find.html">
+                <div class="password_f">
+                    비밀번호 찾기
+                </div>
+                </a>
+
+            </div> <!--find_box-->
+
+            <div class="find_number_box">
+
+                <div class="find_text">
+                <p>회원님의 명의로 등록된 휴대폰으로 본인확인을 진행합니다.</p>
+                </div>
+
+                <div class="number_select">
+                    <select>
+                        <option selected>대한민국</option>
+                        <option>　</option>
+                        <option>　</option>
+                        <option>　</option>
+                    </select>
+
+                    <input type="text" size="16" maxlength="16" id="phone"
+                    required placeholder="휴대폰번호(숫자만입력)">
+
+                </div>
+
+                <div class="number_chk_box">
+                    <input type="text" size="8" maxlength="8" id="certification"
+                    required placeholder="인증번호입력">
+
+                    <a href="#">
+                    <div class="certification_btn">
+                            인증번호받기
+                    </div>
+                    </a>
+
+                </div>
+
+                <input type="button" value="확인" id="confirm">
+
+            </div><!--number_box-->
+        </div>
+    </div>
+
+    <section class="mobile">
+
+        <div class="find_id_m_top">
+           
+            <a href="#">
+                <p>←</p>
+            </a>
+
+            <p>아이디 찾기</p>
+
+            <a href="../index.html">
+                <img src="img/home_m.png">
+            </a>
+
+        </div>
+
+        <div class="find_id_line_m"></div>
+
+        <div class="find_id_menu_m">
+
+            <a href="id.html">
+                <p>아이디찾기</p>
+            </a>
+
+            <a href="../password_find/password_find.html">
+                <p>비밀번호찾기</p>
+            </a>
+
+        </div>
+
+        <p>회원님의 명의로 등록된 휴대폰으로 본인확인을 진행합니다.</p>
+
+        <div class="find_id_box_m_01">
+
+            <select id="korea_m">
+                <option>대한민국</option>
+                <option>대한민국</option>
+                <option>대한민국</option>
+                <option>대한민국</option>
+                <option>대한민국</option>
+            </select>
+
+            <input type="text" id="phone_num_m" size="11" maxlength="11" placeholder="휴대폰 번호(숫자만 입력)">
+
+        </div>
+
+        <div class="find_id_box_m_02">
+
+            <input type="text" id="certification_m" size="10" maxlength="10" placeholder="인증번호 입력">
+
+            <input type="button" value="인증번호받기" id="certification_btn_m">
+        </div>
+
+        <input type="button" value="확인" id="find_id_m">
+
+
+    </section>
+
+</body>
+</html>
