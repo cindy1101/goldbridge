@@ -1,0 +1,35 @@
+entered : 입점문의
+event : 기획전 이벤트 
+find : 아이디 비밀번호 찾기 
+find_id : 아이디 찾기 완료 화면 
+find_password : 비밀번호 찾기 다음 재설정 화면 
+japan : 일본 골프 상품 페이지 
+join : 회원가입 
+join_submit : 회원가입 완료 
+kotakinabalu : 코타키나발루 골프 상품 페이지 
+laos : 라오스 골프 상품 페이지 
+login : 로그인 페이지 
+mypage : 마이페이지 
+wholesale : 홀세일 문의 
+promotion : 제휴,홍보 문의 
+reservation_list : 예약확인 페이지 
+member : 회원권 페이지
+academy : 아카데미 페이지
+index : 메인
+header : 헤더
+footer : 풋터
+event_detaile : 기획전/이벤트 디테일 페이지
+consulting : 상담하기 페이지
+academy_detaile : 아카데미 디테일 페이지
+member_detaile : 회원권 디테일 페이지
+search : 검색결과 페이지
+notification : 공지사항 페이지
+privacy : 개인정보처리방침
+terms_of_use : 이용약관
+travel_terms : 여행약관
+detaile : 상품 디테일
+question : 자주 묻는 질문
+reservation : 예약하기
+reservation_submit : 예약 완료 알림 페이지
+confirmation : 확정서
+company : 회사소개

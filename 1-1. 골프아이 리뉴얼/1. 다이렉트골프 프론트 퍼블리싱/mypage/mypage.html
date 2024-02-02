@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <link href="css/mypage.css" rel="stylesheet">
+    <script>
+
+        $(function(){
+
+            //풋터 이메일무단수집
+            $("#open_emaile").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#popup_emaile").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#emaile_close_btn").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                emaileClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function emaileClose(){
+            $("#popup_emaile").fadeOut(100);}
+
+            //회원탈퇴
+            $("#open_secession").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#secession").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#close_secession").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                secessionClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function secessionClose(){
+            $("#secession").fadeOut(100);}
+
+            //개인정보수집 및 이용 동의함
+            $("#open_mypage_privacy").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#mypage_privacy").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#mypage_privacy_close_btn").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                mpprivacyClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function mpprivacyClose(){
+            $("#mypage_privacy").fadeOut(100);}
+
+            //개인정보수집 및 이용 동의함 (모바일)
+            $("#open_mypage_privacy_m").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#mypage_privacy").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#mypage_privacy_close_btn").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                mpprivacyClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function mpprivacyClose(){
+            $("#mypage_privacy").fadeOut(100);}
+
+
+            //광고성정보수신
+            $("#open_mypage_agree").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#mypage_agree").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#mypage_agree_close_btn").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                mpagreeClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function mpagreeClose(){
+            $("#mypage_agree").fadeOut(100);}
+
+            //광고성정보수신(모바일)
+            $("#open_mypage_agree_m").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#mypage_agree").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#mypage_agree_close_btn").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                mpagreeClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function mpagreeClose(){
+            $("#mypage_agree").fadeOut(100);}
+
+
+            
+        });
+    </script>
+</head>
+<body>
+
+    <input type="checkbox" id="menu_open_web">
+
+    <header class="back_header">
+
+        <div>
+            <a href="#">
+                <img src="img/sub_back_header_icon.png">
+            </a>
+
+            <p>마이페이지</p>
+
+            <a href="#">
+                <img src="img/sub_home_icon.png">
+            </a>
+
+        </div>
+
+     </header><!--back_header // 모바일, 태블릿에서 메인 아닌 header-->
+
+    <header class="header_mobile">
+
+        <div>
+            
+            <div>
+                <label for="menu_open_web">
+                    <img src="../img/mobile_icon_open.png">
+                </label>
+    
+                <a href="#">
+                    <img src="../img/golf_logo.png">
+                </a>
+            </div>
+
+            <a href="#">
+                <img src="../img/mobile_login_icon.png">
+            </a>
+
+        </div>
+
+        <div class="mobile_header_sheet">
+
+            <div class="close_btn_mobile_sheet">
+
+                <div>
+
+                    <div>
+                        <a href="#">
+                            <p>로그인</p>
+                        </a>
+    
+                        <div></div>
+    
+                        <a href="#">
+                            <p>회원가입</p>
+                        </a>
+
+                        <div></div>
+    
+                        <a href="#">
+                            <p>공지사항</p>
+                        </a>
+                    </div>
+    
+                    <label for="menu_open_web">
+                        <img src="../img/close_main_sheet.png" id="menu_close_mobile_btn">
+                    </label>
+
+                </div>
+
+                <div>
+                    <a href="#">
+                        <div>
+                            <img src="../img/reservation_icon.png">
+                        </div>
+                        <p>예약확인</p>
+                    </a>
+
+                    <div></div>
+
+                    <a href="#">
+                        <div>
+                            <img src="../img/mypage_icon.png">
+                        </div>
+                        <p>마이페이지</p>
+                    </a>
+                </div>
+
+            </div><!--close_btn_mobile_sheet-->
+
+            <div class="search_mobile_box">
+
+                <div>
+                    <input type="text" id="search_mobile_txt" placeholder="검색어를 입력하세요.">
+
+                    <input type="submit" id="search_mobile_ok">
+
+                    <label for="search_mobile_ok">
+                        <img src="../img/serach_btn_mobile.png">
+                    </label>
+                </div>
+
+            </div><!--search_mobile_box-->
+
+            <div class="hastag_mobile">
+
+                <p>인기 검색어</p>
+
+                <div>
+                    <a href="#">
+                        <p>#MD추천</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#해외전지훈련</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#인천출발</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#코로나무격리</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#부산출발</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#대구출발</p>
+                    </a>
+                </div>
+
+            </div><!--hastag_mobile-->
+
+            <input type="radio" id="sub_manu_01" name="sub_mobile" checked>
+            <input type="radio" id="sub_manu_02" name="sub_mobile">
+            <input type="radio" id="sub_manu_03" name="sub_mobile">
+            <input type="radio" id="sub_manu_04" name="sub_mobile">
+
+
+            <div class="mobile_lnb_box">
+
+                <div class="left_mobile_sheet">
+
+                    <label for="sub_manu_01">
+                        <p>일본</p>
+                    </label>
+
+                    <label for="sub_manu_02">
+                        <p>베트남</p>
+                    </label>
+
+                    <label for="sub_manu_03">
+                        <p>대만</p>
+                    </label>
+
+                    <a href="#">
+                        <p>라오스</p>
+                    </a>
+
+                    <a href="#">
+                        <p>코타니카발루</p>
+                    </a>
+
+                    <a href="#">
+                        <p>기획전/이벤트</p>
+                    </a>
+
+                    <label for="sub_manu_04">
+                        <p>회원권/아카데미</p>
+                    </label>
+
+                </div><!--left_mobile_sheet-->
+
+                <div class="right_mobile_sheet_01">
+
+                    <ul>
+
+                        <li>
+                            <a href="#">
+                                <p>도쿄/간도</p>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <p>오사카/간사이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>홋카이도/삿포로</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>오키나와/나하</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>후쿠오카/야마구치</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>가고시마/미야자키</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>구마모토/오이타</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>나카사키/사가</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>아오모리/니카타</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>나고야/도카이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>오카야마/츄고쿠</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>다카마츠/마츠야마</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--right_mobile_sheet_01-->
+
+                <div class="right_mobile_sheet_02">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>나트랑</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>푸꾸옥</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>다낭</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>하노이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>호치민</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>달랏</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div><!--right_mobile_sheet_02-->
+
+                <div class="right_mobile_sheet_03">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>가오슝</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>타이중</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>타이페이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>신죽</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>타오위안</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>이란/화련</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div><!--right_mobile_sheet_03-->
+
+                <div class="right_mobile_sheet_04">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>회원권</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>아카데미</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--right_mobile_sheet_04-->
+
+            </div><!--mobile_lnb_box-->
+
+
+        </div><!--mobile_header_sheet-->
+
+    </header><!--header_mobile-->
+
+    <header class="header_web">
+
+        <div class="header_web_top_ex">
+
+            <div class="header_web_top">
+
+                <div>
+                    <a href="#">
+                        <p>로그인</p>
+                    </a>
+
+                    <a href="#">
+                        <p>예약확인</p>
+                    </a>
+
+                    <a href="#">
+                        <p>마이페이지</p>
+                    </a>
+
+                    <a href="#">
+                        <p>회원가입</p>
+                    </a>
+
+                    <a href="#">
+                        <p>공지사항</p>
+                    </a>
+                </div>
+
+            </div><!--header_web_top-->
+
+        </div><!--header_web_top_ex-->
+
+
+        <div class="header_middle_web">
+
+            <div class="logo_web">
+                <a href="#">
+                    <img src="../img/golf_logo.png">
+                </a>
+            </div>
+
+            <div class="search_box">
+                <input type="text" id="search_box_web" placeholder="검색어를 입력하세요.">
+
+                <input type="submit" id="search_ok_btn">
+
+                <label for="search_ok_btn">
+                    <img src="../img/serach_btn_web.png">
+                </label>
+            </div>
+
+            <div class="call_box_web">
+                <img src="../img/call_header.png">
+            </div>
+
+        </div><!--header_middle_web-->
+
+        <div class="header_hashtag_web">
+
+                <a href="#">
+                    <p>#MD추천</p>
+                </a>
+    
+                <a href="#">
+                    <p>#해외전지훈련</p>
+                </a>
+    
+                <a href="#">
+                    <p>#인천출발</p>
+                </a>
+    
+                <a href="#">
+                    <p>#코로나무격리</p>
+                </a>
+    
+                <a href="#">
+                    <p>#부산출발</p>
+                </a>
+    
+                <a href="#">
+                    <p>#대구출발</p>
+                </a>
+
+        </div><!--header_hashtag_web-->
+
+
+        <div class="header_lnb_web_ex">
+
+            <div class="header_lnb_web_box">
+
+                <div class="header_lnb_web_left">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>일본</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>베트남</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>대만</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>라오스</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>코타키나발루</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>기획전/이벤트</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>회원권/아카데미</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--header_lnb_web_left-->
+
+                <label for="menu_open_web">
+                    <img src="../img/menu.png">
+                </label>
+
+            </div><!--header_lnb_web_box-->
+
+            <div class="header_web_sheet_ex">
+                
+                <div class="header_web_sheet">
+
+                    <div>
+
+                        <p>일본골프</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>도쿄/간도</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>오사카/간사이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>홋카이도/삿포로</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>오키나와/나하</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>후쿠오카/야마구치</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>가고시마/미야자키</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>구마모토/오이타</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>나카사키/사가</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>아오모리/니카타</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>나고야/도카이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>오카야마/츄고쿠</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>다카마츠/마츠야마</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--일본골프-->
+
+
+                    <div class="line_header_web_01">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+                    <div>
+
+                        <p>베트남골프</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>나트랑</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>푸꾸옥</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>다낭</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>하노이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>호치민</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>달랏</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--베트남골프-->
+
+                    <div class="line_header_web_02">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div>
+
+                        <p>대만골프</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>가오슝</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>타이중</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>타이페이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>신죽</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>타오위안</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>이란/화련</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--대만골프-->
+
+                    <div class="line_header_web_03">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+                    <div>
+
+                        <p>회원권/아카데미</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>회원권</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>아카데미</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--회원권아카데미-->
+
+                    <div class="line_header_web_04">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+                </div><!--header_web_sheet-->
+
+            </div><!--header_web_sheet_ex-->
+
+            
+        </div><!--header_lnb_web_ex-->
+
+    </header><!--header_web-->
+
+    <div class="mypage_rout">
+
+        <a href="#">
+            <img src="img/sub_home_icon.png">
+        </a>
+
+        <p>></p>
+
+        <p>마이페이지</p>
+
+    </div><!--sub_rout-->
+
+    <div class="title_mypage">
+
+        <p>마이페이지</p>
+
+        <div class="line_title_mypage"></div>
+
+    </div>
+    
+    <div class="mypage_form_box">
+
+        <form>
+
+            <table class="mypage_table_web" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <p>아이디</p>
+                    </td>
+
+                    <td>
+                        <p>sola1207@naver.com</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>이름</p>
+                    </td>
+
+                    <td>
+                        <input type="text" id="mypage_name" placeholder="윤보라">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>휴대폰</p>
+                    </td>
+
+                    <td>
+                        <input type="tel" id="mypage_call" placeholder="010-0000-0000">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>비밀번호 변경</p>
+                    </td>
+
+                    <td>
+                        <div>
+                            <input type="password" id="mypage_password_01" placeholder="현재 비밀번호">
+                            <input type="password" id="mypage_password_02" placeholder="새 비밀번호">
+                            <input type="password" id="mypage_password_03" placeholder="비밀번호 확인">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <p>수신설정</p>
+                    </td>
+
+                    <td>
+                        <div>
+
+                            <input type="checkbox" id="sms_mypage">
+                            <input type="checkbox" id="mms_mypage">
+                            <input type="checkbox" id="emaile_mypage">
+                            <input type="checkbox" id="pussy_mypage">
+
+                            <div>
+                                <p>마케팅 및 이벤트 목적의 개인정보 수집 및 이용 동의함 22.01.16</p>
+                                <p id="open_mypage_privacy">전문보기</p>
+                            </div><!--마케팅 및 이벤트 목적의 개인정보 수집-->
+
+                            <div class="checkbox_mypage_box">
+                                
+                                <div>
+                                    <p>광고성 정보 수신 철회함 22.01.16</p>
+                                    <p id="open_mypage_agree">전문보기</p>
+                                </div>
+
+                                <div class="checkbox_mypage">
+
+                                    <div>
+                                        <label for="sms_mypage">
+
+                                        </label>
+
+                                        <label for="sms_mypage">
+                                            <p>SMS</p>
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <label for="mms_mypage">
+
+                                        </label>
+
+                                        <label for="mms_mypage">
+                                            <p>MMS</p>
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <label for="emaile_mypage">
+
+                                        </label>
+
+                                        <label for="emaile_mypage">
+                                            <p>이메일</p>
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <label for="pussy_mypage">
+
+                                        </label>
+
+                                        <label for="pussy_mypage">
+                                            <p>푸시알림</p>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </div><!--광고성 정보 수신-->
+
+                        </div><!--개인정보/광고성 전체 박스-->
+                    </td>
+
+                </tr>
+
+            </table><!--mypage_table_web-->
+
+
+            <table class="mobile_mypage_table" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <p>아이디(이메일)</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <p>sola1207@naver.com</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>이름</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" id="name_mypage_mobile" placeholder="윤보라">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>휴대폰</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="tel" id="phone_mypage_mobile" placeholder="010-0000-0000">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>비밀번호</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <input type="password" id="mypage_pw_mobile_01" placeholder="현재 비밀번호">
+                            <input type="password" id="mypage_pw_mobile_02" placeholder="새 비밀번호">
+                            <input type="password" id="mypage_pw_mobile_03" placeholder="비밀번호 확인">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>수신동의</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <p>마케팅 및 이벤트 목적의 개인정보 수집 및 이용 동의함 22.01.16</p>
+                            <p id="open_mypage_privacy_m">전문보기</p>
+                        </div>
+
+                        <div>
+
+                            <input type="checkbox" id="sms_mypage_m">
+                            <input type="checkbox" id="mms_mypage_m">
+                            <input type="checkbox" id="emaile_mypage_m">
+                            <input type="checkbox" id="pussy_mypage_m">
+
+                            <div>
+                                <p>광고성 정보 수신 철회함 22.01.16</p>
+                                <p id="open_mypage_agree_m">전문보기</p>
+                            </div>
+
+                            <div class="mobile_chk_box">
+
+                                <div>
+                                    <label for="sms_mypage_m">
+    
+                                    </label>
+    
+                                    <label for="sms_mypage_m">
+                                        <p>SMS</p>
+                                    </label>
+                                </div>
+    
+                                <div>
+                                    <label for="mms_mypage_m">
+    
+                                    </label>
+    
+                                    <label for="mms_mypage_m">
+                                        <p>MMS</p>
+                                    </label>
+                                </div>
+    
+                                <div>
+                                    <label for="emaile_mypage_m">
+    
+                                    </label>
+    
+                                    <label for="emaile_mypage_m">
+                                        <p>이메일</p>
+                                    </label>
+                                </div>
+    
+                                <div>
+                                    <label for="pussy_mypage_m">
+    
+                                    </label>
+    
+                                    <label for="pussy_mypage_m">
+                                        <p>푸시알림</p>
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </td>
+                </tr>
+
+            </table><!--mobile_mypage_table-->
+
+
+
+            <div class="mypage_btn">
+
+                <input type="submit" id="mypage_change_btn" value="변경하기">
+
+                 <p id="open_secession">회원탈퇴</p>
+
+            </div><!--mypage_btn-->
+
+        </form>
+
+    </div><!--mypage_form_box-->
+
+
+    <div class="mypage_privacy_ex" id="mypage_privacy" style="display: none;">
+
+        <div class="mypage_privacy_box">
+
+            <div class="mypage_privacy_title">
+                <p>광고성 개인정보 수집</p>
+            </div>
+
+            <div class="mypage_privacy_contents">
+
+                <div>
+                    <p>[선택] 광고성 목적의 개인정보 수집 및 이용 동의</p>
+                    <p>※동의를 거부할 수 있으며, 동의를 거부하셔도 서비스를 이용하실 수 있습니다.</p>
+                </div>
+
+                <div>
+                    <p>수집항목</p>
+                    <p>서비스 이용기록, 결제기록, 휴대전화번호, 이메일, 본인확인정보 (이름, 생년월일, 성별, 통신사명, 휴대전화번호, 동일인식별정도 (CI), 중복가입확인정보 (DI), 내/외국인정보), 접속IP정보, 쿠키 등의 광고식별자</p>
+                </div>
+
+                <div>
+                    <p>수집목적</p>
+                    <p>(맞춤형) 광고 및 마케팅 참여기회 제공</p>
+                </div>
+
+                <div>
+                    <p>보유기간</p>
+                    <p>동의철회 또는 회원 탈퇴시 지체없이 파기</p>
+                </div>
+                
+
+            </div><!--mypage_privacy_contents-->
+
+            <div class="mypage_privac_line_01"></div>
+
+            <div class="mypage_privacy_close" id="mypage_privacy_close_btn">
+                <p>확인</p>
+            </div><!--mypage_privacy_close-->
+
+        </div><!--mypage_privacy_box-->
+
+    </div><!--mypage_privacy_ex-->
+
+    <div class="mypage_agree_ex" id="mypage_agree" style="display: none;">
+
+        <div class="mypage_agree_box">
+
+            <div class="mypage_agree_title">
+                <p>광고성 정보 수신 동의</p>
+            </div>
+
+            <div class="mypage_agree_contents">
+
+                <div>
+
+                    <p>[선택] 광고성 정보 수신 동의에 대한 약관</p>
+
+                    <p>회원님이 수집 및 이용에 동의한 개인 정보를 이용하여 SMS, MMS, 이메일,푸시 알림 등 다양한 전자적 전송 매체를 통해 오전 8시부터 오후 9시까지 개인 맞춤형 광고 및 정보를 전송할 수 있습니다.
+                        본 동의는 거부하실 수 있으나, 거부 시 이벤트 및 프로모션 안내를 받아보실 수 없습니다.</p>
+
+                    <p>광고성 정보 수신 변경은<br>
+
+                    1)다이렉트 골프 고객센터 (1588-1855)로 요청<br>
+
+                    2) SMS, MMS, 이메일, 푸쉬 : 웹 브라우저에서 마이페이지에서 변경할 수 있습니다.</p>
+
+                </div>
+                
+
+            </div><!--mypage_agree_contents-->
+
+            <div class="mypage_agree_line_01"></div>
+
+            <div class="mypage_agree_close" id="mypage_agree_close_btn">
+                <p>확인</p>
+            </div><!--mypage_agree_close-->
+
+        </div><!--mypage_agree_box-->
+
+    </div><!--mypage_agree_ex-->
+
+    <div class="secession_ex" id="secession" style="display: none;">
+
+        <div class="secession_box">
+
+            <form>
+
+            <div class="secession_title">
+                <p>회원탈퇴</p>
+            </div>
+
+            <div class="secession_contents_01">
+
+                <p>회원탈퇴 전, 유의사항을 확인해주시기 바랍니다.</p>
+
+                <div>
+                    <p>- 회원탈퇴 시 회원전용 웹 서비스 이용이 불가합니다.<br>
+
+                        - 거래정보가 있는 경우, 전자상거래 등에서의 소비자 보호에 관한 법률에 따라 계약 또는 청약철회에 관한 기록, 대금결제 및 재화 등의 공급에 관한 기록은 5년동안 보존됩니다.<br>
+                        
+                        - 미사용 쿠폰은 회원탈퇴 후 사용하실 수 없습니다.<br>
+                        
+                        - 보유하셨던 포인트는 탈퇴와 함께 삭제되며 환불되지 않습니다.<br>
+                        
+                        - 회원탈퇴 후 서비스에 입력하신 상품문의 및 후기, 댓글은 삭제되지 않으며, 회원정보 삭제로 인해 작성자 본인을 확인할 수 없어 편집 및 삭제처리가 원천적으로 불가능 합니다.<br>
+                        
+                        - 상품문의 및 후기, 댓글 삭제를 원하시는 경우에는 먼저 해당 게시물을 삭제하신 후 탈퇴를 신청하시기 바랍니다.<br>
+                        
+                        - 이미 결제가 완료된 건은 탈퇴로 취소되지 않습니다.
+                    </p>
+                </div>
+
+            </div><!--secession_contents_01-->
+            
+            <div class="secession_chk_box">
+
+                <input type="checkbox" id="secession_chk" required>
+
+                <label for="secession_chk">
+                    <p>상기 회원탈퇴시 처리사항 안내를 확인하였음에 동의합니다.</p>
+                </label>
+
+            </div><!--secession_chk_box-->
+
+            <div class="secession_contents_02">
+
+                <p><span>sola1207@naver.com</span> 님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한 번 확인합니다.</p>
+
+                <input type="password" id="secession_password" placeholder="비밀번호 입력" required>
+
+            </div><!--secession_contents_02-->
+
+            <div class="secession_line"></div>
+
+            <div class="secession_btn">
+
+                <input type="submit" id="secession_ok" value="회원탈퇴">
+
+                <p id="close_secession">취소</p>
+
+            </div>
+            
+            </form>
+
+        </div><!--secession_box-->
+
+    </div><!--secession_ex-->
+
+    <footer class="footer_web">
+
+        <div class="footer_top_web">
+
+            <div>
+                <a href="#">
+                    <p>회사소개</p>
+                </a>
+
+                <a href="#">
+                    <p>이용약관</p>
+                </a>
+
+                <a href="#">
+                    <p>여행약관</p>
+                </a>
+
+                <a href="#">
+                    <p>개인정보처리방침</p>
+                </a>
+
+                <p id="open_emaile">이메일무단수집거부</p>
+
+                <a href="#">
+                    <p>제휴/홍보문의</p>
+                </a>
+
+                <a href="#">
+                    <p>홀세일문의</p>
+                </a>
+
+                <a href="#">
+                    <p>입점문의</p>
+                </a>
+            </div>
+
+        </div><!--footer_top_web-->
+
+        <div class="line_footer_web_01"></div>
+
+        <div class="footer_middle_web">
+
+           <div>
+               
+                <a href="#">
+                    <img src="../img/footer_logo.png">
+                </a>
+
+                <div class="sns_zon_web">
+                    <a href="#">
+                        <img src="../img/kakao.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="../img/blog.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="../img/facebook.png">
+                    </a>
+
+                    <a href="https://band.us/@directgolf" target="_blank">
+                        <img src="../img/band.png">
+                    </a>
+                </div>
+
+           </div>
+
+        </div><!--footer_middle_web-->
+
+        <div class="line_footer_web"></div>
+
+        <div class="footer_bottom">
+
+            <div>
+
+                <div>
+
+                    <p>(주)다이렉트골프</p>
+    
+                    <p>대구광역시 달서구 월배로 465</p>
+                    
+                    <div>
+                        <p>사업자번호 : 143-86-02804</p>
+    
+                        <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1438602804"  target="_blank">
+                            <p>사업자정보확인 ></p>
+                        </a>
+                    </div>
+    
+                    <p>통신판매업신고번호 : 2022-대구달서-1541</p>
+    
+                    <div>
+                        <p>대표이사 : 나옥택  개인정보보호책임자 : 나옥택</p>
+    
+                        <a href="#">
+                            <p>E-MAIL 문의 ></p>
+                        </a>
+                    </div>
+    
+                    <p>Copyright GoldBridge .ALL RIGHTS RESERVED. 상품 사진을 포함한 모든 콘텐츠는 저작권법 제 98조에 의거해 보호를 받고 있습니다.</p>
+
+                </div>
+    
+                <a href="https://play.google.com/store/apps/details?id=com.golf.directgolf&hl=ko&gl=US" target="_blank">
+                    <p>다이렉트골프 <span>APP</span> 다운로드</p>
+                </a>
+
+            </div>
+
+        </div><!--footer_bottom-->
+
+    </footer><!--footer_web-->
+
+    <div class="emaile_no_ex" id="popup_emaile" style="display: none;">
+
+        <div class="emaile_no_box">
+
+            <div class="emaile_title">
+
+                <p>이메일 무단 수집 거부</p>
+
+            </div><!--emaile_title-->
+
+            <div class="emaile_contents">
+                <p>
+                    본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치 를 이용하여 무단으로 수집되는 것을 거부하며,<br>
+                    이를 위반시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.<br><br>
+
+
+                    정보통신망 이용촉진 및 정보보호 등에 관한 법률<br>
+
+                    제50조의2 (전자우편주소의 무단 수집행위 등 금지)<br>
+
+                    누구든지 인터넷 홈페이지 운영자 또는 관리자의 사전 동의 없이 인터넷 홈페이지에서 자동으로 전자우편주소를 수집 하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.<br>
+                    누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매ㆍ유통하여서는 아니된다.<br>
+                    누구든지 제1항 및 제2항의 규정에 의하여 수집ㆍ판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보 전송에 이용하여서는 아니된다.<br><br>
+
+
+                    제74조 (벌칙) 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                    제8조제4항의 규정을 위반하여 표시ㆍ판매 또는 판매할 목적으로 진열한 자<br>
+                    제44조의7제1항제1호의 규정을 위반하여 음란한 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 배포ㆍ판매ㆍ임대하거나 공연히 전시한 자<br>
+                    제44조의7제1항제3호의 규정을 위반하여 공포심이나 불안감을 유발하는 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 반복적으로 상대방에게 도달하게 한 자<br>
+                    제50조제6항의 규정을 위반하여 기술적 조치를 한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자 제50조의2의 규정을 위반하여 전자우편 주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자<br>
+                    제53조제4항을 위반하여 등록사항의 변경등록 또는 사업의 양도ㆍ양수 또는 합병ㆍ상속의 신고를 하지 아니한 자<br>
+                </p>
+            </div><!--emaile_contents-->
+
+            <div class="emaile_box_line_01"></div>
+
+            <div class="emaile_close" id="emaile_close_btn">
+                <p>확인</p>
+            </div>
+
+
+        </div><!--emaile_no_box-->
+
+    </div><!--emaile_no_ex-->
+
+</body>
+</html>

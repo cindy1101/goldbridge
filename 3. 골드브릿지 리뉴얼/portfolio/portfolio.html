@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>골드브릿지</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <!-- css -->
+    <link href="css/portfolio.css" rel="stylesheet">
+
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+
+        function closePop02() {
+            document.getElementById("popup_02").style.display = "none";
+            $('html, body').off('scroll touchmove mousewheel');};
+        
+        function openPop02() {
+            document.getElementById("popup_02").style.display = "block";
+        };
+
+    </script>
+</head>
+<body>
+    <header class="header_mobile">
+
+        <input type="checkbox" id="open_chk">
+
+        <div class="header_top_m">
+
+            <a href="../index.html">
+                <div class="mobile_header_logo">
+                    <img src="img/header-logo-mobile.png">
+                </div>
+            </a>
+
+            <label for="open_chk">
+                <img src="img/menu_open.png">
+            </label>
+
+        </div>
+
+
+        <div class="mobile_sheet">
+
+            <div class="sheet_top">
+                
+                <div>
+                    <img src="img/mobile_logo_02.png">
+                </div>
+
+                <label for="open_chk">
+                    <img src="img/menu_close.png">
+                </label>
+            </div>
+
+            <div class="line_mobile_01"></div>
+
+            <div class="lnb_mobile">
+
+                <ul>
+
+                        <a href="../about/about.html">
+                            <li>
+                                <p>ABOUT</p>
+                            </li>
+                        </a>
+                        
+                        <a href="../service/service.html">
+                            <li>
+                                <p>SERVICE</p>
+                            </li>
+                        </a>
+
+                        <a href="../portfolio/portfolio.html">
+                            <li>
+                                <p>PORTFOLIO</p>
+                            </li>
+                        </a>
+
+                        <a href="../news/news.html">
+                            <li>
+                                <p>NEWS</p>
+                            </li>
+                        </a>
+
+                        <a href="../inquire/inqiure.html">
+                            <li>
+                                <p>INQUIRE</p>
+                            </li>
+                        </a>
+
+                </ul>
+
+            </div><!--lnb_mobile-->
+
+        </div>
+
+    </header><!--header_mobile-->
+
+
+    <header class="header_ex">
+        
+        <div class="header_web">
+
+            <a href="../index.html">
+
+                <div class="logo_web">
+    
+                    <img src="img/header-logo.png">
+    
+                </div>
+    
+            </a>
+    
+            <div class="header_middle">
+
+                <div class="lnb">
+
+                    <ul>
+
+                        <a href="../about/about.html">
+                            <li>
+                                <p>ABOUT</p>
+                            </li>
+                        </a>
+                        
+                        <a href="../service/service.html">
+                            <li>
+                                <p>SERVICE</p>
+                            </li>
+                        </a>
+
+                        <a href="../portfolio/portfolio.html">
+                            <li>
+                                <p>PORTFOLIO</p>
+                            </li>
+                        </a>
+
+                        <a href="../news/news.html">
+                            <li>
+                                <p>NEWS</p>
+                            </li>
+                        </a>
+
+                        <a href="../inquire/inqiure.html">
+                            <li>
+                                <p>INQUIRE</p>
+                            </li>
+                        </a>
+
+                    </ul>
+
+                </div><!--lnb-->
+    
+            </div><!--header_middle-->
+
+        </div><!--header_web-->
+
+    </header><!--header_ex-->
+
+    <div class="visual_banner">
+
+        <div>
+            <div>
+                <img src="img/title_icon.png">
+            </div>
+
+            <p>PORTFOLIO</p>
+        </div>
+
+    </div><!--visual_banner-->
+
+
+    <section class="portfolio_box">
+
+        <div class="title_01">
+
+            <p>골드브릿지가 제작한<br>
+                <span>프로젝트</span>들입니다.</p>
+
+            <p>저희 골드브릿지에서는 다양한 프로젝트를 경험하며<br>
+                디자인에서 개발까지 아우를 수 있는 역량을 보유하고 능력있는<br>
+                개발자와 디자이너를 보유하고 있습니다.<br>
+                모바일 시대의 흐름 속에서 필수가 돼 버린 하이브리드 웹/앱부터 다양한 디자인을 만나보세요.
+            </p>
+
+        </div><!--title_01-->
+
+        <div class="title_01_m">
+
+            <p>골드브릿지가 제작한<br>
+                <span>프로젝트</span>들입니다.</p>
+
+            <p>저희 골드브릿지에서는 다양한 프로젝트를 경험하며
+                디자인에서 개발까지 아우를 수 있는 역량을 보유하고 능력있는
+                개발자와 디자이너를 보유하고 있습니다.<br>
+                모바일 시대의 흐름 속에서 필수가 돼 버린 하이브리드 웹/앱부터 다양한 디자인을 만나보세요.
+            </p>
+
+        </div><!--title_01-->
+
+        <input type="radio" name="menu" id="all_chk" checked>
+        <input type="radio" name="menu" id="homepage_chk">
+        <input type="radio" name="menu" id="app_chk">
+        <input type="radio" name="menu" id="design_chk">
+
+        <div class="tap_menu">
+
+            <label for="all_chk">
+                <p>All</p>
+            </label>
+
+            <label for="homepage_chk">
+                <p>Homepage</p>
+            </label>
+
+            <label for="app_chk">
+                <p>App</p>
+            </label>
+
+            <label for="design_chk">
+                <p>Design</p>
+            </label>
+
+        </div><!--tap_menu-->
+
+
+        <select id="tap_menu_m">
+            <option>All</option>
+            <option>Homepage</option>
+            <option>App</option>
+            <option>Design</option>
+        </select>
+
+
+        <div class="page01">
+
+            <div class="page01_box">
+
+                <a href="../portfolio_detaile/portfolio_detaile.html">
+                    <div>
+                        <div>
+                            <img src="img/portfolio1.png">
+                        </div>
+    
+                        <div>
+                            <p>골프아이 홈페이지 제작</p>
+                            <p>Homepage</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio2.png">
+                        </div>
+    
+                        <div>
+                            <p>브릿지오버 홈페이지 제작</p>
+                            <p>Homepage</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio3.png">
+                        </div>
+    
+                        <div>
+                            <p>달누리 홈페이지 제작</p>
+                            <p>Homepage</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="../portfolio_detaile_02/portfolio_detaile_02.html">
+                    <div>
+                        <div>
+                            <img src="img/portfolio4.png">
+                        </div>
+    
+                        <div>
+                            <p>IT 홍보 카드뉴스</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio5.png">
+                        </div>
+    
+                        <div>
+                            <p>IT 홍보 카드뉴스</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio6.png">
+                        </div>
+    
+                        <div>
+                            <p>의류 상세페이지</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio7.png">
+                        </div>
+    
+                        <div>
+                            <p>여행업 홍보 카드뉴스</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio8.png">
+                        </div>
+    
+                        <div>
+                            <p>의류 상세페이지</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio9.png">
+                        </div>
+    
+                        <div>
+                            <p>의류 상세페이지</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div><!--page01_box-->
+
+            <div class="pagebtn_01">더보기</div>
+
+
+        </div><!--all-->
+
+        <div class="page02">
+
+            <div class="page02_box">
+
+                <a href="../portfolio_detaile/portfolio_detaile.html">
+                    <div>
+                        <div>
+                            <img src="img/portfolio1.png">
+                        </div>
+    
+                        <div>
+                            <p>골프아이 홈페이지 제작</p>
+                            <p>Homepage</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio2.png">
+                        </div>
+    
+                        <div>
+                            <p>브릿지오버 홈페이지 제작</p>
+                            <p>Homepage</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio3.png">
+                        </div>
+    
+                        <div>
+                            <p>달누리 홈페이지 제작</p>
+                            <p>Homepage</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div><!--page02_box-->
+
+            <div class="pagebtn_02"></div>
+
+        </div><!--Homepage-->
+
+
+        <div class="page03">
+
+            <div class="page03_box">
+
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio10.png">
+                        </div>
+    
+                        <div>
+                            <p>골드브릿지 여행앱</p>
+                            <p>App</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio11.png">
+                        </div>
+    
+                        <div>
+                            <p>달누리 쇼핑몰 앱</p>
+                            <p>App</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div><!--page03_box-->
+
+
+            <div class="pagebtn_03"></div>
+
+        </div><!--app-->
+
+
+        <div class="page04">
+
+            <div class="page04_box">
+
+                <a href="../portfolio_detaile_02/portfolio_detaile_02.html">
+                    <div>
+                        <div>
+                            <img src="img/portfolio4.png">
+                        </div>
+    
+                        <div>
+                            <p>IT 홍보 카드뉴스</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio5.png">
+                        </div>
+    
+                        <div>
+                            <p>IT 홍보 카드뉴스</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio6.png">
+                        </div>
+    
+                        <div>
+                            <p>의류 상세페이지</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio7.png">
+                        </div>
+    
+                        <div>
+                            <p>여행업 홍보 카드뉴스</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio8.png">
+                        </div>
+    
+                        <div>
+                            <p>의류 상세페이지</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="img/portfolio9.png">
+                        </div>
+    
+                        <div>
+                            <p>의류 상세페이지</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div><!--page04_box-->
+
+            <div class="pagebtn_04"></div>
+
+        </div><!--Design-->
+
+
+    </section><!--portfolio_box-->
+
+
+    <div class="inquiry_box">
+
+        <div>
+            <p>무엇이든 잘 만드는 골드브릿지<br>
+            저희에게 맡겨주세요<i>!</i></p>
+
+            <a href="../inquire/inqiure.html">
+                <p>제작 문의하기</p>
+            </a>
+        </div>
+
+    </div><!--inquiry_box-->
+
+    <footer class="footer">
+
+        <div class="footer_line_01"></div>
+
+        <div class="footer_top">
+            <ul>
+                <a href="../index.html">
+                    <li>
+                        <p>홈</p>
+                    </li>
+                </a>
+
+                <li></li>
+
+                <a href="../about/about.html">
+                    <li>
+                        <p>회사소개</p>
+                    </li>
+                </a>
+
+                <li></li>
+
+                <a href="javascript:openPop02()">
+                    <li>
+                        <p>개인정보취급방침</p>
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="footer_line_02"></div>
+
+        <div class="footer_bottom">
+
+            <div class="bottom_left">
+
+                <p>(주) 골드브릿지</p>
+
+                <p><span>Addres</span>부산광역시 사하구 괴정동 낙동대로 164 한라빌딩 503호</p>
+                <p><span>Tel</span>1899-5442</p>
+                <p><span>E-mail</span>goldbridge-07@hanmail.net</p>
+                <p>Copyrightⓒ 2022 Gold Bridge All right reserved</p>
+
+            </div>
+
+            <div class="bottom_right">
+                <img src="img/footer-logo.png">
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="privacy" id="popup_02" style="display: none;">
+
+        <div class="privacy_box">
+    
+            <!--팝업 컨텐츠 영역-->
+    
+            <div class="privacy_top_title">
+                <p>개인정보처리방침</p>
+            </div>
+    
+            <div class="privacy_cont">
+                <p>사이트가 취급하는 모든 개인정보는 관련법령에 근거하거나 정보주체의 동의에 의하여 수집ㆍ보유 및 처리되고 있습니다.<br><br>
+    
+                    「개인정보보호법률」은 이러한 개인정보의 취급에 대한 일반적 규범을 제시하고 있으며, 사이트는 이러한 법령의 규정에 따라 개인정보의 처리목적에 필요한 최소한의 개인정보를 수집ㆍ보유 및 처리하는 개인정보를 공공업무의 적절한 수행과 국민의 권익을 보호하기 위해 적법하고 적정하게 취급할 것입니다.<br><br>
+                    
+                    또한, 사이트는 관련 법령에서 규정한 바에 따라 사이트에서 보유하고 있는 개인정보에 대한 열람청구권 및 정정청구권 등 이용자 여러분의 권익을 존중하며, 이용자 여러분은 이러한 법령상 권익의 침해 등에 대하여 법률이 정하는 바에 따라 정보주체의 권익을 보호 받을 수 있습니다.<br><br>
+                    
+                    사이트의 개인정보처리방침은 사이트가 운영하는 여러 홈페이지에서 이용자 여러분의 개인정보를 보호하기 위한 [홈페이지 이용자의 개인정보보호]와 소관업무를 수행하는데 필요한 개인정보 취급에 관한 [컴퓨터에 의해 처리되는 개인정보보호] 두 가지로 구성되어 있습니다.<br><br>
+                    
+                    위와 같이 자동 수집ㆍ저장되는 정보는 이용자 여러분에게 보다 나은 서비스를 제공하기 위해 홈페이지의 개선과 보완을 위한 통계분석, 이용자와 홈페이지 간의 원활한 의사소통, 보안 침해 대응 등을 위해 이용될 수 있으며, 이러한 정보는 관계법령의 규정에 따라 제출될 수 있음을 유념하시기 바랍니다.<br><br>
+                    
+                    사이트가 운영하는 홈페이지에서 이메일 주소 등 식별할 수 있는 개인정보를 취득하여서는 아니 됩니다. 적법하지 아니한 방법으로 이러한 개인정보를 열람 또는 제공받은 자는 [개인정보보호법률]에 의하여 처벌을 받을 수 있습니다.</p>
+            </div>
+                
+            <!--팝업 버튼 영역-->
+    
+            <div class="privacy_btn">
+    
+                <a href="javascript:closePop02();">닫기</a>
+    
+            </div>
+    
+        </div>
+    
+    </div><!--popup_02-->
+
+
+</body>
+</html>

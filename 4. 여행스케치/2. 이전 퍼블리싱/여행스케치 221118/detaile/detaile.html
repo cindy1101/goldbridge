@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimin-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="css/detaile.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $('#close_sheet').click(function(){
+                $('.sheet').fadeOut(1000)
+            });
+
+            $('#menu_open_icon').click(function() {
+                $('.sheet').fadeIn(1000)
+            });
+
+        });
+    </script>
+
+    <script>
+
+        function closePop01() {
+            document.getElementById("popup_01").style.display = "none";
+            $('html, body').off('scroll touchmove mousewheel');
+        };
+
+        function openPop01() {
+            document.getElementById("popup_01").style.display = "block";
+        };
+
+
+    </script>
+</head>
+<body>
+
+    <input type="checkbox" id="menu_chk">
+
+    <header class="header_mini">
+
+        <div class="header_mini_top">
+
+            <label for="menu_chk" class="open_mini">
+                <img src="img/menu.png">
+            </label>
+
+            <a href="../index.html">
+                <img src="img/logo.png">
+            </a>
+
+            <a href="../login/login.html">
+                <img src="img/login.png">
+            </a>
+
+        </div>
+
+
+        <div class="header_mini_sheet">
+
+            <div class="header_min_sheet_top">
+
+                <div>
+                    <a href="../login/login.html">
+                        <p>로그인</p>
+                    </a>
+
+                    <div></div>
+
+                    <a href="../join/join.html">
+                        <p>회원가입</p>
+                    </a>
+
+                    <label for="menu_chk">
+                        <img src="img/mobile_close.png">
+                    </label>
+                </div>
+
+            </div><!--header_min_sheet_top-->
+
+            <div class="header_min_sheet_mid">
+
+                <a href="#">
+                    <div>
+                        <img src="img/mypage.png">
+                    </div>
+
+                    <p>마이페이지</p>
+                </a>
+
+                <!-- <a href="#">
+                    <div>
+                        <img src="img/reservation.png">
+                    </div>
+
+                    <p>예약내역</p>
+                </a> -->
+
+                <a href="#">
+                    <div>
+                        <img src="img/notice.png">
+                    </div>
+
+                    <p>공지사항</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="img/talk.png">
+                    </div>
+
+                    <p>톡문의</p>
+                </a>
+
+            </div><!--header_min_sheet_mid-->
+
+            <div class="header_min_line_01"></div>
+
+            <div class="header_min_sheet_bot">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>자전거해외투어</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>자전거국내투어</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>국내여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>해외여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>회사소개</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>고객센터</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div><!--header_min_sheet_bot-->
+
+            <div class="header_min_line_02"></div>
+
+            <div class="call_header_min">
+
+                <div>
+                    <div>
+                        <p>빠른 상담/견적문의</p>
+                        <p>053-426-6200</p>
+                    </div>
+                </div>
+
+                <div></div>
+
+                <div>
+                    <a href="#">
+                        <p>여행스케치 APP 다운로드</p>
+                    </a>
+                </div>
+
+            </div>
+
+        </div><!--header_mini_sheet-->
+
+
+    </header><!--header_mini-->
+
+    <header class="header">
+
+        <div class="header_top">
+
+            <div>
+
+                <ul>
+                    <li>
+                        <a href="../login/login.html">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../join/join.html">
+                            <p>회원가입</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="#">
+                            <p>예약내역</p>
+                        </a>
+                    </li> -->
+
+                    <li>
+                        <a href="#">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="img/header_talk.png">
+                            </div><!--img-->
+                            <p>톡문의</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>기획전/이벤트</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div><!--header_top-->
+
+        <div class="header_bottom">
+
+            <div class="logo_header">
+                <a href="../index.html">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+
+            <div>
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>자전거해외투어</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>자전거국내투어</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>국내여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>해외여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>회사소개</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <label for="menu_chk" id="menu_open_icon">
+                    <div>
+                        <img src="img/menu.png">
+                    </div>
+                </label>
+
+
+            </div>
+
+        </div><!--header_bottom-->
+
+        <div class="sheet">
+
+            <div class="sheet_box">
+
+                <label for="menu_chk" id="close_sheet">
+                    <img src="img/close_btn.png">
+                </label>
+
+                <div class="sheet_left">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>자전거해외투어</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="#">
+                                <p>자전거국내투어</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="#">
+                                <p>국내여행</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="#">
+                                <p>해외여행</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="#">
+                                <p>회사소개</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="#">
+                                <p>고객센터</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="#">
+                                <p>공지사항</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="#">
+                                <p>기획전/이벤트</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--sheet_left-->
+
+                <div class="sheet_right">
+
+                    <div class="sheet_logo">
+                       <img src="img/sheet_logo.png">
+                    </div>
+
+                    <div class="call_sheet">
+                        <p>CALL</p>
+
+                        <p>빠른상담/견적문의 053-426-6200</p>
+                    </div>
+
+                    <div class="app_sheet">
+                        <a href="#">
+                            <p>여행스케치 APP 다운로드</p>
+                        </a>
+                    </div>
+
+
+                </div><!--sheet_right-->
+
+            </div><!--sheet_box-->
+
+        </div><!--sheet-->
+
+    </header><!--header-->
+
+
+    <div class="visual_main">
+
+        <div>
+            <p>자전거해외투어</p>
+        </div>
+
+    </div><!--visual_main-->
+
+    <div class="detaile_rout">
+
+        <div></div>
+
+        <div class="rout_detaile_box">
+
+            <a href="#">
+                <img src="img/home.png">
+            </a>
+
+            <a href="#">
+                <p>자전거해외투어</p>
+            </a>
+
+            <p>></p>
+
+            <a href="#">
+                <p>일본/도쿄</p>
+            </a>
+
+        </div><!--rout_detaile_box-->
+
+        <div></div>
+
+    </div>
+
+
+    <div class="detaile_box">
+
+        <div class="detaile_box_top">
+
+            <div class="detaile_visual">
+
+                    <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+
+                    <div class="swiper-slide">
+                        <img src="img/detaile_visual.png">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="img/detaile_visual_02.png">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="img/detaile_visual_03.png">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="img/detaile_visual_04.png">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="img/detaile_visual_05.png">
+                    </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+            </div>
+
+            <script src="js/visual.js"></script>
+
+
+            </div><!--detaile_visual-->
+
+            <div class="detaile_product">
+
+                <div class="product_name">
+                    <p>도쿄 시부야 시내 트레킹 3일</p>
+                </div><!--product_name-->
+
+                <div class="product_detail_mini">
+
+                    <div>
+                        <p>자전거코스</p>
+                        <p>도쿄 시내 → 시부야까지</p>
+                    </div>
+
+                    <div>
+                        <p>숙박</p>
+                        <p>후지야 호텔 (2인 1실 기준)</p>
+                    </div>
+
+                    <div>
+                        <p>최소인원</p>
+                        <p>4명</p>
+                    </div>
+
+                    <div>
+                        <p>출발지역</p>
+                        <p>인천공항</p>
+                    </div>
+
+                    <div>
+                        <p>도착지역</p>
+                        <p>일본 도쿄 시부야</p>
+                    </div>
+
+                    <div>
+                        <p>90,000원 부터~</p>
+                    </div>
+
+                    <div class="detaile_link_box_w">
+
+                        <input type="checkbox" id="call_box">
+                        <input type="checkbox" id="link_box">
+
+                        <div>
+                            <label for="call_box">
+                                <img src="img/call_icon.png">
+                            </label>
+    
+                            <a href="#">
+                                <img src="img/talk_icon.png">
+                            </a>
+    
+                            <label for="link_box">
+                                <img src="img/link_icon.png">
+                            </label>
+                        </div>
+
+                        <div class="call_sheet_box">
+                            <p>054-426-6200</p>
+                            <p>상담시간 : 09:00 ~ 18:00</p>
+                        </div><!--call_sheet_box-->
+
+                        <div class="link_sheet_box">
+
+                            <a href="#">
+                                <div>
+                                    <img src="img/band.png">
+                                </div>
+
+                                <p>네이버 밴드</p>
+                            </a>
+
+                            <a href="#">
+                                <div>
+                                    <img src="img/facebook.png">
+                                </div>
+
+                                <p>페이스북</p>
+                            </a>
+
+                            <a href="#">
+                                <div>
+                                    <img src="img/instagram.png">
+                                </div>
+
+                                <p>인스타그램</p>
+                            </a>
+
+                            <a href="#">
+                                <div>
+                                    <img src="img/link_icon.png">
+                                </div>
+
+                                <p>URL 복사</p>
+                            </a>
+
+                        </div><!--link_sheet_box-->
+
+
+                    </div><!--detaile_link_box_w-->
+
+
+                    <div class="detaile_link_box_m">
+
+                       <div>
+                            <a href="#">
+                                <img src="img/call_icon.png">
+                            </a>
+
+                            <a href="#">
+                                <img src="img/talk_icon.png">
+                            </a>
+
+                            <a href="javascript:openPop01()">
+                                <img src="img/link_icon.png">
+                            </a>
+                       </div>
+
+                    </div><!--detaile_link_box_m-->
+
+                
+                </div><!--product_detail_mini-->
+
+            </div><!--detaile_product-->
+
+        </div><!--detaile_box_top-->
+
+
+        <div class="information_ex" id="information">
+
+            <div class="information_rout">
+
+                <a href="#information">
+                    <p>여행상세정보</p>
+                </a>
+    
+                <a href="#day">
+                    <p>일정표</p>
+                </a>
+    
+                <a href="#hotel">
+                    <p>숙박정보</p>
+                </a>
+    
+                <div></div>
+    
+            </div><!--information_rout-->
+    
+            <div class="information_box">
+                
+                <table class="information_table" cellpadding="0" cellspacing="0">
+    
+                    <tr>
+                        <td>
+                            <div>
+                                <div>
+                                    <img src="img/information_01.png">
+                                </div>
+    
+                                <p>포함사항</p>
+                            </div>
+                        </td>
+    
+                        <td>
+                            <div>
+                                <p>◎ 왕복항공권 (유류세 & TAX 포함)<br>
+                                ◎ 무제한 그린피<br>
+                                ◎ 후지야 호텔 (2인 1실)<br>
+                                ◎ 전일정 식사</p>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <div>
+                                <div>
+                                    <img src="img/information_02.png">
+                                </div>
+                                <p>불포함사항</p>
+                            </div>
+                        </td>
+    
+                        <td>
+                            <div>
+                                <p>◎ 카트비 : 2인 1카트 500엔 (18홀/1인), 1인 1카트 700엔 (18홀/1인)<br>
+                                ◎ 캐디피 : 350엔 (18홀/1인)<br>
+                                ◎ 캐디팁 : 2인 1캐디 150엔 (18홀/1인), 1인 1캐디 300엔 (18홀/1인)<br>
+                                ◎ 미팅 &샌딩비 : $50 (1인/현장지불)<br>
+                                ◎ 세탁비(의무) : 1일 100엔 (1인)<br>
+                                ◎ 코로나 보험<br>
+                                ◎ 현지 PCR 추가 비용</p>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <div>
+                                <div>
+                                    <img src="img/information_03.png">
+                                </div>
+    
+                                <p>주의사항</p>
+                            </div>
+                        </td>
+    
+                        <td>
+                            <div>
+                                <p>◎ 계약금 입금 후 환불 불가능합니다.<br>
+                                ◎ 예약시 제출 서류 : 여권 사본, 백신 접종 증명서 (영문본)<br>
+                                ◎ 출국시 필요서류는 담당자를 통해 전달 드릴 예정입니다.<br>
+                                ◎ 현지에서 PCR 검사가 추가될 겅우 비용은 본인 부담입니다.<br>
+                                ◎ 준비서류 꼭 프린터해서 입국 부탁드립니다. (영문)<br>
+                                ◎ 여권 유효 기간이 최소 6개월 이상 남아 있어야 합니다.<br>
+                                ◎ 숙박은 기본 2인 1실 기준으로 홀수 인원시 싱글룸 사용하셔야 합니다.<br>
+                                ◎ 라운드 미진행시 별도 그린피 환불은 없습니다.<br>
+                                ◎ 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁드립니다.</p>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <div>
+                                <div>
+                                    <img src="img/information_04.png">
+                                </div>
+    
+                                <p>기타사항</p>
+                            </div>
+                        </td>
+    
+                        <td>
+                            <div>
+                                <p>◎ 본 상품은 예약과 동시에 전세기 상품이므로 계약금 입금 후 취소 불가능합니다. 계약금 환불 불가입니다.<br>
+                                ◎ 본 상품은 전세기 상품으로 취소시 패널티 1인 600,000원 제외 후 환불됩니다.<br>
+                                ◎ 본 상품은 전세기 상품으로 출국 후 PCR 검사 결과 양성시 전액 환불되지 않습니다.<br>
+                                ◎ 국제선 탑승 시간 최소 2시간 전 수속 대기해주세요.<br>
+                                ◎ 아티타야 숙소에는 수영장/헬스장/식당/술집/마사지샵 등 서비스 시설이 구비되어 있습니다.</p>
+                            </div>
+                        </td>
+                    </tr>
+    
+                </table><!--information_table-->
+
+                <table class="information_table_m" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td>
+                            <div>
+                                <div>
+                                    <img src="img/information_01.png">
+                                </div>
+    
+                                <p>포함사항</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <p>◎ 왕복항공권 (유류세 & TAX 포함)<br>
+                                ◎ 무제한 그린피<br>
+                                ◎ 후지야 호텔 (2인 1실)<br>
+                                ◎ 전일정 식사</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <div>
+                                    <img src="img/information_02.png">
+                                </div>
+    
+                                <p>불포함사항</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <p>◎ 카트비 : 2인 1카트 500엔 (18홀/1인), 1인 1카트 700엔 (18홀/1인)<br>
+                                ◎ 캐디피 : 350엔 (18홀/1인)<br>
+                                ◎ 캐디팁 : 2인 1캐디 150엔 (18홀/1인), 1인 1캐디 300엔 (18홀/1인)<br>
+                                ◎ 미팅 &샌딩비 : $50 (1인/현장지불)<br>
+                                ◎ 세탁비(의무) : 1일 100엔 (1인)<br>
+                                ◎ 코로나 보험<br>
+                                ◎ 현지 PCR 추가 비용</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <div>
+                                    <img src="img/information_03.png">
+                                </div>
+    
+                                <p>주의사항</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <p>◎ 계약금 입금 후 환불 불가능합니다.<br>
+                                ◎ 예약시 제출 서류 : 여권 사본, 백신 접종 증명서 (영문본)<br>
+                                ◎ 출국시 필요서류는 담당자를 통해 전달 드릴 예정입니다.<br>
+                                ◎ 현지에서 PCR 검사가 추가될 겅우 비용은 본인 부담입니다.<br>
+                                ◎ 준비서류 꼭 프린터해서 입국 부탁드립니다. (영문)<br>
+                                ◎ 여권 유효 기간이 최소 6개월 이상 남아 있어야 합니다.<br>
+                                ◎ 숙박은 기본 2인 1실 기준으로 홀수 인원시 싱글룸 사용하셔야 합니다.<br>
+                                ◎ 라운드 미진행시 별도 그린피 환불은 없습니다.<br>
+                                ◎ 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁드립니다.</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <div>
+                                    <img src="img/information_04.png">
+                                </div>
+    
+                                <p>기타사항</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <p>◎ 본 상품은 예약과 동시에 전세기 상품이므로 계약금 입금 후 취소 불가능합니다. 계약금 환불 불가입니다.<br>
+                                ◎ 본 상품은 전세기 상품으로 취소시 패널티 1인 600,000원 제외 후 환불됩니다.<br>
+                                ◎ 본 상품은 전세기 상품으로 출국 후 PCR 검사 결과 양성시 전액 환불되지 않습니다.<br>
+                                ◎ 국제선 탑승 시간 최소 2시간 전 수속 대기해주세요.<br>
+                                ◎ 아티타야 숙소에는 수영장/헬스장/식당/술집/마사지샵 등 서비스 시설이 구비되어 있습니다.</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+                
+            </div><!--information_box-->
+
+        </div><!--information_ex-->
+
+       <div class="day_ex" id="day">
+
+        <div class="day_rout">
+
+            <a href="#information">
+                <p>여행상세정보</p>
+            </a>
+
+            <a href="#day">
+                <p>일정표</p>
+            </a>
+
+            <a href="#hotel">
+                <p>숙박정보</p>
+            </a>
+
+            <div></div>
+
+        </div><!--day_rout-->
+
+        <div class="day_box">
+
+            <table class="oneday_table"  cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td colspan="2">
+                        <p>1일차</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div>
+                            <p><span>[08:00]</span> 인천 국제 공항 출발 (에어부산)<br>
+                            <span>[10:30]</span> 일본 나리타 국제공항 도착<br>
+                            직원 미팅 후 중식<br>
+                            중식 식사 후 도쿄 시부야 시내로 이동 (약 50분 소요)<br>
+                            도쿄 시부야 시내 트레킹<br>
+                            저녁 식사 후 호텔 투숙 및 휴식</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <div>
+                            <img src="img/hotel.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>후지야호텔</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <img src="img/food.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>[조식] 호텔식 [중식] 클럽식 [석식] 일식</p>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table><!--oneday_table-->
+
+            <table class="twoday_table"  cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td colspan="2">
+                        <p>2일차</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+
+                        <div>
+                            <p>호텔 조식 후 시부야로 이동 (약 50분 소요)<br>
+                            시부야 시내 트레킹</p>
+
+                            <div>
+                                <img src="img/test_01.png">
+                            </div>
+
+                            <p>저녁 식사 후 호텔 투숙 및 휴식</p>
+                        </div>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <div>
+                            <img src="img/hotel.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>후지야호텔</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <img src="img/food.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>[조식] 호텔식 [중식] 클럽식 [석식] 일식</p>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table><!--twoday_table-->
+
+            <table class="threeday_table"  cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td colspan="4">
+                        <p>3일차</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <div>
+                            <p>호텔 조식 후 시부야로 이동 (약 50분 소요)<br>
+                            시부야 시내 트레킹<br>
+                            <span>[19:00]</span> 일본 나리타 국제공항 출발 (에어부산)<br>
+                            <span>[22:30]</span> 인천 국제공항 도착<br>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <div>
+                            <img src="img/hotel.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>후지야호텔</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <img src="img/food.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>[조식] 호텔식 [중식] 클럽식 [석식] 일식</p>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table><!--twoday_table-->
+
+            <table class="oneday_table_m"  cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td colspan="2">
+                        <p>1일차</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div>
+                            <p><span>[08:00]</span> 인천 국제 공항 출발 (에어부산)<br>
+                            <span>[10:30]</span> 일본 나리타 국제공항 도착<br>
+                            직원 미팅 후 중식<br>
+                            중식 식사 후 도쿄 시부야 시내로 이동 (약 50분 소요)<br>
+                            도쿄 시부야 시내 트레킹<br>
+                            저녁 식사 후 호텔 투숙 및 휴식</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <div>
+                            <img src="img/hotel.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>후지야호텔</p>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <div>
+                            <img src="img/food.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>[조식] 호텔식 [중식] 클럽식 [석식] 일식</p>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table><!--oneday_table_m-->
+
+            <table class="twoday_table_m"  cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td colspan="2">
+                        <p>2일차</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+
+                        <div>
+                            
+                            <p>호텔 조식 후 시부야로 이동 (약 50분 소요)<br>
+                            시부야 시내 트레킹</p>
+
+                            <div>
+                                <img src="img/test_01.png">
+                            </div>
+
+                            <p>저녁 식사 후 호텔 투숙 및 휴식</p>
+
+                        </div>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <div>
+                            <img src="img/hotel.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>후지야호텔</p>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <div>
+                            <img src="img/food.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>[조식] 호텔식 [중식] 클럽식 [석식] 일식</p>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+
+            <table class="threeday_table_m"  cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td colspan="4">
+                        <p>3일차</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <div>
+                            <p>호텔 조식 후 시부야로 이동 (약 50분 소요)<br>
+                            시부야 시내 트레킹<br>
+                            <span>[19:00]</span> 일본 나리타 국제공항 출발 (에어부산)<br>
+                            <span>[22:30]</span> 인천 국제공항 도착</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <div>
+                            <img src="img/hotel.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>후지야호텔</p>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <div>
+                            <img src="img/food.png">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <p>[조식] 호텔식 [중식] 클럽식 [석식] 일식</p>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+        </div><!--day_box-->
+
+       </div><!--day_ex-->
+
+        <div class="hotel_ex" id="hotel">
+
+            <div class="hotel_rout">
+
+                <a href="#information">
+                    <p>여행상세정보</p>
+                </a>
+    
+                <a href="#day">
+                    <p>일정표</p>
+                </a>
+    
+                <a href="#hotel">
+                    <p>숙박정보</p>
+                </a>
+    
+                <div></div>
+    
+            </div><!--hotel_rout-->
+    
+    
+            <div class="hotel_box">
+                
+                <img src="img/hotel_detaile_01.png">
+
+                <img src="img/hotel_detaile_02.png">
+
+                <p>한국인이 직접 사서 운영하고 있는 호텔입니다.<br>
+                이타코 강변에 위치하고 있어서 한적한 분위기가 마음을 사로 잡습니다.<br>
+                코로나 이후 침체되었던 일본 내 한국 기업도 응원한다는 점에서 의미가 깊은 곳입니다.</p>
+
+            </div>
+
+        </div><!--hotel_ex-->
+
+        <div class="reservation_btn">
+            <a href="#">
+                <p>예약 신청서 작성</p>
+            </a>
+        </div>
+
+
+    </div><!--detaile_box-->
+    
+    
+
+    <footer class="footer">
+
+        <div class="footer_box">
+
+            <div class="footer_left">
+
+                <div class="footer_left_top">
+
+                    <div class="logo_footer">
+                        <a href="#">
+                            <img src="img/logo.png">
+                        </a>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>회사소개</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>공지사항</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>이용약관</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>개인정보처리방침</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>이메일무단수집거부</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--footer_left_top-->
+
+                <div class="footer_left_bottom">
+
+                    <div>
+                        <p>상호 : 여행스케치(주) <span>대표 : 김동영</span></p>
+                        <p>주소 : 대구 중구 국채보상로 488 섬유회관 11층</p>
+                        <p>대표번호 : 053-426-6200, 6203 <span>팩스 : 053-431-2100</span> <span>이메일 : toursk07@gmail.com</span></p>
+                        <p>사업자등록번호 : 504-81-33297 <span>통신판매업신고번호 : 2004-338</span></p>
+                        <p>Copyright @ 여행스케치(주) All Rights Reserved. Powered by Revhat Corp.</p>
+                    </div>
+
+                    <div>
+                        <p>대표 계좌번호</p>
+                        <p>기업은행 153-072595-04017</p>
+                    </div>
+
+                </div><!--footer_left_bottom-->
+
+            </div><!--footer_left-->
+
+            <div class="footer_right">
+
+                <div>
+                    <p>빠른상담/고객센터<span>054-426-6200</span></p>
+                    <p>업무시간<span>AM 09:30 ~ PM 05:30</span></p>
+                </div>
+
+                <div class="kakao_re">
+
+                    <a href="#">
+
+                        <div>
+                            <p>상담하기</p>
+                            <div>
+                                <img src="img/header_talk.png">
+                            </div>
+                        </div>
+
+                    </a>
+
+                </div><!--kakao_re-->
+
+                <div class="sns_footer">
+
+                    <!-- <a href="#">
+                        <img src="img/kakao_white.png">
+                    </a> -->
+
+                    <a href="#">
+                        <img src="img/band_white.png">
+                    </a>
+
+                    <!-- <a href="#">
+                        <img src="img/blog_white.png">
+                    </a> -->
+
+                    <a href="#">
+                        <img src="img/facebook_white.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="img/instagram_white.png">
+                    </a>
+
+                    <!-- <a href="#">
+                        <img src="img/naverpost_white.png">
+                    </a> -->
+
+                </div><!--sns_footer-->
+
+            </div><!--footer_right-->
+
+        </div><!--footer_box-->
+
+    </footer><!--footer-->
+
+    <footer class="footer_mini">
+
+        <div class="footer_mini_top">
+
+            <div class="footer_mini_logo">
+                <a href="#">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+
+            <div class="footer_top_mini">
+
+                <a href="#">
+                    <p>회사소개</p>
+                </a>
+
+                <a href="#">
+                    <p>공지사항</p>
+                </a>
+
+                <a href="#">
+                    <p>이용약관</p>
+                </a>
+
+                <a href="#">
+                    <p>개인정보처리방침</p>
+                </a>
+
+                <a href="#">
+                    <p>이메일무단수집거부</p>
+                </a>
+
+            </div>
+
+        </div><!--footer_mini_top-->
+
+        <div class="footer_mini_mid">
+
+            <div>
+                <p>대표 계좌번호</p>
+                <p>기업은행 153-072595-04017</p>
+            </div>
+
+            <div>
+                <p>빠른상담/고객센터 <span>054-426-6200</span></p>
+                <p>업무시간 <span>AM 09:30 ~ PM 05:30</span></p>
+            </div>
+
+            <div>
+
+                <div>
+                    <a href="#">
+                        <p>상담하기</p>
+    
+                        <div>
+                            <img src="img/header_talk.png">
+                        </div>
+                    </a>
+                </div>
+
+                <div>
+                    <!-- <a href="#">
+                        <img src="img/kakao_white.png">
+                    </a> -->
+
+                    <a href="#">
+                        <img src="img/band_white.png">
+                    </a>
+
+                    <!-- <a href="#">
+                        <img src="img/blog_white.png">
+                    </a> -->
+
+                    <a href="#">
+                        <img src="img/facebook_white.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="img/instagram_white.png">
+                    </a>
+
+                    <!-- <a href="#">
+                        <img src="img/naverpost_white.png">
+                    </a> -->
+                </div>
+
+            </div>
+
+        </div><!--footer_mini_mid-->
+
+        <div class="footer_mini_bot">
+            <p>상호 : 여행스케치(주) <span>대표 : 김동영</span></p>
+            <p>주소 : 대구 중구 국채보상로 488 섬유회관 11층</p>
+            <p>대표번호 : 053-426-6200, 6203 <span>팩스 : 053-431-2100</span> <span>이메일 : toursk07@gmail.com</span></p>
+            <p>사업자등록번호 : 504-81-33297 <span>통신판매업신고번호 : 2004-338</span></p>
+            <p>Copyright @ (주)승우여행사 All Rights Reserved. Powered by Revhat Corp.</p>
+        </div>
+
+
+    </footer><!--footer_mini-->
+
+    <div class="popup_link_box" id="popup_01" style="display: none;">
+
+        <div class="link_box_m">
+    
+            <!--팝업 컨텐츠 영역-->
+    
+            <div class="link_top_title">
+                <p>링크 연결하기</p>
+            </div>
+    
+            <div class="link_m_cont">
+
+                <a href="#">
+                    <div>
+                        <img src="img/band.png">
+                    </div>
+
+                    <p>네이버 밴드</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="img/facebook.png">
+                    </div>
+
+                    <p>페이스북</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="img/instagram.png">
+                    </div>
+
+                    <p>인스타그램</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="img/link_icon.png">
+                    </div>
+
+                    <p>URL 복사</p>
+                </a>
+                
+            </div>
+                
+            <!--팝업 버튼 영역-->
+    
+            <div class="link_m_btn">
+    
+                <a href="javascript:closePop01();">닫기</a>
+    
+            </div>
+    
+        </div>
+    
+    </div><!--popup_01-->
+
+
+</body>
+</html>

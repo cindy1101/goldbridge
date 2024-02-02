@@ -1,0 +1,4449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/owl.carousel.js"></script>
+    <script src="https://cdn.ckeditor.com/4.12.1/standard-all/ckeditor.js"></script>
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/detaile.css" rel="stylesheet">
+    <script>
+        $(function(){
+
+            //상품 별점 리뷰 더보기
+            $(".star_bottom_review_ex>div").slice(0, 3).show(); // 초기갯수
+            $("#load_star").click(function(e){ // 클릭시 more
+                e.preventDefault();
+                $(".star_bottom_review_ex>div:hidden").slice(0, 3).show(); // 클릭시 more 갯수 지정 
+            });
+
+            //리뷰 더보기
+            $(".review_show_ex>ul>li").slice(0, 5).show(); // 초기갯수
+            $("#more_txt_review_btn").click(function(e){ // 클릭시 more
+                e.preventDefault();
+                $(".review_show_ex>ul>li:hidden").slice(0, 5).show(); // 클릭시 more 갯수 지정 
+            });
+
+            //아코디언 상품 리뷰
+            $(".more_btn").click(function(){
+
+                    var reviewmore = $(this).prev(".content_show_review");
+
+                    if(reviewmore.is(":visible")){
+                        reviewmore.slideUp(500);
+                        $(this).html('더보기');
+                    }else{
+                        reviewmore.slideDown(500);
+                        $(this).html('닫기');
+                    }
+            });
+
+            //리뷰 팝업창
+            $("#open_review_btn").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#popup_review").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#review_close_btn").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                reviewClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function reviewClose(){
+            $("#popup_review").fadeOut(100);}
+            
+            //1024px 이하일 땐 a 링크 속성 없애는 거
+            $(document).ready(function(){
+
+                if(window.innerWidth <= 1024){
+                    $('#scroll_no_01').removeAttr('href');
+                    $('#scroll_no_02').removeAttr('href');
+                    $('#scroll_no_03').removeAttr('href');
+
+                    $('#scroll_no_04').removeAttr('href');
+                    $('#scroll_no_05').removeAttr('href');
+                    $('#scroll_no_06').removeAttr('href');
+
+                    $('#scroll_no_07').removeAttr('href');
+                    $('#scroll_no_08').removeAttr('href');
+                    $('#scroll_no_09').removeAttr('href');
+                }
+            });
+
+             //header IOS 크롬에서 볼 때 크기 조절
+             let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', vh+"px");
+            // resize
+            window.addEventListener("resize", ()=>{
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', vh+"px");
+            });
+
+            //header 메뉴 체크시 움직이지 않게
+            $(document).ready(function() {
+                $("#menu_open_web").on('click', function() {
+                    if ( $(this).prop('checked') && window.innerWidth <= 1024) {
+                        $(this).parent().addClass("scrollOff");
+                    } else {
+                        $(this).parent().removeClass("scrollOff");
+                    }
+                    });
+            });
+
+            //이메일무단수집(풋터)
+            $("#open_emaile").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#popup_emaile").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#emaile_close_btn").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                emaileClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function emaileClose(){
+            $("#popup_emaile").fadeOut(100);}
+
+        });
+
+        //리뷰 쓸 때 이미지 선택
+        function setThumbnail(event) {
+          for (var image of event.target.files) {
+            var reader = new FileReader();
+  
+            reader.onload = function(event) {
+              var img = document.createElement("img");
+              img.setAttribute("src", event.target.result);
+              document.querySelector("div#image_container").appendChild(img);
+            };
+  
+            console.log(image);
+            reader.readAsDataURL(image);
+          }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type="checkbox" id="menu_open_web">
+
+    <header class="back_header">
+
+        <div>
+            <a href="#">
+                <img src="img/sub_back_header_icon.png">
+            </a>
+
+            <p>도쿄 이타코(水鄕) 골프 2박 3일</p>
+
+            <a href="#">
+                <img src="img/sub_home_icon.png">
+            </a>
+
+        </div>
+
+     </header><!--back_header // 모바일, 태블릿에서 메인 아닌 header-->
+
+     <header class="header_mobile">
+
+        <div>
+            
+            <div>
+                <label for="menu_open_web">
+                    <img src="../img/mobile_icon_open.png">
+                </label>
+    
+                <a href="#">
+                    <img src="../img/golf_logo.png">
+                </a>
+            </div>
+
+            <a href="#">
+                <img src="../img/mobile_login_icon.png">
+            </a>
+
+        </div>
+
+        <div class="mobile_header_sheet">
+
+            <div class="close_btn_mobile_sheet">
+
+                <div>
+
+                    <div>
+                        <a href="#">
+                            <p>로그인</p>
+                        </a>
+    
+                        <div></div>
+    
+                        <a href="#">
+                            <p>회원가입</p>
+                        </a>
+
+                        <div></div>
+    
+                        <a href="#">
+                            <p>공지사항</p>
+                        </a>
+                    </div>
+    
+                    <label for="menu_open_web">
+                        <img src="../img/close_main_sheet.png" id="menu_close_mobile_btn">
+                    </label>
+
+                </div>
+
+                <div>
+                    <a href="#">
+                        <div>
+                            <img src="../img/reservation_icon.png">
+                        </div>
+                        <p>예약확인</p>
+                    </a>
+
+                    <div></div>
+
+                    <a href="#">
+                        <div>
+                            <img src="../img/mypage_icon.png">
+                        </div>
+                        <p>마이페이지</p>
+                    </a>
+                </div>
+
+            </div><!--close_btn_mobile_sheet-->
+
+            <div class="search_mobile_box">
+
+                <div>
+                    <input type="text" id="search_mobile_txt" placeholder="검색어를 입력하세요.">
+
+                    <input type="submit" id="search_mobile_ok">
+
+                    <label for="search_mobile_ok">
+                        <img src="../img/serach_btn_mobile.png">
+                    </label>
+                </div>
+
+            </div><!--search_mobile_box-->
+
+            <div class="hastag_mobile">
+
+                <p>인기 검색어</p>
+
+                <div>
+                    <a href="#">
+                        <p>#MD추천</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#해외전지훈련</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#인천출발</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#코로나무격리</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#부산출발</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#대구출발</p>
+                    </a>
+                </div>
+
+            </div><!--hastag_mobile-->
+
+            <input type="radio" id="sub_manu_01" name="sub_mobile" checked>
+            <input type="radio" id="sub_manu_02" name="sub_mobile">
+            <input type="radio" id="sub_manu_03" name="sub_mobile">
+            <input type="radio" id="sub_manu_04" name="sub_mobile">
+
+
+            <div class="mobile_lnb_box">
+
+                <div class="left_mobile_sheet">
+
+                    <label for="sub_manu_01">
+                        <p>일본</p>
+                    </label>
+
+                    <label for="sub_manu_02">
+                        <p>베트남</p>
+                    </label>
+
+                    <label for="sub_manu_03">
+                        <p>대만</p>
+                    </label>
+
+                    <a href="#">
+                        <p>라오스</p>
+                    </a>
+
+                    <a href="#">
+                        <p>코타니카발루</p>
+                    </a>
+
+                    <a href="#">
+                        <p>기획전/이벤트</p>
+                    </a>
+
+                    <label for="sub_manu_04">
+                        <p>회원권/아카데미</p>
+                    </label>
+
+                </div><!--left_mobile_sheet-->
+
+                <div class="right_mobile_sheet_01">
+
+                    <ul>
+
+                        <li>
+                            <a href="#">
+                                <p>도쿄/간도</p>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <p>오사카/간사이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>홋카이도/삿포로</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>오키나와/나하</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>후쿠오카/야마구치</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>가고시마/미야자키</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>구마모토/오이타</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>나카사키/사가</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>아오모리/니카타</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>나고야/도카이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>오카야마/츄고쿠</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>다카마츠/마츠야마</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--right_mobile_sheet_01-->
+
+                <div class="right_mobile_sheet_02">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>나트랑</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>푸꾸옥</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>다낭</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>하노이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>호치민</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>달랏</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div><!--right_mobile_sheet_02-->
+
+                <div class="right_mobile_sheet_03">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>가오슝</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>타이중</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>타이페이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>신죽</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>타오위안</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>이란/화련</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div><!--right_mobile_sheet_03-->
+
+                <div class="right_mobile_sheet_04">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>회원권</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>아카데미</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--right_mobile_sheet_04-->
+
+            </div><!--mobile_lnb_box-->
+
+
+        </div><!--mobile_header_sheet-->
+
+    </header><!--header_mobile-->
+
+    <header class="header_web">
+
+        <div class="header_web_top_ex">
+
+            <div class="header_web_top">
+
+                <div>
+                    <a href="#">
+                        <p>로그인</p>
+                    </a>
+
+                    <a href="#">
+                        <p>예약확인</p>
+                    </a>
+
+                    <a href="#">
+                        <p>마이페이지</p>
+                    </a>
+
+                    <a href="#">
+                        <p>회원가입</p>
+                    </a>
+
+                    <a href="#">
+                        <p>공지사항</p>
+                    </a>
+                </div>
+
+            </div><!--header_web_top-->
+
+        </div><!--header_web_top_ex-->
+
+
+        <div class="header_middle_web">
+
+            <div class="logo_web">
+                <a href="#">
+                    <img src="../img/golf_logo.png">
+                </a>
+            </div>
+
+            <div class="search_box">
+                <input type="text" id="search_box_web" placeholder="검색어를 입력하세요.">
+
+                <input type="submit" id="search_ok_btn">
+
+                <label for="search_ok_btn">
+                    <img src="../img/serach_btn_web.png">
+                </label>
+            </div>
+
+            <div class="call_box_web">
+                <img src="../img/call_header.png">
+            </div>
+
+        </div><!--header_middle_web-->
+
+        <div class="header_hashtag_web">
+
+                <a href="#">
+                    <p>#MD추천</p>
+                </a>
+    
+                <a href="#">
+                    <p>#해외전지훈련</p>
+                </a>
+    
+                <a href="#">
+                    <p>#인천출발</p>
+                </a>
+    
+                <a href="#">
+                    <p>#코로나무격리</p>
+                </a>
+    
+                <a href="#">
+                    <p>#부산출발</p>
+                </a>
+    
+                <a href="#">
+                    <p>#대구출발</p>
+                </a>
+
+        </div><!--header_hashtag_web-->
+
+
+        <div class="header_lnb_web_ex">
+
+            <div class="header_lnb_web_box">
+
+                <div class="header_lnb_web_left">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>일본</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>베트남</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>대만</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>라오스</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>코타키나발루</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>기획전/이벤트</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>회원권/아카데미</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--header_lnb_web_left-->
+
+                <label for="menu_open_web">
+                    <img src="../img/menu.png">
+                </label>
+
+            </div><!--header_lnb_web_box-->
+
+            <div class="header_web_sheet_ex">
+                
+                <div class="header_web_sheet">
+
+                    <div>
+
+                        <p>일본골프</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>도쿄/간도</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>오사카/간사이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>홋카이도/삿포로</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>오키나와/나하</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>후쿠오카/야마구치</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>가고시마/미야자키</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>구마모토/오이타</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>나카사키/사가</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>아오모리/니카타</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>나고야/도카이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>오카야마/츄고쿠</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>다카마츠/마츠야마</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--일본골프-->
+
+
+                    <div class="line_header_web_01">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+                    <div>
+
+                        <p>베트남골프</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>나트랑</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>푸꾸옥</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>다낭</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>하노이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>호치민</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>달랏</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--베트남골프-->
+
+                    <div class="line_header_web_02">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div>
+
+                        <p>대만골프</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>가오슝</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>타이중</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>타이페이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>신죽</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>타오위안</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>이란/화련</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--대만골프-->
+
+                    <div class="line_header_web_03">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+                    <div>
+
+                        <p>회원권/아카데미</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>회원권</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>아카데미</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--회원권아카데미-->
+
+                    <div class="line_header_web_04">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+                </div><!--header_web_sheet-->
+
+            </div><!--header_web_sheet_ex-->
+
+            
+        </div><!--header_lnb_web_ex-->
+
+    </header><!--header_web-->
+
+
+    <div class="sub_rout">
+        
+        <a href="#">
+            <img src="img/sub_home_icon.png">
+        </a>
+
+        <p>></p>
+
+        <a href="#">
+            <p>일본</p>
+        </a>
+
+        <p>></p>
+
+        <p>도쿄 이타코(水鄕) 골프 2박 3일</p>
+
+    </div><!--sub_rout-->
+
+
+    <div class="detaile_title">
+
+        <p>도쿄 이타코(水鄕) 골프 2박 3일</p>
+
+        <div></div>
+
+    </div><!--detaile_title-->
+    
+    <div class="detaile_visual_ex">
+
+        <div class="owl-carousel owl-theme" id="detaile_visual">
+
+            <div class="item">
+                <img src="img/detaile_visual_01.png">
+            </div>
+
+             <div class="item">
+                <img src="img/detaile_visual_02.png">
+            </div>
+
+        </div><!--#detaile_visual-->
+
+        <div class="detaile_text_ex">
+
+            <div class="detaile_text_box">
+
+                <div>
+                    <p>골프장</p>
+                    <p>센트럴 CC, 뉴센트럴 CC, 노스쇼어 CC</p>
+                </div>
+
+                <div>
+                    <p>숙박지</p>
+                    <p>후지야호텔 (2인 1실 기준)</p>
+                </div>
+
+                <div>
+                    <p>최소인원</p>
+                    <p>4명</p>
+                </div>
+
+                <div>
+                    <p>출발지역</p>
+                    <p>인천공항</p>
+                </div>
+
+                <div>
+                    <p>도착지역</p>
+                    <p>고쿄/나리타</p>
+                </div>
+
+                <div>
+                    <p>상품최적가</p>
+                    <p>1,090,000 ~ </p>
+                </div>
+
+            </div><!--detaile_text_box-->
+
+            <input type="checkbox" id="detaile_link">
+
+            <div class="detaile_text_icon">
+
+                <div>
+
+                    <div>
+
+                        <a href="tel:1688-1855">
+                            <img src="img/call_detail.png">
+                        </a>
+        
+                        <label for="detaile_link">
+                            <img src="img/link_detail.png">
+                        </label>
+
+                    </div>
+
+                </div><!--01-->
+
+                <div>
+
+                    <a href="#">
+                        <div>
+                            <img src="img/band.png">
+                        </div>
+
+                        <p>밴드</p>
+                    </a>
+
+                    <a href="#">
+                        <div>
+                            <img src="img/facebook.png">
+                        </div>
+
+                        <p>페이스북</p>
+                    </a>
+
+                    <a href="#">
+                        <div>
+                            <img src="img/kakao.png">
+                        </div>
+
+                        <p>카카오</p>
+                    </a>
+
+                    <a href="#">
+                        <div>
+                            <img src="img/twitter.png">
+                        </div>
+
+                        <p>트위터</p>
+                    </a>
+
+                    <a href="#">
+                        <div>
+                            <img src="img/line.png">
+                        </div>
+
+                        <p>라인</p>
+                    </a>
+
+                    <a href="#">
+                        <div>
+                            <img src="img/link_detail_mini.png">
+                        </div>
+
+                        <p>링크복사</p>
+                    </a>
+
+                </div><!--02-->
+
+            </div><!--detaile_text_icon-->
+            
+        </div><!--detaile_text_ex-->
+
+
+    </div><!--detaile_visual_ex-->
+
+    <script>
+        $('#detaile_visual').owlCarousel({
+            loop:true,
+            nav:true,
+            autoplay: true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
+    </script>
+
+    <div class="tap_menu_01" id="about">
+
+        <a href="#about" id="scroll_no_01">
+            <p>가격/상품정보</p>
+        </a>
+
+        <a href="#star" id="scroll_no_02">
+            <p>상품별점/평점</p>
+        </a>
+
+        <a href="#review" id="scroll_no_03">
+            <p>상품리뷰</p>
+        </a>
+
+        <div></div>
+
+    </div><!--tap_menu_01-->
+
+    <div class="about_box">
+
+        <div class="reservation_ex">
+
+            <div>
+                <p>상품가격</p>
+            </div>
+
+            <p>※원하시는 기간 금액 옆에 예약하기를 클릭하시면 예약 페이지로 이동됩니다.</p>
+
+            <table class="reservation_table" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <p>기간</p>
+                    </td>
+
+                    <td>
+                        <p>일수</p>
+                    </td>
+
+                    <td>
+                        <p>숙소</p>
+                    </td>
+
+                    <td>
+                        <p>항공</p>
+                    </td>
+
+                    <td>
+                        <p>주중요금</p>
+                    </td>
+
+                    <td>
+                        <p>주말요금</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>2022.05.01 ~ 2022.05.15</p>
+                    </td>
+
+                    <td>
+                        <p>2박 3일</p>
+                    </td>
+
+                    <td>
+                        <p>후지야호텔</p>
+                    </td>
+
+                    <td>
+                        <p>에어부산</p>
+                    </td>
+
+                    <td>
+                        <div>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+
+                    
+                    <td>
+                        <div>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>2022.05.16 ~ 2022.05.31</p>
+                    </td>
+
+                    <td>
+                        <p>2박 3일</p>
+                    </td>
+
+                    <td>
+                        <p>후지야호텔</p>
+                    </td>
+
+                    <td>
+                        <p>에어부산</p>
+                    </td>
+
+                    <td>
+                        <div>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+
+                    
+                    <td>
+                        <div>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>2022.06.01 ~ 2022.06.15</p>
+                    </td>
+
+                    <td>
+                        <p>2박 3일</p>
+                    </td>
+
+                    <td>
+                        <p>후지야호텔</p>
+                    </td>
+
+                    <td>
+                        <p>에어부산</p>
+                    </td>
+
+                    <td>
+                        <div>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+
+                    
+                    <td>
+                        <div>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>2022.06.15 ~ 2022.06.31</p>
+                    </td>
+
+                    <td>
+                        <p>2박 3일</p>
+                    </td>
+
+                    <td>
+                        <p>후지야호텔</p>
+                    </td>
+
+                    <td>
+                        <p>에어부산</p>
+                    </td>
+
+                    <td>
+                        <div>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+
+                    
+                    <td>
+                        <div>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+
+            <div class="reservation_mobile">
+
+                <table class="reservation_table_m_01" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td>
+                            <p>기간</p>
+                        </td>
+
+                        <td>
+                            <p>일수</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>2022.05.01 ~ 2022.05.15</p>
+                        </td>
+
+                        <td>
+                            <p>2박 3일</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>숙소</p>
+                        </td>
+
+                        <td>
+                            <p>항공</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>후지야호텔</p>
+                        </td>
+
+                        <td>
+                            <p>에어부산</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>주중요금</p>
+                        </td>
+
+                        <td>
+                            <p>주말요금</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </td>
+
+                    </tr>
+
+                </table><!--reservation_table_m_01-->
+
+                <table class="reservation_table_m_02" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td>
+                            <p>기간</p>
+                        </td>
+
+                        <td>
+                            <p>일수</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>2022.05.16 ~ 2022.05.31</p>
+                        </td>
+
+                        <td>
+                            <p>2박 3일</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>숙소</p>
+                        </td>
+
+                        <td>
+                            <p>항공</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>후지야호텔</p>
+                        </td>
+
+                        <td>
+                            <p>에어부산</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>주중요금</p>
+                        </td>
+
+                        <td>
+                            <p>주말요금</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </td>
+
+                    </tr>
+
+                </table><!--reservation_table_m_02-->
+
+                <table class="reservation_table_m_03" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td>
+                            <p>기간</p>
+                        </td>
+
+                        <td>
+                            <p>일수</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>2022.05.16 ~ 2022.05.31</p>
+                        </td>
+
+                        <td>
+                            <p>2박 3일</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>숙소</p>
+                        </td>
+
+                        <td>
+                            <p>항공</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>후지야호텔</p>
+                        </td>
+
+                        <td>
+                            <p>에어부산</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>주중요금</p>
+                        </td>
+
+                        <td>
+                            <p>주말요금</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </td>
+
+                    </tr>
+
+                </table><!--reservation_table_m_03-->
+
+                <table class="reservation_table_m_04" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td>
+                            <p>기간</p>
+                        </td>
+
+                        <td>
+                            <p>일수</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>2022.05.16 ~ 2022.05.31</p>
+                        </td>
+
+                        <td>
+                            <p>2박 3일</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>숙소</p>
+                        </td>
+
+                        <td>
+                            <p>항공</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>후지야호텔</p>
+                        </td>
+
+                        <td>
+                            <p>에어부산</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>주중요금</p>
+                        </td>
+
+                        <td>
+                            <p>주말요금</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div>
+                                <p>1,090,000</p>
+                                <a href="#">
+                                    <p>예약하기</p>
+                                </a>
+                            </div>
+                        </td>
+
+                    </tr>
+
+                </table><!--reservation_table_m_04-->
+
+            </div><!--reservation_mobile-->
+
+
+        </div>
+
+        <div class="include_ex_w">
+
+            <div>
+                <p>포함 · 불포함사항</p>
+            </div>
+
+            <table class="incluude_table_m" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="img/information_01.png">
+                            </div>
+                            <p>포함사항</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>+ 왕복항공권(유류세 & TAX 포함)<br>
+
+                            + 무제한 그린피<br>
+                            
+                            + 후자야 호텔 (2인 1실)<br>
+                            
+                            + 전일정 식사</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="img/information_02.png">
+                            </div>
+                            <p>불포함사항</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>+ 카트비 : 2인 1카트 500엔(18홀/1인), 1인 1카트 700엔(18홀/1인)<br>
+
+                            + 캐디피 : 350엔(18홀/1인)<br>
+                            
+                            + 캐디팁 : 2인 1캐디 150엔(18홀/1인), 1인 1캐디 300엔(18홀/1인)<br>
+                            
+                            + 미팅 & 샌딩비 : $50 (1인/현장지불)<br>
+                            
+                            + 세탁비(의무) : 1일 100엔(1인)<br>
+                            
+                            + 코로나보험<br>
+                            
+                            + 현지 PCR 추가 비용</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="img/information_03.png">
+                            </div>
+                            <p>기타사항</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>+ 계약금 입금 후 환불 불가능합니다.<br>
+
+                            + 예약시 제출 서류 : 여권 사본, 백신 접종 증명서(영문본)<br>
+                            
+                            + 출국시 필요서류는 담당자를 통해 전달 드릴 예정입니다.<br>
+                            
+                            + 현지에서 PCR 검사가 추가 될 경우 비용은 본인 부담입니다.<br>
+                            
+                            + 준비 서류 꼭 프린터해서 입국 부탁드립니다. (영문)<br>
+                            
+                            + 여권 유효기간이 최소 6개월 이상 남아 있어야 합니다.<br>
+                            
+                            + 숙박은 기본 2인 1실 기준으로 홀수 인원시 싱글룸 사용하셔야 합니다.<br>
+                            
+                            + 라운드 미진행시 별도 그린피 환불은 없습니다.<br>
+                            
+                            + 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁드립니다.</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="img/information_04.png">
+                            </div>
+                            <p>주의사항</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>+ 계약금 입금 후 환불 불가능합니다.<br>
+
+                            + 예약시 제출 서류 : 여권 사본, 백신 접종 증명서(영문본)<br>
+                            
+                            + 출국시 필요서류는 담당자를 통해 전달 드릴 예정입니다.<br>
+                            
+                            + 현지에서 PCR 검사가 추가 될 경우 비용은 본인 부담입니다.<br>
+                            
+                            + 준비 서류 꼭 프린터해서 입국 부탁드립니다. (영문)<br>
+                            
+                            + 여권 유효기간이 최소 6개월 이상 남아 있어야 합니다.<br>
+                            
+                            + 숙박은 기본 2인 1실 기준으로 홀수 인원시 싱글룸 사용하셔야 합니다.<br>
+                            
+                            + 라운드 미진행시 별도 그린피 환불은 없습니다.<br>
+                            
+                            + 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁드립니다.</p>
+                    </td>
+                </tr>
+
+            </table><!--incluude_table_m-->
+
+            <table class="incluude_table_w" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="img/information_01.png">
+                            </div>
+
+                            <p>포함사항</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <p>+ 왕복항공권(유류세 & TAX 포함)<br>
+
+                            + 무제한 그린피<br>
+                            
+                            + 후자야 호텔 (2인 1실)<br>
+                            
+                            + 전일정 식사</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="img/information_02.png">
+                            </div>
+
+                            <p>불포함사항</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <p>+ 카트비 : 2인 1카트 500엔(18홀/1인), 1인 1카트 700엔(18홀/1인)<br>
+
+                            + 캐디피 : 350엔(18홀/1인)<br>
+                            
+                            + 캐디팁 : 2인 1캐디 150엔(18홀/1인), 1인 1캐디 300엔(18홀/1인)<br>
+                            
+                            + 미팅 & 샌딩비 : $50 (1인/현장지불)<br>
+                            
+                            + 세탁비(의무) : 1일 100엔(1인)<br>
+                            
+                            + 코로나보험<br>
+                            
+                            + 현지 PCR 추가 비용</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="img/information_03.png">
+                            </div>
+
+                            <p>기타사항</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <p>+ 계약금 입금 후 환불 불가능합니다.<br>
+
+                            + 예약시 제출 서류 : 여권 사본, 백신 접종 증명서(영문본)<br>
+                            
+                            + 출국시 필요서류는 담당자를 통해 전달 드릴 예정입니다.<br>
+                            
+                            + 현지에서 PCR 검사가 추가 될 경우 비용은 본인 부담입니다.<br>
+                            
+                            + 준비 서류 꼭 프린터해서 입국 부탁드립니다. (영문)<br>
+                            
+                            + 여권 유효기간이 최소 6개월 이상 남아 있어야 합니다.<br>
+                            
+                            + 숙박은 기본 2인 1실 기준으로 홀수 인원시 싱글룸 사용하셔야 합니다.<br>
+                            
+                            + 라운드 미진행시 별도 그린피 환불은 없습니다.<br>
+                            
+                            + 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁드립니다.</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <div>
+                                <img src="img/information_04.png">
+                            </div>
+
+                            <p>주의사항</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <p>+ 본 상품은 예약과 동시에 전세기 상품이므로 계약금 입금 후 취소 불가능합니다. 계약금 환불 불가입니다.<br>
+
+                            + 본 상품은 전세기 상품으로 취소시 패널티 1인 600,000원 제외 후 환불됩니다.<br>
+                            
+                            + 본 상품은 전세기 상품으로 출국 후 PCR 검사 결과 양성시 전액 환불되지 않습니다.<br>
+                            
+                            + 국제선 탑승시간 최소 2시간 전 수속 대기해주세요.<br>
+                            
+                            + 아티타야 숙소에는 수영장/헬스장/식당/술집/마사지샵 등 서비스 시설이 구비되어 있습니다.</p>
+                    </td>
+                </tr>
+
+            </table><!--incluude_table_w-->
+
+        </div><!--include_ex_w-->
+
+        <div class="schedule_w">
+
+            <div class="schedule_title">
+                <p>일정표</p>
+            </div>
+
+            <div class="schedule_txt_box">
+
+                <div>
+                    <div>
+                        <div>
+                            <img src="img/information_05.png">
+                        </div>
+                        <p>참고하세요!</p>
+                    </div>
+
+                    <p>여행 일정은 계약 체결시 예상하지 못 한 부득이한 사정 등이 발생하는 경우 여행자의 사전 동의를 거쳐 변경될 수 있음을 양지하여 주시길 바랍니다.</p>
+                </div>
+
+            </div><!--schedule_txt_box-->
+
+            <div class="schedule_box_01">
+
+                <div>
+                    <p>1일차</p>
+                    <div></div>
+                </div>
+
+                <table class="day_01" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td>
+                            <p> <span>※05/15, 06/15 현지 독립기념일, 골프장 휴장일로 예약 불가합니다.※</span><br>
+                                <span>[08:00]</span> 인천 국제 공항 출발 (에어부산)<br>
+                                <span>[10:30]</span> 일본 나리타 국제공항 도착<br>
+                                직원 미팅 후 중식<br>
+                                중식 식사 후 골프장으로 이동 (약 50분 소요)<br>
+                                <span>센트럴 CC 2부 18홀 라운딩</span> <br>
+                                <img src="img/detaile_day.png">
+                                저녁 식사 후 호텔 투숙 및 휴식<br><br>
+                                조식 : 불포함<br>
+                                중식 : 일본라면<br>
+                                석식 : 초밥 디너세트<br><br>
+                                호텔 : 후지야호텔
+                            </p>
+                        </td>
+                    </tr>
+
+                </table><!--oneday-->
+                
+            </div><!--schedule_box_01-->
+
+            <div class="schedule_box_02">
+
+                <div>
+                    <p>2일차</p>
+                    <div></div>
+                </div>
+
+                <table class="day_02" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td>
+                            <p>
+                                호텔 조식 후 골프장으로 이동 (약 50분 소요)<br>
+                                <span>뉴센트럴 CC 1부 18홀 라운딩</span><br>
+                                저녁 식사 후 호텔 투숙 및 휴식<br><br>
+                                조식 : 불포함<br>
+                                중식 : 일본 라면<br>
+                                석식 : 초밥 디너세트<br><br>
+                                호텔 : 후지야 호텔
+                            </p>
+                        </td>
+                    </tr>
+
+                </table><!--twoday-->
+                
+            </div><!--schedule_box_02-->
+
+            <div class="schedule_box_03">
+
+                <div>
+                    <p>3일차</p>
+                    <div></div>
+                </div>
+
+                <table class="day_03" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                        <td>
+                            <p>
+                                호텔 조식 후 골프장으로 이동 (약 50분 소요)<br>
+                                <span>노스쇼어 CC 1부 18홀 라운딩 공항으로 이동</span><br>
+                                <span>[19:00]</span> 인천 국제 공항 출발 (에어부산)<br>
+                                <span>[21:30]</span> 일본 나리타 국제공항 도착<br><br>
+                                조식 : 호텔식<br>
+                                중식 : 불포함<br>
+                                석식 : 불포함<br>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table><!--twoday-->
+                
+            </div><!--schedule_box_02-->
+
+            <div class="no_schedule">
+                <p>등록된 일정이 없습니다.</p>
+            </div>
+
+        </div><!--schedule_w-->
+
+    </div><!--about_box-->
+
+    <div class="tap_menu_02" id="star">
+
+        <a href="#about" id="scroll_no_04">
+            <p>가격/상품정보</p>
+        </a>
+
+        <a href="#star" id="scroll_no_05">
+            <p>상품별점/평점</p>
+        </a>
+
+        <a href="#review" id="scroll_no_06">
+            <p>상품리뷰</p>
+        </a>
+
+        <div></div>
+
+    </div><!--tap_menu_02-->
+    
+
+    <div class="star_review_ex">
+
+        <input type="checkbox" id="star01" value="1" checked>
+        <input type="checkbox" id="star02" value="2" checked>
+        <input type="checkbox" id="star03" value="3" checked>
+        <input type="checkbox" id="star04" value="4" checked>
+        <input type="checkbox" id="star05" value="5">
+
+        <div class="star_top_ex">
+
+                <div>
+                    <p>8.9/5</p>
+
+                    <div>
+                       
+                        <label for="star01">
+                            ★
+                        </label>
+
+                        <label for="star02">
+                            ★
+                        </label>
+
+                        <label for="star03">
+                            ★
+                        </label>
+
+                        <label for="star04">
+                            ★
+                        </label>
+
+                        <label for="star05">
+                            ★
+                        </label>
+
+                        
+                    </div>
+
+                </div>
+
+                <div>
+                    <p>0.0</p>
+                    <p>페이웨이/그린</p>
+                </div>
+
+                <div>
+                    <p>0.0</p>
+                    <p>플레이속도</p>
+                </div>
+
+                <div>
+                    <p>0.0</p>
+                    <p>캐디</p>
+                </div>
+
+                <div>
+                    <p>0.0</p>
+                    <p>부대시설</p>
+                </div>
+
+                <div>
+                    <p>0.0</p>
+                    <p>가이드</p>
+                </div>
+
+
+        </div><!--star_top_ex-->
+
+        <div class="star_middle_ex">
+
+            <form>
+
+            <p>전체 <span>6개</span></p>
+
+            <div>
+
+                <div class="star_review_box_m">
+
+                    <div class="star_text_m_01">
+                        <p>◎ 이용한 상품에 대해 "별"을 주세요!</p>
+                        <p>평가해주신 평점은 다른 고객들의 예약에 중요한 기준이 됩니다.<br>
+                        솔직 담백한 평점 부탁드립니다.</p>
+                    </div><!--star_text_m_01-->
+                    
+                    <p>※도배 및 악의적인 내용들은 사전 통보없이 삭제될 수 있습니다.</p>
+
+                    <div class="star_txt_m_02_box">
+
+                        <div class="star_mid_ex">
+
+                            <div class="star_mid_box">
+
+                                <div>
+
+                                    <p>페이웨이/그린</p>
+
+                                    <div>
+                                        <input type="radio" id="star01_m_01" name="green" value="1" v-model="rating">
+                                        <label for="star01_m_01">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star02_m_01" name="green" value="2" v-model="rating">
+                                        <label for="star02_m_01">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star03_m_01" name="green" value="3" v-model="rating">
+                                        <label for="star03_m_01">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star04_m_01" name="green" value="4" v-model="rating">
+                                        <label for="star04_m_01">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star05_m_01" name="green" value="5" v-model="rating">
+                                        <label for="star05_m_01">
+                                            ★
+                                        </label>
+                                    </div>
+
+                                    <p>0.0</p>
+
+                                </div><!--페이웨이-->
+
+                                <div>
+                                    
+                                    <p>플레이속도</p>
+
+                                    <div>
+                                        <input type="radio" id="star01_m_02" name="play" value="1" v-model="play">
+                                        <label for="star01_m_02">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star02_m_02" name="play" value="2" v-model="play">
+                                        <label for="star02_m_02">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star03_m_02" name="play" value="3" v-model="play">
+                                        <label for="star03_m_02">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star04_m_02" name="play" value="4" v-model="play">
+                                        <label for="star04_m_02">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star05_m_02" name="play" value="5" v-model="play">
+                                        <label for="star05_m_02">
+                                            ★
+                                        </label>
+                                    </div>
+
+                                    <p>0.0</p>
+
+                                </div><!--플레이속도-->
+
+                                <div>
+                                    
+                                    <p>캐디</p>
+
+                                    <div>
+                                        <input type="radio" id="star01_m_03" name="cady" value="1" v-model="cady">
+                                        <label for="star01_m_03">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star02_m_03" name="cady" value="2" v-model="cady">
+                                        <label for="star02_m_03">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star03_m_03" name="cady" value="3" v-model="cady">
+                                        <label for="star03_m_03">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star04_m_03" name="cady" value="4" v-model="cady">
+                                        <label for="star04_m_03">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star05_m_03" name="cady" value="5" v-model="cady">
+                                        <label for="star05_m_03">
+                                            ★
+                                        </label>
+                                    </div>
+
+                                    <p>0.0</p>
+
+                                </div><!--캐디-->
+
+                                <div>
+                                    
+                                    <p>부대시설</p>
+
+                                    <div>
+                                        <input type="radio" id="star01_m_04" name="amenities" value="1" v-model="amenities">
+                                        <label for="star01_m_04">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star02_m_04" name="amenities" value="2" v-model="amenities">
+                                        <label for="star02_m_04">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star03_m_04" name="amenities" value="3" v-model="amenities">
+                                        <label for="star03_m_04">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star04_m_04" name="amenities" value="4" v-model="amenities">
+                                        <label for="star04_m_04">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star05_m_04" name="amenities" value="5" v-model="amenities">
+                                        <label for="star05_m_04">
+                                            ★
+                                        </label>
+                                    </div>
+
+                                    <p>0.0</p>
+
+                                </div><!--부대시설-->
+
+                                <div>
+                                    
+                                    <p>가이드</p>
+
+                                    <div>
+                                        <input type="radio" id="star01_m_05" name="guide" value="6" v-model="rating">
+                                        <label for="star01_m_05">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star02_m_05" name="guide" value="6" v-model="rating">
+                                        <label for="star02_m_05">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star03_m_05" name="guide" value="6" v-model="rating">
+                                        <label for="star03_m_05">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star04_m_05" name="guide" value="6" v-model="rating">
+                                        <label for="star04_m_05">
+                                            ★
+                                        </label>
+
+                                        <input type="radio" id="star05_m_05" name="guide" value="6" v-model="rating">
+                                        <label for="star05_m_05">
+                                            ★
+                                        </label>
+                                    </div>
+
+                                    <p>0.0</p>
+
+                                </div><!--가이드-->
+
+                            </div><!--star_mid_box-->
+
+                        </div><!--star_mid_ex // 별점 입력란-->
+
+                        <textarea id="star_review_txt_01" required></textarea>
+
+                    </div><!---star_txt_m_02_box-->
+
+                </div><!--star_review_box_m-->
+
+                <div class="login_star_btn">
+                    <a href="#">
+                        <p>로그인 하러가기</p>
+                    </a>
+                </div>
+
+                <div class="star_review_middel_btn">
+
+                    <input type="submit" value="등록" id="star_review_btn_01">
+                    <input type="reset" value="취소" id="star_review_btn_02">
+
+                </div><!--star_review_middel_btn-->
+
+            </div><!--02-->
+
+        </form>
+
+        </div><!--star_middle_ex-->
+
+        <div class="star_bottom_review_ex">
+
+            <div class="star_bottom_review_01">
+
+                <div class="name_star_b_01">
+
+                    <input type="checkbox" id="star_review_01_b" value="1" checked>
+                    <input type="checkbox" id="star_review_02_b" value="2" checked>
+                    <input type="checkbox" id="star_review_03_b" value="3" checked>
+                    <input type="checkbox" id="star_review_04_b" value="4" checked>
+                    <input type="checkbox" id="star_review_05_b" value="5">
+
+                    <div class="name_star_b_01_top">
+
+                        <div>
+                            <p>평균 고객 평점</p>
+                            <p>등록자 : 홍길동</p>
+                        </div>
+
+                        <div>
+
+                            <div>
+
+                                <p><span>8.9/</span>10</p>
+
+                                <div>
+                                    <label for="star_review_01_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_02_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_03_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_04_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_05_b">
+                                        ★
+                                    </label>
+                    
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <p>등록일 : 2022-05-01</p>
+                            </div>
+
+                        </div>
+
+                    </div><!--name_star_b_01_top-->
+                    
+                    <input type="checkbox" id="green_review_b_01" value="1" checked>
+                    <input type="checkbox" id="green_review_b_02" value="2" checked>
+                    <input type="checkbox" id="green_review_b_03" value="3" checked>
+                    <input type="checkbox" id="green_review_b_04" value="4" checked>
+                    <input type="checkbox" id="green_review_b_05" value="5">
+
+                    <input type="checkbox" id="paly_review_b_01" value="1" checked>
+                    <input type="checkbox" id="paly_review_b_02" value="2" checked>
+                    <input type="checkbox" id="paly_review_b_03" value="3" checked>
+                    <input type="checkbox" id="paly_review_b_04" value="4" checked>
+                    <input type="checkbox" id="paly_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="cady_review_b_01" value="1" checked>
+                    <input type="checkbox" id="cady_review_b_02" value="2" checked>
+                    <input type="checkbox" id="cady_review_b_03" value="3" checked>
+                    <input type="checkbox" id="cady_review_b_04" value="4" checked>
+                    <input type="checkbox" id="cady_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="amenities_review_b_01" value="1" checked>
+                    <input type="checkbox" id="amenities_review_b_02" value="2" checked>
+                    <input type="checkbox" id="amenities_review_b_03" value="3" checked>
+                    <input type="checkbox" id="amenities_review_b_04" value="4">
+                    <input type="checkbox" id="amenities_review_b_05" value="5">
+
+                    <input type="checkbox" id="guide_review_b_01" value="1" checked>
+                    <input type="checkbox" id="guide_review_b_02" value="2" checked>
+                    <input type="checkbox" id="guide_review_b_03" value="3" checked>
+                    <input type="checkbox" id="guide_review_b_04" value="4" checked>
+                    <input type="checkbox" id="guide_review_b_05" value="5" checked>
+
+                    <div class="name_star_b_01_bot">
+
+                        <div>
+                            
+                            <div>
+
+                                <p>페이웨이/그린</p>
+
+                                <div>
+
+                                    <label for="green_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>8</p>
+
+                            </div><!--그린-->
+
+
+                            <div>
+
+                                <p>플레이속도</p>
+
+                                <div>
+
+                                    <label for="paly_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--플레이속도-->
+
+                            <div>
+                                <p>캐디</p>
+
+                                <div>
+                                    
+                                    <label for="cady_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--캐디-->
+
+                            <div>
+                                <p>부대시설</p>
+
+                                <div>
+                                    <label for="amenities_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_05">
+                                        ★
+                                    </label>
+                                </div>
+
+                                <p>6</p>
+
+                            </div><!--부대시설-->
+
+                            <div>
+                                <p>가이드</p>
+
+                                <div>
+
+                                    <label for="guide_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--가이드-->
+
+                        </div><!--01-->
+
+                    </div><!--name_star_b_01_bot-->
+
+                </div><!--name_star_b_01-->
+
+
+                <textarea id="star_review_bottom_01" disabled placeholder="조식포함 가격 생각하면 가성비 괜찮다고 생각해요. 기대 안 해서 그런지 조식도 괜찮았고 룸도 그냥 괜찮았던 것 같아요. 근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요."></textarea>
+
+
+            </div><!--star_bottom_review_01-->
+
+            <div class="star_bottom_review_01">
+
+                <div class="name_star_b_01">
+
+                    <input type="checkbox" id="star_review_01_b" value="1" checked>
+                    <input type="checkbox" id="star_review_02_b" value="2" checked>
+                    <input type="checkbox" id="star_review_03_b" value="3" checked>
+                    <input type="checkbox" id="star_review_04_b" value="4" checked>
+                    <input type="checkbox" id="star_review_05_b" value="5">
+
+                    <div class="name_star_b_01_top">
+
+                        <div>
+                            <p>평균 고객 평점</p>
+                            <p>등록자 : 홍길동</p>
+                        </div>
+
+                        <div>
+
+                            <div>
+
+                                <p><span>8.9/</span>10</p>
+
+                                <div>
+                                    <label for="star_review_01_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_02_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_03_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_04_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_05_b">
+                                        ★
+                                    </label>
+                    
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <p>등록일 : 2022-05-01</p>
+                            </div>
+
+                        </div>
+
+                    </div><!--name_star_b_01_top-->
+                    
+                    <input type="checkbox" id="green_review_b_01" value="1" checked>
+                    <input type="checkbox" id="green_review_b_02" value="2" checked>
+                    <input type="checkbox" id="green_review_b_03" value="3" checked>
+                    <input type="checkbox" id="green_review_b_04" value="4" checked>
+                    <input type="checkbox" id="green_review_b_05" value="5">
+
+                    <input type="checkbox" id="paly_review_b_01" value="1" checked>
+                    <input type="checkbox" id="paly_review_b_02" value="2" checked>
+                    <input type="checkbox" id="paly_review_b_03" value="3" checked>
+                    <input type="checkbox" id="paly_review_b_04" value="4" checked>
+                    <input type="checkbox" id="paly_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="cady_review_b_01" value="1" checked>
+                    <input type="checkbox" id="cady_review_b_02" value="2" checked>
+                    <input type="checkbox" id="cady_review_b_03" value="3" checked>
+                    <input type="checkbox" id="cady_review_b_04" value="4" checked>
+                    <input type="checkbox" id="cady_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="amenities_review_b_01" value="1" checked>
+                    <input type="checkbox" id="amenities_review_b_02" value="2" checked>
+                    <input type="checkbox" id="amenities_review_b_03" value="3" checked>
+                    <input type="checkbox" id="amenities_review_b_04" value="4">
+                    <input type="checkbox" id="amenities_review_b_05" value="5">
+
+                    <input type="checkbox" id="guide_review_b_01" value="1" checked>
+                    <input type="checkbox" id="guide_review_b_02" value="2" checked>
+                    <input type="checkbox" id="guide_review_b_03" value="3" checked>
+                    <input type="checkbox" id="guide_review_b_04" value="4" checked>
+                    <input type="checkbox" id="guide_review_b_05" value="5" checked>
+
+                    <div class="name_star_b_01_bot">
+
+                        <div>
+                            
+                            <div>
+
+                                <p>페이웨이/그린</p>
+
+                                <div>
+
+                                    <label for="green_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>8</p>
+
+                            </div><!--그린-->
+
+
+                            <div>
+
+                                <p>플레이속도</p>
+
+                                <div>
+
+                                    <label for="paly_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--플레이속도-->
+
+                            <div>
+                                <p>캐디</p>
+
+                                <div>
+                                    
+                                    <label for="cady_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--캐디-->
+
+                            <div>
+                                <p>부대시설</p>
+
+                                <div>
+                                    <label for="amenities_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_05">
+                                        ★
+                                    </label>
+                                </div>
+
+                                <p>6</p>
+
+                            </div><!--부대시설-->
+
+                            <div>
+                                <p>가이드</p>
+
+                                <div>
+
+                                    <label for="guide_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--가이드-->
+
+                        </div><!--01-->
+
+                    </div><!--name_star_b_01_bot-->
+
+                </div><!--name_star_b_01-->
+
+
+                <textarea id="star_review_bottom_01" disabled placeholder="조식포함 가격 생각하면 가성비 괜찮다고 생각해요. 기대 안 해서 그런지 조식도 괜찮았고 룸도 그냥 괜찮았던 것 같아요. 근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요."></textarea>
+
+
+            </div><!--star_bottom_review_01-->
+
+            <div class="star_bottom_review_01">
+
+                <div class="name_star_b_01">
+
+                    <input type="checkbox" id="star_review_01_b" value="1" checked>
+                    <input type="checkbox" id="star_review_02_b" value="2" checked>
+                    <input type="checkbox" id="star_review_03_b" value="3" checked>
+                    <input type="checkbox" id="star_review_04_b" value="4" checked>
+                    <input type="checkbox" id="star_review_05_b" value="5">
+
+                    <div class="name_star_b_01_top">
+
+                        <div>
+                            <p>평균 고객 평점</p>
+                            <p>등록자 : 홍길동</p>
+                        </div>
+
+                        <div>
+
+                            <div>
+
+                                <p><span>8.9/</span>10</p>
+
+                                <div>
+                                    <label for="star_review_01_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_02_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_03_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_04_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_05_b">
+                                        ★
+                                    </label>
+                    
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <p>등록일 : 2022-05-01</p>
+                            </div>
+
+                        </div>
+
+                    </div><!--name_star_b_01_top-->
+                    
+                    <input type="checkbox" id="green_review_b_01" value="1" checked>
+                    <input type="checkbox" id="green_review_b_02" value="2" checked>
+                    <input type="checkbox" id="green_review_b_03" value="3" checked>
+                    <input type="checkbox" id="green_review_b_04" value="4" checked>
+                    <input type="checkbox" id="green_review_b_05" value="5">
+
+                    <input type="checkbox" id="paly_review_b_01" value="1" checked>
+                    <input type="checkbox" id="paly_review_b_02" value="2" checked>
+                    <input type="checkbox" id="paly_review_b_03" value="3" checked>
+                    <input type="checkbox" id="paly_review_b_04" value="4" checked>
+                    <input type="checkbox" id="paly_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="cady_review_b_01" value="1" checked>
+                    <input type="checkbox" id="cady_review_b_02" value="2" checked>
+                    <input type="checkbox" id="cady_review_b_03" value="3" checked>
+                    <input type="checkbox" id="cady_review_b_04" value="4" checked>
+                    <input type="checkbox" id="cady_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="amenities_review_b_01" value="1" checked>
+                    <input type="checkbox" id="amenities_review_b_02" value="2" checked>
+                    <input type="checkbox" id="amenities_review_b_03" value="3" checked>
+                    <input type="checkbox" id="amenities_review_b_04" value="4">
+                    <input type="checkbox" id="amenities_review_b_05" value="5">
+
+                    <input type="checkbox" id="guide_review_b_01" value="1" checked>
+                    <input type="checkbox" id="guide_review_b_02" value="2" checked>
+                    <input type="checkbox" id="guide_review_b_03" value="3" checked>
+                    <input type="checkbox" id="guide_review_b_04" value="4" checked>
+                    <input type="checkbox" id="guide_review_b_05" value="5" checked>
+
+                    <div class="name_star_b_01_bot">
+
+                        <div>
+                            
+                            <div>
+
+                                <p>페이웨이/그린</p>
+
+                                <div>
+
+                                    <label for="green_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>8</p>
+
+                            </div><!--그린-->
+
+
+                            <div>
+
+                                <p>플레이속도</p>
+
+                                <div>
+
+                                    <label for="paly_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--플레이속도-->
+
+                            <div>
+                                <p>캐디</p>
+
+                                <div>
+                                    
+                                    <label for="cady_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--캐디-->
+
+                            <div>
+                                <p>부대시설</p>
+
+                                <div>
+                                    <label for="amenities_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_05">
+                                        ★
+                                    </label>
+                                </div>
+
+                                <p>6</p>
+
+                            </div><!--부대시설-->
+
+                            <div>
+                                <p>가이드</p>
+
+                                <div>
+
+                                    <label for="guide_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--가이드-->
+
+                        </div><!--01-->
+
+                    </div><!--name_star_b_01_bot-->
+
+                </div><!--name_star_b_01-->
+
+
+                <textarea id="star_review_bottom_01" disabled placeholder="조식포함 가격 생각하면 가성비 괜찮다고 생각해요. 기대 안 해서 그런지 조식도 괜찮았고 룸도 그냥 괜찮았던 것 같아요. 근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요."></textarea>
+
+
+            </div><!--star_bottom_review_01-->
+
+            <div class="star_bottom_review_01">
+
+                <div class="name_star_b_01">
+
+                    <input type="checkbox" id="star_review_01_b" value="1" checked>
+                    <input type="checkbox" id="star_review_02_b" value="2" checked>
+                    <input type="checkbox" id="star_review_03_b" value="3" checked>
+                    <input type="checkbox" id="star_review_04_b" value="4" checked>
+                    <input type="checkbox" id="star_review_05_b" value="5">
+
+                    <div class="name_star_b_01_top">
+
+                        <div>
+                            <p>평균 고객 평점</p>
+                            <p>등록자 : 홍길동</p>
+                        </div>
+
+                        <div>
+
+                            <div>
+
+                                <p><span>8.9/</span>10</p>
+
+                                <div>
+                                    <label for="star_review_01_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_02_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_03_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_04_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_05_b">
+                                        ★
+                                    </label>
+                    
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <p>등록일 : 2022-05-01</p>
+                            </div>
+
+                        </div>
+
+                    </div><!--name_star_b_01_top-->
+                    
+                    <input type="checkbox" id="green_review_b_01" value="1" checked>
+                    <input type="checkbox" id="green_review_b_02" value="2" checked>
+                    <input type="checkbox" id="green_review_b_03" value="3" checked>
+                    <input type="checkbox" id="green_review_b_04" value="4" checked>
+                    <input type="checkbox" id="green_review_b_05" value="5">
+
+                    <input type="checkbox" id="paly_review_b_01" value="1" checked>
+                    <input type="checkbox" id="paly_review_b_02" value="2" checked>
+                    <input type="checkbox" id="paly_review_b_03" value="3" checked>
+                    <input type="checkbox" id="paly_review_b_04" value="4" checked>
+                    <input type="checkbox" id="paly_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="cady_review_b_01" value="1" checked>
+                    <input type="checkbox" id="cady_review_b_02" value="2" checked>
+                    <input type="checkbox" id="cady_review_b_03" value="3" checked>
+                    <input type="checkbox" id="cady_review_b_04" value="4" checked>
+                    <input type="checkbox" id="cady_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="amenities_review_b_01" value="1" checked>
+                    <input type="checkbox" id="amenities_review_b_02" value="2" checked>
+                    <input type="checkbox" id="amenities_review_b_03" value="3" checked>
+                    <input type="checkbox" id="amenities_review_b_04" value="4">
+                    <input type="checkbox" id="amenities_review_b_05" value="5">
+
+                    <input type="checkbox" id="guide_review_b_01" value="1" checked>
+                    <input type="checkbox" id="guide_review_b_02" value="2" checked>
+                    <input type="checkbox" id="guide_review_b_03" value="3" checked>
+                    <input type="checkbox" id="guide_review_b_04" value="4" checked>
+                    <input type="checkbox" id="guide_review_b_05" value="5" checked>
+
+                    <div class="name_star_b_01_bot">
+
+                        <div>
+                            
+                            <div>
+
+                                <p>페이웨이/그린</p>
+
+                                <div>
+
+                                    <label for="green_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>8</p>
+
+                            </div><!--그린-->
+
+
+                            <div>
+
+                                <p>플레이속도</p>
+
+                                <div>
+
+                                    <label for="paly_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--플레이속도-->
+
+                            <div>
+                                <p>캐디</p>
+
+                                <div>
+                                    
+                                    <label for="cady_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--캐디-->
+
+                            <div>
+                                <p>부대시설</p>
+
+                                <div>
+                                    <label for="amenities_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_05">
+                                        ★
+                                    </label>
+                                </div>
+
+                                <p>6</p>
+
+                            </div><!--부대시설-->
+
+                            <div>
+                                <p>가이드</p>
+
+                                <div>
+
+                                    <label for="guide_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--가이드-->
+
+                        </div><!--01-->
+
+                    </div><!--name_star_b_01_bot-->
+
+                </div><!--name_star_b_01-->
+
+
+                <textarea id="star_review_bottom_01" disabled placeholder="조식포함 가격 생각하면 가성비 괜찮다고 생각해요. 기대 안 해서 그런지 조식도 괜찮았고 룸도 그냥 괜찮았던 것 같아요. 근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요."></textarea>
+
+
+            </div><!--star_bottom_review_01-->
+
+            <div class="star_bottom_review_01">
+
+                <div class="name_star_b_01">
+
+                    <input type="checkbox" id="star_review_01_b" value="1" checked>
+                    <input type="checkbox" id="star_review_02_b" value="2" checked>
+                    <input type="checkbox" id="star_review_03_b" value="3" checked>
+                    <input type="checkbox" id="star_review_04_b" value="4" checked>
+                    <input type="checkbox" id="star_review_05_b" value="5">
+
+                    <div class="name_star_b_01_top">
+
+                        <div>
+                            <p>평균 고객 평점</p>
+                            <p>등록자 : 홍길동</p>
+                        </div>
+
+                        <div>
+
+                            <div>
+
+                                <p><span>8.9/</span>10</p>
+
+                                <div>
+                                    <label for="star_review_01_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_02_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_03_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_04_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_05_b">
+                                        ★
+                                    </label>
+                    
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <p>등록일 : 2022-05-01</p>
+                            </div>
+
+                        </div>
+
+                    </div><!--name_star_b_01_top-->
+                    
+                    <input type="checkbox" id="green_review_b_01" value="1" checked>
+                    <input type="checkbox" id="green_review_b_02" value="2" checked>
+                    <input type="checkbox" id="green_review_b_03" value="3" checked>
+                    <input type="checkbox" id="green_review_b_04" value="4" checked>
+                    <input type="checkbox" id="green_review_b_05" value="5">
+
+                    <input type="checkbox" id="paly_review_b_01" value="1" checked>
+                    <input type="checkbox" id="paly_review_b_02" value="2" checked>
+                    <input type="checkbox" id="paly_review_b_03" value="3" checked>
+                    <input type="checkbox" id="paly_review_b_04" value="4" checked>
+                    <input type="checkbox" id="paly_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="cady_review_b_01" value="1" checked>
+                    <input type="checkbox" id="cady_review_b_02" value="2" checked>
+                    <input type="checkbox" id="cady_review_b_03" value="3" checked>
+                    <input type="checkbox" id="cady_review_b_04" value="4" checked>
+                    <input type="checkbox" id="cady_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="amenities_review_b_01" value="1" checked>
+                    <input type="checkbox" id="amenities_review_b_02" value="2" checked>
+                    <input type="checkbox" id="amenities_review_b_03" value="3" checked>
+                    <input type="checkbox" id="amenities_review_b_04" value="4">
+                    <input type="checkbox" id="amenities_review_b_05" value="5">
+
+                    <input type="checkbox" id="guide_review_b_01" value="1" checked>
+                    <input type="checkbox" id="guide_review_b_02" value="2" checked>
+                    <input type="checkbox" id="guide_review_b_03" value="3" checked>
+                    <input type="checkbox" id="guide_review_b_04" value="4" checked>
+                    <input type="checkbox" id="guide_review_b_05" value="5" checked>
+
+                    <div class="name_star_b_01_bot">
+
+                        <div>
+                            
+                            <div>
+
+                                <p>페이웨이/그린</p>
+
+                                <div>
+
+                                    <label for="green_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>8</p>
+
+                            </div><!--그린-->
+
+
+                            <div>
+
+                                <p>플레이속도</p>
+
+                                <div>
+
+                                    <label for="paly_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--플레이속도-->
+
+                            <div>
+                                <p>캐디</p>
+
+                                <div>
+                                    
+                                    <label for="cady_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--캐디-->
+
+                            <div>
+                                <p>부대시설</p>
+
+                                <div>
+                                    <label for="amenities_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_05">
+                                        ★
+                                    </label>
+                                </div>
+
+                                <p>6</p>
+
+                            </div><!--부대시설-->
+
+                            <div>
+                                <p>가이드</p>
+
+                                <div>
+
+                                    <label for="guide_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--가이드-->
+
+                        </div><!--01-->
+
+                    </div><!--name_star_b_01_bot-->
+
+                </div><!--name_star_b_01-->
+
+
+                <textarea id="star_review_bottom_01" disabled placeholder="조식포함 가격 생각하면 가성비 괜찮다고 생각해요. 기대 안 해서 그런지 조식도 괜찮았고 룸도 그냥 괜찮았던 것 같아요. 근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요."></textarea>
+
+
+            </div><!--star_bottom_review_01-->
+
+            <div class="star_bottom_review_01">
+
+                <div class="name_star_b_01">
+
+                    <input type="checkbox" id="star_review_01_b" value="1" checked>
+                    <input type="checkbox" id="star_review_02_b" value="2" checked>
+                    <input type="checkbox" id="star_review_03_b" value="3" checked>
+                    <input type="checkbox" id="star_review_04_b" value="4" checked>
+                    <input type="checkbox" id="star_review_05_b" value="5">
+
+                    <div class="name_star_b_01_top">
+
+                        <div>
+                            <p>평균 고객 평점</p>
+                            <p>등록자 : 홍길동</p>
+                        </div>
+
+                        <div>
+
+                            <div>
+
+                                <p><span>8.9/</span>10</p>
+
+                                <div>
+                                    <label for="star_review_01_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_02_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_03_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_04_b">
+                                        ★
+                                    </label>
+
+                                    <label for="star_review_05_b">
+                                        ★
+                                    </label>
+                    
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <p>등록일 : 2022-05-01</p>
+                            </div>
+
+                        </div>
+
+                    </div><!--name_star_b_01_top-->
+                    
+                    <input type="checkbox" id="green_review_b_01" value="1" checked>
+                    <input type="checkbox" id="green_review_b_02" value="2" checked>
+                    <input type="checkbox" id="green_review_b_03" value="3" checked>
+                    <input type="checkbox" id="green_review_b_04" value="4" checked>
+                    <input type="checkbox" id="green_review_b_05" value="5">
+
+                    <input type="checkbox" id="paly_review_b_01" value="1" checked>
+                    <input type="checkbox" id="paly_review_b_02" value="2" checked>
+                    <input type="checkbox" id="paly_review_b_03" value="3" checked>
+                    <input type="checkbox" id="paly_review_b_04" value="4" checked>
+                    <input type="checkbox" id="paly_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="cady_review_b_01" value="1" checked>
+                    <input type="checkbox" id="cady_review_b_02" value="2" checked>
+                    <input type="checkbox" id="cady_review_b_03" value="3" checked>
+                    <input type="checkbox" id="cady_review_b_04" value="4" checked>
+                    <input type="checkbox" id="cady_review_b_05" value="5" checked>
+
+                    <input type="checkbox" id="amenities_review_b_01" value="1" checked>
+                    <input type="checkbox" id="amenities_review_b_02" value="2" checked>
+                    <input type="checkbox" id="amenities_review_b_03" value="3" checked>
+                    <input type="checkbox" id="amenities_review_b_04" value="4">
+                    <input type="checkbox" id="amenities_review_b_05" value="5">
+
+                    <input type="checkbox" id="guide_review_b_01" value="1" checked>
+                    <input type="checkbox" id="guide_review_b_02" value="2" checked>
+                    <input type="checkbox" id="guide_review_b_03" value="3" checked>
+                    <input type="checkbox" id="guide_review_b_04" value="4" checked>
+                    <input type="checkbox" id="guide_review_b_05" value="5" checked>
+
+                    <div class="name_star_b_01_bot">
+
+                        <div>
+                            
+                            <div>
+
+                                <p>페이웨이/그린</p>
+
+                                <div>
+
+                                    <label for="green_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="green_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>8</p>
+
+                            </div><!--그린-->
+
+
+                            <div>
+
+                                <p>플레이속도</p>
+
+                                <div>
+
+                                    <label for="paly_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="paly_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--플레이속도-->
+
+                            <div>
+                                <p>캐디</p>
+
+                                <div>
+                                    
+                                    <label for="cady_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="cady_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--캐디-->
+
+                            <div>
+                                <p>부대시설</p>
+
+                                <div>
+                                    <label for="amenities_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="amenities_review_b_05">
+                                        ★
+                                    </label>
+                                </div>
+
+                                <p>6</p>
+
+                            </div><!--부대시설-->
+
+                            <div>
+                                <p>가이드</p>
+
+                                <div>
+
+                                    <label for="guide_review_b_01">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_02">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_03">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_04">
+                                        ★
+                                    </label>
+
+                                    <label for="guide_review_b_05">
+                                        ★
+                                    </label>
+
+                                </div>
+
+                                <p>10</p>
+
+                            </div><!--가이드-->
+
+                        </div><!--01-->
+
+                    </div><!--name_star_b_01_bot-->
+
+                </div><!--name_star_b_01-->
+
+
+                <textarea id="star_review_bottom_01" disabled placeholder="조식포함 가격 생각하면 가성비 괜찮다고 생각해요. 기대 안 해서 그런지 조식도 괜찮았고 룸도 그냥 괜찮았던 것 같아요. 근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요."></textarea>
+
+
+            </div><!--star_bottom_review_01-->
+
+
+            <a href="#" id="load_star">
+                <p>더보기 +</p>
+            </a>
+
+
+        </div><!--star_bottom_review_ex-->
+
+
+    </div><!--star_review_ex-->
+
+    <div class="tap_menu_03" id="review">
+
+        <a href="#about" id="scroll_no_07">
+            <p>가격/상품정보</p>
+        </a>
+
+        <a href="#star" id="scroll_no_08">
+            <p>상품별점/평점</p>
+        </a>
+
+        <a href="#review" id="scroll_no_09">
+            <p>상품리뷰</p>
+        </a>
+
+        <div></div>
+
+    </div><!--tap_menu_03-->
+
+
+    <div class="review_ex">
+
+        <div class="review_write_box">
+
+           
+            <div>
+                <p>※ 참고하세요. ※</p>
+                <p>상품리뷰는 그 상품을 사용해보신 경험을 바탕으로 적어주세요 또한 다이렉트골프는 가공된 리뷰를 사용하지 않습니다.<br>
+                    본 게시판은 상품리뷰와 관련된 게시판이므로 게시판 성격과 맞지 않는 글은 이동 또는 삭제 될 수 있습니다. 고객님들의 양해 부탁 드립니다</p>
+            </div>
+
+            <p id="open_review_btn">리뷰 등록하기</p>
+         
+        </div><!--review_write_box-->
+
+        <div class="review_show_ex">
+
+            <ul>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>다이렉트 골프를 이용해서 잘 다녀왔습니다.</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="owl-carousel owl-theme" id="review_img_box">
+
+                            <div class="item" id="review_img">
+                                <img src="img/detaile_visual_01.png">
+                            </div>
+
+                            <div class="item" id="review_img">
+                                <img src="img/detaile_visual_02.png">
+                            </div>
+
+                            <div class="item" id="review_img">
+                                <img src="img/detaile_visual_01.png">
+                            </div>
+
+                        </div>
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>골프 치기 딱 좋은 곳이에요.</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="review_img_01">
+                            <img src="img/detaile_visual_01.png">
+                        </div>
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>깨끗하고 좋아요!</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="review_img_01">
+
+                        </div><!--이미지 없을 때-->
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>골프 치기 딱 좋은 곳이에요</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="review_img_01">
+
+                        </div><!--이미지 없을 때-->
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>여름에 강추!</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="review_img_01">
+
+                        </div><!--이미지 없을 때-->
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>가족들이랑 친구들이랑 가기 좋아요.</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="review_img_01">
+
+                        </div><!--이미지 없을 때-->
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>바람이 라운딩 치기 좋아요!</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="review_img_01">
+
+                        </div><!--이미지 없을 때-->
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>훨씬 더 업그레이드 되서 좋았어요!</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="review_img_01">
+
+                        </div><!--이미지 없을 때-->
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>즐겁게 놀기 좋아요!</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="review_img_01">
+
+                        </div><!--이미지 없을 때-->
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+                <li>
+
+                    <div class="title_show_review">
+                        <p>바람이 라운딩 치기 좋아요!</p>
+
+                        <div>
+                            <p>홍*동</p>
+                            <p>2022.12.06</p>
+                        </div>
+                    </div><!--title_show_review-->
+
+                    <div class="content_show_review">
+
+                        <p>
+                            이번에 또 한 번 갔다 왔습니다. 골프장 컨디션이 정말 좋아졌네요! 예전에는 바로 옆에 스카이밸리 코스 차량 비용 받아서 많이 이용은 안 했던 기억이 납니다.
+                            양쪽 골프장 무료로 이용이 가능해져서 넘 좋았구요 직원분들 넘 친절합니다! 대우 받는 느낌이었어요.
+                            닭똥 냄새 못 느꼈구요, 첫날 미팅 시간 지연되서 20분 고생한 것 빼고는 만족합니다. 5박 일정 다녀왔구요 4박은 썬라이즈 스카이밸리 라운드 마지막 하루 일정은 파타야 호텔 숙박 잡고
+                            즐겁게 호캉스 했네요. 마지막 날 람차방 18홀 라운드 후 여정 마치고 돌아왔습니다.
+                            다시한 전 즐거운 여행 될 수 있게 리더해주신 직원분들 감사드립니다. 가을에 또 뵙겠습니다!
+                        </p>
+
+                        <div class="review_img_01">
+
+                        </div><!--이미지 없을 때-->
+
+                    </div><!--content_show_review-->
+
+                    <a href="javascript:void(0)" onclick='preventClick(event)' class="more_btn">더보기</a>
+
+                </li>
+
+
+            </ul>
+
+            <a href="#" id="more_txt_review_btn">
+                <p>더보기 +</p>
+            </a>
+
+        </div><!--review_show_ex-->
+
+    </div><!--review_ex-->
+
+    <script>
+        $('#review_img_box').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
+    </script>
+
+
+    <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" multiple/>
+
+    <div class="review_write_popup_ex" id="popup_review" style="display: none;">
+
+        <div class="review_write_popup_box">
+
+            <form>
+
+                <div class="reveiw_title_p">
+                    <p>리뷰 작성하기</p>
+                </div><!--reveiw_title_p-->
+
+                <div class="must_txt_p">
+                    <p>※ 사진 첨부는 최대 3장까지 가능합니다.</p>
+                    <p>※ 상품 리뷰와 관련된 게시판으로 게시판 성격과 맞지 않는 글은 이동 또는 삭제될 수 있습니다.</p>
+                </div><!--must_txt_p-->
+                
+                <div class="photo_select_box">
+                    
+                    <div id="image_container">
+
+                    </div>
+        
+                    <label for="image" id="photo_selsct">
+                        <div>
+                            <div>
+                                <img src="img/detaile_photo_icon.png">
+                            </div>
+
+                            <p>사진 선택</p>
+                        </div>
+                    </label>
+                </div><!--photo_select_box-->
+
+                <div class="write_review_p">
+
+                    <div>
+                        <p>타이틀</p>
+
+                        <input type="text" id="title_reveiw_p" placeholder="리뷰 타이틀을 적어주세요." required>
+                    </div>
+
+                    <textarea id="write_review_popup" placeholder="상품 리뷰를 적어주세요." required></textarea>
+                </div><!--write_review_p-->
+
+
+                <div class="review_btn_p">
+
+                    <input type="submit" id="ok_review_btn" value="등록하기">
+
+                    <p id="review_close_btn">닫기</p>
+
+                </div><!--review_btn_p-->
+
+            </form>
+            
+        </div><!--review_write_popup_box-->
+
+       
+
+    </div><!--review_write_popup_ex-->
+
+    <footer class="footer_web">
+
+        <div class="footer_top_web">
+
+            <div>
+                <a href="#">
+                    <p>회사소개</p>
+                </a>
+
+                <a href="#">
+                    <p>이용약관</p>
+                </a>
+
+                <a href="#">
+                    <p>여행약관</p>
+                </a>
+
+                <a href="#">
+                    <p>개인정보처리방침</p>
+                </a>
+
+                <p id="open_emaile">이메일무단수집거부</p>
+
+                <a href="#">
+                    <p>제휴/홍보문의</p>
+                </a>
+
+                <a href="#">
+                    <p>홀세일문의</p>
+                </a>
+
+                <a href="#">
+                    <p>입점문의</p>
+                </a>
+            </div>
+
+        </div><!--footer_top_web-->
+
+        <div class="line_footer_web_01"></div>
+
+        <div class="footer_middle_web">
+
+           <div>
+               
+                <a href="#">
+                    <img src="../img/footer_logo.png">
+                </a>
+
+                <div class="sns_zon_web">
+                    <a href="#">
+                        <img src="../img/kakao.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="../img/blog.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="../img/facebook.png">
+                    </a>
+
+                    <a href="https://band.us/@directgolf" target="_blank">
+                        <img src="../img/band.png">
+                    </a>
+                </div>
+
+           </div>
+
+        </div><!--footer_middle_web-->
+
+        <div class="line_footer_web"></div>
+
+        <div class="footer_bottom">
+
+            <div>
+
+                <div>
+
+                    <p>(주)다이렉트골프</p>
+    
+                    <p>대구광역시 달서구 월배로 465</p>
+                    
+                    <div>
+                        <p>사업자번호 : 143-86-02804</p>
+    
+                        <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1438602804"  target="_blank">
+                            <p>사업자정보확인 ></p>
+                        </a>
+                    </div>
+    
+                    <p>통신판매업신고번호 : 2022-대구달서-1541</p>
+    
+                    <div>
+                        <p>대표이사 : 나옥택  개인정보보호책임자 : 나옥택</p>
+    
+                        <a href="#">
+                            <p>E-MAIL 문의 ></p>
+                        </a>
+                    </div>
+    
+                    <p>Copyright GoldBridge .ALL RIGHTS RESERVED. 상품 사진을 포함한 모든 콘텐츠는 저작권법 제 98조에 의거해 보호를 받고 있습니다.</p>
+
+                </div>
+    
+                <a href="https://play.google.com/store/apps/details?id=com.golf.directgolf&hl=ko&gl=US" target="_blank">
+                    <p>다이렉트골프 <span>APP</span> 다운로드</p>
+                </a>
+
+            </div>
+
+        </div><!--footer_bottom-->
+
+    </footer><!--footer_web-->
+
+    <div class="emaile_no_ex" id="popup_emaile" style="display: none;">
+
+        <div class="emaile_no_box">
+
+            <div class="emaile_title">
+
+                <p>이메일 무단 수집 거부</p>
+
+            </div><!--emaile_title-->
+
+            <div class="emaile_contents">
+                <p>
+                    본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치 를 이용하여 무단으로 수집되는 것을 거부하며,<br>
+                    이를 위반시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.<br><br>
+
+
+                    정보통신망 이용촉진 및 정보보호 등에 관한 법률<br>
+
+                    제50조의2 (전자우편주소의 무단 수집행위 등 금지)<br>
+
+                    누구든지 인터넷 홈페이지 운영자 또는 관리자의 사전 동의 없이 인터넷 홈페이지에서 자동으로 전자우편주소를 수집 하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.<br>
+                    누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매ㆍ유통하여서는 아니된다.<br>
+                    누구든지 제1항 및 제2항의 규정에 의하여 수집ㆍ판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보 전송에 이용하여서는 아니된다.<br><br>
+
+
+                    제74조 (벌칙) 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                    제8조제4항의 규정을 위반하여 표시ㆍ판매 또는 판매할 목적으로 진열한 자<br>
+                    제44조의7제1항제1호의 규정을 위반하여 음란한 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 배포ㆍ판매ㆍ임대하거나 공연히 전시한 자<br>
+                    제44조의7제1항제3호의 규정을 위반하여 공포심이나 불안감을 유발하는 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 반복적으로 상대방에게 도달하게 한 자<br>
+                    제50조제6항의 규정을 위반하여 기술적 조치를 한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자 제50조의2의 규정을 위반하여 전자우편 주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자<br>
+                    제53조제4항을 위반하여 등록사항의 변경등록 또는 사업의 양도ㆍ양수 또는 합병ㆍ상속의 신고를 하지 아니한 자<br>
+                </p>
+            </div><!--emaile_contents-->
+
+            <div class="emaile_box_line_01"></div>
+
+            <div class="emaile_close" id="emaile_close_btn">
+                <p>확인</p>
+            </div>
+
+
+        </div><!--emaile_no_box-->
+
+    </div><!--emaile_no_ex-->
+    
+
+
+</body>
+</html>

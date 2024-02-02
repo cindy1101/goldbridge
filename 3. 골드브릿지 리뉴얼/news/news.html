@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>골드브릿지</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/news.css">
+
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+
+        function closePop02() {
+            document.getElementById("popup_02").style.display = "none";
+            $('html, body').off('scroll touchmove mousewheel');};
+        
+        function openPop02() {
+            document.getElementById("popup_02").style.display = "block";
+        };
+
+    </script>
+</head>
+<body>
+    
+    <header class="header_mobile">
+
+        <input type="checkbox" id="open_chk">
+
+        <div class="header_top_m">
+
+            <a href="../index.html">
+                <div class="mobile_header_logo">
+                    <img src="img/header-logo-mobile.png">
+                </div>
+            </a>
+
+            <label for="open_chk">
+                <img src="img/menu_open.png">
+            </label>
+
+        </div>
+
+
+        <div class="mobile_sheet">
+
+            <div class="sheet_top">
+                
+                <div>
+                    <img src="img/mobile_logo_02.png">
+                </div>
+
+                <label for="open_chk">
+                    <img src="img/menu_close.png">
+                </label>
+            
+            </div>
+
+            <div class="line_mobile_01"></div>
+
+            <div class="lnb_mobile">
+
+                <ul>
+
+                        <a href="../about/about.html">
+                            <li>
+                                <p>ABOUT</p>
+                            </li>
+                        </a>
+                        
+                        <a href="../service/service.html">
+                            <li>
+                                <p>SERVICE</p>
+                            </li>
+                        </a>
+
+                        <a href="../portfolio/portfolio.html">
+                            <li>
+                                <p>PORTFOLIO</p>
+                            </li>
+                        </a>
+
+                        <a href="news.html">
+                            <li>
+                                <p>NEWS</p>
+                            </li>
+                        </a>
+
+                        <a href="../inquire/inqiure.html">
+                            <li>
+                                <p>INQUIRE</p>
+                            </li>
+                        </a>
+
+                </ul>
+
+            </div><!--lnb_mobile-->
+
+        </div>
+
+    </header><!--header_mobile-->
+
+    <header class="header_ex">
+        
+        <div class="header_web">
+
+            <div class="logo_web">
+                <a href="../index.html">
+                    <img src="img/header-logo.png">
+                </a>
+            </div>
+    
+            <div class="header_middle">
+
+                <div class="lnb">
+
+                    <ul>
+
+                        <a href="../index.html">
+                            <li>
+                                <p>ABOUT</p>
+                            </li>
+                        </a>
+                        
+                        <a href="../service/service.html">
+                            <li>
+                                <p>SERVICE</p>
+                            </li>
+                        </a>
+
+                        <a href="../portfolio/portfolio.html">
+                            <li>
+                                <p>PORTFOLIO</p>
+                            </li>
+                        </a>
+
+                        <a href="news.html">
+                            <li>
+                                <p>NEWS</p>
+                            </li>
+                        </a>
+
+                        <a href="../inquire/inqiure.html">
+                            <li>
+                                <p>INQUIRE</p>
+                            </li>
+                        </a>
+
+                    </ul>
+
+                </div><!--lnb-->
+    
+            </div><!--header_middle-->
+
+        </div><!--header_web-->
+
+    </header><!--header_ex-->
+
+    <div class="visual_banner">
+
+        <div>
+            <div>
+                <img src="img/title_icon.png">
+            </div>
+
+            <p>NEWS</p>
+        </div>
+
+    </div><!--visual_banner-->
+
+    <div class="n_content">
+
+        <div>
+            
+            <p>NEWS</p>
+
+            <div class="n_conbox">
+
+                <div>
+                    
+                    <a href="../news_detaile/news_detaile.html">
+                    
+                        <img src="img/con1.png" alt="컨텐츠1">
+                    
+                        <p>데이터 바우처 공급기업선정</p>
+
+                        <p class="date">매출 상승을 위한 누구가 신청 가능한 돈 되는 정보를 누릴 수 있는</p>
+                    
+                    </a>
+
+                </div>
+
+                <div>
+                    
+                    <a href="">
+                    
+                        <img src="img/con2.png" alt="컨텐츠2">
+
+                    
+                        <p>혁신 바우처 수행기관선정</p>
+
+                        <p class="date">골드브릿지가 중소기업 혁신바우처 수행기관에 선정되었습니다!</p>
+                    
+                    </a>
+
+                </div>
+
+                <div>
+                    
+                    <a href="">
+                    
+                        <img src="img/con3.png" alt="컨텐츠3">
+
+                    
+                        <p>특허등록 및 웹/앱 제작</p>
+
+                        <p class="date">골드브릿지의 앱들은 업종을 뛰어 넘어 협업합니다. 중/소상공인들의</p>
+                    
+                    </a>
+
+                </div>
+
+                <div>
+                    
+                    <a href="">
+                    
+                        <img src="img/con4.png" alt="컨텐츠4">
+
+                    
+                        <p>10월 카드사 정보</p>
+
+                        <p class="date">10월 카드사 정보입니다.</p>
+                    
+                    </a>
+
+                </div>
+                
+            </div>
+
+            <div class="n_line"></div>
+
+        </div>
+
+    </div><!--n_conbox-->
+
+    <div class="n_table">
+
+        <div>
+
+            <table cellspacing="0" cellpadding="0">
+                
+                <tr>
+                    <td>No.</td>
+                    <td>글쓴이</td>
+                    <td>제목</td>
+                    <td>등록일</td>
+                    <td>조회수</td>
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <a href="../news_detaile/news_detaile.html">9</a>
+                    </td>
+                    
+                    <td>
+                        <a href="../news_detaile/news_detaile.html">염주호</a>
+                    </td>
+                    
+                    <td>
+                        <a href="../news_detaile/news_detaile.html">관광혁신바우처</a>
+                    </td>
+                    
+                    <td>
+                        <a href="../news_detaile/news_detaile.html">2022.10.04</a> 
+                    </td>
+                    
+                    <td>
+                       <a href="../news_detaile/news_detaile.html">110</a>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <a href="">8</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">염주호</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">부산항일학생 72주년 기념</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">2022.10.04</a> 
+                    </td>
+                    
+                    <td>
+                       <a href="">110</a>
+                    </td>
+                
+                </tr>
+                
+                <tr>
+                    
+                    <td>
+                        <a href="">7</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">염주호</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">부산관광박람회</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">2022.10.04</a> 
+                    </td>
+                    
+                    <td>
+                       <a href="">110</a>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <a href="">6</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">염주호</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">골드브릿지 박람회</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">2022.10.04</a> 
+                    </td>
+                    
+                    <td>
+                       <a href="">110</a>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <a href="">5</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">염주호</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">11월 카드사별 할부목록</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">2022.10.04</a> 
+                    </td>
+                    
+                    <td>
+                       <a href="">110</a>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <a href="">4</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">염주호</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">데이터 바우처 공급기업선정</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">2022.10.04</a> 
+                    </td>
+                    
+                    <td>
+                       <a href="">110</a>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <a href="">3</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">염주호</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">특허등록 및 웹/앱 제작</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">2022.10.04</a> 
+                    </td>
+                    
+                    <td>
+                       <a href="">110</a>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <a href="">2</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">염주호</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">혁신 바우처 수행기관선정</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">2022.10.04</a> 
+                    </td>
+                    
+                    <td>
+                       <a href="">110</a>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <a href="">1</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">염주호</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">특허기술 2건 등록</a>
+                    </td>
+                    
+                    <td>
+                        <a href="">2022.10.04</a> 
+                    </td>
+                    
+                    <td>
+                       <a href="">110</a>
+                    </td>
+                
+                </tr>
+            </table>
+        
+        </div>
+
+        <section class="page_num">
+            
+            <div class="num_wrap">
+                
+                <a href="">
+                    <p> < </p>
+                </a>
+
+                <a href="">
+                    <p> 1 </p>
+                </a>
+
+                <a href="">
+                    <p> 2 </p>
+                </a>
+
+                <a href="">
+                    <p> 3 </p>
+                </a>
+
+                <a href="">
+                    <p> 4 </p>
+                </a>
+
+                <a href="">
+                    <p> 5 </p>
+                </a>
+
+                <a href="">
+                    <p> > </p>
+                </a>
+            
+            </div>
+
+        </div>
+
+        <div class="m_table">
+
+            <div>
+
+                <table cellspacing="0" cellpadding="0" class="m_t">
+
+                    <tr>
+                        <td>
+                            <a href="../news_detaile/news_detaile.html">
+                                <p>관광혁신바우처</p>
+                                <p>2022.10.04</p>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../news_detaile/news_detaile.html">
+                                <p>부산항일학생 72주년 기념</p>
+                                <p>2022.10.04</p>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../news_detaile/news_detaile.html">
+                                <p>부산관광박람회</p>
+                                <p>2022.10.04</p>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../news_detaile/news_detaile.html">
+                                <p>골드브릿지 박람회</p>
+                                <p>2022.10.04</p>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../news_detaile/news_detaile.html">
+                                <p>11월 카드사별 할부목록</p>
+                                <p>2022.10.04</p>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../news_detaile/news_detaile.html">
+                                <p>데이터 바우처 공급기업선정</p>
+                                <p>2022.10.04</p>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../news_detaile/news_detaile.html">
+                                <p>특허등록 및 웹/앱 제작</p>
+                                <p>2022.10.04</p>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../news_detaile/news_detaile.html">
+                                <p>혁신 바우처 수행기관선정</p>
+                                <p>2022.10.04</p>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../news_detaile/news_detaile.html">
+                                <p>특허기술 2건 등록</p>
+                                <p>2022.10.04</p>
+                            </a>
+                        </td>
+                    </tr>
+                    
+                </table>
+
+            </div>
+
+            <section class="m_page_num">
+            
+                <div class="m_num_wrap">
+                    
+                    <a href="">
+                        <p> < </p>
+                    </a>
+    
+                    <a href="">
+                        <p> 1 </p>
+                    </a>
+    
+                    <a href="">
+                        <p> 2 </p>
+                    </a>
+    
+                    <a href="">
+                        <p> 3 </p>
+                    </a>
+    
+                    <a href="">
+                        <p> 4 </p>
+                    </a>
+    
+                    <a href="">
+                        <p> 5 </p>
+                    </a>
+    
+                    <a href="">
+                        <p> > </p>
+                    </a>
+                
+                </div>
+    
+            </section>
+
+        </div><!--m_table-->
+
+    
+    </section><!--n_table-->
+
+    <footer class="footer">
+
+        <div class="footer_line_01"></div>
+
+        <div class="footer_top">
+            <ul>
+                <a href="../index.html">
+                    <li>
+                        <p>홈</p>
+                    </li>
+                </a>
+
+                <li></li>
+
+                <a href="../about/about.html">
+                    <li>
+                        <p>회사소개</p>
+                    </li>
+                </a>
+
+                <li></li>
+
+                <a href="javascript:openPop02()">
+                    <li>
+                        <p>개인정보취급방침</p>
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="footer_line_02"></div>
+
+        <div class="footer_bottom">
+
+            <div class="bottom_left">
+
+                <p>(주) 골드브릿지</p>
+
+                <p><span>Addres</span>부산광역시 사하구 괴정동 낙동대로 164 한라빌딩 503호 | [서울지사] 서울시 강남구 테헤란로 431 (삼성동, 저스트코 타워)</p>
+                <p><span>Tel</span>1899-5442</p>
+                <p><span>E-mail</span>goldbridge-07@hanmail.net</p>
+                <p>Copyrightⓒ 2022 Gold Bridge All right reserved</p>
+
+            </div>
+
+            <div class="bottom_right">
+                <img src="img/footer-logo.png">
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="privacy" id="popup_02" style="display: none;">
+
+        <div class="privacy_box">
+    
+            <!--팝업 컨텐츠 영역-->
+    
+            <div class="privacy_top_title">
+                <p>개인정보처리방침</p>
+            </div>
+    
+            <div class="privacy_cont">
+                <p>사이트가 취급하는 모든 개인정보는 관련법령에 근거하거나 정보주체의 동의에 의하여 수집ㆍ보유 및 처리되고 있습니다.<br><br>
+    
+                    「개인정보보호법률」은 이러한 개인정보의 취급에 대한 일반적 규범을 제시하고 있으며, 사이트는 이러한 법령의 규정에 따라 개인정보의 처리목적에 필요한 최소한의 개인정보를 수집ㆍ보유 및 처리하는 개인정보를 공공업무의 적절한 수행과 국민의 권익을 보호하기 위해 적법하고 적정하게 취급할 것입니다.<br><br>
+                    
+                    또한, 사이트는 관련 법령에서 규정한 바에 따라 사이트에서 보유하고 있는 개인정보에 대한 열람청구권 및 정정청구권 등 이용자 여러분의 권익을 존중하며, 이용자 여러분은 이러한 법령상 권익의 침해 등에 대하여 법률이 정하는 바에 따라 정보주체의 권익을 보호 받을 수 있습니다.<br><br>
+                    
+                    사이트의 개인정보처리방침은 사이트가 운영하는 여러 홈페이지에서 이용자 여러분의 개인정보를 보호하기 위한 [홈페이지 이용자의 개인정보보호]와 소관업무를 수행하는데 필요한 개인정보 취급에 관한 [컴퓨터에 의해 처리되는 개인정보보호] 두 가지로 구성되어 있습니다.<br><br>
+                    
+                    위와 같이 자동 수집ㆍ저장되는 정보는 이용자 여러분에게 보다 나은 서비스를 제공하기 위해 홈페이지의 개선과 보완을 위한 통계분석, 이용자와 홈페이지 간의 원활한 의사소통, 보안 침해 대응 등을 위해 이용될 수 있으며, 이러한 정보는 관계법령의 규정에 따라 제출될 수 있음을 유념하시기 바랍니다.<br><br>
+                    
+                    사이트가 운영하는 홈페이지에서 이메일 주소 등 식별할 수 있는 개인정보를 취득하여서는 아니 됩니다. 적법하지 아니한 방법으로 이러한 개인정보를 열람 또는 제공받은 자는 [개인정보보호법률]에 의하여 처벌을 받을 수 있습니다.</p>
+            </div>
+                
+            <!--팝업 버튼 영역-->
+    
+            <div class="privacy_btn">
+    
+                <a href="javascript:closePop02();">닫기</a>
+    
+            </div>
+    
+        </div>
+    
+    </div><!--popup_02-->
+   
+</body>
+</html>

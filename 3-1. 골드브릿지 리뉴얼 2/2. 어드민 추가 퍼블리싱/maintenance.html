@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유지보수</title>
+
+    <script src="https://cdn.ckeditor.com/4.12.1/standard-all/ckeditor.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="maintenance.css">
+</head>
+<body>
+    
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">유지보수 관리</h1>
+    </div>
+
+    <div class="maintenance_sheet">
+
+        <form>
+
+            <ul class="maintenance_basic_form">
+
+                <li>
+                    <p>회사명</p>
+                </li>
+
+                <li>
+                    <input type="text" class="maintenance_basic_text">
+                </li>
+
+                <li>
+                    <p>전화번호</p>
+                </li>
+
+                <li>
+                    <input type="tel" class="maintenance_basic_text">
+                </li>
+
+                <li>
+                    <p>이메일</p>
+                </li>
+
+                <li>
+                    <input type="email" class="maintenance_basic_text">
+                </li>
+
+                <li>
+                    <p>이름/작위</p>
+                </li>
+
+                <li>
+                    <input type="text" class="maintenance_basic_text">
+                </li>
+
+                <li>
+                    <p>프로젝트명</p>
+                </li>
+
+                <li class="maintenance_basic_form_width_list">
+                    <input type="text" class="maintenance_basic_text">
+                </li>
+
+            </ul><!--maintenance_basic_form end-->
+
+            <ul class="maintenance_detail_form">
+
+                <li>
+                    <p>유지보수</p>
+                </li>
+
+                <li class="maintenance_detail_check_width">
+
+                    <div class="maintenance_detail_checkbox">
+
+                        <div>
+                            <input type="checkbox" class="maintenance_check">
+                            <p>페이지 추가</p>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="maintenance_check">
+                            <p>페이지 수정</p>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="maintenance_check">
+                            <p>기능 추가</p>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="maintenance_check">
+                            <p>기능 수정</p>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="maintenance_check">
+                            <p>오류 · 버그 수정</p>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="maintenance_check">
+                            <p>이미지 수정</p>
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li>
+                    <p>희망 완료일</p>
+                </li>
+
+                <li class="maintenance_detail_day_width">
+                    <input type="text" class="maintenance_detaile_day">
+                </li>
+
+                <li>
+                    <p>홈페이지 URL</p>
+                </li>
+
+                <li>
+                    <input type="text" class="maintenance_detaile_text">
+                </li>
+
+                <li>
+                    <p>참고 홈페이지 URL</p>
+                </li>
+
+                <li>
+                    <input type="text" class="maintenance_detaile_text">
+                </li>
+
+                <li>
+                    <p>포함사항</p>
+                </li>
+
+                <li class="maintenance_detaile_include_width">
+
+                    <div class="maintenance_detaile_include_ex">
+
+                    <div class="maintenance_detaile_include_cont">
+
+                            <p>테스트입니다.</p>
+                            <p>테스트입니다.</p>
+                            <p>테스트입니다.</p>
+                    
+                        </div>
+
+                    </div>
+                </li>
+
+
+                <li>
+                    <p>첨부파일</p>
+                </li>
+
+                <li class="maintenance_detaile_include_width">
+
+                    <div class="maintenance_detail_file_box">
+                        <a href="#" download class="maintenance_detail_file">
+                            <p>첨부파일 1 이름명</p>
+                        </a>
+        
+                        <a href="#" download class="maintenance_detail_file">
+                            <p>첨부파일 2 이름명</p>
+                        </a>
+                    </div>
+
+                </li>
+
+            </ul><!--maintenance_detail_form end-->
+            
+
+            <ul class="maintenance_answer_form">
+
+                <li>
+                    <p>답변 제목</p>
+                </li>
+
+                <li>
+                    <input type="text" class="maintenance_answer_text">
+                </li>
+
+                <li>
+                    <p>내용</p>
+                </li>
+
+                <li class="maintenance_answer_width">
+                    <textarea class="admin_textarea_cont" id="mce_2"></textarea>
+                    
+                    <script type="text/javascript">
+                        CKEDITOR.replace('mce_2',{
+                            filebrowserUploadUrl: './imageUpload.do'
+                        });
+                    </script>
+                </li>
+
+            </ul>
+
+            <div class="maintenance_btn_box">
+                <input type="submit" class="maintenance_btn_correction btn-success" value="답변">
+                <input type="button" class="maintenance_btn_delate btn-danger" value="삭제">
+                <a href="#" class="maintenance_btn_re_list btn-secondary">
+                    <p>목록</p>
+                </a>
+                
+            </div>
+
+
+        </form>
+
+    </div>
+
+</body>
+</html>

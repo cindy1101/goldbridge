@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <link href="css/header.css" rel="stylesheet">
+    
+    <script>
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', vh+"px");
+        // resize
+        window.addEventListener("resize", ()=>{
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', vh+"px");
+        });
+    </script><!--크롬으로 볼 때 height 오류 방지 코드 (헤더)-->
+
+    <script>
+        $(document).ready(function() {
+            $("#menu_open_web").on('click', function() {
+                if ( $(this).prop('checked') && window.innerWidth <= 1024) {
+                    $(this).parent().addClass("scrollOff");
+                } else {
+                    $(this).parent().removeClass("scrollOff");
+                }
+                });
+        });
+    </script> <!--모바일 메뉴 안 움직이게 스크롤, 모바일일 때! (헤더)-->
+</head>
+<body>
+    <input type="checkbox" id="menu_open_web">
+
+    <header class="header_mobile">
+
+        <div>
+            
+            <div>
+                <label for="menu_open_web">
+                    <img src="../img/mobile_icon_open.png">
+                </label>
+    
+                <a href="#">
+                    <img src="../img/golf_logo.png">
+                </a>
+            </div>
+
+            <a href="#">
+                <img src="../img/mobile_login_icon.png">
+            </a>
+
+        </div>
+
+        <div class="mobile_header_sheet">
+
+            <div class="close_btn_mobile_sheet">
+
+                <div>
+
+                    <div>
+                        <a href="#">
+                            <p>로그인</p>
+                        </a>
+    
+                        <div></div>
+    
+                        <a href="#">
+                            <p>회원가입</p>
+                        </a>
+
+                        <div></div>
+    
+                        <a href="#">
+                            <p>공지사항</p>
+                        </a>
+
+                    </div>
+    
+                    <label for="menu_open_web">
+                        <img src="../img/close_main_sheet.png" id="menu_close_mobile_btn">
+                    </label>
+
+                </div>
+
+                <div>
+                    <a href="#">
+                        <div>
+                            <img src="../img/reservation_icon.png">
+                        </div>
+                        <p>예약확인</p>
+                    </a>
+
+                    <div></div>
+
+                    <a href="#">
+                        <div>
+                            <img src="../img/mypage_icon.png">
+                        </div>
+                        <p>마이페이지</p>
+                    </a>
+                </div>
+
+            </div><!--close_btn_mobile_sheet-->
+
+            <div class="search_mobile_box">
+
+                <div>
+                    <input type="text" id="search_mobile_txt" placeholder="검색어를 입력하세요.">
+
+                    <input type="submit" id="search_mobile_ok">
+
+                    <label for="search_mobile_ok">
+                        <img src="../img/serach_btn_mobile.png">
+                    </label>
+                </div>
+
+            </div><!--search_mobile_box-->
+
+            <div class="hastag_mobile">
+
+                <p>인기 검색어</p>
+
+                <div>
+                    <a href="#">
+                        <p>#MD추천</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#해외전지훈련</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#인천출발</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#코로나무격리</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#부산출발</p>
+                    </a>
+    
+                    <a href="#">
+                        <p>#대구출발</p>
+                    </a>
+                </div>
+
+            </div><!--hastag_mobile-->
+
+            <input type="radio" id="sub_manu_01" name="sub_mobile" checked>
+            <input type="radio" id="sub_manu_02" name="sub_mobile">
+            <input type="radio" id="sub_manu_03" name="sub_mobile">
+            <input type="radio" id="sub_manu_04" name="sub_mobile">
+
+
+            <div class="mobile_lnb_box">
+
+                <div class="left_mobile_sheet">
+
+                    <label for="sub_manu_01">
+                        <p>일본</p>
+                    </label>
+
+                    <label for="sub_manu_02">
+                        <p>베트남</p>
+                    </label>
+
+                    <label for="sub_manu_03">
+                        <p>대만</p>
+                    </label>
+
+                    <a href="#">
+                        <p>라오스</p>
+                    </a>
+
+                    <a href="#">
+                        <p>코타니카발루</p>
+                    </a>
+
+                    <a href="#">
+                        <p>기획전/이벤트</p>
+                    </a>
+
+                    <label for="sub_manu_04">
+                        <p>회원권/아카데미</p>
+                    </label>
+
+                </div><!--left_mobile_sheet-->
+
+                <div class="right_mobile_sheet_01">
+
+                    <ul>
+
+                        <li>
+                            <a href="#">
+                                <p>도쿄/간도</p>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <p>오사카/간사이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>홋카이도/삿포로</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>오키나와/나하</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>후쿠오카/야마구치</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>가고시마/미야자키</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>구마모토/오이타</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>나카사키/사가</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>아오모리/니카타</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>나고야/도카이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>오카야마/츄고쿠</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>다카마츠/마츠야마</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--right_mobile_sheet_01-->
+
+                <div class="right_mobile_sheet_02">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>나트랑</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>푸꾸옥</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>다낭</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>하노이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>호치민</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>달랏</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div><!--right_mobile_sheet_02-->
+
+                <div class="right_mobile_sheet_03">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>가오슝</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>타이중</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>타이페이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>신죽</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>타오위안</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>이란/화련</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div><!--right_mobile_sheet_03-->
+
+                <div class="right_mobile_sheet_04">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>회원권</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>아카데미</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--right_mobile_sheet_04-->
+
+            </div><!--mobile_lnb_box-->
+
+
+        </div><!--mobile_header_sheet-->
+
+    </header><!--header_mobile-->
+
+    <header class="header_web">
+
+        <div class="header_web_top_ex">
+
+            <div class="header_web_top">
+
+                <div>
+                    <a href="#">
+                        <p>로그인</p>
+                    </a>
+
+                    <a href="#">
+                        <p>예약확인</p>
+                    </a>
+
+                    <a href="#">
+                        <p>마이페이지</p>
+                    </a>
+
+                    <a href="#">
+                        <p>회원가입</p>
+                    </a>
+
+                    <a href="#">
+                        <p>공지사항</p>
+                    </a>
+
+                </div>
+
+            </div><!--header_web_top-->
+
+        </div><!--header_web_top_ex-->
+
+
+        <div class="header_middle_web">
+
+            <div class="logo_web">
+                <a href="#">
+                    <img src="../img/golf_logo.png">
+                </a>
+            </div>
+
+            <div class="search_box">
+                <input type="text" id="search_box_web" placeholder="검색어를 입력하세요.">
+
+                <input type="submit" id="search_ok_btn">
+
+                <label for="search_ok_btn">
+                    <img src="../img/serach_btn_web.png">
+                </label>
+            </div>
+
+            <div class="call_box_web">
+                <img src="../img/call_header.png">
+            </div>
+
+        </div><!--header_middle_web-->
+
+        <div class="header_hashtag_web">
+
+                <a href="#">
+                    <p>#MD추천</p>
+                </a>
+    
+                <a href="#">
+                    <p>#해외전지훈련</p>
+                </a>
+    
+                <a href="#">
+                    <p>#인천출발</p>
+                </a>
+    
+                <a href="#">
+                    <p>#코로나무격리</p>
+                </a>
+    
+                <a href="#">
+                    <p>#부산출발</p>
+                </a>
+    
+                <a href="#">
+                    <p>#대구출발</p>
+                </a>
+
+        </div><!--header_hashtag_web-->
+
+
+        <div class="header_lnb_web_ex">
+
+            <div class="header_lnb_web_box">
+
+                <div class="header_lnb_web_left">
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>일본</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>베트남</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>대만</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>라오스</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>코타키나발루</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>기획전/이벤트</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>회원권/아카데미</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--header_lnb_web_left-->
+
+                <label for="menu_open_web">
+                    <img src="../img/menu.png">
+                </label>
+
+            </div><!--header_lnb_web_box-->
+
+            <div class="header_web_sheet_ex">
+                
+                <div class="header_web_sheet">
+
+                    <div>
+
+                        <p>일본골프</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>도쿄/간도</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>오사카/간사이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>홋카이도/삿포로</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>오키나와/나하</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>후쿠오카/야마구치</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>가고시마/미야자키</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>구마모토/오이타</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>나카사키/사가</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>아오모리/니카타</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>나고야/도카이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>오카야마/츄고쿠</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>다카마츠/마츠야마</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--일본골프-->
+
+
+                    <div class="line_header_web_01">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+                    <div>
+
+                        <p>베트남골프</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>나트랑</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>푸꾸옥</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>다낭</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>하노이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>호치민</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>달랏</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--베트남골프-->
+
+                    <div class="line_header_web_02">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div>
+
+                        <p>대만골프</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>가오슝</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>타이중</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>타이페이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>신죽</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>타오위안</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>이란/화련</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--대만골프-->
+
+                    <div class="line_header_web_03">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+                    <div>
+
+                        <p>회원권/아카데미</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>회원권</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>아카데미</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div><!--회원권아카데미-->
+
+                    <div class="line_header_web_04">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+                </div><!--header_web_sheet-->
+
+            </div><!--header_web_sheet_ex-->
+
+            
+        </div><!--header_lnb_web_ex-->
+
+    </header><!--header_web-->
+</body>
+</html>

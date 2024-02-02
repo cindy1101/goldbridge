@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link href="css/popup.css" rel="stylesheet">
+    <script>
+        //팝업창
+       $(document).ready(function(){
+
+        const body = document.querySelector('body');
+        body.style.overflowY = 'hidden'
+
+       });
+
+        $(function(){
+
+            $("#close").click(function(){
+                modalClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function modalClose(){
+            $("#popup").fadeOut(1000);}
+
+        });
+    </script>
+</head>
+<body>
+    <div class="container"> 
+
+        <div class="popup-wrap" id="popup"> 
+    
+            <div class="popup">	
+    
+                <div class="popup_img">
+                    <div class="swiper">
+                
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+            
+                            <div class="swiper-slide" id="popup_layout">
+                                <p>
+                                    <img src="img/popup_test.png">
+                                </p>
+                            </div>
+            
+                            <div class="swiper-slide" id="popup_layout">
+                                <p>
+                                    <img src="img/test_popup_02.png">
+                                </p>
+                            </div>
+            
+                        </div>
+            
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination" id="popup_chk_btn"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    
+                    </div>
+                </div>
+    
+                <div class="popuop_footer">
+                    <div>
+                        <input type="checkbox" id="reset_popup_chk"> <label for="reset_popup_chk"> 오늘 다시 보지 않기</label>
+                    </div>
+    
+                    <a href="#" id="close">창 닫기</a>
+                </div>
+    
+            </div><!--popup-->
+    
+        </div><!--popup-wrap-->
+    
+    </div><!--container-->
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+
+            autoplay: {
+                //시간 1000 이 1초
+            delay: 5000,
+            disableOnInteraction: false,
+            },
+
+            // If we need pagination
+            pagination: {
+            el: '.swiper-pagination',
+            },
+        
+            // Navigation arrows
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+        
+        });
+    </script>
+    
+</body>
+</html>

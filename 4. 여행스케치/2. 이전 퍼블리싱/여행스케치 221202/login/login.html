@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimin-scale=1.0, user-scalable=no">
+    <title>login</title>
+    <link href="css/login.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $('#close_sheet').click(function(){
+                $('.sheet').fadeOut(1000)
+            });
+
+            $('#menu_open_icon').click(function() {
+                $('.sheet').fadeIn(1000)
+            });
+
+        });
+    </script>
+    <script>
+
+        $(function(){
+
+            $("#email_open").click(function(){        
+                $("#popup_email").fadeIn(500);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#mail_close").click(function(){
+                modalClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function modalClose(){
+            $("#popup_email").fadeOut(500);}
+
+        });
+    </script><!--이메일 무단 수집 거부-->
+
+    <script>
+        $(function(){
+
+            $("#email_open_02").click(function(){        
+                $("#popup_email").fadeIn(500);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+
+            $("#mail_close").click(function(){
+                modalClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+
+            function modalClose(){
+            $("#popup_email").fadeOut(500);}
+
+        });    
+    </script><!--이메일 무단 수집 거부(~1024px)-->
+</head>
+<body>
+
+    <input type="checkbox" id="menu_chk">
+
+    <header class="header_mini">
+
+        <div class="header_mini_top">
+
+            <div>
+                <label for="menu_chk" class="open_mini">
+                    <img src="img/menu.png">
+                </label>
+    
+                <a href="../index.html">
+                    <img src="img/header_logo.png">
+                </a>
+    
+                <div>
+                    <a href="../login.html">
+                        <img src="img/login.png">
+                    </a>
+                    
+                    <a href="#">
+                        <img src="img/app_icon.png">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="header_mini_sheet">
+
+            <div class="header_min_sheet_top">
+
+                <div>
+                    <a href="../login/login.html">
+                        <p>로그인</p>
+                    </a>
+
+                    <div></div>
+
+                    <a href="join.html">
+                        <p>회원가입</p>
+                    </a>
+
+                    <label for="menu_chk">
+                        <img src="img/mobile_close.png">
+                    </label>
+                </div>
+
+            </div><!--header_min_sheet_top-->
+
+            <div class="header_min_sheet_mid">
+
+                <a href="../mypage/mypage.html">
+                    <div>
+                        <img src="img/mypage.png">
+                    </div>
+
+                    <p>마이페이지</p>
+                </a>
+
+                <!--<a href="#">
+                    <div>
+                        <img src="img/reservation.png">
+                    </div>
+
+                    <p>예약내역</p>
+                </a>-->
+
+                <a href="../notice/notice.html">
+                    <div>
+                        <img src="img/notice.png">
+                    </div>
+
+                    <p>공지사항</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="img/talk.png">
+                    </div>
+
+                    <p>물어보기</p>
+                </a>
+
+            </div><!--header_min_sheet_mid-->
+
+            <div class="header_min_line_01"></div>
+
+            <div class="header_min_sheet_bot">
+
+                <ul>
+                    <li>
+                        <a href="../subpage/subpage.html">
+                            <p>[국내]자전거투어</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../subpage/subpage.html">
+                            <p>[해외]자전거투어</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../subpage/subpage.html">
+                            <p>국내여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../subpage/subpage.html">
+                            <p>해외여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../company/company.html">
+                            <p>회사소개</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div><!--header_min_sheet_bot-->
+
+            <div class="header_min_line_02"></div>
+
+            <div class="call_header_min">
+
+                <div>
+                    <div>
+                        <p>빠른 상담/견적문의</p>
+                        <p>053-426-6200</p>
+                    </div>
+                </div>
+
+                <div></div>
+
+                <div>
+                    <a href="#">
+                        <p>여행스케치 APP 다운로드</p>
+                    </a>
+                </div>
+
+            </div>
+
+        </div><!--header_mini_sheet-->
+
+
+    </header><!--header_mini--><!--헤더 모바일 ~ 1024px-->
+
+    <header class="header">
+
+        <div class="header_top">
+
+            <div>
+                <ul>
+                    <li>
+                        <a href="../login/login.html">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../join/join.html">
+                            <p>회원가입</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../mypage/mypage.html">
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../notice/notice.html">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="img/header_talk.png">
+                            </div>
+
+                            <p>물어보기</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div><!--header_top-->
+
+        <div class="header_bottom">
+
+            <div class="logo_header">
+                <a href="../index.html">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+
+            <div>
+
+                <ul>
+                    <li>
+                        <a href="../subpage/subpage.html">
+                            <p>[국내] 자전거여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../subpage/subpage.html">
+                            <p>[해외] 자전거여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../subpage/subpage.html">
+                            <p>국내여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../subpage/subpage.html">
+                            <p>해외여행</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../company/company.html">
+                            <p>회사소개</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <label for="menu_chk" id="menu_open_icon">
+                    <div>
+                        <img src="img/menu.png">
+                    </div>
+                </label>
+
+            </div>
+
+
+        </div><!--header_bottom-->
+
+        <div class="sheet">
+
+            <div class="sheet_box">
+
+                <label for="menu_chk" id="close_sheet">
+                    <img src="img/close_btn.png">
+                </label>
+
+                <div class="sheet_left">
+
+                    <ul>
+                        <li>
+                            <a href="../subpage/subpage.html">
+                                <p>[국내] 자전거투어</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="../subpage/subpage.html">
+                                <p>[해외] 자전거투어</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="../subpage/subpage.html">
+                                <p>국내여행</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="../subpage/subpage.html">
+                                <p>해외여행</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="../company/company.html">
+                                <p>회사소개</p>
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="../notice/notice.html">
+                                <p>공지사항</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!--sheet_left-->
+
+                <div class="sheet_right">
+
+                    <div class="sheet_logo">
+                       <img src="img/sheet_logo.png">
+                    </div>
+
+                    <div class="call_sheet">
+                        <p>CALL</p>
+
+                        <p>빠른상담/견적문의 053-426-6200</p>
+                    </div>
+
+                    <div class="app_sheet">
+                        <a href="#">
+                            <p>여행스케치 APP 다운로드</p>
+                        </a>
+                    </div>
+
+
+                </div><!--sheet_right-->
+
+            </div><!--sheet_box-->
+
+        </div><!--sheet-->
+
+    </header><!--header-->
+
+
+    <div class="visual_main">
+
+        <div>
+            <p>MEMBER</p>
+        </div>
+
+    </div><!--visual_main-->
+
+
+    <div class="login">
+
+        <div class="title_login">
+            <p>로그인</p>
+        </div>
+
+        <div class="login_form">
+
+            <form>
+
+                <input type="text" id="id_box" placeholder="아이디 또는 이메일 아이디" required>
+
+                <input type="password" id="pw_box" placeholder="비밀번호" required>
+
+                <div class="found_box">
+
+                    <div>
+                        <input type="checkbox" id="id_remember"> <label for="id_remember">아이디 저장</label>
+                    </div>
+
+                    <div>
+                        <a href="../find/find.html">
+                            <p>아이디 찾기 <span>·</span> 비밀번호 찾기</p>
+                        </a>
+
+                        <a href="../join/join.html">
+                            <p>회원가입</p>
+                        </a>
+
+                    </div>
+
+                </div><!--found_box-->
+
+                <input type="submit" id="login_ok" value="로그인">
+
+            </form>
+
+        </div><!--login_form-->
+
+        <div class="login_another">
+
+            <div class="title_another">
+
+                <p>간편하게 로그인하기</p>
+
+                <div></div>
+
+            </div>
+
+            <div class="another">
+
+                <div>
+
+                    <a href="#">
+                        <img src="img/naver_login.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="img/kakao_login.png">
+                    </a>
+
+                </div>
+
+            </div><!--another-->
+
+        </div><!--login_another-->
+
+
+    </div><!--login-->
+
+    <footer class="footer">
+
+        <div class="footer_box">
+    
+            <div class="footer_left">
+    
+                <div class="footer_left_top">
+    
+                    <div class="logo_footer">
+                        <a href="../index.html">
+                            <img src="img/logo.png">
+                        </a>
+                    </div>
+    
+                    <ul>
+                        <li>
+                            <a href="../company/company.html">
+                                <p>회사소개</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="../notice/notice.html">
+                                <p>공지사항</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="../terms/terms.html">
+                                <p>이용약관</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="../personal/personal.html">
+                                <p>개인정보처리방침</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <p id="email_open">이메일무단수집거부</p>
+                        </li>
+                    </ul>
+    
+                </div><!--footer_left_top-->
+    
+                <div class="footer_left_bottom">
+    
+                    <div>
+                        <p>· 계좌번호 : 기업은행 153-072595-04017</p>
+                    </div>
+    
+                    <div>
+                        <p>상호 : 여행스케치(주) <span>대표 : 김동영</span></p>
+                        <p>주소 : 대구 중구 국채보상로 488 섬유회관 11층</p>
+                        <p>· Tel: 053-426-6200</p>
+                        <p>· Fax : 053-431-2100</p>
+                        <p>· mail : toursk07@gmail.com</p>
+                        <p>사업자등록번호 : 504-81-33297 <span>통신판매업신고번호 : 2004-338</span></p>
+                        <p>Copyright @ 여행스케치(주) All Rights Reserved. Powered by Revhat Corp.</p>
+                    </div>
+                    
+                </div><!--footer_left_bottom-->
+    
+            </div><!--footer_left-->
+    
+            <div class="footer_right">
+    
+                <div>
+                    <p>Tel. <span>053-426-6200</span></p>
+                    <p>상담시간<span>AM 09:30 ~ PM 05:30</span></p>
+                </div>
+    
+                <div class="kakao_re">
+    
+                    <a href="#">
+    
+                        <div>
+                            <p>물어보기</p>
+                            <div>
+                                <img src="img/header_talk.png">
+                            </div>
+                        </div>
+    
+                    </a>
+    
+                </div><!--kakao_re-->
+    
+                <div class="sns_footer">
+    
+                    <!-- <a href="#">
+                        <img src="img/kakao_white.png">
+                    </a> -->
+    
+                    <a href="#">
+                        <img src="img/band_white.png">
+                    </a>
+    
+                    <!-- <a href="#">
+                        <img src="img/blog_white.png">
+                    </a> -->
+    
+                    <a href="#">
+                        <img src="img/facebook_white.png">
+                    </a>
+    
+                    <a href="#">
+                        <img src="img/instagram_white.png">
+                    </a>
+    
+                    <!-- <a href="#">
+                        <img src="img/naverpost_white.png">
+                    </a> -->
+    
+                </div><!--sns_footer-->
+    
+            </div><!--footer_right-->
+    
+        </div><!--footer_box-->
+    
+    </footer><!--footer-->
+    
+    <footer class="footer_mini">
+    
+        <div class="footer_mini_top">
+    
+            <div class="footer_mini_logo">
+                <a href="../index.html">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+    
+            <div class="footer_top_mini">
+    
+                <a href="../company/company.html">
+                    <p>회사소개</p>
+                </a>
+    
+                <a href="../notice/notice.html">
+                    <p>공지사항</p>
+                </a>
+    
+                <a href="../terms/terms.html">
+                    <p>이용약관</p>
+                </a>
+    
+                <a href="../personal/personal.html">
+                    <p>개인정보처리방침</p>
+                </a>
+    
+                <p id="email_open_02">이메일무단수집거부</p>
+    
+            </div>
+    
+        </div><!--footer_mini_top-->
+    
+        <div class="footer_mini_mid">
+    
+            <div>
+                <p>· 계좌번호 : 기업은행 153-072595-04017</p>
+            </div>
+    
+            <div>
+                <p>Tel. <span>053-426-6200</span></p>
+                <p>상담시간 <span>AM 09:30 ~ PM 05:30</span></p>
+            </div>
+    
+            <!--<div>
+    
+                <div>
+                    <a href="#">
+                        <p>물어보기</p>
+    
+                        <div>
+                            <img src="img/header_talk.png">
+                        </div>
+                    </a>
+                </div>
+    
+                <div>
+    
+                    <a href="#">
+                        <img src="img/band_white.png">
+                    </a>
+    
+    
+                    <a href="#">
+                        <img src="img/facebook_white.png">
+                    </a>
+    
+                    <a href="#">
+                        <img src="img/instagram_white.png">
+                    </a>
+    
+                </div>
+    
+            </div>-->
+    
+        </div><!--footer_mini_mid-->
+    
+        <div class="footer_mini_bot">
+            <p>상호 : 여행스케치(주) <span>대표 : 김동영</span></p>
+            <p>주소 : 대구 중구 국채보상로 488 섬유회관 11층</p>
+            <p>· Tel: 053-426-6200</p>
+            <p>· Fax : 053-431-2100</p>
+            <p>· mail : toursk07@gmail.com</p>
+            <p>사업자등록번호 : 504-81-33297 <span>통신판매업신고번호 : 2004-338</span></p>
+            <p>Copyright @ 여행스케치(주) All Rights Reserved. Powered by Revhat Corp.</p>
+        </div>
+    
+    
+    </footer><!--footer_mini-->
+
+
+    <div class="mail_box" id="popup_email" style="display: none;">
+
+        <div class="mail">
+
+            <div class="mail_title">
+                <p>이메일무단수집거부</p>
+            </div>
+
+            <div>
+                <p>
+                    본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치 를 이용하여 무단으로 수집되는 것을 거부하며,
+                    이를 위반시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.
+                </p>
+            </div>
+    
+            <div class="mail_title_02">
+                <p>
+                    <span>정보통신망 이용촉진 및 정보보호 등에 관한 법률</span><br><br>
+                    제50조의2 (전자우편주소의 무단 수집행위 등 금지)<br><br>
+                    -누구든지 인터넷 홈페이지 운영자 또는 관리자의 사전 동의 없이 인터넷 홈페이지에서 자동으로 전자우편주소를 수집 하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.<br>
+                    -누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매ㆍ유통하여서는 아니된다.<br>
+                    -누구든지 제1항 및 제2항의 규정에 의하여 수집ㆍ판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보 전송에 이용하여서는 아니된다.<br><br>
+
+                    제74조 (벌칙) 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+                    제8조제4항의 규정을 위반하여 표시ㆍ판매 또는 판매할 목적으로 진열한 자<br>
+                    제44조의7제1항제1호의 규정을 위반하여 음란한 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 배포ㆍ판매ㆍ임대하거나 공연히 전시한 자<br>
+                    제44조의7제1항제3호의 규정을 위반하여 공포심이나 불안감을 유발하는 부호ㆍ문언ㆍ음향ㆍ화상 또는 영상을 반복적으로 상대방에게 도달하게 한 자<br>
+                    제50조제6항의 규정을 위반하여 기술적 조치를 한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자 제50조의2의 규정을 위반하여 전자우편 주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자<br>
+                    제50조의8의 규정을 위반하여 광고성 정보를 전송한 자<br>
+                    제53조제4항을 위반하여 등록사항의 변경등록 또는 사업의 양도ㆍ양수 또는 합병ㆍ상속의 신고를 하지 아니한 자<br>
+                </p>
+            </div>
+    
+            <div class="mail_btn" id="mail_close">
+        
+                <p>닫기</p>
+    
+            </div>
+
+        </div>
+
+    </div><!--popup_04-->
+    
+</body>
+</html>

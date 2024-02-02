@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>골드브릿지</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    
+    <!-- css -->
+    <link href="css/inquire.css" rel="stylesheet">
+    
+    <!-- script -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        //페이지 열었을 때 준비되어 있다.
+       $(document).ready(function(){
+            $("#file_web").on('change',function(){
+            var fileName = $("#file_web").val();
+            $("#upload-name").val(fileName);
+            });
+       });
+
+        //페이지 열었을 때 준비되어 있다.
+        $(document).ready(function(){
+            $("#file_m").on('change',function(){
+            var fileName = $("#file_m").val();
+            $("#upload-name-m").val(fileName);
+            });
+       });
+
+       function closePop02() {
+            document.getElementById("popup_02").style.display = "none";
+            $('html, body').off('scroll touchmove mousewheel');};
+        
+        function openPop02() {
+            document.getElementById("popup_02").style.display = "block";
+        };
+    </script>
+</head>
+<body>
+
+    <header class="header_mobile">
+
+        <input type="checkbox" id="open_chk">
+
+        <div class="header_top_m">
+
+            <a href="../index.html">
+                <div class="mobile_header_logo">
+                    <img src="img/header-logo-mobile.png">
+                </div>
+            </a>
+
+            <label for="open_chk">
+                <img src="img/menu_open.png">
+            </label>
+
+        </div>
+
+
+        <div class="mobile_sheet">
+
+            <div class="sheet_top">
+                
+                <div>
+                    <img src="img/mobile_logo_02.png">
+                </div>
+
+                <label for="open_chk">
+                    <img src="img/menu_close.png">
+                </label>
+            </div>
+
+            <div class="line_mobile_01"></div>
+
+            <div class="lnb_mobile">
+
+                <ul>
+
+                        <a href="../about/about.html">
+                            <li>
+                                <p>ABOUT</p>
+                            </li>
+                        </a>
+                        
+                        <a href="../service/service.html">
+                            <li>
+                                <p>SERVICE</p>
+                            </li>
+                        </a>
+
+                        <a href="../portfolio/portfolio.html">
+                            <li>
+                                <p>PORTFOLIO</p>
+                            </li>
+                        </a>
+
+                        <a href="../news/news.html">
+                            <li>
+                                <p>NEWS</p>
+                            </li>
+                        </a>
+
+                        <a href="inqiure.html">
+                            <li>
+                                <p>INQUIRE</p>
+                            </li>
+                        </a>
+
+                </ul>
+
+            </div><!--lnb_mobile-->
+
+        </div>
+
+    </header><!--header_mobile-->
+
+    <header class="header_ex">
+        
+        <div class="header_web">
+
+            <a href="../index.html">
+
+                <div class="logo_web">
+    
+                    <img src="img/header-logo.png">
+    
+                </div>
+    
+            </a>
+    
+            <div class="header_middle">
+
+                <div class="lnb">
+
+                    <ul>
+
+                        <a href="../about/about.html">
+                            <li>
+                                <p>ABOUT</p>
+                            </li>
+                        </a>
+                        
+                        <a href="../service/service.html">
+                            <li>
+                                <p>SERVICE</p>
+                            </li>
+                        </a>
+
+                        <a href="../portfolio/portfolio.html">
+                            <li>
+                                <p>PORTFOLIO</p>
+                            </li>
+                        </a>
+
+                        <a href="../news/news.html">
+                            <li>
+                                <p>NEWS</p>
+                            </li>
+                        </a>
+
+                        <a href="inqiure.html">
+                            <li>
+                                <p>INQUIRE</p>
+                            </li>
+                        </a>
+
+                    </ul>
+
+                </div><!--lnb-->
+    
+            </div><!--header_middle-->
+
+        </div><!--header_web-->
+
+    </header><!--header_ex-->
+
+    <div class="visual_banner">
+
+        <div>
+            <div>
+                <img src="img/title_icon.png">
+            </div>
+
+            <p>INQUIRE</p>
+        </div>
+
+    </div><!--visual_banner-->
+
+    <section class="inquire_box">
+
+        <div class="inquire_title">
+
+            <p>아래에 있는 <span>문의신청</span>을 작성하시거나 <span>전화</span>로 <span>작업</span>을 의뢰해주세요. <span>(T.1899-5442)</span></span></p>
+    
+        </div><!--inquire_title-->
+    
+        <div class="check_box">
+    
+            <input type="checkbox" id="it_chk"> <label for="it_chk">웹사이트 개발/구축문의</label>
+            <input type="checkbox" id="operate_chk"> <label for="operate_chk">운영,유지보수 문의</label>
+            <input type="checkbox" id="travel_chk"> <label for="travel_chk">여행앱 공급/운영 문의</label>
+            <input type="checkbox" id="shopping_chk"> <label for="shopping_chk">쇼핑몰 공급/운영 문의</label>
+    
+        </div><!--check_box-->
+
+        <table class="web_table" cellpadding="0" cellspacing="0">
+
+            <tr>
+                <td>
+                    <p><span>*</span> 회사명</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="company_web" required placeholder="회사명을 입력하세요.">
+                </td>
+    
+                <td>
+                    <p><span>*</span> 담당자</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="name_web" required placeholder="담당자 이름을 입력하세요.">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><span>*</span> 연락처</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="call_web" required placeholder="연락처를 입력하세요.">
+                </td>
+    
+                <td>
+                    <p><span>*</span> 이메일</p>
+                </td>
+    
+                <td>
+                    <input type="email" id="email_web" required placeholder="이메일을 입력하세요.">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>홈페이지</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="site_web" placeholder="http://">
+                </td>
+    
+                <td>
+                    <p>예상예산</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="money_web" placeholder="예산을 입력하세요.">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>첨부파일</p>
+                </td>
+
+                <td colspan="3">
+
+                    <div>
+                        <input id="upload-name">
+
+                        <input type="file" id="file_web">
+
+                        <label for="file_web">
+                            <p>첨부파일</p>
+                        </label>
+                    </div>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><span>*</span> 의뢰내용</p>
+                </td>
+
+                <td colspan="3">
+                    <textarea id="contents_web" placeholder="의뢰내용을 입력하세요."></textarea>
+                </td>
+            </tr>
+
+        </table><!--web_table-->
+
+
+        <table class="mobile_table" cellpadding="0" cellspacing="0">
+
+            <tr>
+                <td>
+                    <p><span>*</span> 회사명</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="company_m" required placeholder="회사명을 입력하세요.">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><span>*</span> 담당자</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="name_m" required placeholder="담당자 이름을 입력하세요.">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><span>*</span> 연락처</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="call_m" required placeholder="연락처를 입력하세요.">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><span>*</span> 이메일</p>
+                </td>
+    
+                <td>
+                    <input type="email" id="email_m" required placeholder="이메일을 입력하세요.">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <p>홈페이지</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="site_m" placeholder="http://">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>예상예산</p>
+                </td>
+    
+                <td>
+                    <input type="text" id="money_m" placeholder="예산을 입력하세요.">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>첨부파일</p>
+                </td>
+    
+                <td>
+    
+                    <div>
+                        <input id="upload-name-m">
+    
+                        <input type="file" id="file_m">
+    
+                        <label for="file_m">
+                            <p>첨부파일</p>
+                        </label>
+                    </div>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><span>*</span> 의뢰내용</p>
+                </td>
+
+                <td>
+                    <textarea id="contents_m" placeholder="의뢰내용을 입력하세요."></textarea>
+                </td>
+            </tr>
+        </table><!--mobile_table-->
+
+
+        <div class="information">
+
+            <div>
+                <p><span>개인정보 수집 및 이용에 대한 안내</span><br><br>
+
+                    골드브릿지는 귀하의 개인정보보호를 매우 중요시하며,”정보통신망이용촉진등에관한법률” 을 준수하고 있습니다. 골드브릿지의 개인정보보호방침을 통하여 귀하께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고
+                    있으며 개인 정보 보호를 위해 어떠한 조차기 취해지고 있는지 알려드립니다.<br><br>
+        
+        
+                    <span>① 개인정보 수집 항목 및 수집·이용 목적</span><br>
+        
+                    가) 수집 항목 (필수항목) : 이름, 연락처<br>
+        
+                    나) 수집 및 이용 목적 : 온라인 문의<br><br>
+        
+                   <span>② 개인정보 보유 및 이용기간</span><br>
+        
+                    수집·이용 동의일로부터 개인정보의 수집·이용목적을 달성할 때까지<br><br>
+        
+                    <span>③ 동의거부관리귀하께서는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다.</span><br>
+        
+                    다만, 귀하가 개인정보의 수집/이용에 동의를 거부하시는 경우에 온라인문의를 이용함에 있어 불이익이 발생할 수 있음을 알려드립니다
+                    </p>
+            </div>
+
+            <div>
+                <input type="checkbox" required id="agree_w_01"><label for="agree_w_01">위 약관에 동의합니다.</label>
+            </div>
+
+        </div><!--information-->
+
+
+        <div class="web_btn">
+            <input type="submit" id="web_submit" value="골드브릿지에게 작업 의뢰하기">
+        </div>
+    
+
+    </section><!--inquire_box-->
+
+    <footer class="footer">
+
+        <div class="footer_line_01"></div>
+
+        <div class="footer_top">
+            <ul>
+                <a href="../index.html">
+                    <li>
+                        <p>홈</p>
+                    </li>
+                </a>
+
+                <li></li>
+
+                <a href="../about/about.html">
+                    <li>
+                        <p>회사소개</p>
+                    </li>
+                </a>
+
+                <li></li>
+
+                <a href="javascript:openPop02()">
+                    <li>
+                        <p>개인정보취급방침</p>
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="footer_line_02"></div>
+
+        <div class="footer_bottom">
+
+            <div class="bottom_left">
+
+                <p>(주) 골드브릿지</p>
+
+                <p><span>Addres</span>부산광역시 사하구 괴정동 낙동대로 164 한라빌딩 503호 | [서울지사] 서울시 강남구 테헤란로 431 (삼성동, 저스트코 타워)</p>
+                <p><span>Tel</span>1899-5442</p>
+                <p><span>E-mail</span>goldbridge-07@hanmail.net</p>
+                <p>Copyrightⓒ 2022 Gold Bridge All right reserved</p>
+
+            </div>
+
+            <div class="bottom_right">
+                <img src="img/footer-logo.png">
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="privacy" id="popup_02" style="display: none;">
+
+        <div class="privacy_box">
+    
+            <!--팝업 컨텐츠 영역-->
+    
+            <div class="privacy_top_title">
+                <p>개인정보처리방침</p>
+            </div>
+    
+            <div class="privacy_cont">
+                <p>사이트가 취급하는 모든 개인정보는 관련법령에 근거하거나 정보주체의 동의에 의하여 수집ㆍ보유 및 처리되고 있습니다.<br><br>
+    
+                    「개인정보보호법률」은 이러한 개인정보의 취급에 대한 일반적 규범을 제시하고 있으며, 사이트는 이러한 법령의 규정에 따라 개인정보의 처리목적에 필요한 최소한의 개인정보를 수집ㆍ보유 및 처리하는 개인정보를 공공업무의 적절한 수행과 국민의 권익을 보호하기 위해 적법하고 적정하게 취급할 것입니다.<br><br>
+                    
+                    또한, 사이트는 관련 법령에서 규정한 바에 따라 사이트에서 보유하고 있는 개인정보에 대한 열람청구권 및 정정청구권 등 이용자 여러분의 권익을 존중하며, 이용자 여러분은 이러한 법령상 권익의 침해 등에 대하여 법률이 정하는 바에 따라 정보주체의 권익을 보호 받을 수 있습니다.<br><br>
+                    
+                    사이트의 개인정보처리방침은 사이트가 운영하는 여러 홈페이지에서 이용자 여러분의 개인정보를 보호하기 위한 [홈페이지 이용자의 개인정보보호]와 소관업무를 수행하는데 필요한 개인정보 취급에 관한 [컴퓨터에 의해 처리되는 개인정보보호] 두 가지로 구성되어 있습니다.<br><br>
+                    
+                    위와 같이 자동 수집ㆍ저장되는 정보는 이용자 여러분에게 보다 나은 서비스를 제공하기 위해 홈페이지의 개선과 보완을 위한 통계분석, 이용자와 홈페이지 간의 원활한 의사소통, 보안 침해 대응 등을 위해 이용될 수 있으며, 이러한 정보는 관계법령의 규정에 따라 제출될 수 있음을 유념하시기 바랍니다.<br><br>
+                    
+                    사이트가 운영하는 홈페이지에서 이메일 주소 등 식별할 수 있는 개인정보를 취득하여서는 아니 됩니다. 적법하지 아니한 방법으로 이러한 개인정보를 열람 또는 제공받은 자는 [개인정보보호법률]에 의하여 처벌을 받을 수 있습니다.</p>
+            </div>
+                
+            <!--팝업 버튼 영역-->
+    
+            <div class="privacy_btn">
+    
+                <a href="javascript:closePop02();">닫기</a>
+    
+            </div>
+    
+        </div>
+    
+    </div><!--popup_02-->
+
+ 
+</body>
+</html>

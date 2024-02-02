@@ -1,0 +1,637 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard';}
+
+@media all and (max-width: 600px)
+{
+    /**/
+    .visual_main
+    {width: 100%; height: 200px;
+    background-image: url(../img/visual_main.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+    .visual_main>div
+    {font-size: 32px;
+    font-family: bold;
+    color: #fff;}
+
+    .change_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 100px;}
+
+    .change_ex .change_pw_title
+    {width: 100%;
+    margin-bottom: 30px;
+    text-align: center;}
+
+    .change_pw_title>p:nth-child(1)
+    {width: 100%; height: 30px;
+    font-size: 28px; font-family: bold; color: #333; line-height: 30px;
+    margin-bottom: 10px;}
+
+    .change_pw_title>p:nth-child(2)
+    {width: 95%;
+    margin: 0 auto;
+    color: #707070;
+    font-size: 14px; line-height: 20px;}
+
+    .change_ex>form>div:nth-child(2)
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    .change_ex>form>div:nth-child(2)>p:nth-child(1)
+    {width: 100%; height: 20px;
+    color: #333;
+    margin-bottom: 5px; line-height: 20px; margin-bottom: 5px;}
+
+    #pw_txt_01
+    {width: 100%; height: 50px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 5px; font-family: 'Pretendard';}
+
+    .change_ex>form>div:nth-child(3)
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    .change_ex>form>div:nth-child(3)>p:nth-child(1)
+    {width: 100%; height: 20px;
+    color: #333;
+    margin-bottom: 5px; line-height: 20px; margin-bottom: 5px;}
+
+    #pw_txt_02
+    {width: 100%; height: 50px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 5px; font-family: 'Pretendard';}
+
+    .change_ex>form>div:nth-child(4)
+    {width: 100%;}
+
+    .change_ex>form>div:nth-child(4)>p:nth-child(1)
+    {width: 100%; height: 20px;
+    color: #333;
+    margin-bottom: 5px; line-height: 20px; margin-bottom: 5px;}
+
+    #pw_txt_03
+    {width: 100%; height: 50px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 5px; font-family: 'Pretendard';}
+
+    #pw_change_ok
+    {width: 100%; height: 50px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: none; outline: none;
+    background-color: #1c99d9; color: #fff;
+    font-family: 'Pretendard'; font-size: 16px;
+    text-align: center; line-height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;}
+}
+
+@media all and (min-width: 601px) and (max-width: 768px)
+{
+    /*비주얼 메인*/
+    .visual_main
+    {width: 100%; height: 250px;
+    background-image: url(../img/visual_main.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+    .visual_main>div
+    {font-size: 52px;
+    font-family: bold;
+    color: #fff;}
+    
+    /*비밀번호 변경하기*/
+    .change_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 100px;}
+
+    .change_ex .change_pw_title
+    {width: 100%;
+    margin-bottom: 50px;
+    text-align: center;}
+
+    .change_pw_title>p:nth-child(1)
+    {width: 100%; height: 40px;
+    font-family: bold; font-size: 32px; line-height: 40px;
+    color: #333;
+    margin-bottom: 10px;}
+
+    .change_pw_title>p:nth-child(2)
+    {width: 100%; height: 20px;
+    line-height: 20px; color: #707070;}
+
+    .change_ex>form>div:nth-child(2)
+    {width: 100%; 
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    .change_ex>form>div:nth-child(2)>p:nth-child(1)
+    {width: 120px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_01
+    {width: calc(100% - 120px); height: 50px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    float: left;
+    font-size: 14px; text-indent: 5px; font-family: 'Pretendard';}
+
+    .change_ex>form>div:nth-child(3)
+    {width: 100%; 
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    .change_ex>form>div:nth-child(3)>p:nth-child(1)
+    {width: 120px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_02
+    {width: calc(100% - 120px); height: 50px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    float: left;
+    font-size: 14px; text-indent: 5px; font-family: 'Pretendard';}
+
+    .change_ex>form>div:nth-child(4)
+    {width: 100%; 
+    margin-bottom: 10px;
+    overflow: hidden;}
+
+    .change_ex>form>div:nth-child(4)>p:nth-child(1)
+    {width: 120px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_03
+    {width: calc(100% - 120px); height: 50px;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    float: left;
+    font-size: 14px; text-indent: 5px; font-family: 'Pretendard';}
+
+    #pw_change_ok
+    {width: 100%; height: 50px;
+    margin-top: 30px; 
+    border-radius: 5px;
+    border: none; outline: none;
+    background-color: #1c99d9; color: #fff;
+    font-family: 'Pretendard'; font-size: 16px;
+    text-align: center; line-height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;}
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px)
+{
+    /**/
+    .visual_main
+    {width: 100%; height: 300px;
+    background-image: url(../img/visual_main.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+    .visual_main>div
+    {font-size: 72px;
+    font-weight: bold;
+    color: #fff;}
+
+    /*비밀번호 재설정*/
+    .change_ex
+    {width: 490px;
+    margin: 100px auto;
+    margin-bottom: 200px;}
+
+    .change_ex .change_pw_title
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    .change_pw_title>p:nth-child(1)
+    {width: 100%; height: 50px;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px; font-family: bold; line-height: 50px; text-align: center;}
+
+    .change_pw_title>p:nth-child(2)
+    {width: 100%; height: 20px;
+    line-height: 20px; text-align: center; color: #707070;}
+
+    .change_ex>form>div:nth-child(2)
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    .change_ex>form>div:nth-child(2)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_01
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    .change_ex>form>div:nth-child(3)
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    .change_ex>form>div:nth-child(3)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_02
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    .change_ex>form>div:nth-child(4)
+    {width: 100%;
+    overflow: hidden;}
+
+    .change_ex>form>div:nth-child(4)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_03
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    #pw_change_ok
+    {width: 100%; height: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none; outline: none;
+    background-color: #1c99d9; color: #fff;
+    font-family: 'Pretendard'; font-size: 16px;
+    text-align: center; line-height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;}
+}
+
+@media all and (min-width: 1025px) and (max-width: 1279px)
+{
+    /*비주얼 메인*/
+    .visual_main
+    {width: 100%; height: 400px;
+    background-image: url(../img/visual_main.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+    .visual_main>div
+    {font-size: 72px;
+    font-weight: bold;
+    color: #fff;}
+
+    /*비밀번호 재설정*/
+    .change_ex
+    {width: 490px;
+    margin: 100px auto;
+    margin-bottom: 200px;}
+
+    .change_ex .change_pw_title
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    .change_pw_title>p:nth-child(1)
+    {width: 100%; height: 50px;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px; font-family: bold; line-height: 50px; text-align: center;}
+
+    .change_pw_title>p:nth-child(2)
+    {width: 100%; height: 20px;
+    line-height: 20px; text-align: center; color: #707070;}
+
+    .change_ex>form>div:nth-child(2)
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    .change_ex>form>div:nth-child(2)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_01
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    .change_ex>form>div:nth-child(3)
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    .change_ex>form>div:nth-child(3)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_02
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    .change_ex>form>div:nth-child(4)
+    {width: 100%;
+    overflow: hidden;}
+
+    .change_ex>form>div:nth-child(4)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_03
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    #pw_change_ok
+    {width: 100%; height: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none; outline: none;
+    background-color: #1c99d9; color: #fff;
+    font-family: 'Pretendard'; font-size: 16px;
+    text-align: center; line-height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;}
+}
+
+@media all and (min-width: 1280px) and (max-width: 1419px)
+{
+    /*비주얼 메인*/
+    .visual_main
+    {width: 100%; height: 400px;
+    background-image: url(../img/visual_main.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+    .visual_main>div
+    {font-size: 72px;
+    font-weight: bold;
+    color: #fff;}
+
+    /*비밀번호 재설정*/
+    .change_ex
+    {width: 490px;
+    margin: 100px auto;
+    margin-bottom: 200px;}
+
+    .change_ex .change_pw_title
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    .change_pw_title>p:nth-child(1)
+    {width: 100%; height: 50px;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px; font-family: bold; line-height: 50px; text-align: center;}
+
+    .change_pw_title>p:nth-child(2)
+    {width: 100%; height: 20px;
+    line-height: 20px; text-align: center; color: #707070;}
+
+    .change_ex>form>div:nth-child(2)
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    .change_ex>form>div:nth-child(2)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_01
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    .change_ex>form>div:nth-child(3)
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    .change_ex>form>div:nth-child(3)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_02
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    .change_ex>form>div:nth-child(4)
+    {width: 100%;
+    overflow: hidden;}
+
+    .change_ex>form>div:nth-child(4)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_03
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    #pw_change_ok
+    {width: 100%; height: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none; outline: none;
+    background-color: #1c99d9; color: #fff;
+    font-family: 'Pretendard'; font-size: 16px;
+    text-align: center; line-height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;}
+}
+
+@media all and (min-width: 1420px)
+{
+    /*비주얼 메인*/
+    .visual_main
+    {width: 100%; height: 400px;
+    background-image: url(../img/visual_main.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+    .visual_main>div
+    {font-size: 72px;
+    font-weight: bold;
+    color: #fff;}
+
+    /*비밀번호 재설정*/
+    .change_ex
+    {width: 490px;
+    margin: 100px auto;
+    margin-bottom: 200px;}
+
+    .change_ex .change_pw_title
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    .change_pw_title>p:nth-child(1)
+    {width: 100%; height: 50px;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px; font-family: bold; line-height: 50px; text-align: center;}
+
+    .change_pw_title>p:nth-child(2)
+    {width: 100%; height: 20px;
+    line-height: 20px; text-align: center; color: #707070;}
+
+    .change_ex>form>div:nth-child(2)
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    .change_ex>form>div:nth-child(2)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_01
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    .change_ex>form>div:nth-child(3)
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    .change_ex>form>div:nth-child(3)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_02
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    .change_ex>form>div:nth-child(4)
+    {width: 100%;
+    overflow: hidden;}
+
+    .change_ex>form>div:nth-child(4)>p:nth-child(1)
+    {width: 120px; height: 50px;
+    float: left;
+    line-height: 50px;
+    color: #333;}
+
+    #pw_txt_03
+    {width: calc(100% - 120px); height: 50px;
+    float: left;
+    border: 1px solid #ccc; box-sizing: border-box;
+    outline: none;
+    font-size: 14px; text-indent: 10px; font-family: 'Pretendard'}
+
+    #pw_change_ok
+    {width: 100%; height: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none; outline: none;
+    background-color: #1c99d9; color: #fff;
+    font-family: 'Pretendard'; font-size: 16px;
+    text-align: center; line-height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;}
+}

@@ -1,0 +1,278 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {display: block;}
+
+.px-4 
+{padding-right: 1.5rem !important;
+padding-left: 1.5rem !important;}
+
+.mt-4 
+{width: 98%;
+margin: 0 auto;
+font-size: 18px;
+font-weight: bold;}
+
+.mt-4 
+{margin-top: 1.5rem !important;
+margin-bottom: 1.5rem;}
+
+div.maintenance_sheet
+{width: 95%;
+margin: 0 auto;}
+
+ul.maintenance_basic_form
+{width: 100%;
+margin: 0; padding: 0;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+border: 1px solid #ccc;
+border-top: 1px solid #222; 
+box-sizing: border-box;}
+
+ul.maintenance_basic_form li
+{display: flex;
+align-items: center;
+border-right: 1px solid #ccc; border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+ul.maintenance_basic_form li:nth-child(odd)
+{width: 10%;
+background-color: #eee;}
+
+ul.maintenance_basic_form li:nth-child(even)
+{width: 40%;}
+
+ul.maintenance_basic_form li.maintenance_basic_form_width_list
+{width: 90%;
+border-right: none;}
+
+ul.maintenance_basic_form li:nth-child(4n+4)
+{border-right: none;}
+
+ul.maintenance_basic_form li:nth-child(1n+9)
+{border-bottom: none;}
+
+ul.maintenance_basic_form li:nth-child(odd)>p
+{width: calc(100% - 10px);
+margin: 0 auto;
+font-size: 14px; line-height: 20px; text-align: center;
+color: #000; font-weight: bold;
+word-wrap: break-word; word-break: keep-all;}
+
+input[type="text"].maintenance_basic_text
+{width: calc(100% - 20px); height: 30px;
+margin: 10px;
+border: 1px solid #ccc; box-sizing: border-box;
+border-radius: 4px; outline: none; text-indent: 10px;
+font-size: 14px; color: #000;}
+
+input[type="tel"].maintenance_basic_text
+{width: calc(100% - 20px); height: 30px;
+margin: 10px;
+border: 1px solid #ccc; box-sizing: border-box;
+border-radius: 4px; outline: none; text-indent: 10px;
+font-size: 14px; color: #000;}
+
+input[type="email"].maintenance_basic_text
+{width: calc(100% - 20px); height: 30px;
+margin: 10px;
+border: 1px solid #ccc; box-sizing: border-box;
+border-radius: 4px; outline: none; text-indent: 10px;
+font-size: 14px; color: #000;}
+
+ul.maintenance_detail_form
+{width: 100%;
+margin: 0; padding: 0;
+margin-top: 15px;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+border: 1px solid #ccc;
+border-top: 1px solid #000; box-sizing: border-box;}
+
+ul.maintenance_detail_form li
+{display: flex;
+align-items: center;
+border-right: 1px solid #ccc; border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+ul.maintenance_detail_form li:nth-child(4), ul.maintenance_detail_form li:nth-child(8), ul.maintenance_detail_form li:nth-child(10)
+{border-right: none;}
+
+ul.maintenance_detail_form li:nth-child(12) 
+{border-right: none;}
+
+ul.maintenance_detail_form li:nth-child(1n+11) {border-bottom: none;}
+
+ul.maintenance_detail_form li:nth-child(odd)
+{width: 10%;
+background-color: #eee;}
+
+ul.maintenance_detail_form li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+text-align: center;
+font-size: 14px; font-weight: bold; line-height: 20px;
+word-wrap: break-word; word-break: keep-all;}
+
+ul.maintenance_detail_form li:nth-child(even)
+{width: 40%;}
+
+ul.maintenance_detail_form li.maintenance_detail_check_width
+{width: calc(80% - 250px);}
+
+ul.maintenance_detail_form li.maintenance_detail_day_width
+{width: 250px;}
+
+ul.maintenance_detail_form li.maintenance_detaile_include_width
+{width: 90%;}
+
+div.maintenance_detail_checkbox
+{width: calc(100% - 20px);
+margin: 10px auto;
+display: flex;
+align-items: center;
+flex-wrap: wrap;}
+
+div.maintenance_detail_checkbox>div
+{width: fit-content;
+margin-right: 15px;
+display: flex;
+align-items: center;}
+
+div.maintenance_detail_checkbox>div:last-child
+{margin-right: 0;}
+
+input[type="checkbox"].maintenance_check
+{width: 13px; height: 13px;
+border: 1px solid #ccc; box-sizing: border-box;
+outline: none;
+margin-right: 5px;}
+
+div.maintenance_detail_checkbox>div>p:nth-child(2)
+{font-size: 14px; color: #000;
+margin: 0;
+line-height: 20px;}
+
+input[type="text"].maintenance_detaile_day
+{width: calc(100% - 20px); height: 30px;
+margin: 10px;
+border: 1px solid #ccc; box-sizing: border-box;
+color: #000;
+border-radius: 4px; outline: none; text-indent: 10px;
+font-size: 14px;}
+
+input[type="text"].maintenance_detaile_text
+{width: calc(100% - 20px); height: 30px;
+margin: 10px;
+border: 1px solid #ccc; box-sizing: border-box;
+border-radius: 4px; outline: none; text-indent: 10px;
+color: #000;
+font-size: 14px;}
+
+div.maintenance_detaile_include_ex
+{width: calc(100% - 20px);
+margin: 10px;
+border: 1px solid #ccc; box-sizing: border-box;}
+
+div.maintenance_detaile_include_cont
+{width: calc(100% - 20px);
+margin: 10px;}
+
+div.maintenance_detaile_include_cont p
+{font-size: 14px; line-height: 20px;
+color: #000;
+margin: 0;
+word-wrap: break-word;}
+
+div.maintenance_detail_file_box
+{width: calc(100% - 20px);
+margin: 15px auto;}
+
+a.maintenance_detail_file
+{width: 100%;
+display: block;
+margin-bottom: 5px;}
+
+a.maintenance_detail_file:last-child
+{margin-bottom: 0;}
+
+a.maintenance_detail_file>p
+{font-size: 14px; line-height: 20px;
+color: red;
+margin: 0;
+word-wrap: break-word;}
+
+ul.maintenance_answer_form
+{width: 100%;
+margin: 0; padding: 0;
+margin-top: 50px; margin-bottom: 80px;
+border: 1px solid #ccc;
+border-top: 1px solid #000;
+box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.maintenance_answer_form li
+{display: flex;
+align-items: center;}
+
+ul.maintenance_answer_form li:nth-child(odd)
+{width: 10%;
+background-color: #eee;
+border-right: 1px solid #ccc; box-sizing: border-box;}
+
+ul.maintenance_answer_form li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+text-align: center; font-size: 14px; font-weight: bold;
+line-height: 20px;}
+
+ul.maintenance_answer_form li:nth-child(even)
+{width: 90%;}
+
+ul.maintenance_answer_form li.maintenance_answer_width
+{padding: 10px;}
+
+input[type="text"].maintenance_answer_text
+{width: calc(100% - 20px); height: 30px;
+margin: 10px;
+border: 1px solid #ccc; box-sizing: border-box;
+border-radius: 4px; outline: none; text-indent: 10px;
+color: #000;
+font-size: 14px;}
+
+div.cke_1 
+{width: 100%;}
+
+ul.maintenance_answer_form li:nth-child(1), ul.maintenance_answer_form li:nth-child(2)
+{border-bottom: 1px solid #ccc; box-sizing: border-box;}
+
+div.maintenance_btn_box
+{width: fit-content;
+margin: 0 auto;
+display: flex;
+align-items: center;}
+
+input[type="submit"].maintenance_btn_correction
+{width: 80px; height: 36px;
+border-radius: 5px; line-height: 36px;
+font-size: 15px;
+outline: none; resize: none; border: none;
+margin-right: 10px;}
+
+input[type="button"].maintenance_btn_delate
+{width: 80px; height: 36px;
+border-radius: 5px; line-height: 36px;
+font-size: 15px;
+outline: none; resize: none; border: none;
+margin-right: 10px;}
+
+a.maintenance_btn_re_list
+{width: 80px; height: 36px;
+border-radius: 5px; line-height: 36px;
+font-size: 15px; text-align: center;
+display: block;}
