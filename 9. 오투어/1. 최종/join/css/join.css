@@ -1,0 +1,492 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+button {margin-bottom: 0;}
+
+
+@media all and (min-width: 1420px)
+{
+    /*회원가입*/
+    div.join_ex
+    {width: 500px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+    
+    /*회원가입 타이틀*/
+    div.join_title_box
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.join_title_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 35px; font-family: bold;
+    font-size: 32px; color: #222;
+    margin-bottom: 10px;}
+
+    div.join_title_box>p:nth-child(2)
+    {width: 100%;
+    color: #555; line-height: 20px;}
+
+    div.join_title_box>p:nth-child(2)>span
+    {color: #fd6f6f;}
+
+    /*회원가입 버튼*/
+    #join_submit_btn
+    {width: 100%; height: 50px;
+    display: block;
+    text-align: center;
+    background: #fd6f6f;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important;
+    color: #fff; line-height: 50px; font-size: 16px;}
+
+    /*간편회원가입*/
+    div.simple_join_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    a.naver_simple_join
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 5px;
+    background-color: #00c300;
+    margin-bottom: 10px;}
+
+    a.naver_simple_join>div
+    {width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.naver_simple_join>div>div:nth-child(1)
+    {width: 20px; height: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-right: 10px;}
+
+    a.naver_simple_join>div>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.naver_simple_join>div>p:nth-child(2)
+    {width: fit-content;
+    float: left;
+    margin-top: 15px;
+    line-height: 20px; color: #fff;}
+
+    a.kakao_simple_join
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 5px;
+    background-color: #fae100;}
+
+    a.kakao_simple_join>div
+    {width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.kakao_simple_join>div>div:nth-child(1)
+    {width: 25px; height: 25px;
+    float: left;
+    margin-top: 12.5px;
+    margin-right: 10px;}
+
+    a.kakao_simple_join>div>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.kakao_simple_join>div>p:nth-child(2)
+    {width: fit-content;
+    float: left;
+    margin-top: 15px;
+    line-height: 20px; color: #371d1e;}
+
+    p.sns_join_caution
+    {margin-top: 20px;
+    color: #777;
+    font-size: 15px;
+    text-align: center;}
+   
+}
+
+@media all and (min-width: 769px) and (max-width: 1419px)
+{
+    /*회원가입*/
+    div.join_ex
+    {width: 500px;
+    margin: 100px auto;
+    margin-bottom: 150px;}
+    
+    /*회원가입 타이틀*/
+    div.join_title_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.join_title_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 35px; font-family: bold;
+    font-size: 32px; color: #222;
+    margin-bottom: 10px;}
+
+    div.join_title_box>p:nth-child(2)
+    {width: 100%;
+    color: #555; line-height: 20px;}
+
+    div.join_title_box>p:nth-child(2)>span
+    {color: #fd6f6f;}
+
+    /*회원가입 버튼*/
+    #join_submit_btn
+    {width: 100%; height: 50px;
+    display: block;
+    text-align: center;
+    background: #fd6f6f;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important;
+    color: #fff; line-height: 50px; font-size: 16px;}
+
+    /*간편회원가입*/
+    div.simple_join_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    a.naver_simple_join
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 5px;
+    background-color: #00c300;
+    margin-bottom: 10px;}
+
+    a.naver_simple_join>div
+    {width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.naver_simple_join>div>div:nth-child(1)
+    {width: 20px; height: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-right: 10px;}
+
+    a.naver_simple_join>div>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.naver_simple_join>div>p:nth-child(2)
+    {width: fit-content;
+    float: left;
+    margin-top: 15px;
+    line-height: 20px; color: #fff;}
+
+    a.kakao_simple_join
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 5px;
+    background-color: #fae100;}
+
+    a.kakao_simple_join>div
+    {width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.kakao_simple_join>div>div:nth-child(1)
+    {width: 25px; height: 25px;
+    float: left;
+    margin-top: 12.5px;
+    margin-right: 10px;}
+
+    a.kakao_simple_join>div>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.kakao_simple_join>div>p:nth-child(2)
+    {width: fit-content;
+    float: left;
+    margin-top: 15px;
+    line-height: 20px; color: #371d1e;}
+
+    p.sns_join_caution
+    {margin-top: 20px;
+    color: #777;
+    font-size: 15px;}
+    
+}
+
+@media all and (min-width : 601px) and (max-width: 768px)
+{
+    /*회원가입*/
+    div.join_ex
+    {width: 500px;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 80px;}
+    
+    /*회원가입 타이틀*/
+    div.join_title_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.join_title_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 35px; font-family: bold;
+    font-size: 32px; color: #222;
+    margin-bottom: 10px;}
+
+    div.join_title_box>p:nth-child(2)
+    {width: 100%;
+    color: #555; line-height: 20px;}
+
+    div.join_title_box>p:nth-child(2)>span
+    {color: #fd6f6f;}
+
+    /*회원가입 버튼*/
+    #join_submit_btn
+    {width: 100%; height: 50px;
+    display: block;
+    text-align: center;
+    background: #fd6f6f;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important;
+    color: #fff; line-height: 50px; font-size: 16px;}
+
+    /*간편회원가입*/
+    div.simple_join_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    a.naver_simple_join
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 5px;
+    background-color: #00c300;
+    margin-bottom: 10px;}
+
+    a.naver_simple_join>div
+    {width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.naver_simple_join>div>div:nth-child(1)
+    {width: 20px; height: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-right: 10px;}
+
+    a.naver_simple_join>div>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.naver_simple_join>div>p:nth-child(2)
+    {width: fit-content;
+    float: left;
+    margin-top: 15px;
+    line-height: 20px; color: #fff;}
+
+    a.kakao_simple_join
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 5px;
+    background-color: #fae100;}
+
+    a.kakao_simple_join>div
+    {width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    a.kakao_simple_join>div>div:nth-child(1)
+    {width: 25px; height: 25px;
+    float: left;
+    margin-top: 12.5px;
+    margin-right: 10px;}
+
+    a.kakao_simple_join>div>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.kakao_simple_join>div>p:nth-child(2)
+    {width: fit-content;
+    float: left;
+    margin-top: 15px;
+    line-height: 20px; color: #371d1e;}
+
+    p.sns_join_caution
+    {margin-top: 20px;
+    color: #777;
+    font-size: 15px;}
+
+}
+
+@media all and (max-width: 600px)
+{
+    /*회원가입*/
+    div.join_ex
+    {width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 80px;}
+
+    /*타이틀*/
+    div.join_title_box
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.join_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 28px; font-family: bold;
+    color: #222; line-height: 30px;
+    margin-bottom: 10px;}
+
+    div.join_title_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 15px; color: #555;
+    line-height: 20px;
+    word-break: keep-all;}
+
+    div.join_title_box>p:nth-child(2)>span
+    {color: #fd6f6f;}
+
+    /*회원가입 버튼*/
+    #join_submit_btn
+    {width: 100%; height: 50px;
+    display: block;
+    text-align: center;
+    background: #fd6f6f;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none; outline: none;
+    font-family: 'Pretendard' !important;
+    color: #fff; line-height: 50px; font-size: 15px;}
+
+    /*간편회원가입, 네이버 - 카카오*/
+    div.simple_join_box
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    a.naver_simple_join
+    {width: 100%; height: 50px;
+    background-color: #00c300;
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    a.naver_simple_join>div
+    {width: fit-content;
+    margin: 15px auto;
+    overflow: hidden;}
+
+    a.naver_simple_join>div>div:nth-child(1)
+    {width: 20px; height: 20px;
+    float: left;
+    margin-right: 5px;}
+
+    a.naver_simple_join>div>div:nth-child(1) img 
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.naver_simple_join>div>p:nth-child(2)
+    {width: fit-content;
+    float: left;
+    line-height: 20px; font-size: 15px;
+    color: #fff;}
+
+    a.kakao_simple_join
+    {width: 100%; height: 50px;
+    background-color: #fae100;
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    a.kakao_simple_join>div
+    {width: fit-content;
+    margin: 15px auto;
+    overflow: hidden;}
+
+    a.kakao_simple_join>div>div:nth-child(1)
+    {width: 20px; height: 20px;
+    float: left;
+    margin-right: 5px;}
+
+    a.kakao_simple_join>div>div:nth-child(1) img 
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.kakao_simple_join>div>p:nth-child(2)
+    {width: fit-content;
+    float: left;
+    line-height: 20px; font-size: 15px;
+    color: #371d1e;}
+
+    p.sns_join_caution
+    {margin-top: 20px;
+    color: #777;
+    font-size: 15px;}
+}

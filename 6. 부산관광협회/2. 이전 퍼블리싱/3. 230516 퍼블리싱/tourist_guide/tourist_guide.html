@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>관광종사원 자격증 발급</title>
+
+    <!-- js -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+
+    <!-- css -->
+    <link href="css/tourist_guide.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <input type="checkbox" id="header_open">
+
+    <header class="mobile_busan_header">
+        
+        <div>
+            <a class="header_logo_m" href="../index.html">
+                <img src="../img/header_logo.png" alt="부산관역시관광협회 로고">
+            </a>
+
+            <label class="header_open_btn" for="header_open">
+                <img src="../img/mobile_icon_open.png" alt="모바일 메뉴열기 버튼">
+            </label>
+        </div>
+
+        <div class="mobile_sheet">
+
+            <div class="header_close_btn">
+                <label for="header_open">
+                    <img src="../img/close_main_sheet.png" alt="모바일 메뉴닫기 버튼">
+                </label>
+            </div>
+
+            <div class="header_member">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="../img/join_header_m_icon.png" alt="회원사 가입 바로가기">
+                            </div>
+                            <p>회원사 가입</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="http://mail.bta.or.kr/ngw/app/#/sign" target="_blank">
+                            <div>
+                                <img src="../img/login_header_m_icon.png" alt="웹 메일 바로가기">
+                            </div>
+                            <p>웹 메일 바로가기</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="header_lnb">
+
+                <input type="checkbox" id="mobile_lnb_open01" class="lnb_chk">
+                <input type="checkbox" id="mobile_lnb_open02" class="lnb_chk">
+                <input type="checkbox" id="mobile_lnb_open03" class="lnb_chk">
+                <input type="checkbox" id="mobile_lnb_open04" class="lnb_chk">
+
+                <ul>
+                    
+                    <li>
+                        <label for="mobile_lnb_open01">
+                            <p>관광협회소개<span class="dot01">▼<span></p>
+                        </label>
+
+                        <ul class="mobile_submenu01">
+                            
+                            <li>
+                                <a href="../introduce/introduce.html">
+                                    <p>인사말</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../history/history.html">
+                                    <p>설립목적 및 연혁</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../organization/organization.html">
+                                    <p>조직도</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../work/work.html">
+                                    <p>기능 및 업무</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../agency/agency.html">
+                                    <p>관련기관</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../map_info/map_info.html">
+                                    <p>오시는 길</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <label for="mobile_lnb_open02">
+                            <p>관광사업체현황<span class="dot02">▼<span></p>
+                        </label>
+
+                        <ul class="mobile_submenu02">
+                            
+                            <li>
+                                <a href="../member_search/member_search.html">
+                                    <p>회원사검색</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../member_status/member_status.html">
+                                    <p>회원사현황</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <p>회원가입안내</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <label for="mobile_lnb_open03">
+                            <p>자료실<span class="dot03">▼<span></p>
+                        </label>
+
+                        <ul class="mobile_submenu03">
+                            
+                            <li>
+                                <a href="http://www.tourinfo.or.kr/v2/info/agreement_01.asp" target="_blank">
+                                    <p>국내여행 표준약관</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://www.tourinfo.or.kr/v2/info/agreement_02.asp" target="_blank">
+                                    <p>국외여행 표준약관</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://www.tourinfo.or.kr/v2/info/resolution_01.asp" target="_blank">
+                                    <p>소비자피해보상규정</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>관광사업등록안내</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.busan.go.kr/ghopen09/list?schCommand=List&schUpperClNo=135&schClNo=202&schBizNo=&schIndx=&bizCurPage=1&cntPerPage=15&schSdate=&schEdate=&srchKey=&srchText" target="_blank">
+                                    <p>관광통계</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>관광법규</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <label for="mobile_lnb_open04">
+                            <p>주요사업<span class="dot04">▼<span></p>
+                        </label>
+
+                        <ul class="mobile_submenu04">
+                            
+                            <li>
+                                <a href="../ktasb/ktasb.html">
+                                    <p>관광공제회</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="tourist_guide.html">
+                                    <p>관광종사원 자격증발급</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <p>관광의 날</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <p>융자 사업 안내</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="../free_board/free_board.html">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../tourist_information/tourist_information.html">
+                            <p>관광안내소</p>
+                        </a>
+                    </li>
+                   
+                </ul>
+
+            </div>
+
+        </div><!--mobile_sheet-->
+
+    </header><!--mobile_busan_header-->
+
+    <header class="header_busan">
+        
+        <div class="gnb_busan">
+            
+            <div>
+                <a href="#">
+                    <p>회원사 가입</p>
+                </a>
+                
+                <a href="http://mail.bta.or.kr/ngw/app/#/sign" target="_blank">
+                    <p>웹 메일 바로가기</p>
+                </a>
+            </div>
+
+        </div><!--gnb_busan-->
+
+        <div class="header_middle">
+
+            <a class="header_logo" href="../index.html">
+                <img src="../img/header_logo.png" alt="부산관역시관광협회 로고">
+            </a>
+
+            <ul class="menu_ex clearfix">
+
+                <li>
+                    <a href="../introduce/introduce.html">
+                        <p>관광협회소개</p>
+                    </a>
+
+                    <ul class="dept01">
+
+                        <li id="nop">
+                            <a href="../introduce/introduce.html">
+                                <p>인사말</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="../history/history.html">
+                                <p>설립목적 및 연혁</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="../organization/organization.html">
+                                <p>조직도</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="../work/work.html">
+                                <p>기능 및 업무</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="../agency/agency.html">
+                                <p>관련기관</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="../map_info/map_info.html">
+                                <p>오시는 길</p>
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="../member_search/member_search.html">
+                        <p>관광사업체현황</p>
+                    </a>
+
+                    <ul class="dept01">
+
+                        <li id="nop">
+                            <a href="../member_search/member_search.html">
+                                <p>회원사검색</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="../member_status/member_status.html">
+                                <p>회원사 현황</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="#">
+                                <p>회원가입안내</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="">
+                        <p>자료실</p>
+                    </a>
+
+                    <ul class="dept01">
+
+                        <li id="nop">
+                            <a href="http://www.tourinfo.or.kr/v2/info/agreement_01.asp" target="_blank">
+                                <p>국내여행 표준약관</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="http://www.tourinfo.or.kr/v2/info/agreement_02.asp" target="_blank">
+                                <p>국외여행 표준약관</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="http://www.tourinfo.or.kr/v2/info/resolution_01.asp" target="_blank">
+                                <p>소비자피해보상규정</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="#">
+                                <p>관광사업등록안내</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="https://www.busan.go.kr/ghopen09/list?schCommand=List&schUpperClNo=135&schClNo=202&schBizNo=&schIndx=&bizCurPage=1&cntPerPage=15&schSdate=&schEdate=&srchKey=&srchText" target="_blank">
+                                <p>관광통계</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="#">
+                                <p>관광법규</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../ktasb/ktasb.html">
+                        <p>주요사업</p>
+                    </a>
+
+                    <ul class="dept01">
+
+                        <li id="nop">
+                            <a href="../ktasb/ktasb.html">
+                                <p>관광공제회</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="tourist_guide.html">
+                                <p>관광종사원 자격증발급</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="#">
+                                <p>관광의 날</p>
+                            </a>
+                        </li>
+
+                        <li id="nop">
+                            <a href="#">
+                                <p>융자 사업 안내</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../free_board/free_board.html">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../tourist_information/tourist_information.html">
+                        <p>관광안내소</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!--header_middle-->
+
+    </header><!--header_busan-->
+
+    <div class="visual_bussiness">
+
+        <p>주요사업</p>
+
+    </div><!--visual_bussiness-->
+
+
+    <div class="ktasb_nav_zon">
+
+        <div></div>
+
+        <div class="clearfix">
+
+            <a href="../index.html">
+                <img src="img/home_icon.png">
+            </a>
+
+            <div class="selectBox1">
+
+                <button class="option_label">
+                    <p>주요사업</p>
+                </button>
+
+                <ul class="optionList">
+
+                  <li class="optionItem">
+                    <a href="#">
+                        <p>관광협회소개</p>
+                    </a>
+                  </li>
+
+                  <li class="optionItem">
+                    <a href="#">
+                        <p>관광사업체현황</p>
+                    </a>
+                  </li>
+
+                  <li class="optionItem">
+                    <a href="#">
+                        <p>자료실</p>
+                    </a>
+                  </li>
+
+                  <li class="optionItem">
+                    <a href="#">
+                        <p>주요사업</p>
+                    </a>
+                  </li>
+
+                  <li class="optionItem">
+                    <a href="#">
+                        <p>공지사항</p>
+                    </a>
+                  </li>
+
+                  <li class="optionItem">
+                    <a href="#">
+                        <p>관광안내소</p>
+                    </a>
+                  </li>
+                  
+                </ul>
+
+            </div><!--selectBox1-->
+
+            <div class="selectBox2">
+
+                <button class="option_label">
+                    <p>관광종사원 자격증 발급</p>
+                </button>
+
+                <ul class="optionList">
+
+                    <li class="optionItem">
+                      <a href="#">
+                          <p>관광공제회</p>
+                      </a>
+                    </li>
+  
+                    <li class="optionItem">
+                      <a href="#">
+                          <p>관광종사원 자격증 발급</p>
+                      </a>
+                    </li>
+  
+                    <li class="optionItem">
+                      <a href="#">
+                          <p>관광의 날</p>
+                      </a>
+                    </li>
+
+                    <li class="optionItem">
+                        <a href="#">
+                            <p>융자 안내</p>
+                        </a>
+                      </li>
+                    
+                  </ul>
+
+
+            </div><!--selectBox2-->
+
+        </div>
+
+        <div></div>
+
+    </div><!--member_nav_zon-->
+
+    <div class="tourist_guide_ex">
+
+        <div class="tourist_guide_ex_title">
+            <p>부신광역시관광협회<br>
+            <span>관광종사원 자격증 발급</span></p>
+        </div><!--tourist_guide_ex_title-->
+
+        <div class="tourist_guide_section_01">
+
+            <div class="tourist_guide_title_01">
+                <div></div>
+                <p>관광종사원 자격증 발급 안내</p>
+            </div><!--tourist_guide_title_01-->
+
+            <div class="guide_issued_box">
+
+                <div>
+                    <div>
+                        <img src="img/guide_icon_01.png">
+                    </div>
+
+                    <p>대상자격증</p>
+
+                    <p>국내여행사, 호텔서비스사</p>
+                </div>
+
+                <div>
+                    <div>
+                        <img src="img/guide_icon_02.png">
+                    </div>
+
+                    <p>자격증 발급처</p>
+
+                    <p>한국관광협회중앙회 및 시도시관광협회</p>
+                </div>
+
+                <div>
+                    <div>
+                        <img src="img/guide_icon_03.png">
+                    </div>
+
+                    <p>발급방법</p>
+
+                    <p>발급처에 따라 상이함 (발급방식 확인)</p>
+                </div>
+
+            </div><!--guide_issued_box-->
+
+        </div><!--tourist_guide_section_01-->
+
+
+        <div class="tourist_guide_section_02">
+
+            <div class="tourist_guide_title_02">
+                <div></div>
+                <p>방문 / 이메일 접수</p>
+            </div><!--tourist_guide_title_02-->
+
+            <table class="guide_receipt_mobile" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <p>협회명</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>부산광역시관광협회</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>연락처</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>051-463-3111</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>주소</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>부산광역시 동구 대영로 243번길 38<br>
+                            부산트래블라운지 3층</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>이메일 주소 / 입금계좌번호</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>kta1998@naver.com<br>
+                            /<br>
+                            신한 140-013-157917<br>
+                            (예금주 : 한국관광협회중앙회)</p>
+                    </td>
+                </tr>
+
+            </table><!--guide_receipt_mobile-->
+
+            <table class="guide_receipt_web" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <p>협회명</p>
+                    </td>
+
+                    <td>
+                        <p>연락처</p>
+                    </td>
+
+                    <td>
+                        <p>주소</p>
+                    </td>
+
+                    <td>
+                        <p>이메일 주소 / 입금계좌번호</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>부산광역시관광협회</p>
+                    </td>
+
+                    <td>
+                        <p>051-463-3111</p>
+                    </td>
+
+                    <td>
+                        <p>부산광역시 동구 대영로 243번길 38<br>
+                        부산트래블라운지 3층</p>
+                    </td>
+
+                    <td>
+                        <p>kta1998@naver.com<br>
+                            /<br>
+                            신한 140-013-157917<br>
+                            (예금주 : 한국관광협회중앙회)</p>
+                    </td>
+                </tr>
+                
+            </table><!--guide_receipt_web-->
+
+        </div><!--tourist_guide_section_02-->
+
+
+        <div class="tourist_guide_section_03">
+
+            <div class="tourist_guide_title_03">
+                <div></div>
+                <p>제출서류 안내</p>
+            </div>
+
+            <table class="submitting_paper_web" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <p>구분</p>
+                    </td>
+
+                    <td>
+                        <p>방문접수</p>
+                    </td>
+
+                    <td>
+                        <p>이메일접수</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">
+                        <p>구비서류</p>
+                    </td>
+
+                    <td>
+                        <p>신분증</p>
+                    </td>
+
+                    <td>
+                        <p>신분증 사본 또는 주민등록등본 1부</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>등록신청서 및 개인정보수집 · 이용동의서 1부<br>
+                            (하단의 양식 다운로드)</p>
+                    </td>
+
+                    <td>
+                        <p>- 등록신청서 및 개인정보 수집 · 이용동의서 1부<br>
+                            (하단의 양식 다운로드)<br>
+                            - 이체확인증 (본인 이름으로 송금 필수)</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <p>사진 반명함판 (3*4, jpg) 1매</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>신규발급</p>
+                    </td>
+
+                    <td>
+                        <p>현금 5,000원</p>
+                    </td>
+
+                    <td>
+                        <p>계좌이체 7,700원 (발급, 등기 발송)</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>재발급</p>
+                    </td>
+
+                    <td>
+                        <p>현금 3,000원</p>
+                    </td>
+
+                    <td>
+                        <p>계좌이체 5,700원 (발급, 등기 발송)</p>
+                    </td>
+                </tr>
+
+            </table><!--submitting_paper-->
+
+            <table class="submitting_paper_mobile_01" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <p>구분</p>
+                    </td>
+
+                    <td>
+                        <p>방문접수</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">
+                        <p>구비서류</p>
+                    </td>
+
+                    <td>
+                        <p>신분증</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>등록신청서 및 개인정보수집 · 이용동의서 1부<br>
+                            (하단의 양식 다운로드)</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>사진 반명함판 (3*4, jpg) 1매</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>신규발급</p>
+                    </td>
+
+                    <td>
+                        <p>현금 5,000원</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>재발급</p>
+                    </td>
+
+                    <td>
+                        <p>현금 3,000원</p>
+                    </td>
+                </tr>
+
+            </table>
+
+
+            <table class="submitting_paper_mobile_02" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td>
+                        <p>구분</p>
+                    </td>
+
+                    <td>
+                        <p>이메일접수</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">
+                        <p>구비서류</p>
+                    </td>
+
+                    <td>
+                        <p>신분증 사본 또는 주민등록등본 1부</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>- 등록신청서 및 개인정보 수집 · 이용동의서 1부<br>
+                            (하단의 양식 다운로드)<br>
+                            - 이체확인증 (본인 이름으로 송금 필수)</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>사진 반명함판 (3*4, jpg) 1매</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>신규발급</p>
+                    </td>
+
+                    <td>
+                        <p>계좌이체 7,700원 (발급, 등기 발송)</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>재발급</p>
+                    </td>
+
+                    <td>
+                        <p>계좌이체 5,700원 (발급, 등기 발송)</p>
+                    </td>
+                </tr>
+
+            </table>
+
+
+            <div class="tourist_guide_time">
+                <p>※ 운영시간 09:00 ~ 18:00 (점심시간 11:30 ~ 13:00), 토 · 일 · 공휴일은 발급하지 않습니다.</p>
+            </div>
+
+        </div><!--tourist_guide_section_03-->
+
+        <div class="tourist_guide_download">
+
+            <a href="../file/관광종사원 자격증 발급예시.pdf" download>
+
+                <div>
+
+                    <div>
+                        <img src="img/file_icon_blue.png">
+                    </div>
+    
+                    <p>관광종사원 자격증 발급 예시</p>
+                    
+                </div>
+
+            </a>
+
+
+            <a href="../file/관광종사원 자격증 발급 등록 신청서.hwp" download>
+
+                <div>
+
+                    <div>
+                        <img src="img/file_icon_white.png">
+                    </div>
+    
+                    <p>관광종사원 자격증 발급 등록 신청서</p>
+                    
+                </div>
+
+            </a>
+
+          
+
+        </div><!--tourist_guide_download-->
+        
+    </div><!--tourist_guide_ex-->
+
+    <footer class="footer_ex">
+
+        <div class="footer_top">
+
+            <div class="clearfix">
+
+                <ul class="footer_top_list">
+                    
+                    <li>
+                        <a href="../introduce/introduce.html">관광협회소개</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="return false;" id="open_privacy">개인정보처리방침</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="return false;" id="open_emaile">이메일무단수집거부</a>
+                    </li>
+                    
+                    <li>
+                        <a href="../map_info/map_info.html">찾아오시는 길</a>
+                    </li>
+                
+                </ul><!--footer_top_list-->
+
+                <div class="related_site">
+
+                    <div class="selectBox3 ">
+
+                        <button class="label02">관련기관 링크서비스 <span>▽</span></button>
+
+                        <ul class="optionList">
+                            <a href="https://www.busan.go.kr/index" target="_blank">
+                                <li class="optionItem02">부산광역시</li>
+                            </a>
+                            <a href="http://www.ekta.kr/" target="_blank">
+                                <li class="optionItem02">한국관광협회중앙회</li>
+                            </a>
+                            <a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank">
+                                <li class="optionItem02">문화체육관광부</li>
+                            </a>
+                            <a href="https://kto.visitkorea.or.kr/kor.kto" target="_blank">
+                                <li class="optionItem02">한국관광공사</li>
+                            </a>
+                        </ul>
+
+                    </div>
+
+                </div><!--related_site-->
+
+            </div>
+
+        </div><!--footer_top-->
+
+        <div class="footer_bottom">
+
+            <div>
+                
+                <a href="../index.html">
+                    <img src="../img/footer_logo.png" alt="부산광역시관광협회 로고">
+                </a>
+                
+                <ul>
+                    <li>부산광역시 동구 대영로 243번길 38 부산트래블라운지 3층</li>
+                    <li>전화 : 051-463-3111    팩스 : 051-463-0004</li>
+                    <li class="copyright">COPYRIGHT © 2023 Busan Tourism Association All Rights Reserved</li>
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </footer><!--footer_ex-->
+
+    <div class="emaile_ex" id="emaile" style="display: none;">
+
+        <div class="emaile_box">
+
+            <div>
+                <p>이메일무단수집거부</p>
+            </div>
+
+            <div>
+                <p>
+
+                <span>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며,
+                이를 위반시 정보통신망법에 의해 형사처벌됨을 유의하시기 바랍니다.</span><br><br>
+
+                정보통신망법 제 50조의2 (전자우편주소의 무단 수집행위 등 금지)<br><br>
+
+                1. 누구든지 전자우편주소의 수집을 거부하는 의사가 명시된 인터넷 홈페이지에서 자동으로 전자우편주소를 수집하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.<br>
+
+                2. 누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매·유통하여서는 아니된다.<br>
+
+                3. 누구든지 제1항의 및 제2항의 규정에 의하여 수집·판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보전송에 이용하여서는 아니된다.<br><br>
+
+                정보통신망법 제65조의2 (벌칙)<br><br>
+
+                1. 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                1-1. 제50조제4항의 규정을 위반하여 기술적 조치를 한 자<br>
+                1-2. 제50조제6항의 규정을 위반하여 영리목적의 광고성 정보를 전송한 자<br>
+                1-3. 제50조의2의 규정을 위반하여 전자우편주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자
+                </p>
+            </div>
+
+            <div id="close_emaile">
+                <p>닫기</p>
+            </div>
+
+        </div><!--emaile_box-->
+
+    </div><!--emaile_ex-->
+
+    <div class="privacy_ex" id="privacy" style="display: none;">
+
+        <div class="privacy_box">
+
+            <div>
+                <p>개인정보처리방침</p>
+            </div>
+
+            <div>
+                <p>
+
+                <span>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며,
+                이를 위반시 정보통신망법에 의해 형사처벌됨을 유의하시기 바랍니다.</span><br><br>
+
+                정보통신망법 제 50조의2 (전자우편주소의 무단 수집행위 등 금지)<br><br>
+
+                1. 누구든지 전자우편주소의 수집을 거부하는 의사가 명시된 인터넷 홈페이지에서 자동으로 전자우편주소를 수집하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.<br>
+
+                2. 누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매·유통하여서는 아니된다.<br>
+
+                3. 누구든지 제1항의 및 제2항의 규정에 의하여 수집·판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보전송에 이용하여서는 아니된다.<br><br>
+
+                정보통신망법 제65조의2 (벌칙)<br><br>
+
+                1. 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                1-1. 제50조제4항의 규정을 위반하여 기술적 조치를 한 자<br>
+                1-2. 제50조제6항의 규정을 위반하여 영리목적의 광고성 정보를 전송한 자<br>
+                1-3. 제50조의2의 규정을 위반하여 전자우편주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자
+                </p>
+            </div>
+
+            <div id="close_privacy">
+                <p>닫기</p>
+            </div>
+
+        </div><!--privacy_box-->
+
+    </div><!--privacy_ex-->
+
+    <script src="../js/common_bottom.js"></script>
+    <script src="../js/dropdown.js"></script>
+
+</body>
+</html>

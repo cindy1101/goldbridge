@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {margin: 0; padding: 0;}
+
+li {list-style: none;}
+a {text-decoration: none !important; color: inherit;}
+img {display: block;}
+
+body {font-family: 'Noto Sans KR', sans-serif;}
+
+p {margin-bottom: 0;}
+
+
+/*각 페이지 크기 조절*/
+div.px-4
+{width: calc(100% - 60px);
+margin: 30px auto;
+padding: 0 !important;}
+
+
+/*로그인 페이지*/
+section.admin_login
+{width: 100%; height: 100vh;
+background: url(../img/main_visual_01.jpg) center center / cover no-repeat;}
+
+div.admin_login_cont_ex
+{width: 600px; height: 100vh;
+margin: 0 auto;
+background-color: #fff;
+display: flex;
+align-items: center;}
+
+div.admin_login_cont_ex>form
+{width: calc(100% - 60px);
+margin: 0 auto;}
+
+div.admin_login_cont
+{width: 100%;}
+
+div.admin_login_logo
+{width: 150px;
+margin: 0 auto;
+margin-bottom: 50px;}
+
+div.admin_login_logo img
+{width: 100%; height: auto;}
+
+div.admin_login_cont_id_ex
+{width: 100%;
+margin-bottom: 15px;}
+
+div.admin_login_cont_id_ex>p:nth-child(1)
+{font-weight: 600; color: #000;
+line-height: 20px;
+margin-bottom: 15px;}
+
+div.admin_login_cont_id_box
+{width: 100%;
+display: flex;
+align-items: center;}
+
+div.admin_login_cont_id_box>div:nth-child(1)
+{width: 40px; height: 40px;
+margin-right: 10px;}
+
+div.admin_login_cont_id_box>div:nth-child(1) img
+{width: 22px; height: 22px;
+margin: 9px auto;}
+
+input[type="text"].admin_login_input
+{width: calc(100% - 50px); height: 50px;
+border: 1px solid #ddd; box-sizing: border-box;
+background: #fff; outline: none;
+text-indent: 10px; color: #000;
+font-size: 15px;
+font-family: 'Noto Sans KR', sans-serif !important;}
+
+input[type="text"].admin_login_input::placeholder {color: #555;}
+
+div.admin_login_cont_pw_ex
+{width: 100%;
+margin-bottom: 70px;}
+
+div.admin_login_cont_pw_ex>p:nth-child(1)
+{font-weight: 600; color: #000;
+line-height: 20px;
+margin-bottom: 15px;}
+
+div.admin_login_cont_pw_box
+{width: 100%;
+display: flex;
+align-items: center;}
+
+div.admin_login_cont_pw_box>div:nth-child(1)
+{width: 40px; height: 40px;
+margin-right: 10px;}
+
+div.admin_login_cont_pw_box>div:nth-child(1) img
+{width: 22px; height: 22px;
+margin: 9px auto;}
+
+input[type="password"].admin_login_input
+{width: calc(100% - 50px); height: 50px;
+border: 1px solid #ddd; box-sizing: border-box;
+background: #fff; outline: none;
+text-indent: 10px; color: #000;
+font-size: 15px;
+font-family: 'Noto Sans KR', sans-serif !important;}
+
+input[type="password"].admin_login_input::placeholder {color: #555;}
+
+input[type="submit"].admin_login_submit
+{width: 100%; height: 55px;
+border: none; outline: none;
+border-radius: 5px;
+background-color: #ff2022;
+font-size: 15px; color: #fff;
+text-align: center; line-height: 55px;
+font-weight: 500;
+font-family: 'Noto Sans KR', sans-serif !important;}
+
+
+/*커뮤니티 작성 페이지*/
+section.admin_community_ex
+{width: 100%;}
+
+div.admin_title
+{width: 100%;
+padding-bottom: 15px;
+border-bottom: 1px solid #ddd; box-sizing: border-box;
+margin-bottom: 30px;}
+
+div.admin_title p
+{font-weight: 700; font-size: 17px; line-height: 20px;}
+
+ul.admin_community_cont_box
+{width: 100%;
+padding: 0; margin: 0;
+border-top: 1px solid #000; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.admin_community_cont_box li
+{display: flex;
+align-items: center;
+border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_community_cont_box li:nth-child(odd)
+{width: 10%;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_community_cont_box li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 10px 0;
+font-weight: 500; text-align: center; line-height: 23px; font-size: 15px;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.admin_community_cont_box li:nth-child(even)
+{width: 90%;}
+
+select.admin_community_select_box
+{width: 250px; height: 35px;
+max-width: calc(100% - 20px);
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+font-size: 15px; color: #000;
+outline: none;
+font-family: 'Noto Sans KR', sans-serif !important;}
+
+ul.admin_community_cont_box li:nth-child(4)
+{border-right: 1px solid #ddd; box-sizing: border-box;}
+
+li.admin_community_cont_width
+{width: 40% !important;}
+
+input[type="text"].admin_community_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+text-indent: 5px; font-size: 15px;
+color: #000;}
+
+input[type="text"].admin_community_txt::placeholder {color: #000;}
+
+li.admin_community_cont_textarea
+{width: 100% !important;
+padding: 10px;
+background-color: #fff !important;
+display: block !important;}
+
+
+/*수정시 등록일자, 수정일자 박스*/
+ul.admin_correction_cont
+{width: 100%;
+margin: 0; padding: 0;
+display: flex;
+align-items: stretch;}
+
+ul.admin_correction_cont li
+{border-bottom: 1px solid #ddd; 
+border-right: 1px solid #ddd;
+box-sizing: border-box;}
+
+ul.admin_correction_cont li:last-child {border-right: none;}
+
+ul.admin_correction_cont li:nth-child(odd)
+{width: 10%;
+background-color: #f3f3f3;
+display: flex;
+align-items: center;}
+
+ul.admin_correction_cont li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 15px 0;
+font-size: 15px; font-weight: 500; line-height: 20px;
+word-wrap: break-word;
+word-break: keep-all;
+text-align: center;}
+
+ul.admin_correction_cont li:nth-child(even)
+{width: 40%;
+display: flex;
+align-items: center;}
+
+ul.admin_correction_cont li:nth-child(even)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; color: #333; line-height: 20px;
+padding: 15px 0;
+word-wrap: break-word;
+word-break: keep-all;}
+
+
+/*버튼 박스*/
+div.admin_button_cont_ex
+{width: fit-content;
+margin: 0 auto;
+margin-top: 80px;}
+
+input[type="submit"].admin_button_cont
+{width: 150px; height: 50px;
+margin-right: 10px;
+font-size: 15px; font-family: 'Noto Sans KR', sans-serif !important;
+border: none; outline: none;
+border-radius: 5px;}
+
+input[type="button"].admin_button_cont
+{width: 150px; height: 50px;
+margin-right: 10px;
+font-size: 15px; font-family: 'Noto Sans KR', sans-serif !important;
+border: none; outline: none;
+border-radius: 5px;}
+
+input[type="button"].admin_button_cont:last-child
+{margin-right: 0;}
+
+
+/*문의하기*/
+section.admin_inquriy_ex
+{width: 100%;}
+
+ul.admin_inquriy_select
+{width: 100%;
+margin: 0; padding: 0;
+border-top: 1px solid #000;
+border-bottom: 1px solid #ddd; 
+box-sizing: border-box;
+display: flex;
+align-items: stretch;}
+
+ul.admin_inquriy_select li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;}
+
+ul.admin_inquriy_select li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 10px 0;
+font-weight: 500; font-size: 15px; color: #000;
+text-align: center;}
+
+select.admin_inquriy_select_box
+{width: 250px; height: 35px;
+max-width: calc(100% - 20px);
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+font-size: 15px; color: #000;
+outline: none;
+font-family: 'Noto Sans KR', sans-serif !important;}
+
+ul.admin_inquriy_cont
+{width: 100%;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+margin: 0; padding: 0;}
+
+ul.admin_inquriy_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_inquriy_cont li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;}
+
+ul.admin_inquriy_cont li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 10px 0;
+font-weight: 500; font-size: 15px; color: #000;
+text-align: center;}
+
+ul.admin_inquriy_cont li:nth-child(even)
+{width: 90%;}
+
+li.admin_inquriy_cont_width
+{width: 40% !important;}
+
+ul.admin_inquriy_cont li:nth-child(2)
+{border-right: 1px solid #ddd !important; box-sizing: border-box;}
+
+input[type="text"].admin_inquriy_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+text-indent: 5px; font-size: 15px;
+color: #000;}
+
+input[type="tel"].admin_inquriy_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+text-indent: 5px; font-size: 15px;
+color: #000;}
+
+input[type="email"].admin_inquriy_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+text-indent: 5px; font-size: 15px;
+color: #000;}
+
+input[type="text"].admin_inquriy_txt::placeholder {color: #333;}
+
+input[type="tel"].admin_inquriy_txt::placeholder {color: #333;}
+
+input[type="email"].admin_inquriy_txt::placeholder {color: #333;}
+
+textarea.admin_inquriy_textarea
+{width: calc(100% - 20px); height: 150px;
+border: 1px solid #ddd; box-sizing: border-box;
+margin: 10px; outline: none; resize: none;
+padding: 5px; font-size: 15px;
+font-family: 'Noto Sans KR', sans-serif !important;}
+
+textarea.admin_inquriy_textarea::placeholder
+{color: #333;}
+
+
+ul.admin_support_cont
+{width: 100%;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+margin: 0; padding: 0;}
+
+ul.admin_support_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_support_cont li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;}
+
+ul.admin_support_cont li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 10px 0;
+font-weight: 500; font-size: 15px; color: #000;
+text-align: center;}
+
+ul.admin_support_cont li:nth-child(even)
+{width: 90%;}
+
+ul.admin_support_cont li:nth-child(2)
+{border-right: 1px solid #ddd !important; box-sizing: border-box;}
+
+div.admin_download_cont
+{width: calc(100% - 20px);
+margin: 10px;}
+
+div.admin_download_cont>a
+{width: 100%;
+display: flex;
+align-items: center;}
+
+div.admin_download_cont>a>p:nth-child(1)
+{width: calc(100% - 90px);
+margin-right: 10px;
+font-size: 15px; color: #000;}
+
+div.admin_download_cont>a>p:nth-child(2)
+{width: 80px; height: 40px;
+text-align: center; line-height: 38px;
+font-size: 15px; color: #000;
+border: 1px solid #000; box-sizing: border-box;
+transition: all 0.3s;}
+
+div.admin_download_cont>a:hover>p:nth-child(2)
+{background-color: #000; color: #fff;}
+
+p.admin_inquriy_day
+{width: calc(100% - 20px);
+margin: 10px; padding: 10px 0;
+color: #333;
+line-height: 20px; font-size: 15px;}
+
+
+/*포토폴리오*/
+section.admin_portfolio_ex
+{width: 100%;}
+
+ul.admin_portfolio_cont
+{width: 100%;
+border-top: 1px solid #000; box-sizing: border-box;
+margin: 0; padding: 0;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.admin_portfolio_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_portfolio_cont li:nth-child(odd)
+{width: 10%;
+background-color: #f3f3f3;
+display: flex;
+align-items: center;}
+
+ul.admin_portfolio_cont li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 15px 0;
+font-size: 15px; font-weight: 500; line-height: 20px;
+word-wrap: break-word;
+word-break: keep-all;
+text-align: center;}
+
+ul.admin_portfolio_cont li:nth-child(even)
+{width: 90%;}
+
+li.admin_portfolio_cont_width
+{width: 40% !important;}
+
+input[type="text"].admin_portfolio_yearpicker
+{width: 150px; height: 35px;
+max-width: calc(100% - 20px);
+margin: 10px; padding: 0;
+text-indent: 5px; border-radius: 0;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+font-size: 15px;
+color: #000;}
+
+.form-control:focus
+{box-shadow: none;}
+
+.form-control:disabled, .form-control[readonly]
+{background-color: #fff;}
+
+select.admin_portfolio_day
+{width: 150px; height: 35px;
+max-width: calc(100% - 20px);
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+font-size: 15px;
+color: #000;}
+
+input[type="text"].admin_portfolio_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+text-indent: 5px; font-size: 15px;
+color: #000;}
+
+
+/*Now*/
+section.admin_now_ex
+{width: 100%;}
+
+ul.admin_now_cont_top
+{width: 100%;
+border-top: 1px solid #000; box-sizing: border-box;
+margin: 0; padding: 0;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.admin_now_cont_top li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_now_cont_top li:nth-child(2)
+{border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_now_cont_top li:nth-child(6)
+{border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_now_cont_top li:nth-child(16)
+{border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_now_cont_top li:nth-child(20)
+{border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_now_cont_top li:nth-child(odd)
+{width: 10%;
+background-color: #f3f3f3;
+display: flex;
+align-items: center;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.admin_now_cont_top li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 10px 0; font-weight: 500;
+font-size: 15px; line-height: 20px;
+color: #000; text-align: center;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.admin_now_cont_top li:nth-child(even)
+{width: 90%;}
+
+li.admin_now_cont_width
+{width: 40% !important;}
+
+input[type="text"].admin_now_yearpicker
+{width: 150px; height: 35px;
+max-width: calc(100% - 20px);
+margin: 10px; padding: 0;
+text-indent: 5px; border-radius: 0;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+font-size: 15px;
+color: #000;}
+
+input[type="text"].admin_now_cont_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+text-indent: 5px; font-size: 15px;
+color: #000;}
+
+input[type="text"].admin_now_cont_txt::placeholder {color: #555;}
+
+input[type="number"].admin_now_cont_number
+{width: 300px; height: 35px;
+max-width: calc(100% - 20px);
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+text-indent: 5px; font-size: 15px;
+color: #000;}
+
+input[type="tel"].admin_now_cont_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+text-indent: 5px; font-size: 15px;
+color: #000;}
+
+li.admin_now_textarea
+{padding: 10px;}
+
+/*썸네일 이미지*/
+div.admin_thumbnail_box
+{width: calc(100% - 20px);
+margin: 10px;}
+
+img.admin_image_cont
+{width: 250px;
+max-width: 100%;
+margin-bottom: 10px;}
+
+input[type="file"].admin_image_file
+{width: fit-content;
+font-family: 'Noto Sans KR', sans-serif !important;}
+
+/*슬라이드 이미지*/
+div.admin_slide_box
+{width: 100%;
+display: flex;
+align-items: stretch;}
+
+div.admin_slide_box>div
+{width: calc(100% / 4);
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+img.admin_image_cont.slide_image_cont
+{width: 250px;
+max-width: calc(100% - 20px);
+margin: 10px;}
+
+input[type="file"].admin_image_file.slide_image_file
+{width: fit-content;
+max-width: calc(100% - 20px);
+margin: 0 10px;
+margin-bottom: 10px;
+font-family: 'Noto Sans KR', sans-serif !important;}
+
+/*지도*/
+div.admin_now_map
+{width: calc(100% - 20px);
+margin: 10px auto;}
+
+div.admin_now_map>div:nth-child(1)
+{width: 650px;
+max-width: 100%;
+padding: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+margin-bottom: 10px;}
+
+div.admin_now_map>div:nth-child(1) img
+{width: 100%; height: auto;}
+
+div.admin_now_map>div:nth-child(2)
+{width: 100%;
+margin-bottom: 20px;}
+
+div.admin_now_map>div:nth-child(2)>p
+{width: 100%;
+font-size: 15px; line-height: 23px;
+color: #000;}
+
+input[type="text"].admin_now_map_txt
+{width: 100%; height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+font-family: 'Noto Sans KR', sans-serif !important;
+text-indent: 5px; font-size: 15px;
+color: #000;}
+
+

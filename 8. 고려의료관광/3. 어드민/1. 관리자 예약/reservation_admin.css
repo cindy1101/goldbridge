@@ -1,0 +1,591 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard';}
+
+section.reservation_admin
+{width: 100%;}
+
+div.reservation_admin_title
+{width: 100%;
+margin-bottom: 30px;
+padding-bottom: 10px;
+border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+div.reservation_admin_title>p
+{width: 100%;
+font-size: 18px; font-family: bold; line-height: 25px;
+color: #222;}
+
+ul.reservation_admin_member
+{width: 100%;
+display: flex;
+align-items: stretch;
+border-top: 1px solid #222;
+border-bottom: 1px solid #ddd;
+box-sizing: border-box;
+margin-bottom: 30px;
+padding: 0;}
+
+ul.reservation_admin_member li
+{border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.reservation_admin_member li:last-child
+{border-right: none;}
+
+ul.reservation_admin_member li:nth-child(odd)
+{width: 10%;
+background-color: #f3f3f3;
+display: flex;
+align-items: center;}
+
+ul.reservation_admin_member li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+line-height: 25px; font-size: 15px; font-family: 'min_bold';
+text-align: center; 
+word-break: keep-all;
+word-wrap: break-word;
+color: #222;}
+
+ul.reservation_admin_member li:nth-child(even)
+{width: 90%;}
+
+input[type="text"].reservation_admin_member_txt
+{width: 650px; height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;
+margin: 10px;
+color: #333;
+font-family: 'Pretendard' !important; font-size: 15px; text-indent: 5px;}
+
+/*patient_admin*/
+div.patient_admin
+{width: 100%;
+margin-bottom: 30px;}
+
+p.patient_admin_title
+{width: 100%;
+font-family: bold; color: #222; line-height: 25px; font-size: 17px;
+margin-bottom: 15px;}
+
+ul.patient_admin_form
+{width: 100%;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;}
+
+ul.patient_admin_form li
+{border-right: 1px solid #ddd; 
+border-bottom: 1px solid #ddd;
+box-sizing: border-box;}
+
+ul.patient_admin_form li:nth-child(4n+4)
+{border-right: none;}
+
+ul.patient_admin_form li:nth-child(odd)
+{width: 10%;
+background-color: #f3f3f3;
+display: flex;
+align-items: center;}
+
+ul.patient_admin_form li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+line-height: 22px; font-size: 15px; font-family: 'min_bold';
+text-align: center;
+color: #222;
+word-break: keep-all;
+word-wrap: break-word;}
+
+ul.patient_admin_form li:nth-child(even)
+{width: 40%;
+display: flex;
+align-items: center;}
+
+ul.patient_admin_form li:nth-child(18)
+{width: 90%;
+display: flex;
+align-items: center;
+border-right: none;}
+
+div.patient_admin_name
+{width: calc(100% - 20px);
+margin: 10px auto;
+overflow: hidden;}
+
+input[type="text"].reservation_admin_name_txt
+{width: 49%; height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;
+color: #333;
+float: left;
+font-family: 'Pretendard' !important; font-size: 15px; text-indent: 5px;}
+
+input[type="text"].reservation_admin_name_txt:nth-child(1)
+{margin-right: 2%;}
+
+input[type="text"].reservation_patient_name_txt
+{width: calc(100% - 20px); height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;
+margin: 10px;
+color: #333;
+font-family: 'Pretendard' !important; font-size: 15px; text-indent: 5px;}
+
+input[type="email"].reservation_patient_txt
+{width: calc(100% - 20px); height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;
+margin: 10px;
+color: #333;
+font-family: 'Pretendard' !important; font-size: 15px; text-indent: 5px;}
+
+div.patient_admin_address
+{width: calc(100% - 20px);
+margin: 10px auto;}
+
+input[type="text"].reservation_patient_address_txt
+{width: 100%; height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;
+color: #333;
+font-family: 'Pretendard' !important; font-size: 15px; text-indent: 5px;}
+
+input[type="text"].reservation_patient_address_txt:nth-child(1)
+{margin-bottom: 5px;}
+
+/*성별*/
+div.patient_admin_gender
+{width: calc(100% - 20px);
+margin: 10px auto;
+overflow: hidden;}
+
+div.patient_admin_gender>div
+{width: fit-content;
+max-width: 49%;
+float: left;}
+
+div.patient_admin_gender>div:nth-child(1)
+{margin-right: 2%;}
+
+input[type="radio"].gender_chk_admin
+{width: 13px; height: 13px;
+float: left;
+border: 1px solid #222; box-sizing: border-box;
+margin-right: 5px;
+outline: none;
+margin-top: 3.5px;}
+
+div.patient_admin_gender>div>label:nth-child(2)
+{width: fit-content;
+max-width: calc(100% - 18px);
+display: block;
+float: right;}
+
+div.patient_admin_gender>div>label:nth-child(2)>p
+{font-size: 15px; line-height: 20px;
+color: #222;}
+
+/*Insurance*/
+div.patient_admin_insurance
+{width: calc(100% - 20px);
+margin: 10px auto;
+overflow: hidden;}
+
+div.patient_admin_insurance>div
+{width: fit-content;
+max-width: 49%;
+float: left;}
+
+div.patient_admin_insurance>div:nth-child(1)
+{margin-right: 2%;}
+
+input[type="radio"].patient_chk_insurance
+{width: 13px; height: 13px;
+float: left;
+border: 1px solid #222; box-sizing: border-box;
+margin-right: 5px;
+outline: none;
+margin-top: 3.5px;}
+
+div.patient_admin_insurance>div>label:nth-child(2)
+{width: fit-content;
+max-width: calc(100% - 18px);
+display: block;
+float: right;}
+
+div.patient_admin_insurance>div>label:nth-child(2)>p
+{font-size: 15px; line-height: 20px;
+color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+/*patient_admin_preferred*/
+div.patient_admin_preferred
+{width: calc(100% - 20px);
+margin: 10px auto;}
+
+input[type="text"].reservation_preferred_address_txt
+{width: 100%; height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;
+color: #333;
+font-family: 'Pretendard' !important; font-size: 15px; text-indent: 5px;}
+
+input[type="text"].reservation_preferred_address_txt:nth-child(2)
+{margin-top: 5px; margin-bottom: 5px;}
+
+
+/*Preferred Check-Up Date*/
+div.patient_admin_preferred_date
+{width: 43%;
+margin-left: 10px;
+margin-top: 10px; margin-bottom: 10px;}
+
+input[type="text"].reservation_preferred_preferred_date_txt
+{width: 100%; height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;
+color: #333;
+font-family: 'Pretendard' !important; font-size: 15px; text-indent: 5px;}
+
+input[type="text"].reservation_preferred_preferred_date_txt:nth-child(2)
+{margin-top: 5px; margin-bottom: 5px;}
+
+
+/*개인 정보*/
+div.request_an_appointment_admin
+{width: 100%;}
+
+p.request_an_appointment_admin_title
+{width: 100%;
+font-family: bold; color: #222; line-height: 25px; font-size: 17px;
+margin-bottom: 15px;}
+
+/*01*/
+div.people_appointment
+{width: 100%;
+margin-bottom: 30px;}
+
+div.people_appointment:last-child
+{margin-bottom: 0;}
+
+p.people_appointment_title
+{width: fit-content;
+padding: 5px 5px;
+line-height: 20px; font-size: 14px; line-height: 20px;
+border: 1px solid #51b8ff; box-sizing: border-box;
+color: #51b8ff;
+margin-bottom: 10px;}
+
+ul.people_appointment_form
+{width: 100%;
+padding: 0;
+margin-bottom: 30px;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+border-top: 1px solid #222; box-sizing: border-box;}
+
+ul.people_appointment_form li
+{border-right: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+box-sizing: border-box;}
+
+ul.people_appointment_form li:nth-child(4n+4)
+{border-right: none;}
+
+ul.people_appointment_form li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;}
+
+ul.people_appointment_form li:nth-child(even)
+{width: 40%;
+display: flex;
+align-items: center;}
+
+ul.people_appointment_form li:nth-child(10)
+{width: 90%;}
+
+ul.people_appointment_form li:nth-child(12)
+{width: 90%;}
+
+ul.people_appointment_form li:nth-child(14)
+{width: 90%;}
+
+ul.people_appointment_form li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+line-height: 22px; font-size: 15px; font-family: 'min_bold';
+text-align: center;
+color: #222;
+word-break: keep-all;
+word-wrap: break-word;}
+
+div.people_appointment_name
+{width: calc(100% - 20px);
+margin: 10px auto;
+overflow: hidden;}
+
+input[type="text"].appointment_admin_name_txt
+{width: 49%; height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;
+color: #333;
+float: left;
+font-family: 'Pretendard' !important; font-size: 15px; text-indent: 5px;}
+
+input[type="text"].appointment_admin_name_txt:nth-child(1)
+{margin-right: 2%;}
+
+div.people_appointment_passport
+{width: calc(100% - 20px);
+margin: 10px auto;}
+
+input[type="text"].people_appointment_passport_txt
+{width: 100%; height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;
+color: #333;
+font-family: 'Pretendard' !important; font-size: 15px; text-indent: 5px;}
+
+input[type="text"].people_appointment_passport_txt:nth-child(2)
+{margin-top: 5px; margin-bottom: 5px;}
+
+textarea.people_appointment_textarea
+{width: calc(100% - 20px); height: 150px;
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; resize: none;
+padding: 5px;
+font-size: 15px; font-family: 'Pretendard' !important;}
+
+/*성별*/
+div.people_appointment_gender
+{width: calc(100% - 20px);
+margin: 10px auto;
+overflow: hidden;}
+
+div.people_appointment_gender>div
+{width: fit-content;
+max-width: 49%;
+float: left;}
+
+div.people_appointment_gender>div:nth-child(1)
+{margin-right: 2%;}
+
+input[type="radio"].people_appointment_gender_chk
+{width: 13px; height: 13px;
+float: left;
+border: 1px solid #222; box-sizing: border-box;
+margin-right: 5px;
+outline: none;
+margin-top: 3.5px;}
+
+div.people_appointment_gender>div>label:nth-child(2)
+{width: fit-content;
+max-width: calc(100% - 18px);
+display: block;
+float: right;}
+
+div.people_appointment_gender>div>label:nth-child(2)>p
+{font-size: 15px; line-height: 20px;
+color: #222;}
+
+/*people_appointment_status*/
+div.people_appointment_status
+{width: calc(100% - 20px);
+margin: 10px auto;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+overflow: hidden;}
+
+div.people_appointment_status>div
+{width: fit-content;
+margin-right: 10px;}
+
+div.people_appointment_status>div:last-child
+{margin-right: 0;}
+
+input[type="checkbox"].people_appointment_status_chk
+{width: 13px; height: 13px;
+float: left;
+border: 1px solid #222; box-sizing: border-box;
+margin-right: 5px;
+outline: none;
+margin-top: 8.5px;}
+
+div.people_appointment_status>div>label:nth-child(2)
+{width: fit-content;
+max-width: calc(100% - 18px);
+display: block;
+float: right;}
+
+div.people_appointment_status>div>label:nth-child(2)>p
+{font-size: 15px; line-height: 30px;
+word-wrap: break-word;
+word-break: keep-all;
+color: #222;}
+
+/*전체 가격*/
+div.total_pay_admin
+{width: 100%;}
+
+p.total_pay_admin_title
+{width: 100%;
+font-family: bold; color: #222; line-height: 25px; font-size: 17px;
+margin-bottom: 15px;}
+
+ul.total_admin_product
+{width: 100%;
+border-top: 1px solid #222;
+box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+overflow: hidden;
+padding: 0; margin-bottom: 15px;}
+
+ul.total_admin_product li
+{border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd; 
+box-sizing: border-box;
+display: flex;
+align-items: center;}
+
+ul.total_admin_product li:nth-child(8n+1)
+{width: 15%;}
+
+ul.total_admin_product li:nth-child(8n+2)
+{width: 15%;}
+
+ul.total_admin_product li:nth-child(8n+3)
+{width: 20%;}
+
+ul.total_admin_product li:nth-child(8n+4)
+{width: 20%;}
+
+ul.total_admin_product li:nth-child(8n+5)
+{width: 5%;}
+
+ul.total_admin_product li:nth-child(8n+6)
+{width: 5%;}
+
+ul.total_admin_product li:nth-child(8n+7)
+{width: 5%;}
+
+ul.total_admin_product li:nth-child(8n+8)
+{width: 15%;
+border-right: none;}
+
+ul.total_admin_product li>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+line-height: 22px; font-size: 15px; padding: 10px 0;
+text-align: center;
+color: #222;
+word-break: keep-all;
+word-wrap: break-word;}
+
+ul.total_admin_product li:nth-child(1n+1)
+{background-color: #f3f3f3;}
+
+ul.total_admin_product li:nth-child(1n+1)>p
+{font-family: 'min_bold';}
+
+ul.total_admin_product li:nth-child(1n+9)
+{background-color: #fff;}
+
+ul.total_admin_product li:nth-child(1n+9)>p
+{font-family: 'Pretendard';}
+
+/*총 가격*/
+ul.total_pay_admin_box
+{width: 100%;
+border-top: 1px solid #222;
+box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+overflow: hidden;
+padding: 0; margin-bottom: 80px;}
+
+ul.total_pay_admin_box li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.total_pay_admin_box li:nth-child(1)
+{width: 15%;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;
+display: flex;
+align-items: center;}
+
+ul.total_pay_admin_box li:nth-child(1)>p 
+{width: calc(100% - 20px);
+margin: 0 auto;
+line-height: 22px; font-size: 15px; padding: 10px 0;
+text-align: center;
+color: #222;
+word-break: keep-all;
+word-wrap: break-word;
+font-family: 'min_bold';}
+
+ul.total_pay_admin_box li:nth-child(2)
+{width: 85%;
+display: flex;
+align-items: center;}
+
+ul.total_pay_admin_box li:nth-child(2)>p 
+{width: calc(100% - 20px);
+margin: 0 auto;
+line-height: 22px; font-size: 15px; padding: 10px 0;
+color: red;
+word-break: keep-all;
+word-wrap: break-word;}
+
+
+

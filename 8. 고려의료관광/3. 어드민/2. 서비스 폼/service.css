@@ -1,0 +1,736 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard';}
+
+section.service_form_ex
+{width: 100%;}
+
+div.service_title
+{width: 100%;
+padding-bottom: 10px;
+border-bottom: 1px solid #ddd; box-sizing: border-box;
+margin-bottom: 30px;}
+
+div.service_title p
+{width: 100%;
+margin: 0;
+font-size: 18px; line-height: 25px; font-family: bold; color: #222;}
+
+ul.service_big_title
+{width: 100%;
+padding: 0;
+margin-bottom: 50px;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.service_big_title li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.service_big_title li:nth-child(odd)
+{width: 15%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.service_big_title li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;}
+
+ul.service_big_title li:nth-child(even)
+{width: 85%;}
+
+input[type="checkbox"].main_open_chk_box
+{width: 15px; height: 15px;
+margin: 17.5px 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none;}
+
+select.notic_select_box
+{width: 350px; height: 35px;
+max-width: calc(100% - 20px);
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; font-size: 15px; color: #222;
+padding: 0 5px;
+font-family: 'Pretendard' !important;}
+
+select.question_select_box
+{width: 350px; height: 35px;
+max-width: calc(100% - 20px);
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; font-size: 15px; color: #222;
+padding: 0 5px;
+font-family: 'Pretendard' !important;}
+
+select.region_select_box
+{width: 350px; height: 35px;
+max-width: calc(100% - 20px);
+margin: 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+outline: none; font-size: 15px; color: #222;
+padding: 0 5px;
+font-family: 'Pretendard' !important;}
+
+/*health 서비스*/
+div.health_service_form_ex
+{width: 100%;
+margin-bottom: 80px;}
+
+ul.health_service_form_cont
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.health_service_form_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.health_service_form_cont li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.health_service_form_cont li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.health_service_form_cont li:nth-child(even)
+{width: 90%;
+display: flex;
+align-items: center;}
+
+input[type="number"].servies_title_txt
+{width: calc(100% - 20px); height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+margin: 10px; text-indent: 5px;
+font-size: 15px; color: #222;
+font-family: 'Pretendard' !important;
+outline: none;}
+
+input[type="text"].servies_title_txt
+{width: calc(100% - 20px); height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+margin: 10px; text-indent: 5px;
+font-size: 15px; color: #222;
+font-family: 'Pretendard' !important;
+outline: none;}
+
+li.textarea_jq_box
+{padding: 10px !important;}
+
+div.list_image_cont
+{width: calc(100% - 20px);
+margin: 10px auto;}
+
+div.list_image_cont img
+{width: 250px; height: 250px;
+margin-bottom: 10px;}
+
+input[type="file"].servies_thumbnail
+{width: fit-content;
+max-width: 100%;
+font-family: 'Pretendard'; font-size: 15px;}
+
+div.slide_image_cont
+{width: 100%;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+div.slide_image_cont div
+{width: 33.333333%;
+border-right: 1px solid #ddd; 
+border-bottom: 1px solid #ddd;
+box-sizing: border-box;}
+
+div.slide_image_cont div:nth-child(3)
+{border-right: none;}
+
+div.slide_image_cont div:last-child
+{border-bottom: none;}
+
+div.slide_image_cont div img
+{width: 250px; height: 250px;
+margin: 10px 10px;}
+
+input[type="file"].servies_visual
+{width: fit-content;
+max-width: calc(100% - 20px);
+font-family: 'Pretendard'; font-size: 15px;
+margin: 10px 10px;
+margin-top: 0;}
+
+input[type="text"].servies_form_txt
+{width: calc(100% - 20px); height: 35px;
+border: 1px solid #ddd; box-sizing: border-box;
+margin: 10px; text-indent: 5px;
+font-size: 15px; color: #222;
+font-family: 'Pretendard' !important;
+outline: none;}
+
+input[type="file"].pdf_file_input
+{width: fit-content;
+max-width: calc(100% - 20px);
+font-family: 'Pretendard'; font-size: 15px;
+margin: 10px;}
+
+/*wellness 서비스*/
+div.wellness_service_form_ex
+{width: 100%;
+margin-bottom: 80px;}
+
+ul.wellness_service_form_cont
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.wellness_service_form_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.wellness_service_form_cont li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.wellness_service_form_cont li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.wellness_service_form_cont li:nth-child(even)
+{width: 90%;
+display: flex;
+align-items: center;}
+
+/*텍스트 자바 관련*/
+.cke_chrome 
+{width: 100% !important;}
+
+/*concierge 차 서비스*/
+div.concierge_car_form_ex
+{width: 100%;
+margin-bottom: 80px;}
+
+ul.concierge_car_cont
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.concierge_car_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.concierge_car_cont li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.concierge_car_cont li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.concierge_car_cont li:nth-child(even)
+{width: 90%;
+display: flex;
+align-items: center;}
+
+/*concierge 호텔 서비스*/
+div.concierge_hotel_form_ex
+{width: 100%;
+margin-bottom: 80px;}
+
+ul.concierge_hotel_form_cont
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+margin-bottom: 30px;}
+
+ul.concierge_hotel_form_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.concierge_hotel_form_cont li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.concierge_hotel_form_cont li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.concierge_hotel_form_cont li:nth-child(even)
+{width: 90%;
+display: flex;
+align-items: center;}
+
+/*호텔 룸타입*/
+ul.concierge_hotel_room_ex
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+margin-bottom: 30px;}
+
+ul.concierge_hotel_room_ex li:nth-child(1)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.concierge_hotel_room_ex li:nth-child(1) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.concierge_hotel_room_ex li:nth-child(2)
+{width: 90%;}
+
+ul.concierge_hotel_room_ex li:nth-child(2)>div
+{width: 100%;
+display: flex;
+align-items: stretch;
+border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+div.hotel_room_type_title
+{width: 10%;
+display: flex;
+align-items: center;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+div.hotel_room_type_title p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+div.hoetl_room_type
+{width: calc(100% - 20px);
+display: flex;
+align-items: stretch;}
+
+div.hoetl_room_type>div:nth-child(1)
+{width: 40%;
+padding: 10px;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+div.hoetl_room_type>div:nth-child(1) p
+{width: 100%;
+font-size: 15px; line-height: 20px;
+word-break: keep-all;
+word-wrap: break-word;
+font-family: 'min_bold';
+color: #222;}
+
+div.hoetl_room_type>div:nth-child(1) img
+{width: 400px; height: auto;
+max-width: 100%;
+margin: 10px 0;}
+
+input[type="file"].hotel_room_txt
+{width: fit-content;
+max-width: 100%;
+font-family: 'Pretendard'; font-size: 15px;}
+
+div.hotel_room_type_right
+{width: 60%;}
+
+div.hotel_room_type_right div
+{width: 100%; height: calc(100% / 3);
+display: flex;
+align-content: center;
+flex-wrap: wrap;
+border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+div.hotel_room_type_right div p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 20px;
+word-break: keep-all;
+word-wrap: break-word;
+font-family: 'min_bold';
+color: #222;}
+
+input[type="text"].hotel_room_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 0 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+margin: 10px; text-indent: 5px;
+font-size: 15px; color: #222;
+font-family: 'Pretendard' !important;
+outline: none;}
+
+input[type="number"].hotel_room_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 0 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+margin: 10px; text-indent: 5px;
+font-size: 15px; color: #222;
+font-family: 'Pretendard' !important;
+outline: none;}
+
+div.hotel_room_type_right div:last-child
+{border-bottom: none;}
+
+
+/*concierge 레스토랑 서비스*/
+div.concierge_restaurants_form_ex
+{width: 100%;
+margin-bottom: 80px;}
+
+ul.concierge_restaurants_cont
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.concierge_restaurants_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.concierge_restaurants_cont li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.concierge_restaurants_cont li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.concierge_restaurants_cont li:nth-child(even)
+{width: 90%;
+display: flex;
+align-items: center;}
+
+/*interpreter 서비스*/
+div.interpreter_form_ex
+{width: 100%;
+margin-bottom: 80px;}
+
+ul.interpreter_cont
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+margin-bottom: 30px;}
+
+ul.interpreter_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.interpreter_cont li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.interpreter_cont li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.interpreter_cont li:nth-child(even)
+{width: 90%;
+display: flex;
+align-items: center;}
+
+div.select_lan_cont
+{width: calc(100% - 20px);
+margin: 20px auto;
+display: flex;
+align-items: center;
+flex-wrap: wrap;}
+
+div.select_lan_cont>div
+{width: fit-content;
+margin-right: 10px;
+overflow: hidden;}
+
+input[type="checkbox"].lang_chk 
+{width: 13px; height: 13px;
+margin-right: 5px;
+margin-top: 3.5px;
+float: left;}
+
+div.select_lan_cont>div>label:nth-child(2) 
+{display: block;
+float: left;}
+
+div.select_lan_cont>div>label:nth-child(2)>p 
+{font-size: 15px;
+line-height: 20px;
+color: #333;}
+
+li.interpreter_li_width_01
+{width: 40% !important;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+li.interpreter_li_width_02
+{width: 40% !important;}
+
+input[type="number"].meet_price_txt
+{width: calc(100% - 20px); height: 35px;
+margin: 0 10px;
+border: 1px solid #ddd; box-sizing: border-box;
+margin: 10px; text-indent: 5px;
+font-size: 15px; color: #222;
+font-family: 'Pretendard' !important;
+outline: none;}
+
+/*interpreter 가격*/
+p.interpreter_pay_title
+{width: 100%;
+font-size: 18px; font-family: 'min_bold';
+margin-bottom: 30px;
+color: #222; line-height: 25px;}
+ul.interpreter_pay_cont
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+margin-bottom: 30px;}
+
+ul.interpreter_pay_cont li
+{width: 50%;
+border-right: 1px solid #ddd;
+border-bottom: 1px solid #ddd; 
+box-sizing: border-box;}
+
+ul.interpreter_pay_cont li:nth-child(1), ul.interpreter_pay_cont li:nth-child(2)
+{background-color: #f3f3f3;}
+
+ul.interpreter_pay_cont li:nth-child(1) p 
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 15px 0;
+text-align: center; font-size: 15px; font-family: 'min_bold'; color: #222;}
+
+ul.interpreter_pay_cont li:nth-child(2) p 
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 15px 0;
+text-align: center; font-size: 15px; font-family: 'min_bold'; color: #222;}
+
+
+/*translation 서비스*/
+div.translation_form_ex
+{width: 100%;
+margin-bottom: 80px;}
+
+ul.translation_cont
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+margin-bottom: 30px;}
+
+ul.translation_cont li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.translation_cont li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.translation_cont li:nth-child(odd) p
+{width: calc(100% - 20px);
+margin: 0 auto;
+font-size: 15px; line-height: 23px;
+text-align: center; font-family: 'min_bold'; color: #222;
+word-wrap: break-word;
+word-break: keep-all;}
+
+ul.translation_cont li:nth-child(even)
+{width: 90%;
+display: flex;
+align-items: center;}
+
+/*translation 가격*/
+p.translation_pay_title
+{width: 100%;
+font-size: 18px; font-family: 'min_bold';
+margin-bottom: 30px;
+color: #222; line-height: 25px;}
+
+ul.translation_pay_cont
+{width: 100%;
+padding: 0;
+border-top: 1px solid #222; box-sizing: border-box;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+margin-bottom: 30px;}
+
+ul.translation_pay_cont li
+{width: 50%;
+border-right: 1px solid #ddd;
+border-bottom: 1px solid #ddd; 
+box-sizing: border-box;}
+
+ul.translation_pay_cont li:nth-child(1), ul.translation_pay_cont li:nth-child(2)
+{background-color: #f3f3f3;}
+
+ul.translation_pay_cont li:nth-child(1) p 
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 15px 0;
+text-align: center; font-size: 15px; font-family: 'min_bold'; color: #222;}
+
+ul.translation_pay_cont li:nth-child(2) p 
+{width: calc(100% - 20px);
+margin: 0 auto;
+padding: 15px 0;
+text-align: center; font-size: 15px; font-family: 'min_bold'; color: #222;}
+
+
+/*버튼*/
+div.announcement_registration_btn_ex
+{width: fit-content;
+margin: 0 auto;
+overflow: hidden;}
+
+input[type="submit"].announcement_re_submit
+{width: 120px; height: 45px;
+border: none; outline: none;
+text-align: center; line-height: 45px;
+float: left;
+font-size: 15px;
+border-radius: 5px;
+margin-right: 10px;}
+
+/*목록으로*/
+input[type="button"].announcement_re_list
+{width: 120px; height: 45px;
+border: none; outline: none;
+text-align: center; line-height: 45px;
+float: left;
+font-size: 15px;
+border-radius: 5px;}
+
+/*삭제하기 버튼*/
+input[type="button"].announcement_re_submit
+{width: 120px; height: 45px;
+border: none; outline: none;
+text-align: center; line-height: 45px;
+float: right;
+font-size: 15px;
+margin-left: 10px;
+border-radius: 5px;}
+
+a.announcement_re_list
+{width: 120px; height: 45px;
+display: block;
+float: left;
+border-radius: 5px;
+background-color: #6c757d;
+border: none;}
+
+a.announcement_re_list>p
+{text-align: center; line-height: 45px;
+font-size: 15px;}
+
+
+

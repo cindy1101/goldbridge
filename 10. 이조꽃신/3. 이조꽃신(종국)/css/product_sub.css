@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+/*페이징버튼 제어*/
+.sub_page_btn ul.pagination
+{width: fit-content;
+margin: 0 auto;}
+
+ul.pagination
+{margin-left: 0;}
+
+ul.pagination li
+{height: fit-content;
+margin-left: 0;
+font-size: 16px;}
+
+ul.pagination li a
+{color: #222;
+padding: 5px 10px;
+border: none;
+border-radius: 0;
+text-align: center; line-height: 20px;}
+
+.page-item:not(:first-child) .page-link
+{margin-left: 0;}
+
+/*부트스트랩 클릭시 생기는 선 삭제*/
+.page-link:focus, .page-link:active 
+{outline: none;
+box-shadow: none;
+background-color: transparent !important;}
+
+.page-link:focus, .page-link:hover 
+{background-color: transparent !important;
+color: #a4917b !important;}
+
+.page-link:focus, .page-link:active 
+{color: #a4917b;}
+
+.page-item.active .page-link
+{background-color: #a4917b;
+color: #fff;}
+    
+/* 비주얼 */
+.common_visual
+{width: 100%; height: 300px;
+background: url(../img/sub_visual.png);
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 90px;
+position: relative;
+background-size:cover;}
+
+.common_visual>h2
+{font-size: 40px;
+font-family: 'bold';
+color: #fff;}
+
+.visual_active_ex
+{width: 100%; height: 100%; 
+background: rgba(0, 0, 0, 0.6);
+position: absolute;}
+
+.visual_active
+{height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;}
+
+.visual_active>div
+{text-align: center;
+color: #fff;}
+
+.visual_active>div h2
+{font-size: 32px;
+font-family: 'bold';
+color: #fff;
+margin-bottom: 20px;}
+
+.visual_active>div p
+{color:#fff;
+padding-top: 16px;
+border-top: 2px solid #fff;
+font-size: 16px;
+line-height: 24px;}
+
+/* 서브페이지 타이틀*/
+.product_sub_ex
+{max-width: 1420px;
+margin: 0 auto;
+margin-top: 100px;}
+
+.product_sub_title
+{border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 50px;}
+
+.product_sub_title h2
+{width: fit-content;
+font-size: 24px; line-height: 30px;
+font-family: 'bold';
+color: #000;
+position: relative;
+margin-bottom: 15px;}
+
+.product_sub_title h2::before
+{content: '';
+position: absolute;
+width: 100%; height: 5px;
+background: #000;
+bottom: -16px;}
+
+/* 서브페이지 상품 */
+.product_item_box
+{display: flex;
+flex-wrap: wrap;
+margin-bottom: 10px;}
+
+.product_item_box>div
+{width: 22.5%;
+margin-bottom: 40px;
+margin-right: calc(10% / 3);}
+
+.product_item_box>div:nth-child(4n)
+{margin-right: 0;}
+
+.product_item_box>div:hover img
+{scale: 1.1;}
+
+.product_item_box>div:hover .product_name
+{color: #a4917b;}
+
+div.item_imgbox
+{width: 100%;
+overflow: hidden;}
+
+div.item_imgbox img
+{transition: all 0.5s;}
+
+.product_name
+{text-align: center;
+font-family: 'bold';
+margin-top: 16px;
+transition: all 0.3s;}
+
+/* 페이지 버튼 */
+.sub_page_btn
+{margin-bottom: 150px;
+margin-top: 60px;}
+
+@media all and (max-width: 1419px)
+{
+    /* 서브페이지 */
+    .product_sub_ex
+    {width: 90%;}
+}
+
+@media all and (max-width: 1024px)
+{
+    /* 비주얼 배너 */
+    .common_visual 
+    {height: 250px;}
+
+    /* 서브페이지 상품 */
+    .product_item_box > div
+    {width: 31%;
+    margin-right: calc(7% / 2);}
+
+    .product_item_box > div:nth-child(4n)
+    {margin-right: calc(7% / 2);}
+
+    .product_item_box > div:nth-child(3n)
+    {margin-right: 0;}
+}
+
+@media all and (max-width: 769px)
+{
+    /* 비주얼 배너 */
+    .common_visual 
+    {height: 180px;}
+
+    .common_visual>h2
+    {font-size: 28px;}
+
+    /* 서브페이지 */
+    .product_sub_ex
+    {margin-top: 70px;}
+
+    /* 서브페이지 타이틀 */
+    .product_sub_title
+    {margin-bottom: 40px;}
+
+    .product_sub_title h2
+    {font-size: 18px; line-height: 25px;}
+
+    /* 서브페이지 상품 */
+    .product_item_box > div
+    {width: 48%;
+    margin-right: 4%;}
+
+    .product_item_box > div:nth-child(4n)
+    {margin-right: 4%;}
+
+    .product_item_box > div:nth-child(3n)
+    {margin-right: 4%;}
+
+    .product_item_box > div:nth-child(2n)
+    {margin-right: 0;}
+
+    /* 페이지 버튼 */
+    .sub_page_btn
+    {margin-top: 30px;
+    margin-bottom: 100px;}
+
+}
+
+@media all and (max-width: 600px)
+{
+    /* 서브페이지 */
+    .product_sub_ex
+    {margin-top: 50px;}
+
+    /* 페이지 버튼 */
+    .sub_page_btn
+    {margin-top: 10px;
+    margin-bottom: 70px;}
+}
+
+@media all and (max-width: 425px)
+{
+    /* 서브페이지 상품 */
+    .product_item_box > div
+    {width: 100%;
+    margin-right: 0%;}
+
+    .product_item_box > div:nth-child(4n)
+    {margin-right: 0%;}
+
+    .product_item_box > div:nth-child(3n)
+    {margin-right: 0%;}
+
+    .product_item_box > div:nth-child(2n)
+    {margin-right: 0;}
+}
+

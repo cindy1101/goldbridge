@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <meta property="og:image" content="img/open_graph.png">
+    <link rel="shortcut icon" href="../img/favicon-32x32.png">
+
+    <title>상품 디테일페이지(반자유 상품)</title>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/popup.js"></script>
+
+    <!--페이징버튼-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+    <!--owl캐러셀-->
+    <script src="../js/owl.carousel.js"></script>
+    <link href="../css/docs.theme.min.css" rel="stylesheet">
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+
+    <!--헤더, 풋터-->
+    <link href="../css/header_footer.css" rel="stylesheet">
+    <link href="css/product_detail.css" rel="stylesheet">
+
+    <script>
+        //객실사진보기 
+        $(function(){
+            
+            $(".open_picture_popup").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#picture").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+        
+            $(".close_picture").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                modalClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+        
+            function modalClose(){
+            $("#picture").fadeOut(100);}
+        
+        });
+    </script>
+</head>
+<body>
+
+    <header id="header_m">
+
+        <input type="checkbox" id="mobile_header_open" style="display: none;">
+
+        <div class="header_m">
+            <h1>
+                <a href="../index.html">
+                    <img src="../img/header_logo.png" alt="오션관광 로고">
+                </a>
+            </h1>
+
+            <div class="ham_btn">
+                <label for="mobile_header_open">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="mobile_header_sheet">
+
+            <div class="mobile_header_top">
+
+                <ul>
+
+                    <li>
+                        <a href="../login/login.html">
+                            <div>
+                                <img src="../img/sheet_icon_01.png" alt="즐겨찾기 아이콘">
+                            </div>
+                            <p>로그인</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../join/join.html">
+                            <div>
+                                <img src="../img/sheet_icon_02.png" alt="홈 아이콘">
+                            </div>
+                            <p>회원가입</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../mypage/mypage.html">
+                            <div>
+                                <img src="../img/sheet_icon_03.png" alt="홈 아이콘">
+                            </div>
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../event/event.html">
+                            <div>
+                                <img src="../img/sheet_icon_05.png" alt="홈 아이콘">
+                            </div>
+                            <p>기획전/이벤트</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../discount_coupon/discount_coupon.html">
+                            <div>
+                                <img src="../img/sheet_icon_06.png" alt="홈 아이콘">
+                            </div>
+                            <p>할인쿠폰</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../announcement/announcement.html">
+                            <div>
+                                <img src="../img/sheet_icon_04.png" alt="홈 아이콘">
+                            </div>
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../quote_contact/quote_contact.html">
+                            <div>
+                                <img src="../img/sheet_icon_07.png" alt="홈 아이콘">
+                            </div>
+                            <p>견적문의</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../counsel/counsel.html">
+                            <div>
+                                <img src="../img/sheet_icon_08.png" alt="홈 아이콘">
+                            </div>
+                            <p>상담문의</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="mobile_header_search">
+                <form action="">
+                    <input type="text" placeholder="검색어를 입력해주세요." class="header_search_input_m">
+                    <input type="submit" id="header_search_btn_m" style="display: none;">
+                    <label for="header_search_btn_m">
+                        <div class="search_btn_m">
+                            <img src="../img/header_search.png" alt="검색 아이콘">
+                        </div>
+                    </label>
+                </form>
+            </div>
+
+            <div class="travel_mobile_lnb">
+                <div>
+                    <a href="">
+                        <img src="../img/lnb_icon_01.png" alt="">
+                        <p>해외여행</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="">
+                        <img src="../img/lnb_icon_04.png" alt="">
+                        <p>골프투어</p>
+                    </a>
+                </div>
+
+            </div><!--travel_mobile_lnb-->
+
+            <div class="exbition_mobile_lnb">
+
+                <input type="checkbox" id="mobile_lnb_open01" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open02" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open03" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open04" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open05" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open06" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open07" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open08" class="lnb_chk" style="display: none;">
+
+
+                <ul>
+                    <li>
+
+                        <label for="mobile_lnb_open01">
+                            <p><a href="../sub/sub.html">태국</a><span class="dot01">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu01">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>모사무이</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>후아인</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>기타 지역</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--태국-->
+
+                    <li>
+
+                        <p><a href="../sub/sub.html">발리</a></p>
+
+                    </li><!--발리-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open02">
+                            <p><a href="../sub/sub.html">필리핀</a><span class="dot02">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu02">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>세부</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>보홀</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>보라카이</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>기타 지역</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--필리핀-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open03">
+                            <p><a href="../sub/sub.html">베트남</a><span class="dot03">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu03">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>다낭</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>나트랑</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>퀴논</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>부꾸옥</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--베트남-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open04">
+                            <p><a href="../sub/sub.html">하와이</a><span class="dot04">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu04">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>오하우</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>이웃섬</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--하와이-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open05">
+                            <p><a href="../sub/sub.html">유럽</a><span class="dot05">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu05">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>서유럽</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>동유럽</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>스페인</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>기타 지역</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--유럽-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open06">
+                            <p><a href="../sub/sub.html">호주</a><span class="dot06">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu06">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>시드니</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>골드코스트</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>케언즈</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>델버른</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--호주-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open07">
+                            <p><a href="../sub/sub.html">몰디브</a><span class="dot07">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu07">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>스피드보트</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>수상비행기</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>국내선</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--몰디브-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open08">
+                            <p><a href="../sub/sub.html">칸쿤</a><span class="dot08">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu08">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>호텔존</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>무헤레스</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>라바애러마야</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--칸쿤-->
+
+                    <li>
+
+                        <p><a href="../sub/sub.html">기타 지역</a></p>
+
+                    </li><!--기타 지역-->
+
+                </ul>
+
+
+            </div><!--exbition_mobile_lnb-->
+
+
+        </div>
+
+        <div class="mobile_header_dimd"></div>
+
+    </header>
+
+    <header id="header_pc">
+
+        <div class="top_gnb_ex">
+            <div class="clearfix">
+                <ul>
+                    <li><a href="../login/login.html">로그인</a></li>
+                    <li><a href="../join/join.html">회원가입</a></li>
+                    <li><a href="../mypage/mypage.html">마이페이지</a></li>
+                    <li><a href="../event/event.html">기획전/이벤트</a></li>
+                    <li><a href="../discount_coupon/discount_coupon.html">할인쿠폰</a></li>
+                    <li><a href="../announcement/announcement.html">공지사항</a></li>
+                    <li><a href="../quote_contact/quote_contact.html">견적문의</a></li>
+                    <li><a href="../counsel/counsel.html">상담문의</a></li>
+                </ul>
+            </div>
+        </div><!--top_gnb_ex-->
+
+        <div class="top_lnb_ex clearfix">
+            <div>
+
+                <h1 class="header_logo">
+                    <a href="../index.html">
+                        <img src="../img/header_logo.png" alt="오션관광 로고">
+                    </a>
+                </h1>
+
+                <div class="header_search_box">
+                    <form action="">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <input type="submit" id="header_search_btn">
+                        <label for="header_search_btn">
+                            <div class="search_btn">
+                                <img src="../img/header_search.png" alt="검색 아이콘">
+                            </div>
+                        </label>
+                    </form>
+                </div>
+
+                <div class="sub_lnb_ex">
+
+                    <ul>
+
+                        <li>
+                            <a href="">
+                                <img src="../img/lnb_icon_01.png" alt="">
+                                <p>해외여행</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <img src="../img/lnb_icon_04.png" alt="">
+                                <p>골프투어</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div><!--top_lnb_ex-->
+
+        <input type="checkbox" id="total_nav_btn" style="display: none;">
+
+        <div class="total_lnb_ex">
+            <div class="clearfix">
+
+                <ul class="clearfix lnb_header">
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">태국</a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">발리</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">필리핀</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">베트남</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">하와이</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">유럽</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">호주</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">몰디브</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">칸쿤</a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">기타지역</a>
+                    </li>
+                </ul>
+
+                <!-- <div class="total_lnb_btn">
+              <label for="total_nav_btn">
+                <img src="img/open_btn_icon.png" alt="">
+              </label>
+            </div> -->
+
+            </div>
+
+        </div><!--total_lnb_ex-->
+
+        <div class="total_nav_sheet">
+
+            <nav class="bottom_nav">
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>태국</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>모사무이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>후아인</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>기타지역</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>발리</p>
+                        </a>
+                    </h2>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>필리핀</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>세부</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>보홀</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>보라카이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>기타 지역</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>베트남</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>다낭</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>나트랑</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>퀴논</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>부꾸옥</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>하와이</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>오하우</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>이웃섬</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>유럽</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>서유럽</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>동유럽</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>스페인</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>기타지역</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>호주</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>시드니</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>골드코스트</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>케언즈</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>델버른</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>몰디브</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>스피드보트</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>수상비행기</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>국내선</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>칸쿤</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>호텔존</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>무헤레스</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>라바애러마야</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>기타 지역</p>
+                        </a>
+                    </h2>
+
+                </div>
+            </nav>
+
+        </div><!--total_nav_sheet-->
+
+    </header>
+
+    <div class="sub_visual_banner">
+
+       <div class="sub_visual_banner_img">
+            <img src="img/sub_visual_banner.png">   
+       </div>
+
+       <div class="sub_visual_banner_txt">
+            <p>서유럽</p>
+       </div>
+
+    </div><!--sub_visual_banner-->
+
+    <div class="rout_ex">
+
+       <nav class="rout_box">
+
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <img src="img/home_rout_icon.png">
+                    </a>
+                </li>
+
+                <li>
+                    <p>></p>
+                </li>
+
+                <li>
+                    <p>서유럽</p>
+                </li>
+
+                <li>
+                    <p>></p>
+                </li>
+
+                <li>
+                    <p>파리</p>
+                </li>
+                
+            </ul>
+
+       </nav><!--rout_box-->
+        
+    </div><!--rout_ex-->
+
+    <div class="product_detail_ex">
+
+        <div class="detail_header">
+
+            <div class="detail_imgbox">
+                <img src="img/product_detail_img.png" alt="">
+            </div>
+
+            <div class="detail_infobox">
+                <div class="product_title_ex">
+                    <p class="detail_rout">
+                        <span>서유럽</span>
+                        <span>></span>
+                        <span>파리</span>
+                    </p>
+
+                    <h2 class="product_title semifree_price" >서유럽 / 파리 2박+인터라켄 2박 6박 8일 <<span class="change_title_word">아랍에미레이트</span>></h2>
+
+                    <h2 class="product_title" style="display: none;">푸켓 / [스미냐] 까야나스미냑 4박 6일</h2>
+                </div>
+
+                <div class="product_price_ex">
+                    <p class="product_price"  style="display: none;">
+                        <span>579,900</span>원~
+                    </p>
+
+                    <div class="semifree_price"  >
+                        <div>
+                            <p>성인</p>
+                            <p><span>3,690,000</span>원~</p>
+                        </div>
+
+                        <div>
+                            <p>아동(만 12세 미만)</p>
+                            <p><span>3,690,000</span>원~</p>
+                        </div>
+
+                        <div>
+                            <p>유아(24개월 미만)</p>
+                            <p><span>100,000</span>원~</p>
+                        </div>
+                    </div>
+
+                    <div class="product_btnbox">
+                        <button type="button">
+                            <img src="img/print_icon.png" alt="프린트 아이콘">
+                            <p>프린트</p>
+                        </button>
+
+                        <button type="button">
+                            <img src="img/mail_icon.png" alt="메일 아이콘">
+                            <p>메일 보내기</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--detail_header-->
+
+        <div class="detail_body">
+
+            <div class="product_guide_ex"  style="display: none;">
+                <p class="product_common_title">상품안내</p>
+
+                <div class="product_guide_mobile_ex">
+                    
+                    <div class="product_guide_mobile_card">
+                        <div class="mobile_card_room">
+                            <div>
+                                <p class="mobile_card_info_top">객실타입</p>
+                                <p class="mobile_card_info_foot">리조트2박+풀빌라2박</p>
+                            </div>
+
+                            <a href="javascript:void(0);" class="open_picture_popup">사진보기→</a>
+                        </div>
+
+                        <p class="mobile_card_info_top">기간</p>
+                        <P class="mobile_card_info_foot"><span>2023-06-01</span>~<span>2023-06-27</span></P>
+
+                        <p class="mobile_card_info_top">출발패턴</p>
+                        <p class="mobile_card_info_foot">[오후출발] 매주 토,일 출발</p>
+
+                        <p class="mobile_card_info_top">가격</p>
+                        <p class="mobile_card_info_foot">599,000원</p>
+
+                        <P class="mobile_card_info_caption">※ 상기 여행 요금 및 유류할증료, 제세공과금은 유가와 환율에 따라 인상 또는 인하될 수 있습니다.</P>
+                    </div>
+
+                    <div class="product_guide_mobile_card">
+                        <div class="mobile_card_room">
+                            <div>
+                                <p class="mobile_card_info_top">객실타입</p>
+                                <p class="mobile_card_info_foot">리조트2박+풀빌라2박</p>
+                            </div>
+
+                            <a href="javascript:void(0);" class="open_picture_popup">사진보기→</a>
+                        </div>
+
+                        <p class="mobile_card_info_top">기간</p>
+                        <P class="mobile_card_info_foot"><span>2023-06-01</span>~<span>2023-06-27</span></P>
+
+                        <p class="mobile_card_info_top">출발패턴</p>
+                        <p class="mobile_card_info_foot">[오후출발] 매주 토,일 출발</p>
+
+                        <p class="mobile_card_info_top">가격</p>
+                        <p class="mobile_card_info_foot">599,000원</p>
+
+                        <P class="mobile_card_info_caption">※ 상기 여행 요금 및 유류할증료, 제세공과금은 유가와 환율에 따라 인상 또는 인하될 수 있습니다.</P>
+                    </div>
+
+                </div><!--product_guide_mobile_ex-->
+
+                <div class="product_guide_pc_ex" >
+                    <table class="product_guide_table" cellpadding="0" cellspacing="0">
+                        
+                        <thead>
+                            <tr>
+                                <th>
+                                    <P>객실타입</P>
+                                </th>
+                                <th>
+                                    <P>사진</P>
+                                </th>
+                                <th>
+                                    <P>기간</P>
+                                </th>
+                                <th>
+                                    <P>출발패턴</P>
+                                </th>
+                                <th>
+                                    <P>가격(1인기준)</P>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>리조트2박+풀빌라2박</p>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);" class="open_picture_popup">
+                                        보기→
+                                    </a>
+                                </td>
+                                <td>
+                                    <P><span>2023-06-01</span>~<span>2023-06-27</span></P>
+                                </td>
+                                <td>
+                                    <P>[오후출발] 매주 토,일 출발</P>
+                                </td>
+                                <td>
+                                    <P class="product_common_price">579,900원</P>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>리조트2박+풀빌라2박</p>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);" class="open_picture_popup">
+                                        보기→
+                                    </a>
+                                </td>
+                                <td>
+                                    <P><span>2023-06-01</span>~<span>2023-06-27</span></P>
+                                </td>
+                                <td>
+                                    <P>[오후출발] 매주 토,일 출발</P>
+                                </td>
+                                <td>
+                                    <P class="product_common_price">579,900원</P>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <P>※ 상기 여행 요금 및 유류할증료, 제세공과금은 유가와 환율에 따라 인상 또는 인하될 수 있습니다.</P>
+                </div>
+            </div><!--product_guide_ex-->
+
+            <div class="airline_info_ex">
+
+                <p class="product_common_title">항공정보</p>
+
+                <input type="radio" id="airline_semifre_ck_01" name="airline_semifre_ck" checked>
+                <input type="radio" id="airline_semifre_ck_02" name="airline_semifre_ck">
+                <input type="radio" id="airline_semifre_ck_03" name="airline_semifre_ck">
+                <input type="radio" id="airline_semifre_ck_04" name="airline_semifre_ck">
+                <input type="radio" id="airline_semifre_ck_05" name="airline_semifre_ck">
+                <input type="radio" id="airline_semifre_ck_06" name="airline_semifre_ck">
+                <input type="radio" id="airline_semifre_ck_07" name="airline_semifre_ck">
+                <input type="radio" id="airline_semifre_ck_08" name="airline_semifre_ck">
+                <input type="radio" id="airline_semifre_ck_09" name="airline_semifre_ck">
+
+                <div class="airline_semifree_wrap"   >
+                    
+                    <label for="airline_semifre_ck_01">
+                        <div>
+                            <img src="img/airline_icon_01.png" alt="아랍에미레이트 로고"> 
+                            <span>아랍에미레이트</span>
+                        </div>
+                    </label>
+
+                    <label for="airline_semifre_ck_02">
+                        <div>
+                            <img src="img/airline_icon_02.png" alt="터키항공 로고"> 
+                            <span>터키항공</span>
+                        </div>
+                    </label>
+
+                    <label for="airline_semifre_ck_03">
+                        <div>
+                            <img src="img/airline_icon_03.png" alt="카타르항공 로고"> 
+                            <span>카타르항공</span>
+                        </div>
+                    </label>
+
+                    <label for="airline_semifre_ck_04">
+                        <div>
+                            <img src="img/airline_icon_04.png" alt="네덜란드항공 로고"> 
+                            <span>네덜란드항공</span>
+                        </div>
+                    </label>
+
+                    <label for="airline_semifre_ck_05">
+                        <div>
+                            <img src="img/airline_icon_05.png" alt="에어프랑스 로고"> 
+                            <span>에어프랑스</span>
+                        </div>
+                    </label>
+
+                    <label for="airline_semifre_ck_06">
+                        <div>
+                            <img src="img/airline_icon_06.png" alt="핀에어 로고"> 
+                            <span>핀에어</span>
+                        </div>
+                    </label>
+
+                    <label for="airline_semifre_ck_07">
+                        <div>
+                            <img src="img/airline_icon_07.png" alt="루프트한자 로고"> 
+                            <span>루프트한자</span>
+                        </div>
+                    </label>
+
+                    <label for="airline_semifre_ck_08">
+                        <div>
+                            <img src="img/airline_icon_08.png" alt="아시아나 로고"> 
+                            <span>아시아나</span>
+                        </div>
+                    </label>
+
+                    <label for="airline_semifre_ck_09">
+                        <div>
+                            <img src="img/airline_icon_09.png" alt="폴란드항공 로고"> 
+                            <span>폴란드항공</span>
+                        </div>
+                    </label>
+
+                </div>
+
+                <div class="airline_info_wrap" style="display: none;">
+                    
+                    <div class="airline_info_card">
+                        <p class="card_airline">항공사</p>
+                        <p class="card_airline_value">대한항공</p>
+                        <div class="airline_card_inner_wrap">
+                            <div class="airline_card_inner">
+                                <div>
+                                    <p>한국출발</p>
+                                    <p><span class="card_place">코타키나발루</span>출발 <span class="card_time">19:00</span></p>
+                                    <p><span  class="card_code">KB0001</span></p>
+                                </div>
+                                <div>
+                                    <p>현지도착</p>
+                                    <p><span class="card_place">인천</span>출발 <span class="card_time">19:00</span></p>
+                                    <p><span  class="card_code">KB0002</span></p>
+                                </div>
+                            </div>
+
+                            <div class="airline_card_inner">
+                                <div>
+                                    <p>현지출발</p>
+                                    <p><span class="card_place">푸캣</span>출발 <span class="card_time">19:00</span></p>
+                                    <p><span  class="card_code">KB0001</span></p>
+                                </div>
+                                <div>
+                                    <p>한국도착</p>
+                                    <p><span class="card_place">인천</span>출발 <span class="card_time">19:00</span></p>
+                                    <p><span  class="card_code">KB0002</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="airline_info_card">
+                        <p class="card_airline">항공사</p>
+                        <p class="card_airline_value">타이항공</p>
+                        <div class="airline_card_inner_wrap">
+                            <div class="airline_card_inner">
+                                <div>
+                                    <p>한국출발</p>
+                                    <p><span class="card_place">인천</span>출발 <span class="card_time">19:00</span></p>
+                                    <p><span  class="card_code">KB0001</span></p>
+                                </div>
+                                <div>
+                                    <p>현지도착</p>
+                                    <p><span class="card_place">인천</span>출발 <span class="card_time">19:00</span></p>
+                                    <p><span  class="card_code">KB0002</span></p>
+                                </div>
+                            </div>
+
+                            <div class="airline_card_inner">
+                                <div>
+                                    <p>현지출발</p>
+                                    <p><span class="card_place">푸캣</span>출발 <span class="card_time">19:00</span></p>
+                                    <p><span  class="card_code">KB0001</span></p>
+                                </div>
+                                <div>
+                                    <p>한국도착</p>
+                                    <p><span class="card_place">인천</span>출발 <span class="card_time">19:00</span></p>
+                                    <p><span  class="card_code">KB0002</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="manager_info_ex">
+                    <p>담당자<span class="maneger_name">홍길동</span></p>
+                    <p>전화번호<span class="maneger_tel">02-1234-5656</span></p>
+                    <p>이메일<span class="maneger_email">an20o0@naver.com</span></p>
+                    <p>계좌정보<span class="maneger_account">1001-001-0000001 (주)오투어 (국민은행)</span></p>
+                </div>
+
+            </div><!--airline_info_ex-->
+
+            <script>
+            $(document).ready(function() {
+                // 라디오 버튼들을 선택하고 이벤트 리스너를 추가합니다.
+                $('input[name="airline_semifre_ck"]').change(function() {
+                // 선택된 라디오 버튼의 id 값을 가져옵니다.
+                const selectedRadioButtonId = $(this).attr('id');
+                // 해당 라디오 버튼에 대응하는 label 요소를 선택합니다.
+                const selectedLabel = $('label[for="' + selectedRadioButtonId + '"]');
+                // 선택된 label 내부의 span 요소 안에 있는 텍스트를 가져옵니다.
+                const airlineName = selectedLabel.find('span').text();
+                // .change_title_word 요소에 항공사 이름을 출력합니다.
+                $('.change_title_word').text(airlineName);
+                });
+            });
+            </script>
+
+            <div class="travel_schedule_ex">
+
+                <p class="product_common_title">여행 일정표</p>
+
+                <div class="travel_schedule_table" cellpadding="0" cellspacing="0">
+
+                    <div>
+                        <div>
+                            <img src="img/check.png" alt="포함내역 아이콘">
+                            <p>포함내역</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>[왕복항공권]터키항공 일반석<br>
+                            [유류할증료] (항공사 발표에 따라 매월 변동 될 수 있습니다.)<br>
+                            [일정표상의 숙박]전일정 1급 호텔(4성급)[일정표상의 식사]<br>
+                            [전용차량] 45인승 대형버스<br>
+                            [여행자 보험]1억원(KB손해보험가입) / *여행기간동안만 적용/연령별 차등적용, *11개월 이하, 81세 이상: 보험가입 제외</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/Cancel.png" alt="불포함내역 아이콘">
+                            <p>불포함내역</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>[가이드/기사 경비]전 일정 1인당 100유로 (20명 미만 행사 진행 시, 1인 전 일정 150유로 가이드/기사 경비를 현지에서 지불해야 합니다)<br>
+                        [싱글룸 사용료]전 일정 10박 80만원(룸조인 원하실 경우 예약시 재확인 바랍니다.)<br>
+                        [선택관광 비용] 선택관광 선택시 별도 비용이 발생합니다. (일정표참고)<br>
+                        [기타경비]현지조인 및 항공권 소지자 지상 ONLY 200만원</p>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/guide_icon.png" alt="안내사항 아이콘">
+                            <p>안내사항</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p><span style="color: #0067FF;">[선택관광]</span><br>
+                            묶음할인 $160-> $150 : 한강유람선 $30, 마사지 2시간 $40($4), 호이안 야경&씨클로 $50, 바구니배 $40<br>
+                            ※가이드의 안내에 따라 진행하실 수 있습니다.<br><br>
+                            
+                            <span style="color: #0067FF;">[쇼핑정보]</span><br>
+                            3회 노니(침향),커피,잡화<br>
+                            (현지에서 물품 구매 후 환불시 수수료 발생, 교환이나 환불은 구매 후 한달 이내만 가능합니다.)</p>
+                    </div>
+                </div>
+
+                <div class="travel_schedule_box">
+                    
+                    <div class="travel_day_box">
+                        <p><span>1</span>일차</p>
+                    </div>
+
+                    <div class="schedule_ck_area_ex">
+
+                        <div class="schedule_ck_area">
+
+                            <ul>
+                                <li>
+                                    <p style="color: #fd6f6f;">[11:00] 부산역 미팅</p>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <p>☞ 미팅 안내사항<br>
+                                            ※ 출발일 1~2일전에 고객님께 별도로 담당자가 확정서를 보내드립니다.<br>
+                                            ※ 부산역 만남의 장소로 오시면 가이드 또는 기사님이 펫 말을 들고 기다리고 있습니다.<br>
+                                            ※ 가이드&기사 미팅 후 차량으로 이동</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <p>[11:30] 나라타 국제공항 도착/입국 수속</p>
+                                </li>
+
+                                <li>
+                                    <p>[12:40] 시부야</p>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <p>
+                                        이 거리는, 거리와 지역별로 각각 다른 얼굴을 보여주는 것이 특징이다. 젊은층 상대의 패션상가, 패스트 푸드, 게임센터 등이 밀집한 중심가는 젊은이들의 유행 발신기지로 주목받고 있으며,
+                                        밤낮을 가리지 않고 10대를 중심으로 한 젊은이들이 항상 붐비고 있어, 일본의 현대풍습을 피부로 느낄 수 있다.</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="travel_option">
+                        <div>
+                            <p class="travel_option_hotel">호텔</p>
+                            <p class="travel_option_hotel_val">윙 인터내셔널 아카바네 또는 동급 [세미더블룸/2인1실]</p>
+                        </div>
+
+                        <div>
+                            <p class="travel_option_meal">식사</p>
+                            <ul class="travel_option_meal_val">
+                                <li>조식 : <span class="option_meal_breakfast">불포함</span></li>
+                                <li>중식 : <span class="option_meal_lunch">불포함</span></li>
+                                <li>석식 : <span class="option_meal_dinner">불포함</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div><!--travel_schedule_box-->
+
+                <div class="travel_schedule_box">
+                    
+                    <div class="travel_day_box">
+                        <p><span>2</span>일차</p>
+                    </div>
+
+                    <div class="schedule_ck_area_ex">
+
+                        <div class="schedule_ck_area">
+
+                            <ul>
+                                <li>
+                                    <p>[09:30] 호텔조식 후</p>
+                                </li>
+
+                                <li>
+                                   <p>[11:30] 동경의 엔터테인먼트 추천일정</p>
+                                </li>
+
+                                <li>
+                                   <p>[14:10] 디즈니 랜드 관광</p>
+                                </li>
+
+                                <li>
+                                    <div class="schedule_border_box">
+                                        <p>
+                                            - 세계적인 명성의 디즈니 테마파크로 아시아 지역에서는 최초로 만들어졌다. 디즈니랜드는 몇개의 구역으로 나뉘어 이루어져 있는데 각 구역마다 색다른 테마로 꾸며져 있으며, 
+                                            각 구역마다 테마에 맞는 어트랙션과 상점, 레스토랑들이 마련되어 있다. 디즈니랜드는 가족 단위의 여행객이나 놀이동산을 좋아하는 여행객이라면 후회없는 곳이다.</p>
+                                            <div class="owl-carousel owl-theme schedule_tourist_img_box">
+                                                <div class="item schedule_tourist_img"><img src="img/schedule_img_01.png"></div>
+                                                <div class="item schedule_tourist_img"><img src="img/schedule_img_02.png"></div>
+                                                <div class="item schedule_tourist_img"><img src="img/schedule_img_03.png"></div>
+                                            </div>
+                                    </div>
+                                 </li>
+
+                                 <li>
+                                    <p>[20:10] 숙소 도착 및 자유시간</p>
+                                 </li>
+ 
+                            </ul>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="travel_option">
+                        <div>
+                            <p class="travel_option_hotel">호텔</p>
+                            <p class="travel_option_hotel_val">윙 인터내셔널 아카바네 또는 동급 [세미더블룸/2인1실]</p>
+                        </div>
+
+                        <div>
+                            <p class="travel_option_meal">식사</p>
+                            <ul class="travel_option_meal_val">
+                                <li>조식 : <span class="option_meal_breakfast">토마호크 스테이크</span></li>
+                                <li>중식 : <span class="option_meal_lunch">토마호크 스테이크</span></li>
+                                <li>석식 : <span class="option_meal_dinner">토마호크 스테이크</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div><!--travel_schedule_box-->
+
+                <div class="travel_schedule_table">
+
+                    <div>
+                        <div>
+                            <img src="img/terms_icon.png" alt="상품약관 아이콘">
+                            <p>상품약관</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p><span style="font-family: 'bold';">취소료 규정</span><br>
+                            여행 취소시 국외여행표준약관 제 16조 소비자분쟁해결규정에 따라 아래의 비율로 취소료가 부과됩니다.(단, 당사의 귀책사유로 여행출발 취소 경우에도 동일한 규정이 
+                            적용됩니다.)<br>
+                            가. 여행개시 30일전(~30)까지 통보시 : 계약금환급<br>
+                            나. 여행개시 20일전(29~20)까지 통보시 : 총상품가격의 10% 배상<br>
+                            다. 여행개시 10일전(19~10)까지 통보시 : 총상품가격의 15% 배상<br>
+                            라. 여행개시 8일전(9~8)까지 통보시 : 총상품가격의 20% 배상<br>
+                            마. 여행개시 1일전(7~1)까지 통보시 : 총상품가격의 30% 배상<br>
+                            바. 여행 당일 통보시: 총상품가격의 50% 배상<br>
+                            ※ 여행출발일 이전 상해,질병,입원,사망등으로 여행을 취소하는 경우 [진 취소료 규정단서]증빙 근거하여 환불이 가능하며 출발일 기준 7일이내 증빙서류를 제출해 주시기 
+                            바랍니다. (상세규정은 약관참조)<br><br>
+                            <span style="font-family: 'bold';">최저출발인원 미 충족 시 계약해제</span><br>
+                            당사는 최저행사인원이 충족되지 아니하여 여행계약을 해제하는 경우 여행개시 7일전까지 여행자에게 통지하여야 합니다.<br>
+                            당사가 여행참가자 수 미달로 전항의 기일내 통지를 하지 아니하고 계약을 해제하는 경우 이미 지급받은 계약금 환급 외에 다음 각 항목의 1의 금액을 여행자에게 
+                            배상하여야 합니다.
+                    </div>    
+                </div>
+
+            </div>
+
+            <div class="product_detail_btn_box">
+                <a href="">견적문의</a>
+                <a href="" download="">워드 다운로드</a>
+            </div>
+            
+
+        </div><!--detail_body-->
+
+    </div>
+
+    <div class="picture_ex" id="picture" style="display: none;">
+
+        <div class="picture_popup_box">
+
+            <div>
+                <p>객실사진</p>
+            </div>
+
+            <div>
+                <div class="owl-carousel owl-theme picture_popup_ex">
+                    <div class="item schedule_tourist_img"><img src="img/hotel_inner_01.png"></div>
+                    <div class="item schedule_tourist_img"><img src="img/hotel_inner_02.png"></div>
+                    <div class="item schedule_tourist_img"><img src="img/hotel_inner_03.png"></div>
+                </div>
+            </div>
+
+            <div class="close_picture">
+                <p>닫기</p>
+            </div>
+
+        </div><!--common_popup_box-->
+
+    </div><!--picture_popup_ex-->
+
+    <script>
+        //상품 상세페이지 사진 슬라이드
+        var TouristImgCount = $ ('.schedule_tourist_img_box').length;
+        var autoplayCouponThree = (TouristImgCount > 3) ? true : false;
+        var autoplayCouponTwo = (TouristImgCount > 2) ? true : false;
+        var autoplayCouponOne = (TouristImgCount > 1) ? true : false;
+
+        $('.schedule_tourist_img_box').owlCarousel({
+            nav : false,
+            dots: false,
+            margin:0,
+            responsive:{
+                0:{
+                    loop: autoplayCouponOne,
+                    autoplay : autoplayCouponOne,
+                    autoplayHoverPause: true,
+                    items:1
+                },
+                601:{
+                    loop: autoplayCouponTwo,
+                    autoplay : autoplayCouponTwo,
+                    autoplayHoverPause: true,
+                    items:2,
+                    margin: 10
+                },
+                769:{
+                    loop: autoplayCouponTwo,
+                    autoplay : autoplayCouponTwo,
+                    autoplayHoverPause: true,
+                    items:2,
+                    margin: 20
+                },
+                1025:{
+                    loop: autoplayCouponThree,
+                    autoplay : autoplayCouponThree,
+                    autoplayHoverPause: true,
+                    items:3,
+                    margin: 20
+                },
+                1420:{
+                    loop: autoplayCouponThree,
+                    autoplay : autoplayCouponThree,
+                    autoplayHoverPause: true,
+                    items:3,
+                    margin: 30
+                }
+
+            }
+        });
+
+        //객실사진 팝업 슬라이드
+        var PicureCount = $ ('.picture_popup_ex').length;
+        var autoplayCouponOne = (PicureCount > 1) ? true : false;
+
+        $('.picture_popup_ex').owlCarousel({
+            nav : true,
+            dots: false,
+            margin:0,
+            responsive:{
+                0:{
+                    loop: autoplayCouponOne,
+                    autoplay : autoplayCouponOne,
+                    autoplayHoverPause: true,
+                    items:1
+                }
+                
+            }
+        });
+    </script>
+
+    <footer id="footer">
+
+        <div class="footer_top">
+
+            <div>
+
+                <div class="footer_top_gnb">
+                    <ul>
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="../tour_provision/tour_provision.html">여행약관</a></li>
+                        <li><a href="../privacy/privacy.html">개인정보처리방침</a></li>
+                        <li><a href="javascript:void(0);" id="open_emaile">이메일주소무단수집거부</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_top_lnb">
+                    <ul>
+                        <li><a href=""><img src="../img/sns_instagram.png" alt="인스타그램 아이콘"></a></li>
+                        <li><a href=""><img src="../img/sns_facebook.png" alt="페이스북 아이콘"></a></li>
+                        <li><a href=""><img src="../img/sns_TWITER.png" alt="트위터 아이콘"></a></li>
+                        <li><a href=""><img src="../img/sns_youtube.png" alt="유튜브 아이콘"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer_bottom">
+
+            <div>
+                <h1>오투어앤비즈</h1>
+
+                <ul>
+                    <h2>부산본점</h2>
+                    <li>부산광역시 부산진구 서전로9번길 27(부전동) 순흥빌딩 301호 (우)47245</li>
+                    <li>대표전화 : 051-462-5525</li>
+                    <li>팩스 : 0504-206-5909</li>
+                    <li>휴대전화 : 010-9779-9323</li>
+                    <li>대표자 : 정종현</li>
+                </ul>
+
+                <ul>
+                    <h2>창원지점</h2>
+                    <li>경남 창원시 성산구 중앙대로 49, 서광오피스텔 1004-5호 (우)51522</li>
+                    <li>대표전화 : 055-715-6525</li>
+                    <li>팩스 : 0504-206-5909</li>
+                </ul>
+
+                <ul>
+                    <li>메일 : ohotour@gmail.com</li>
+                    <li>사업자등록번호 : 582-87-01521</li>
+                    <li>통신판매업신고번호 : 제2011-부산진-026호</li>
+                    <li>관광사업자등록번호 : 제2019-000013호</li>
+                </ul>
+
+                <p class="footer_Copyright">Copyright ⓒ 2022 OHO TOUR Co., Ltd. All Rights Reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="common_popup_ex" id="emaile" style="display: none;">
+
+        <div class="common_popup_box">
+
+            <div>
+                <p>이메일무단수집거부</p>
+            </div>
+
+            <div>
+                <p>
+                    <span>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며,
+                        이를 위반시 정보통신망법에 의해 형사처벌됨을 유의하시기 바랍니다.</span><br><br>
+
+                    정보통신망법 제 50조의2 (전자우편주소의 무단 수집행위 등 금지)<br><br>
+
+                    1. 누구든지 전자우편주소의 수집을 거부하는 의사가 명시된 인터넷 홈페이지에서 자동으로 전자우편주소를 수집하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는
+                    아니된다.<br>
+
+                    2. 누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매·유통하여서는 아니된다.<br>
+
+                    3. 누구든지 제1항의 및 제2항의 규정에 의하여 수집·판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보전송에 이용하여서는 아니된다.<br><br>
+
+                    정보통신망법 제65조의2 (벌칙)<br><br>
+
+                    1. 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                    1-1. 제50조제4항의 규정을 위반하여 기술적 조치를 한 자<br>
+                    1-2. 제50조제6항의 규정을 위반하여 영리목적의 광고성 정보를 전송한 자<br>
+                    1-3. 제50조의2의 규정을 위반하여 전자우편주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자
+                </p>
+            </div>
+
+            <div id="close_emaile">
+                <p>닫기</p>
+            </div>
+
+        </div><!--common_popup_box-->
+
+    </div><!--common_popup_ex-->
+
+</body>
+</html>

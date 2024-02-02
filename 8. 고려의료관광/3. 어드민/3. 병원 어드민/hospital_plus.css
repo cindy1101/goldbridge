@@ -1,0 +1,113 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard';}
+
+div.px-4
+{width: calc(100% - 60px);
+margin: 30px auto;
+padding: 0;}
+
+section.hospital_form_ex
+{width: 100%;}
+
+div.hospital_title_box
+{width: 100%;
+padding-bottom: 10px;
+border-bottom: 1px solid #ddd;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+div.hospital_title_box>p 
+{width: 100%;
+margin: 0;
+font-size: 18px;
+line-height: 25px;
+font-family: bold;
+color: #222;}
+
+/*폼*/
+ul.hospital_box
+{width: 100%;
+border-top: 1px solid #222;
+box-sizing: border-box;
+margin-bottom: 80px;
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;}
+
+ul.hospital_box li
+{border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+ul.hospital_box li:nth-child(odd)
+{width: 10%;
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+border-right: 1px solid #ddd; box-sizing: border-box;}
+
+ul.hospital_box li:nth-child(odd)>p
+{width: calc(100% - 20px);
+margin: 0 auto;
+text-align: center;
+font-size: 15px; line-height: 20px;
+word-break: keep-all;
+font-family: 'min_bold';}
+
+ul.hospital_box li:nth-child(even)
+{width: 90%;}
+
+input[type="text"].hospital_txt_box
+{width: calc(100% - 20px); height: 35px;
+margin: 10px;
+outline: none;
+font-family: 'Pretendard' !important; color: #333;
+outline: none; text-indent: 5px; font-size: 15px;
+border: 1px solid #ddd; box-sizing: border-box;}
+
+li.hospital_script_box
+{padding: 10px;}
+
+
+
+
+
+

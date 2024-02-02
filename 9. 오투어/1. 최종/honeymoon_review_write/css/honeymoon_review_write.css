@@ -1,0 +1,640 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+.tox .tox-notification--warn, .tox .tox-notification--warning
+{display: none !important;}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+button {margin-bottom: 0;}
+
+/*페이징버튼 제어*/
+ul.pagination
+{margin-left: 0;}
+
+ul.pagination li
+{height: fit-content;
+margin-left: 0;
+font-size: 16px;}
+
+ul.pagination li a
+{color: #222;
+padding: 5px 10px;
+border: none;
+border-radius: 0;
+text-align: center; line-height: 20px;}
+
+.page-item:not(:first-child) .page-link
+{margin-left: 0;}
+
+/*부트스트랩 클릭시 생기는 선 삭제*/
+.page-link:focus, .page-link:active 
+{outline: none;
+box-shadow: none;
+background-color: transparent !important;}
+
+.page-link:focus, .page-link:hover 
+{background-color: transparent !important;
+color: #fd6f6f !important;}
+
+.page-link:focus, .page-link:active 
+{color: #fd6f6f;}
+
+@media all and (min-width: 1420px)
+{   
+    /*헤더*/
+    header.header_web
+    {margin-bottom: 0;}
+
+    /*서브 이미지*/
+    div.review_visual_banner
+    {width: 100%;
+    position: relative;}
+
+    div.review_visual_banner_img
+    {width: 100%; height: 300px;}
+
+    div.review_visual_banner_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.review_visual_banner_txt
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;}
+
+    div.review_visual_banner_txt>p
+    {text-align: center;
+    font-size: 42px; font-family: bold;
+    color: #fff; line-height: 50px;}
+
+    /*루트*/
+    div.rout_ex
+    {width: 100%; height: 40px;
+    background-color: #fd6f6f;
+    margin-bottom: 100px;}
+
+    nav.rout_box
+    {width: 1400px;
+    margin: 0 auto;}
+
+    nav.rout_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.rout_box>ul>li
+    {float: left;
+    margin-right: 10px;}
+
+    nav.rout_box>ul>li:last-child
+    {margin-right: 0;}
+
+    nav.rout_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px;}
+
+    nav.rout_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.rout_box>ul>li:nth-child(1n+2)>p
+    {line-height: 40px;
+    color: #fff;
+    font-size: 15px;}
+
+    nav.rout_box>ul>li:last-child>p
+    {font-family: bold;}
+
+    /*리뷰*/
+    div.honeymoon_review_ex
+    {width: 1300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 150px;}
+
+    /*타이틀*/
+    div.honeymoon_review_title_ex
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.honeymoon_review_title_box
+    {width: calc(100% - 250px);}
+
+    div.honeymoon_review_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 32px; line-height: 35px;
+    font-family: bold; color: #222;
+    margin-bottom: 15px;}
+
+    div.honeymoon_review_title_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 16px; line-height: 20px;
+    color: #555;}
+
+    /* 허니문 라디오 버튼 */
+    .review_ck_btn
+    {overflow: hidden;
+    margin-bottom: 30px;}
+
+    .review_ck_title
+    {margin-bottom: 10px;}
+
+    .review_ck_btn>input
+    {display: none;}
+
+    .review_ck_btn>label
+    {width: 120px; height: 36px;
+    line-height: 36px;
+    border: 1px solid #fd6f6f;
+    color: #fd6f6f;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+    float: left;}
+
+    .review_ck_btn>label:nth-child(3)
+    {margin-right: 10px;}
+
+    #honeymoon_ck_btn:checked ~ label:nth-child(3)
+    {background: #fd6f6f;
+    color: #fff;}
+
+    #contract_ck_btn:checked ~ label:nth-child(4)
+    {background: #fd6f6f;
+    color: #fff;}
+    
+    /* 에디터 */
+    .tox-tinymce
+    {height: 500px !important;}
+
+   /* 허니문 페이지 버튼 */
+   .honeymoon_review_btn_box
+   {display: flex;
+   align-items: center;
+   justify-content: center;
+    margin-top: 100px;}
+   
+   .honeymoon_review_btn_box>a,
+   .honeymoon_review_btn_box>input
+   {width: 200px; height: 50px;
+   line-height: 50px;
+   color: #fff;
+   border-radius: 10px;
+   text-align: center;
+   display: block;}
+
+   .honeymoon_review_btn_box>a:first-child
+   {background: #1C1C1C;
+   margin-right: 20px;}
+
+   .honeymoon_review_btn_box>input
+   {background: #085FE0;
+    outline: none;
+    border: 0;}
+
+}
+
+@media all and (min-width: 769px) and (max-width : 1419px)
+{   
+    /*헤더*/
+    header.header_web
+    {margin-bottom: 0;}
+
+    /*서브 이미지*/
+    div.review_visual_banner
+    {width: 100%;
+    position: relative;}
+
+    div.review_visual_banner_img
+    {width: 100%; height: 300px;}
+
+    div.review_visual_banner_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.review_visual_banner_txt
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 25px); left: 0;}
+
+    div.review_visual_banner_txt>p
+    {text-align: center;
+    font-size: 42px; font-family: bold;
+    color: #fff; line-height: 50px;}
+
+    /*루트*/
+    div.rout_ex
+    {width: 100%; height: 40px;
+    background-color: #fd6f6f;
+    margin-bottom: 100px;}
+
+    nav.rout_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.rout_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.rout_box>ul>li
+    {float: left;
+    margin-right: 10px;}
+
+    nav.rout_box>ul>li:last-child
+    {margin-right: 0;}
+
+    nav.rout_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px;}
+
+    nav.rout_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.rout_box>ul>li:nth-child(1n+2)>p
+    {line-height: 40px;
+    color: #fff;
+    font-size: 15px;}
+
+    nav.rout_box>ul>li:last-child>p
+    {font-family: bold;}
+
+
+    /*리뷰*/
+    div.honeymoon_review_ex
+    {width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 150px;}
+
+    /*타이틀*/
+    div.honeymoon_review_title_ex
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.honeymoon_review_title_box
+    {width: calc(100% - 250px);}
+
+    div.honeymoon_review_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 32px; line-height: 35px;
+    font-family: bold; color: #222;
+    margin-bottom: 15px;}
+
+    div.honeymoon_review_title_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 16px; line-height: 20px;
+    color: #555;}
+
+    /* 허니문 라디오 버튼 */
+    .review_ck_btn
+    {overflow: hidden;
+    margin-bottom: 30px;}
+
+    .review_ck_title
+    {margin-bottom: 10px;}
+
+    .review_ck_btn>input
+    {display: none;}
+
+    .review_ck_btn>label
+    {width: 120px; height: 36px;
+    line-height: 36px;
+    border: 1px solid #fd6f6f;
+    color: #fd6f6f;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+    float: left;}
+
+    .review_ck_btn>label:nth-child(3)
+    {margin-right: 10px;}
+
+    #honeymoon_ck_btn:checked ~ label:nth-child(3)
+    {background: #fd6f6f;
+    color: #fff;}
+
+    #contract_ck_btn:checked ~ label:nth-child(4)
+    {background: #fd6f6f;
+    color: #fff;}
+
+    /* 에디터 */
+    .tox-tinymce
+    {height: 450px !important;}
+
+    /* 허니문 페이지 버튼 */
+    .honeymoon_review_btn_box
+    {display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;}
+    
+    .honeymoon_review_btn_box>a,
+   .honeymoon_review_btn_box>input
+    {width: 200px; height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    display: block;}
+
+    .honeymoon_review_btn_box>a:first-child
+    {background: #1C1C1C;
+    margin-right: 20px;}
+
+    .honeymoon_review_btn_box>input:last-child
+    {background: #085FE0;
+    outline: none;
+    border: 0;}
+}
+
+@media all and (min-width: 769px) and (max-width : 1024px)
+{
+    /*서브 이미지*/
+    div.review_visual_banner
+    {width: 100%;
+    position: relative;
+    margin-top: 60px;}
+
+    div.review_visual_banner_img
+    {width: 100%; height: 250px;}
+
+}
+
+@media all and (max-width: 768px)
+{
+    /*서브 이미지*/
+    div.review_visual_banner
+    {width: 100%;
+    position: relative;
+    margin-top: 60px;}
+
+    div.review_visual_banner_img
+    {width: 100%; height: 150px;}
+
+    div.review_visual_banner_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.review_visual_banner_txt
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 20px); left: 0;}
+
+    div.review_visual_banner_txt>p
+    {text-align: center;
+    font-size: 32px; font-family: bold;
+    color: #fff; line-height: 40px;}
+
+    /*루트*/
+    div.rout_ex
+    {width: 100%; height: 40px;
+    background-color: #fd6f6f;
+    margin-bottom: 50px;}
+
+    nav.rout_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    nav.rout_box>ul
+    {width: 100%;
+    overflow: hidden;}
+
+    nav.rout_box>ul>li
+    {float: left;
+    margin-right: 5px;}
+
+    nav.rout_box>ul>li:last-child
+    {margin-right: 0;}
+
+    nav.rout_box>ul>li:nth-child(1)
+    {width: 20px; height: 20px;
+    margin-top: 10px;}
+
+    nav.rout_box>ul>li:nth-child(1)>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    nav.rout_box>ul>li:nth-child(1n+2)>p
+    {line-height: 40px;
+    color: #fff;
+    font-size: 15px;}
+
+    nav.rout_box>ul>li:last-child>p
+    {font-family: bold;}
+
+    /*허니문 리뷰*/
+    div.honeymoon_review_ex
+    {width: 90%;
+    margin: 0 auto;
+    margin-bottom: 80px;}
+
+    /*타이틀*/
+    div.honeymoon_review_title_ex
+    {width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    div.honeymoon_review_title_box
+    {width: calc(100% - 180px);
+    margin-right: 20px;}
+
+    div.honeymoon_review_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 28px; font-family: bold; color: #222;
+    line-height: 30px;
+    margin-bottom: 10px;}
+
+    div.honeymoon_review_title_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 15px; line-height: 20px;
+    color: #555;}
+
+    /* 허니문 라디오 버튼 */
+    .review_ck_btn
+    {overflow: hidden;
+    margin-bottom: 30px;}
+
+    .review_ck_title
+    {margin-bottom: 10px;}
+
+    .review_ck_btn>input
+    {display: none;}
+
+    .review_ck_btn>label
+    {width: 120px; height: 36px;
+    line-height: 36px;
+    border: 1px solid #fd6f6f;
+    color: #fd6f6f;
+    border-radius: 50px;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+    float: left;}
+
+    .review_ck_btn>label:nth-child(3)
+    {margin-right: 10px;}
+
+    #honeymoon_ck_btn:checked ~ label:nth-child(3)
+    {background: #fd6f6f;
+    color: #fff;}
+
+    #contract_ck_btn:checked ~ label:nth-child(4)
+    {background: #fd6f6f;
+    color: #fff;}
+    
+    /* 에디터 */
+    .tox-tinymce
+    {height: 300px !important;}
+
+    /* 허니문 페이지 버튼 */
+    .honeymoon_review_btn_box
+    {display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;}
+    
+    .honeymoon_review_btn_box>a,
+    .honeymoon_review_btn_box>input
+    {width: 200px; height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    display: block;}
+
+    .honeymoon_review_btn_box>a:first-child
+    {background: #1C1C1C;
+    margin-right: 10px;
+    font-size: 15px;}
+
+    .honeymoon_review_btn_box>input:last-child
+    {background: #085FE0;
+    font-size: 15px;
+    outline: none;
+    border: 0;}
+
+}
+
+@media all and (max-width: 600px)
+{
+    /*서브 이미지*/
+    div.review_visual_banner
+    {margin-top: 60px;}
+
+    /*타이틀*/
+    div.honeymoon_review_title_ex
+    {width: 100%;
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: none;
+    overflow: hidden;}
+
+    div.honeymoon_review_title_box
+    {width: 100%;}
+
+    div.honeymoon_review_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 24px; font-family: bold; color: #222;
+    line-height: 30px;
+    margin-bottom: 5px;}
+
+    div.honeymoon_review_title_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 14px; line-height: 20px;
+    word-break: keep-all;
+    color: #555;}
+
+    a.honeymoon_review_right_box
+    {width: 160px; height: 40px;
+    border-radius: 5px;
+    display: block;
+    float: right;
+    background-color: #fd6f6f;}
+
+    a.honeymoon_review_right_box>p
+    {font-size: 15px;
+    text-align: center;
+    color: #fff; line-height: 40px;}
+
+    /* 허니문 페이지 버튼 */
+    .honeymoon_review_btn_box
+    {margin-top: 50px;}
+
+}

@@ -1,0 +1,221 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+button {margin-bottom: 0;}
+
+ol {margin: 0; padding: 0;}
+
+ul li ol {margin-left: 0; padding: 0;}
+
+/* ------- 에러 페이지 ------- */
+
+.error_page_ex
+{max-width: 1400px; height:calc(100vh - 365px);
+margin: 0 auto;
+display: flex;
+align-items: center;
+padding: 100px 0;}
+
+.error_page_ex>div
+{width: 50%;
+display: flex;
+align-items: center;}
+
+.error_page_ex>div:first-child
+{justify-content: left;}
+
+.error_page_ex>div:last-child
+{justify-content: center;}
+
+.error_page_ex>div>img
+{width: 100%; height: auto;
+margin: 0 auto;}
+
+.error_page_ex>div>div>p:nth-child(1)
+{font-size: 100px; line-height: 100px;
+font-family: 'bold';
+color: #fd6f6f;}
+
+.error_page_ex>div>div>p:nth-child(1) span
+{font-size: 50px;
+font-family: 'min_bold';}
+
+.error_page_ex>div>div>p:nth-child(2)
+{font-size: 24px; line-height: 30px;
+font-family: 'min_bold';
+margin-bottom: 15px;}
+
+.error_page_ex>div>div>p:nth-child(3)
+{color: #999;
+line-height: 22px;}
+
+.error_btn
+{display: flex;
+margin-top: 30px;}
+
+.error_btn > a
+{width: 150px; height: 45px;
+line-height: 45px;
+display: block;
+text-align: center;
+border: 1px solid  #fd6f6f;
+border-radius: 5px;
+color: #fd6f6f;
+margin-right: 20px;
+transition: all 0.3s;}
+
+.error_btn > a:hover
+{background: #fd6f6f;
+color: #fff;}
+
+@media all and (max-width:1024px) 
+{
+  .error_page_ex
+  {justify-content: center;}
+
+  .error_page_ex>div:first-child
+  {display: none;}
+
+  .error_page_ex>div:nth-child(2)
+  {justify-content: center;}
+
+}
+
+@media all and (max-width:768px)
+{
+  .error_page_ex
+  {padding: 70px 0 70px 0;}
+
+  .error_page_ex>div:nth-child(2)
+  {width: 100%;}
+  
+  .error_page_ex>div:nth-child(2)>div
+  {text-align: center;}
+
+  .error_page_ex>div>div>p:nth-child(1)
+  {font-size: 64px; line-height: 70px;} 
+
+  .error_page_ex>div>div>p:nth-child(1) span
+  {font-size: 40px;}
+
+  .error_page_ex>div>div>p:nth-child(2)
+  {font-size: 18px; line-height: 25px;}
+
+  .error_page_ex>div>div>p:nth-child(3)
+  {font-size: 15px;}
+
+  .error_btn
+  {justify-content: space-between;}
+
+  .error_btn > a
+  {width: 48%;
+  margin-right: 4%;}
+
+  .error_btn > a:last-child
+  {margin-right: 0;
+  background: #fd6f6f;
+  color: #fff;}
+
+  .error_btn > a:hover
+  {background: #fff;
+  color: #fd6f6f;}
+
+  .error_btn > a:last-child:hover
+  {background: #fd6f6f;
+  color: #fff;}
+
+} 
+
+@media all and (max-width:768px)
+{
+  .error_page_ex
+  {padding: 50px 0 50px 0;}
+}
+
+@media all and (max-width:425px)
+{
+  .error_page_ex
+  {width: 90%;
+  margin: 0 auto;}
+
+  .error_page_ex>div>div>p:nth-child(1)
+  {font-size: 32px; line-height: 50px;}
+
+  .error_page_ex>div>div>p:nth-child(1) span
+  {font-size: 20px;}
+
+  .error_page_ex>div>div>p:nth-child(2)
+  {font-size: 16px;}
+
+  .error_page_ex>div>div>p:nth-child(3) br
+  {display: none;
+  word-break: keep-all;}
+
+  .error_btn > a
+  {height: 40px;
+  line-height: 40px;}
+
+}
+

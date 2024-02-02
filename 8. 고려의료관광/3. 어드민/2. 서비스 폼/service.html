@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서비스 등록</title>
+
+    <script src="https://cdn.ckeditor.com/4.12.1/standard-all/ckeditor.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <link rel="stylesheet" href="service.css">
+    
+</head>
+<body>
+    
+    <section class="service_form_ex">
+
+        <form>
+
+            <div class="service_title">
+
+                <p>서비스 등록</p>
+
+            </div><!--service_title end-->
+
+            <ul class="service_big_title">
+
+                <li>
+                    <p>메인화면노출</p>
+                </li>
+
+                <li>
+                    <input type="checkbox" value="1" name="exposure" class="main_open_chk_box">
+                </li>
+
+                <li>
+                    <p>분류</p>
+                </li>
+
+                <li>
+                    <select name="cate1" required="required" class="notic_select_box" onchange="serv_cate1_visible(this.value);">
+                        <option value="">서비스를 선택하세요.</option>
+                        <option value="1">Health Screening</option>
+                        <option value="2">Wellness Programs</option>
+                        <option value="3">Concierge Services</option>
+                        <option value="4">Interpreter Service</option>
+                    </select>
+                </li>
+
+                <li>
+                    <p>항목분류</p>
+                </li>
+
+                <li>
+                    <select name="cate2" class="question_select_box" required="required"><!--  onchange="serv_cate2_visible(this.value);"  -->
+                        <option value="">서비스 항목을 선택하세요.</option>
+                    </select>
+                </li>
+
+                <li>
+                    <p>지역</p>
+                </li>
+
+                <li>
+                    <select name="region" class="region_select_box">
+                        <option value="">지역을 선택하세요.</option>
+                        <option value="1">Seoul</option>
+                        <option value="2">Busan</option>
+                        <option value="3">Jeju</option>
+                    </select>
+                </li>
+
+            </ul><!--service_big_title end-->
+
+            <div class="health_service_form_ex">
+
+                <ul class="health_service_form_cont">
+
+                    <li>
+                        <p>Price</p>
+                    </li>
+
+                    <li>
+                        <input type="number" class="servies_title_txt" name="per_price" value="0" min="0" step="0.01">
+                    </li>
+
+                    <li>
+                        <p>Subject</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_title_txt" name="subject" maxlength="100" required="required">
+                    </li>
+
+                    <li>
+                        <p>Explanation</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="mce_1" name="content"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('mce_1',{
+                                filebrowserUploadUrl: './imageUpload.do'
+                            });
+                        </script>
+                    </li>
+
+                    <li>
+                        <p>List Image(Thumbnail)</p>
+                    </li>
+
+                    <li>
+                        <div class="list_image_cont">
+                            <img src="https://via.placeholder.com/500" alt="샘플이미지 " id="thumb_area">
+                            <input type="file" class="servies_thumbnail" name="file_name" accept=".png, .jpg, .jpeg" id="thumb"
+                            onchange="thumbnail('#thumb', '#thumb_area')">
+                        </div><!--list_image_cont end-->
+                    </li>
+
+                    <li>
+                        <p>Slide Images</p>
+                    </li>
+
+                    <li>
+                        <div class="slide_image_cont">
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list1_area">
+                                <input type="file" class="servies_visual" name="file_name2" accept=".png, .jpg, .jpeg" id="list1"
+                                onchange="thumbnail('#list1', '#list1_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list2_area">
+                                <input type="file" class="servies_visual" name="file_name3" accept=".png, .jpg, .jpeg" id="list2"
+                                onchange="thumbnail('#list2', '#list2_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list3_area">
+                                <input type="file" class="servies_visual" name="file_name4" accept=".png, .jpg, .jpeg" id="list3"
+                                onchange="thumbnail('#list3', '#list3_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list4_area">
+                                <input type="file" class="servies_visual" name="file_name5" accept=".png, .jpg, .jpeg" id="list4"
+                                onchange="thumbnail('#list4', '#list4_area')">
+                            </div>
+
+                        </div><!--slide_image_cont end-->
+                    </li>
+
+                    <li>
+                        <p>Address</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="addr" maxlength="150" placeholder="B1-10, 875 Haeundae-ro, Haeundae-gu, Busan, Republic of Korea">
+                    </li>
+
+                    <li>
+                        <p>Homepage</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="link_url" maxlength="255" placeholder="http://medikiosk.co.kr/">
+                    </li>
+                    
+                    <li>
+                        <p>Business Number</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="business_num" maxlength="50" placeholder="605-81-98797">
+                    </li>
+
+                    <li>
+                        <p>Business Hours</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" name="standard_etc" id="mce_13"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('mce_13',{
+                                filebrowserUploadUrl: './imageUpload.do'
+                            });
+                        </script>
+                    </li>
+
+                    <li>
+                        <p>PDF 파일 첨부</p>
+                    </li>
+
+                    <li>
+                        <input type="file" class="pdf_file_input">
+                    </li>
+
+                </ul>
+
+            </div><!--health_service_form_ex end-->
+
+            <div class="wellness_service_form_ex">
+
+                <ul class="wellness_service_form_cont">
+
+                    <li>
+                        <p>Subject</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_title_txt" name="subject" maxlength="100" required="required">
+                    </li>
+
+                    <li>
+                        <p>Explanation</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="wellness_01" name="content"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('wellness_01',{
+                                filebrowserUploadUrl: './imageUpload.do'
+                            });
+                        </script>
+                    </li>
+
+                    <li>
+                        <p>List Image(Thumbnail)</p>
+                    </li>
+
+                    <li>
+                        <div class="list_image_cont">
+                            <img src="https://via.placeholder.com/500" alt="샘플이미지 " id="thumb_area">
+                            <input type="file" class="servies_thumbnail" name="file_name" accept=".png, .jpg, .jpeg" id="thumb"
+                            onchange="thumbnail('#thumb', '#thumb_area')">
+                        </div><!--list_image_cont end-->
+                    </li>
+
+                    <li>
+                        <p>Slide Images</p>
+                    </li>
+
+                    <li>
+                        <div class="slide_image_cont">
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list1_area">
+                                <input type="file" class="servies_visual" name="file_name2" accept=".png, .jpg, .jpeg" id="list1"
+                                onchange="thumbnail('#list1', '#list1_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list2_area">
+                                <input type="file" class="servies_visual" name="file_name3" accept=".png, .jpg, .jpeg" id="list2"
+                                onchange="thumbnail('#list2', '#list2_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list3_area">
+                                <input type="file" class="servies_visual" name="file_name4" accept=".png, .jpg, .jpeg" id="list3"
+                                onchange="thumbnail('#list3', '#list3_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list4_area">
+                                <input type="file" class="servies_visual" name="file_name5" accept=".png, .jpg, .jpeg" id="list4"
+                                onchange="thumbnail('#list4', '#list4_area')">
+                            </div>
+
+                        </div><!--slide_image_cont end-->
+
+                    </li>
+
+                    <li>
+                        <p>Address</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="addr" maxlength="150" placeholder="B1-10, 875 Haeundae-ro, Haeundae-gu, Busan, Republic of Korea">
+                    </li>
+
+                    <li>
+                        <p>Website</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="link_url" maxlength="255" placeholder="http://medikiosk.co.kr/">
+                    </li>
+
+                    <li>
+                        <p>Business establishment number</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="business_num" maxlength="50" placeholder="605-81-98797">
+                    </li>
+
+                    <li>
+                        <p>Operating hours</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+
+                        <textarea class="servies_detaile_form" name="standard_etc" id="wellness_02"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('wellness_02',{
+                                filebrowserUploadUrl: './imageUpload.do'
+                            });
+                        </script>
+
+                    </li>
+
+                    <li>
+                        <p>Key Programs</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" name="etc" id="wellness_03"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('wellness_03',{
+                                filebrowserUploadUrl: './imageUpload.do'
+                            });
+                        </script>
+                    </li>
+
+                </ul><!--wellness_service_form_cont end-->
+
+            </div><!--wellness_service_form_ex end-->
+
+            <div class="concierge_car_form_ex">
+
+                <ul class="concierge_car_cont">
+
+                    <li>
+                        <p>Price</p>
+                    </li>
+
+                    <li>
+                        <input type="number" class="servies_title_txt" name="per_price" value="0" min="0" step="0.01">
+                    </li>
+
+                    <li>
+                        <p>Subject</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_title_txt" name="subject" maxlength="100" required="required">
+                    </li>
+
+                    <li>
+                        <p>Explanation</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="concierge_car_01" name="content"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('concierge_car_01',{
+                                filebrowserUploadUrl: './imageUpload.do'
+                            });
+                        </script>
+                    </li>
+
+                    <li>
+                        <p>List Image(Thumbnail)</p>
+                    </li>
+
+                    <li>
+                        <div class="list_image_cont">
+                            <img src="https://via.placeholder.com/500" alt="샘플이미지 " id="thumb_area">
+                            <input type="file" class="servies_thumbnail" name="file_name" accept=".png, .jpg, .jpeg" id="thumb"
+                            onchange="thumbnail('#thumb', '#thumb_area')">
+                        </div><!--list_image_cont end-->
+                    </li>
+
+                    <li>
+                        <p>Slide Images</p>
+                    </li>
+
+                    <li>
+                        <div class="slide_image_cont">
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list1_area">
+                                <input type="file" class="servies_visual" name="file_name2" accept=".png, .jpg, .jpeg" id="list1"
+                                onchange="thumbnail('#list1', '#list1_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list2_area">
+                                <input type="file" class="servies_visual" name="file_name3" accept=".png, .jpg, .jpeg" id="list2"
+                                onchange="thumbnail('#list2', '#list2_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list3_area">
+                                <input type="file" class="servies_visual" name="file_name4" accept=".png, .jpg, .jpeg" id="list3"
+                                onchange="thumbnail('#list3', '#list3_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list4_area">
+                                <input type="file" class="servies_visual" name="file_name5" accept=".png, .jpg, .jpeg" id="list4"
+                                onchange="thumbnail('#list4', '#list4_area')">
+                            </div>
+
+                        </div><!--slide_image_cont end-->
+
+                    </li>
+
+                </ul><!--concierge_car_cont end-->
+
+            </div><!--concierge_car_form_ex end-->
+
+            <div class="concierge_hotel_form_ex">
+
+                <ul class="concierge_hotel_form_cont">
+
+                    <li>
+                        <p>Price</p>
+                    </li>
+
+                    <li>
+                        <input type="number" class="servies_title_txt" name="per_price" value="0" min="0" step="0.01">
+                    </li>
+
+                    <li>
+                        <p>Subject</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_title_txt" name="subject" maxlength="100" required="required">
+                    </li>
+
+                    <li>
+                        <p>Explanation</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="concierge_hotel_01" name="content"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('concierge_hotel_01',{
+                                filebrowserUploadUrl: './imageUpload.do'
+                            });
+                        </script>
+                    </li>
+
+                    <li>
+                        <p>List Image(Thumbnail)</p>
+                    </li>
+
+                    <li>
+                        <div class="list_image_cont">
+                            <img src="https://via.placeholder.com/500" alt="샘플이미지 " id="thumb_area">
+                            <input type="file" class="servies_thumbnail" name="file_name" accept=".png, .jpg, .jpeg" id="thumb"
+                            onchange="thumbnail('#thumb', '#thumb_area')">
+                        </div><!--list_image_cont end-->
+                    </li>
+
+                    <li>
+                        <p>Slide Images</p>
+                    </li>
+
+                    <li>
+                        <div class="slide_image_cont">
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list1_area">
+                                <input type="file" class="servies_visual" name="file_name2" accept=".png, .jpg, .jpeg" id="list1"
+                                onchange="thumbnail('#list1', '#list1_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list2_area">
+                                <input type="file" class="servies_visual" name="file_name3" accept=".png, .jpg, .jpeg" id="list2"
+                                onchange="thumbnail('#list2', '#list2_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list3_area">
+                                <input type="file" class="servies_visual" name="file_name4" accept=".png, .jpg, .jpeg" id="list3"
+                                onchange="thumbnail('#list3', '#list3_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list4_area">
+                                <input type="file" class="servies_visual" name="file_name5" accept=".png, .jpg, .jpeg" id="list4"
+                                onchange="thumbnail('#list4', '#list4_area')">
+                            </div>
+
+                        </div><!--slide_image_cont end-->
+
+                    </li>
+
+                    <li>
+                        <p>Type</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="type" maxlength="10" placeholder="Five stars">
+                    </li>
+
+                    <li>
+                        <p>Address</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="addr" maxlength="150" placeholder="B1-10, 875 Haeundae-ro, Haeundae-gu, Busan, Republic of Korea">
+                    </li>
+
+                    <li>
+                        <p>Homepage</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="link_url" maxlength="255" placeholder="http://medikiosk.co.kr/">
+                    </li>
+
+                    <li>
+                        <p>Business Number</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="business_num" maxlength="50" placeholder="605-81-98797">
+                    </li>
+
+                    <li>
+                        <p>Notes</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" name="etc" id="concierge_hotel_02"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace('concierge_hotel_02',{
+                                filebrowserUploadUrl: './imageUpload.do'
+                            });
+                        </script>
+                    </li>
+
+
+                </ul><!--concierge_hotel_form_cont end-->
+
+                <ul class="concierge_hotel_room_ex">
+
+                    <li>
+                        <p>Room Information</p>
+                    </li>
+
+                    <li>
+                        
+                        <div>
+
+                            <div class="hotel_room_type_title">
+                                <p>Room Type1</p>
+                            </div>
+
+                            <div class="hoetl_room_type">
+
+                                <div>
+                                    <p>※ Room Image</p>
+                                    <img src="https://via.placeholder.com/655x368" alt="샘플이미지" id="room1_area">
+                                    <input type="file" class="hotel_room_txt" name="file_name6" accept=".png, .jpg, .jpeg" id="room1"
+                            onchange="thumbnail('#room1', '#room1_area')">
+                                </div>
+                        
+                                <div class="hotel_room_type_right">
+
+                                    <div>
+                                        <p>※ Room Names</p>
+                                        <input type="text" class="hotel_room_txt" name="hotel_name1" maxlength="100">
+                                    </div>
+                                    
+                                    <div>
+                                        <p>※ People</p>
+                                        <input type="number" class="hotel_room_txt" min="0" value="0" name="hotel_people1">
+                                    </div>
+
+                                    <div>
+                                        <p>※ Hotel One Night For One Person</p>
+                                        <input type="number" class="hotel_room_txt" min="0" value="0" name="hotel_price1">
+                                    </div>
+
+                                </div>
+
+                            </div><!--hoetl_room_type end-->
+
+                        </div><!--01 end-->
+
+                        <div>
+                        
+                            <div class="hotel_room_type_title">
+                                <p>Room Type2</p>
+                            </div>
+
+                            <div class="hoetl_room_type">
+
+                                <div>
+                                    <p>※ Room Image</p>
+                                    <img src="https://via.placeholder.com/655x368" alt="샘플이미지" id="room2_area">
+                                    <input type="file" class="hotel_room_txt" name="file_name7" accept=".png, .jpg, .jpeg" id="room2" onchange="thumbnail('#room2', '#room2_area')">
+                                </div>
+                        
+                                <div class="hotel_room_type_right">
+
+                                    <div>
+                                        <p>※ Room Names</p>
+                                        <input type="text" class="hotel_room_txt" name="hotel_name2" maxlength="100">
+                                    </div>
+
+                                    <div>
+                                        <p>※ People</p>
+                                        <input type="number" class="hotel_room_txt" min="0" value="0" name="hotel_people2">
+                                    </div>
+
+                                    <div>
+                                        <p>※ Hotel One Night For One Person</p>
+                                        <input type="number" class="hotel_room_txt" min="0" value="0" name="hotel_price2">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div><!--02 end-->
+
+                        <div>
+                        
+                            <div class="hotel_room_type_title">
+                                <p>Room Type3</p>
+                            </div>
+
+                            <div class="hoetl_room_type">
+
+                                <div>
+                                    <p>※ Room Image</p>
+                                    <img src="https://via.placeholder.com/655x368" alt="샘플이미지" id="room3_area">
+                                    <input type="file" class="hotel_room_txt" name="file_name8" accept=".png, .jpg, .jpeg" id="room3" onchange="thumbnail('#room3', '#room3_area')">
+                                </div>
+                        
+                                <div class="hotel_room_type_right">
+
+                                    <div>
+                                        <p>※ Room Names</p>
+                                        <input type="text" class="hotel_room_txt" name="hotel_name3" maxlength="100">
+                                    </div>
+                                    
+                                    <div>
+                                        <p>※ People</p>
+                                        <input type="number" class="hotel_room_txt" min="0" value="0" name="hotel_people3">
+                                    </div>
+
+                                    <div>
+                                        <p>※ Hotel One Night For One Person</p>
+                                        <input type="number" class="hotel_room_txt" min="0" value="0" name="hotel_price3">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div><!--03 end-->
+
+                        <div>
+                        
+                            <div class="hotel_room_type_title">
+                                <p>Room Type4</p>
+                            </div>
+
+                            <div class="hoetl_room_type">
+
+                                <div>
+                                    <p>※ Room Image</p>
+                                    <img src="https://via.placeholder.com/655x368" alt="샘플이미지" id="room4_area">
+                                    <input type="file" class="hotel_room_txt" name="file_name9" accept=".png, .jpg, .jpeg" id="room4" onchange="thumbnail('#room4', '#room4_area')">
+                                </div>
+                        
+                                <div class="hotel_room_type_right">
+
+                                    <div>
+                                        <p>※ Room Names</p>
+                                        <input type="text" class="hotel_room_txt" name="hotel_name4" maxlength="100">
+                                    </div>
+                                    
+                                    <div>
+                                        <p>※ People</p>
+                                        <input type="number" class="hotel_room_txt" min="0" value="0" name="hotel_people4">
+                                    </div>
+
+                                    <div>
+                                        <p>※ Hotel One Night For One Person</p>
+                                        <input type="number" class="hotel_room_txt" min="0" value="0" name="hotel_price4">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div><!--04 end-->
+
+                    </li>
+
+                </ul><!--concierge_hotel_room_ex-->
+
+            </div><!--concierge_hotel_form_ex end-->
+
+            <div class="concierge_restaurants_form_ex">
+
+                <ul class="concierge_restaurants_cont">
+
+                    <li>
+                        <p>Price</p>
+                    </li>
+
+                    <li>
+                        <input type="number" class="servies_title_txt" name="per_price" value="0" min="0" step="0.01">
+                    </li>
+
+                    <li>
+                        <p>Subject</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_title_txt" name="subject" maxlength="100" required="required">
+                    </li>
+
+                    <li>
+                        <p>Explanation</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="concierge_restaurants_01" name="content"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('concierge_restaurants_01',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>List Image(Thumbnail)</p>
+                    </li>
+
+                    <li>
+                        <div class="list_image_cont">
+                            <img src="https://via.placeholder.com/500" alt="샘플이미지 " id="thumb_area">
+                            <input type="file" class="servies_thumbnail" name="file_name" accept=".png, .jpg, .jpeg" id="thumb"
+                            onchange="thumbnail('#thumb', '#thumb_area')">
+                        </div><!--list_image_cont end-->
+                    </li>
+
+                    <li>
+                        <p>Slide Images</p>
+                    </li>
+
+                    <li>
+                        <div class="slide_image_cont">
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list1_area">
+                                <input type="file" class="servies_visual" name="file_name2" accept=".png, .jpg, .jpeg" id="list1"
+                                onchange="thumbnail('#list1', '#list1_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list2_area">
+                                <input type="file" class="servies_visual" name="file_name3" accept=".png, .jpg, .jpeg" id="list2"
+                                onchange="thumbnail('#list2', '#list2_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list3_area">
+                                <input type="file" class="servies_visual" name="file_name4" accept=".png, .jpg, .jpeg" id="list3"
+                                onchange="thumbnail('#list3', '#list3_area')">
+                            </div>
+
+                            <div>
+                                <img src="https://via.placeholder.com/500" alt="샘플이미지" id="list4_area">
+                                <input type="file" class="servies_visual" name="file_name5" accept=".png, .jpg, .jpeg" id="list4"
+                                onchange="thumbnail('#list4', '#list4_area')">
+                            </div>
+
+                        </div><!--slide_image_cont end-->
+
+                    </li>
+
+                    <li>
+                        <p>Address</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="addr" maxlength="150" placeholder="B1-10, 875 Haeundae-ro, Haeundae-gu, Busan, Republic of Korea">
+                    </li>
+
+                    <li>
+                        <p>Homepage</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="link_url" maxlength="255" placeholder="http://medikiosk.co.kr/">
+                    </li>
+
+                    <li>
+                        <p>Business Number</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_form_txt" name="business_num" maxlength="50" placeholder="605-81-98797">
+                    </li>
+
+                    <li>
+                        <p>Business Hours</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" name="standard_etc" id="concierge_restaurants_02"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('concierge_restaurants_02',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>The Representative Menu</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" name="etc" id="concierge_restaurants_03"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('concierge_restaurants_03',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+
+                </ul><!--concierge_restaurants_cont end-->
+
+            </div><!--concierge_restaurants_form_ex end-->
+
+            <div class="interpreter_form_ex">
+
+                <ul class="interpreter_cont">
+
+                    <li>
+                        <p>Subject</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_title_txt" name="subject" maxlength="100" required="required">
+                    </li>
+
+                    <li>
+                        <p>Explanation</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="interpreter_01" name="content"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('interpreter_01',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>Support Criteria</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="interpreter_02" name="content"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('interpreter_02',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>List Image(Thumbnail)</p>
+                    </li>
+
+                    <li>
+                        <div class="list_image_cont">
+                            <img src="https://via.placeholder.com/500" alt="샘플이미지 " id="thumb_area">
+                            <input type="file" class="servies_thumbnail" name="file_name" accept=".png, .jpg, .jpeg" id="thumb"
+                            onchange="thumbnail('#thumb', '#thumb_area')">
+                        </div><!--list_image_cont end-->
+                    </li>
+
+                    <li>
+                        <p>Language Select</p>
+                    </li>
+
+                    <li>
+                        <div class="select_lan_cont">
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="eng" value="English" name="lang">
+                                <label for="eng">
+                                    <p>English</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="japan" value="Japanese" name="lang">
+                                <label for="japan">
+                                    <p>Japanese</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="chinese" value="Chinese" name="lang">
+                                <label for="chinese">
+                                    <p>Chinese</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="russian" value="Russian" name="lang">
+                                <label for="russian">
+                                    <p>Russian</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="mongolian" value="Mongolian" name="lang">
+                                <label for="mongolian">
+                                    <p>Mongolian</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="vietnamese" value="Vietnamese" name="lang">
+                                <label for="vietnamese">
+                                    <p>Vietnamese</p>
+                                </label>
+                            </div>
+
+                        </div><!--select_lan_cont-->
+                    </li>
+
+                    <li>
+                        <p>Meet</p>
+                    </li>
+
+                    <li class="interpreter_li_width_01">
+                        <input type="number" class="meet_price_txt" min="0" name="meet_price" value="0">
+                    </li>
+
+                    <li>
+                        <p>Non-Face-To-Face (per 30 minutes)</p>
+                    </li>
+
+                    <li class="interpreter_li_width_02">
+                        <input type="number" class="meet_price_txt" min="0" name="non_price" value="0">
+                    </li>
+
+                    <li>
+                        <p>Upper</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="interpreter_upper" name="upper_etc"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('interpreter_upper',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>Middle</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="interpreter_middle" name="middle_etc"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('interpreter_middle',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>Lower</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="interpreter_lower" name="lower_etc"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('interpreter_lower',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+
+                </ul><!--interpreter_cont end-->
+
+                <p class="interpreter_pay_title">> Price guide</p>
+
+                <ul class="interpreter_pay_cont">
+
+                    <li>
+                        <p>Meet</p>
+                    </li>
+
+                    <li>
+                        <p>Language</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_01" name="price_guide1"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_01',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02" name="price_guide2"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_03" name="price_guide3"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_03',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_04" name="price_guide4"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_04',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_05" name="price_guide5"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_05',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_06" name="price_guide6"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_06',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_07" name="price_guide7"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_07',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_08" name="price_guide8"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_08',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_09" name="price_guide9"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_09',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_10" name="price_guide10"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_10',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_11" name="price_guide11"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_11',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_12" name="price_guide12"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_12',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                </ul><!--interpreter_pay_cont-->
+
+            </div><!--Interpreter_form_ex end-->
+
+            <div class="translation_form_ex">
+
+                <ul class="translation_cont">
+
+                    <li>
+                        <p>Per page</p>
+                    </li>
+
+                    <li>
+                        <input type="number" class="servies_title_txt" name="per_price" value="0" min="0" step="0.01">
+                    </li>
+
+                    <li>
+                        <p>Subject</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="servies_title_txt" name="subject" maxlength="100" required="required">
+                    </li>
+
+                    <li>
+                        <p>Explanation</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="translation_01" name="content"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('translation_01',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>Support Criteria</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="translation_02" name="content"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('translation_02',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>List Image(Thumbnail)</p>
+                    </li>
+
+                    <li>
+                        <div class="list_image_cont">
+                            <img src="https://via.placeholder.com/500" alt="샘플이미지 " id="thumb_area">
+                            <input type="file" class="servies_thumbnail" name="file_name" accept=".png, .jpg, .jpeg" id="thumb"
+                            onchange="thumbnail('#thumb', '#thumb_area')">
+                        </div><!--list_image_cont end-->
+                    </li>
+
+                    <li>
+                        <p>Language Select</p>
+                    </li>
+
+                    <li>
+                        <div class="select_lan_cont">
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="eng" value="English" name="lang">
+                                <label for="eng">
+                                    <p>English</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="japan" value="Japanese" name="lang">
+                                <label for="japan">
+                                    <p>Japanese</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="chinese" value="Chinese" name="lang">
+                                <label for="chinese">
+                                    <p>Chinese</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="russian" value="Russian" name="lang">
+                                <label for="russian">
+                                    <p>Russian</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="mongolian" value="Mongolian" name="lang">
+                                <label for="mongolian">
+                                    <p>Mongolian</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="lang_chk" id="vietnamese" value="Vietnamese" name="lang">
+                                <label for="vietnamese">
+                                    <p>Vietnamese</p>
+                                </label>
+                            </div>
+
+                        </div><!--select_lan_cont-->
+                    </li>
+
+                    <li>
+                        <p>Upper</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="translation_upper" name="upper_etc"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('translation_upper',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>Middle</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="translation_middle" name="middle_etc"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('translation_middle',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>Lower</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="translation_lower" name="lower_etc"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('translation_lower',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>Standard</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="translation_standard" name="standard_etc" ></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('translation_standard',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li>
+                        <p>Interpretation Contents</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="translation_cont_01" name="itpt_etc"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('translation_cont_01',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+
+                </ul><!--translation_cont end-->
+
+                <p class="translation_pay_title">> Price guide</p>
+
+                <ul class="translation_pay_cont">
+
+                    <li>
+                        <p>Language</p>
+                    </li>
+
+                    <li>
+                        <p>Price</p>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_01" name="price_guide1"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_01',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_02" name="price_guide2"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_02',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_03" name="price_guide3"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_03',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_04" name="price_guide4"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_04',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_05" name="price_guide5"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_05',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_06" name="price_guide6"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_06',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_07" name="price_guide7"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_07',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_08" name="price_guide8"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_08',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_09" name="price_guide9"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_09',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_10" name="price_guide10"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_10',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_11" name="price_guide11"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_11',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                    <li class="textarea_jq_box">
+                        <textarea class="servies_detaile_form" id="lang_02_12" name="price_guide12"></textarea>
+                        <script type="text/javascript">
+                           CKEDITOR.replace('lang_02_12',{
+                               filebrowserUploadUrl: './imageUpload.do'
+                           });
+                       </script>
+                    </li>
+
+                </ul><!--interpreter_pay_cont-->
+
+            </div><!--translation_form_ex end-->
+
+            <div class="announcement_registration_btn_ex">
+                <input type="submit" class="announcement_re_submit btn-primary" value="수정하기">
+                <input type="button" onclick="javascript:location.href='./admService';" class="announcement_re_list btn-secondary" value="목록으로">
+                <input type="button" class="announcement_re_submit btn-danger" value="삭제하기" onclick="deleteSvc('${data.no}','${data.cate1}', 'service')">
+            </div><!--announcement_registration_btn_ex-->
+
+        </form> <!--form end-->
+
+
+    </section><!--service_form_ex end-->
+
+</body>
+</html>

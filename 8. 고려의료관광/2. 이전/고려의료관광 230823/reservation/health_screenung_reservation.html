@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Screening Appointment</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_icon_medi.png">
+
+    <script src="../js/jquery.min.js"></script>
+
+    <!--swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--owl캐러셀-->
+    <script src="../js/owl.carousel.js"></script>
+    <link href="../css/docs.theme.min.css" rel="stylesheet">
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+
+    <!--헤더, 풋터, 윙메뉴-->
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
+    <link href="../css/wing_menu.css" rel="stylesheet">
+
+    <!--카트 팝업-->
+    <link href="../css/cart_popup.css" rel="stylesheet">
+    <script src="../js/cart_popup.js"></script>
+
+
+    <link href="css/reservation.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="reservation_ex">
+
+        <form>
+
+        <div class="health_screening_reservation_ex">
+
+
+                <div class="health_screening_reservation_title">
+
+                    <p>Health Screening Appointment</p>
+
+                    <p>
+                        If you would like to schedule a Health Screening through <span>Medi<span>Kiosk</span><span>+</span></span>, please fill out the form below.<br>
+                        Please contact us for more information or any inquires related to your appointment.<br>
+                        (E-mail: info.medikiosk@gmail.com)<br>
+
+                    </p>
+
+                </div><!--health_screening_reservation_title // 건강검진 타이틀-->
+
+
+                <p class="required_txt"><span>*</span> Necessary Input Information</p>
+
+
+                <div class="reservation_id_pw_ex">
+
+                    <div class="reservation_id_pw_box">
+
+                        <p><span>*</span> E-mail (Your Username)</p>
+
+                        <input type="email" id="username_txt_box" class="input_txt" required>
+
+                    </div><!--reservation_id_pw_box-->
+
+                    <div class="reservation_id_pw_box">
+
+                        <p><span>*</span> Password</p>
+
+                        <input type="password" id="password_txt_box" class="input_txt" required>
+
+                    </div><!--reservation_id_pw_box-->
+
+                </div><!--reservation_id_pw_ex // 아이디(이메일), 비밀번호 작성-->
+
+
+                <div class="patient_information_ex">
+
+                    <p class="patient_information_title">Patient Information</p>
+
+                    <div class="patient_information_name_ex">
+
+                        <p><span>*</span> Name</p>
+
+                        <div class="patient_information_name_box">
+                            <input type="text" id="patient_information_name_first" placeholder="First Name" required>
+                            <input type="text" id="patient_information_name_last" placeholder="Last Name" required>
+                        </div><!--patient_information_name_box-->
+
+                    </div><!--patient_information_name_ex-->
+
+                    <div class="patient_information_box">
+                        <p><span>*</span> Date of Birth</p>
+                        <input type="text" id="patient_information_birth" class="patient_txt" required>
+                    </div>
+
+                    <div class="patient_information_box">
+
+                        <p><span>*</span> Gender</p>
+
+                        <div class="patient_information_gender_box">
+
+                            <div>
+                                <input type="radio" name="patient_information_gender" id="gender_radio_btn_male" class="gender_radio_btn">
+
+                                <label for="gender_radio_btn_male">
+                                    <p>Male</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="patient_information_gender" id="gender_radio_btn_female" class="gender_radio_btn">
+
+                                <label for="gender_radio_btn_female">
+                                    <p>Female</p>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div><!--성별-->
+
+                    <div class="patient_information_box">
+                        <p><span>*</span> Nationality</p>
+                        <input type="text" id="patient_information_nationality" class="patient_txt" required>
+                    </div>
+
+                    <div class="patient_information_box">
+                        <p><span>*</span> E-mail Address</p>
+                        <input type="email" id="patient_information_nationality" class="patient_txt" required>
+                    </div>
+
+                    <div class="patient_information_box">
+
+                        <p><span>*</span> Phone Number</p>
+                       
+                        <div class="patient_information_phone_box">
+
+                            <input type="tel" id="patient_cellular" placeholder="☎	Cellular" required>
+                            <input type="tel" id="patient_home" placeholder="☎ Home" required>
+
+                        </div><!--patient_information_phone_box-->
+
+                    </div>
+
+                    <div class="patient_information_box">
+
+                        <p><span>*</span> Address</p>
+                       
+                        <div class="patient_information_address_box">
+
+                            <input type="text" id="patient_address_home" placeholder="Home: (Your Home Country) " required>
+                            <input type="text" id="patient_address_korea" placeholder="Korea: (e.g. Address of Hotel, Guardian, etc.)" required>
+
+                        </div><!--patient_information_phone_box-->
+
+                    </div>
+
+                    <div class="patient_information_box">
+
+                        <p><span>*</span> Insurance</p>
+
+                        <div class="patient_information_insurance_box">
+
+                            <div>
+                                <input type="radio" name="patient_information_insurance" id="insurance_radio_btn_ok" class="insurance_radio_btn">
+
+                                <label for="insurance_radio_btn_ok">
+                                    <p>Yes</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="patient_information_insurance" id="insurance_radio_btn_no" class="insurance_radio_btn">
+
+                                <label for="insurance_radio_btn_no">
+                                    <p>No / Self-Payment</p>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div><!--보험-->
+
+                    <div class="patient_information_box">
+
+                        <p><span>*</span> Preferred Type of Health Screening Program</p>
+
+                        <input type="text" id="preferred_type_health_program_choice_01" class="preferred_type_health_program_choice" placeholder="CHOICE #1">
+                        <input type="text" id="preferred_type_health_program_choice_02" class="preferred_type_health_program_choice" placeholder="CHOICE #2">
+                        <input type="text" id="preferred_type_health_program_choice_03" class="preferred_type_health_program_choice" placeholder="CHOICE #3">
+                       
+                    </div><!--선호하는 건강검진-->
+
+                    <div class="patient_information_box">
+
+                        <p><span>*</span> Preferred Check-Up Date</p>
+
+                        <input type="text" id="preferred_check_up_date_01" class="preferred_check_up_date" placeholder="(e.g 2023-09-01)">
+                        <input type="text" id="preferred_check_up_date_02" class="preferred_check_up_date" placeholder="(e.g 2023-09-01)">
+                        <input type="text" id="preferred_check_up_date_03" class="preferred_check_up_date" placeholder="(e.g 2023-09-01)">
+                       
+                    </div><!--선호하는 건강검진-->
+
+                </div><!--patient_nformation_ex // 예약자 정보 입력-->
+
+
+                <div class="appointment_health_screening_form_ex">
+
+                    <p class="appointment_health_screening_title">Request an Appointment for the Health Screening</p>
+
+                    <div class="health_checkup_uer_ex">
+
+                        <p class="health_checkup_uer_title">Health checkup user 01</p>
+
+                        <div class="appointment_health_screening_box">
+
+                            <p><span>*</span> Name</p>
+
+                            <div class="appointment_health_name_input_box">
+
+                                <input type="text" class="appointment_health_name_box" id="appointment_health_first_name" placeholder="First Name">
+                                <input type="text" class="appointment_health_name_box" id="appointment_health_Last_name" placeholder="Last Name">
+                            
+                            </div>
+
+                        </div><!--appointment_health_screening_box-->
+
+                        <div class="appointment_health_screening_box">
+
+                            <p><span>*</span> Gender</p>
+    
+                            <div class="appointment_health_gender_box">
+    
+                                <div>
+                                    <input type="radio" name="appointment_health_gender" id="appointment_gender_radio_btn_male" class="gender_radio_btn">
+    
+                                    <label for="appointment_gender_radio_btn_male">
+                                        <p>Male</p>
+                                    </label>
+                                </div>
+    
+                                <div>
+                                    <input type="radio" name="appointment_health_gender" id="appointment_gender_radio_btn_female" class="gender_radio_btn">
+    
+                                    <label for="appointment_gender_radio_btn_female">
+                                        <p>Female</p>
+                                    </label>
+                                </div>
+    
+                            </div>
+    
+                        </div><!--성별-->
+                        
+                        <div class="appointment_health_screening_box">
+
+                            <p>Passport (Number)</p>
+
+                            <div class="appointment_health_passport_input_box">
+
+                                <input type="text" class="appointment_health_passport_box" id="appointment_health_passport_number" placeholder="Number">
+                                <input type="text" class="appointment_health_passport_box" id="appointment_health_passport_issue" placeholder="Date of Issue">
+                                <input type="text" class="appointment_health_passport_box" id="appointment_health_passport_expiration" placeholder="Date of Expiration">
+
+                            </div>
+
+                        </div><!--여권번호-->
+
+                        <div class="appointment_health_screening_box">
+
+                            <p>Your Status</p>
+
+                            <div class="appointment_health_screening_status_box">
+
+                                <div>
+                                    <input type="checkbox" id="appointment_health_screening_status_chk_01" class="appointment_health_screening_status_btn">
+                                    <label for="appointment_health_screening_status_chk_01">
+                                        <p>Business</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="appointment_health_screening_status_chk_02" class="appointment_health_screening_status_btn">
+                                    <label for="appointment_health_screening_status_chk_02">
+                                        <p>Travel</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="appointment_health_screening_status_chk_03" class="appointment_health_screening_status_btn">
+                                    <label for="appointment_health_screening_status_chk_03">
+                                        <p>Student</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="appointment_health_screening_status_chk_04" class="appointment_health_screening_status_btn">
+                                    <label for="appointment_health_screening_status_chk_04">
+                                        <p>Treatment</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="appointment_health_screening_status_chk_05" class="appointment_health_screening_status_btn">
+                                    <label for="appointment_health_screening_status_chk_05">
+                                        <p>For Health Screening Only / + Medical Tourism</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="appointment_health_screening_status_chk_06" class="appointment_health_screening_status_btn">
+                                    <label for="appointment_health_screening_status_chk_06">
+                                        <p>Other</p>
+                                    </label>
+                                </div>
+
+                            </div><!--appointment_health_screening_status_box-->
+
+                        </div><!--귀하의 상태-->
+
+                        <div class="appointment_health_screening_box">
+
+                            <p><span>*</span> Please describe history of medication intake</p>
+
+                            <textarea id="appointment_health_screening_drug_box" required></textarea>
+
+                        </div><!--약물복용-->
+
+                        <div class="appointment_health_screening_box">
+
+                            <p><span>*</span> Please describe history of surgery, medical treatment</p>
+
+                            <textarea id="appointment_health_screening_operation_box" required></textarea>
+
+                        </div><!--수술력 진료력-->
+
+                    </div><!--health_checkup_uer_ex // 이용자 인원-->
+
+                </div><!--appointment_health_screening_form_ex // 건강검진 예약 정보-->
+
+
+        </div><!--health_screening_reservation_ex / 건강검진 예약 정보-->
+
+        <div class="reservation_other_inquiries_box">
+
+            <p>Special Comments or Other Inquiries</p>
+
+            <textarea id="other_inquiries_box"></textarea>
+
+        </div><!--reservation_other_inquiries_box // 문의 정보-->
+
+        <div class="reservation_personal_information_ex">
+
+            <p><span>*</span> Information on the Collection & Use of Personal Information</p>
+
+            <div class="personal_information_contents_box">
+                <p>
+                    <span>Consent for Collection and Use of Personal Information</span><br>
+                    Your personal information will be collected and used by MediKiosk for the purpose of program reservations.<br><br>
+                    <span>Items of Personal Information to be Collected and Used</span><br>
+                    Your personal information to be collected and used includes the following<br>
+                    - Name, gender, date of birth, address, phone number, passport number, etc.<br><br>
+                    <span>Retention and Use Period of Personal Information</span><br>
+                    Personal information will be disposed of once the purpose of collecting and using the information is achieved.<br><br>
+                    <span>Right to Refuse Consent and Consequences of Refusal</span><br>
+                    You have the right to refuse consent for the collection and use of your personal information.<br>
+                    However, please be aware that refusing consent may result in difficulties in making reservations.
+                </p>
+            </div>
+
+            <div class="reservation_personal_information_agree_box">
+
+                <input type="checkbox" id="reservation_personal_information_agree" required>
+
+                <label for="reservation_personal_information_agree">
+                    <p>I agree</p>
+                </label>
+
+            </div>
+        </div><!--reservation_personal_information_ex-->
+
+
+        <div class="reservation_total_pay_ex">
+
+            <div class="reservation_total_pay_box">
+
+                <p>Total order amount</p>
+
+            </div>
+
+            <div class="reservation_totla_pay_detaile_box">
+
+                
+                <ul class="reservation_product_ex">
+
+                    <li class="reservation_product_title">
+                        <p>Health Screening</p>
+                    </li>
+
+                    <li class="reservation_product_box">
+                        <p>Inje University, Haeundae PAIK Hospital (Health Promotion Center)</p>
+                        <p>Male VIP Accommodation Precision Health Checkup</p>
+                    </li>
+
+                    <li class="reservation_product_pay">
+                        <p>350,000 won</p>
+                    </li>
+
+                </ul>
+
+                <ul class="reservation_product_ex">
+
+                    <li class="reservation_product_title">
+                        <p>Concierge Services</p>
+                    </li>
+
+                    <li class="reservation_product_box">
+                        <p>Car</p>
+                        <p>TOYOTA COROLLA</p>
+                    </li>
+
+                    <li class="reservation_product_box">
+                        <p>Hotels</p>
+                        <p>Lotte Hotel Seoul (Five Stars)</p>
+                    </li>
+
+                    <li class="reservation_product_box">
+                        <p>Restaurants</p>
+                        <p>Restaurants Name</p>
+                    </li>
+
+                    <li class="reservation_product_pay">
+                        <p>600,000 won</p>
+                    </li>
+
+                </ul>
+
+                <ul class="reservation_product_ex">
+
+                    <li class="reservation_product_title">
+                        <p>Interpreter Services</p>
+                    </li>
+
+                    <li class="reservation_product_box">
+                        <p>Interpreter</p>
+                        <p>David Yon</p>
+                    </li>
+
+                    <li class="reservation_product_box">
+                        <p>Translation</p>
+                        <p>David Yon</p>
+                    </li>
+
+                    <li class="reservation_product_pay">
+                        <p>600,000 won</p>
+                    </li>
+
+                </ul>
+
+                <div class="reservation_product_total_box">
+                    
+                    <p>Total</p>
+                    <p>1,550,000 <span>won</span></p>
+
+                </div>
+                
+            </div><!--reservation_totla_pay_detaile_box-->
+
+        </div><!--reservation_total_pay_ex // 전체 금액-->
+
+
+        <input type="button" value="Contact Us" id="reservation_submit_btn">
+
+        </form>
+
+    </div><!--reservation_ex-->
+
+    <footer class="footer_medi_ex">
+
+        <div class="footer_top">
+
+            <div class="footer_logo_box">
+                <a href="../index.html" class="footer_logo">
+                    <img src="../img/white_logo.png">
+                </a> 
+            </div>
+    
+            <div class="footer_sns_ex">
+    
+                <a href="#">
+                    <img src="../img/insta.png">
+                </a>
+    
+                <a href="#">
+                    <img src="../img/facebook.png">
+                </a>
+    
+                <a href="#">
+                    <img src="../img/twiiter.png">
+                </a>
+    
+                <a href="#">
+                    <img src="../img/youtube.png">
+                </a>
+    
+            </div>
+    
+        </div><!--footer_top-->
+
+        <div class="footer_center">
+
+            <nav>
+                <ul class="footer_lnb">
+                    <li>
+                        <a href="../about/about.html">
+                            <p>Company Introduction</p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="../terms_of_use/terms_of_use.html">
+                            <p>Terms of Use</p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="../privacy_policy/privacy_policy.html">
+                            <p>Privacy Policy</p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="../unauthorized_email_collection/unauthorized_email_collection.html">
+                            <p>Refusal of Unauthorized Collection of E-mail Address</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    
+        </div><!--footer_center-->
+
+        <div class="footer_bottom">
+
+            <p>Our efforts for the health and happiness of our customers are shared with the best medical institutions in Korea.</p>
+            
+            <div class="footer_bottom_txt_box">
+                <p>Business License :</p>
+                <p>605-81-98797</p>
+            </div>
+
+            <div class="footer_bottom_txt_box">
+                <p>CEO :</p>
+                <p>Kim, Jae Hie</p>
+            </div>
+
+            <div class="footer_bottom_txt_box">
+                <p>Tel :</p>
+                <p>+82-51-807-8200</p>
+            </div>
+
+            <div class="footer_bottom_txt_box">
+                <p>Fax :</p>
+                <p>+82-51-807-6900</p>
+            </div>
+
+            <div class="footer_bottom_txt_box">
+                <p>E-MAIL :</p>
+                <p>info.medikiosk@gmail.com</p>
+            </div>
+
+            <div class="footer_bottom_txt_box">
+                <p>Address :</p>
+                <p>B1-10, 875 Haeundae-ro, Haeundae-gu, Busan, Republic of Korea</p>
+            </div>
+
+        </div>
+
+        <div class="footer_bottom_copy_right">
+            <p>COPYRIGHT ⓒ Korea Medical Tour Development, Inc. All Rights Reserved.</p>
+        </div>
+
+    </footer><!--footer_medi_ex-->
+
+    <div class="quickmenu_box">
+
+        <a href="https://www.visakorea.com/">
+            <div>
+                <img src="../img/visa_icon.png">
+            </div>
+        </a>
+
+        <a href="https://www.paypal.com/kr/home">
+            <div>
+                <img src="../img/paypal_icon.png">
+            </div>
+        </a>
+
+        <a href="#" class="reservation_web_cart">
+            <div>
+                <img src="../img/order.png">
+            </div>
+        </a>
+
+        <a href="http://www.koreatournet.kr/currencyconverter.php">
+            <div>
+                <img src="../img/currency_icon.png">
+            </div>
+        </a>
+
+        <a href="#">
+
+           <div class="weather_box">
+                <div>
+                    <div>
+                        <img src="../img/sunney.png">
+                    </div>
+
+                    <p>28°C</p>
+                </div>
+           </div>
+
+        </a>
+
+        <a href="#" id="top_web">
+            <div>
+                <p>TOP</p>
+            </div>
+        </a>
+
+    </div><!--quickmenu_box-->
+
+    <a href="#" class="top_mobile" id="top_mobile_btn">
+        <div>
+            <img src="../img/top_mobile_icon.png">
+        </div>
+    </a><!--top_mobile-->
+
+    <div class="reservation_cart_popup_ex" style="display: none;">
+
+        <div class="reservation_cart_popup">
+
+            <form>
+
+                <p class="reservation_cart_popup">Confirmation of Reservation</p>
+
+                <p class="cart_popup_txt">Please enter the e-mail and password you entered at the time of reservation.</p>
+
+                <div class="reservation_cart_popup_form_box">
+
+                    <input type="email" id="reservation_cart_email" placeholder="E-Mail" required>
+
+                    <input type="password" id="reservation_cart_pw" placeholder="Password" required>
+
+                </div>
+
+                <a href="../cart/cart.html" class="new_reservation_txt">
+                    <p>[Click] Is this a new reservation?</p>
+                </a>
+
+                <input type="button" id="reservation_cart_submit_btn" value="Confirmation of Reservation" onclick="location.href = '../reservation_list/reservation_list.html'">
+
+                <p class="close_reservation_cart_btn" style="cursor: pointer;">Return to Screen</p>
+            </form>
+
+        </div><!--reservation_cart_popup-->
+
+    </div><!--reservation_cart_popup_ex-->
+
+</body>
+</html>

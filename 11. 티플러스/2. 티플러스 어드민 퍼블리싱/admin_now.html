@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now</title>
+    <script src="https://cdn.ckeditor.com/4.12.1/standard-all/ckeditor.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <link rel="stylesheet" href="css/yearpicker.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <section class="admin_now_ex">
+
+        <div class="admin_title">
+            <p>NOW</p>
+        </div><!--admin_title end-->
+
+        <ul class="admin_now_cont_top">
+
+            <li>
+                <p>년도</p>
+            </li>
+
+            <li class="admin_now_cont_width">
+                <input type="text" class="admin_now_yearpicker form-control" value="" / readonly>
+            </li>
+
+            <li>
+                <p>행사 날짜</p>
+            </li>
+
+            <li class="admin_now_cont_width">
+                <input type="text" class="admin_now_cont_txt" placeholder="예. 2023.04.21 ~ 2023.04.23">
+            </li>
+
+            <li>
+                <p>제목</p>
+            </li>
+
+            <li>
+                <input type="text" class="admin_now_cont_txt">
+            </li>
+
+            <li>
+                <p>장소</p>
+            </li>
+
+            <li>
+                <input type="text" class="admin_now_cont_txt">
+            </li>
+
+            <li>
+                <p>행사 설명</p>
+            </li>
+
+            <li class="admin_now_textarea">
+                <textarea class="admin_now_textarea_cont" id="mce_2"></textarea>
+                    
+                <script type="text/javascript">
+                    CKEDITOR.replace('mce_2',{
+                        filebrowserUploadUrl: './imageUpload.do'
+                    });
+                </script>
+            </li>
+
+            <li>
+                <p>썸네일 이미지</p>
+            </li>
+
+            <li>
+                <div class="admin_thumbnail_box">
+
+                    <img src="https://via.placeholder.com/500" alt="" class="admin_image_cont">
+
+                    <input type="file" class="admin_image_file">
+
+                </div><!--admin_thumbnail_box end-->
+            </li>
+
+            <li>
+                <p>슬라이드 이미지</p>
+            </li>
+
+            <li>
+                <div class="admin_slide_box">
+
+                    <div>
+                        <img src="https://via.placeholder.com/500" alt="" class="admin_image_cont slide_image_cont">
+
+                        <input type="file" class="admin_image_file slide_image_file">
+                    </div>
+
+                    <div>
+                        <img src="https://via.placeholder.com/500" alt="" class="admin_image_cont slide_image_cont">
+
+                        <input type="file" class="admin_image_file slide_image_file">
+                    </div>
+
+                    <div>
+                        <img src="https://via.placeholder.com/500" alt="" class="admin_image_cont slide_image_cont">
+
+                        <input type="file" class="admin_image_file slide_image_file">
+                    </div>
+
+                    <div>
+                        <img src="https://via.placeholder.com/500" alt="" class="admin_image_cont slide_image_cont">
+
+                        <input type="file" class="admin_image_file slide_image_file">
+                    </div>
+
+                </div><!--admin_slide_box-->
+            </li>
+
+            <li>
+                <p>금액</p>
+            </li>
+
+            <li class="admin_now_cont_width">
+                <input type="number" class="admin_now_cont_number">
+            </li>
+
+            
+            <li>
+                <p>전화번호</p>
+            </li>
+
+            <li class="admin_now_cont_width">
+                <input type="tel" class="admin_now_cont_txt">
+            </li>
+
+            <li>
+                <p>행사 주소</p>
+            </li>
+
+            <li class="admin_now_cont_width">
+                <input type="text" class="admin_now_cont_txt">
+            </li>
+
+            <li>
+                <p>행사 홈페이지 링크</p>
+            </li>
+
+            <li class="admin_now_cont_width">
+                <input type="text" class="admin_now_cont_txt">
+            </li>
+
+            <li>
+                <p>행사 세부 설명</p>
+            </li>
+
+            <li class="admin_now_textarea">
+                <textarea class="admin_now_textarea_cont" id="mce_3"></textarea>
+                    
+                <script type="text/javascript">
+                    CKEDITOR.replace('mce_3',{
+                        filebrowserUploadUrl: './imageUpload.do'
+                    });
+                </script>
+            </li>
+
+            <li>
+                <p>행사 지도 첨부</p>
+            </li>
+
+            <li>
+                <div class="admin_now_map">
+
+                    <div>
+                        <img src="img/map_image.png" alt="">
+                    </div>
+
+                    <div>
+                        <p>① 구글맵에서 행사 주소를 작성한 후 공유 버튼을 클릭합니다.<br>
+                        ② 지도퍼가기를 클릭합니다.<br>
+                        ③ HTML 복사를 클릭한 후 입력창에 붙여넣습니다.</p>
+                    </div>
+
+                    <input type="text" class="admin_now_map_txt">
+
+                </div><!--admin_now_map end-->
+            </li>
+
+        </ul><!--admin_now_cont_top end-->
+
+
+        <ul class="admin_correction_cont">
+
+            <li>
+                <p>등록일자</p>
+            </li>
+
+            <li>
+                <p>2023-11-09 11:52:26</p>
+            </li>
+
+            <li>
+                <p>수정일자</p>
+            </li>
+
+            <li>
+                <p></p>
+            </li>
+
+        </ul><!--admin_correction_cont end // 등록일자 · 수정일자-->
+
+
+        <div class="admin_button_cont_ex">
+
+            <input type="submit" class="admin_button_cont btn-primary" value="등록하기">
+            <input type="button" class="admin_button_cont btn-secondary" value="목록으로">
+            <input type="button" class="admin_button_cont btn-danger" value="삭제하기">
+
+        </div><!--admin_button_cont_ex-->
+
+    </section><!--admin_now_ex end-->
+
+    <script src="js/yearpicker.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+          $(".admin_now_yearpicker").yearpicker({
+            year: 2017,
+            startYear: 2012,
+            endYear: 2050
+          });
+
+          $(".admin_image_file").on("change", function(event) {
+		  var file = event.target.files[0];
+		  var reader = new FileReader(); 
+		  reader.onload = function(e) {
+			$(event.target).siblings(".admin_image_cont").attr("src", e.target.result);
+		  }
+		  if (file) {
+			reader.readAsDataURL(file);
+		  } else {
+			$(event.target).siblings(".admin_image_cont").attr("src", ""); 
+			// 파일을 선택하지 않았을 때 이미지의 src를 초기화
+		  }
+		});
+
+        });
+    </script>
+
+</body>
+</html>

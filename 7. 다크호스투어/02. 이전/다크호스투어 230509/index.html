@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다크호스투어</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.global.js"></script>
+    <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar01');
+
+    var calendar01 = new FullCalendar.Calendar(calendarEl, {
+        height: 'auto',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: ''
+      },
+      locale: "ko",
+      initialDate: '2023-05-01',
+      navLinks: true, // can click day/week names to navigate views
+      nowIndicator: true,
+
+      weekNumbers: true,
+      weekNumberCalculation: 'ISO',
+
+      editable: true,
+      selectable: true,
+      dayMaxEvents: true, // allow "more" link when too many events
+      events: [
+        {
+          title: '나트랑',
+          start: '2023-05-02', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#e4007f",
+          borderColor : "transparent",
+        },
+        {
+          title: '다낭',
+          start: '2023-05-02', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        }
+        ,
+        {
+          title: '다낭',
+          start: '2023-05-03', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '나트랑',
+          start: '2023-05-05', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#e4007f",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-05-05', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-05-10', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-05-12', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-05-17', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-05-19', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '나트랑',
+          start: '2023-05-23', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#e4007f",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-05-23', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-05-24', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '나트랑',
+          start: '2023-05-26',
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html", 
+          backgroundColor : "#e4007f",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-05-26', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-05-31', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        }
+      ]
+    });
+
+    calendar01.render();
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar02');
+
+    var calendar02 = new FullCalendar.Calendar(calendarEl, {
+        height: 'auto',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: ''
+      },
+      initialDate: '2023-06-01',
+      locale: "ko",
+      navLinks: true, // can click day/week names to navigate views
+      nowIndicator: true,
+
+      weekNumbers: true,
+      weekNumberCalculation: 'ISO',
+
+      editable: true,
+      selectable: true,
+      dayMaxEvents: true, // allow "more" link when too many events
+      events: [
+        {
+          title: '나트랑',
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          start: '2023-06-01', 
+          backgroundColor : "#e4007f",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-01', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-06', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-08', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-13', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-15', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        }
+        ,{
+          title: '나트랑',
+          start: '2023-06-19', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#e4007f",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-19', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-20', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-22', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '나트랑',
+          start: '2023-06-22', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#e4007f",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-27', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        },
+        {
+          title: '다낭',
+          start: '2023-06-29', 
+          url:"http://yeom1508.gabia.io/dark/sub/sub.html",
+          backgroundColor : "#008000",
+          borderColor : "transparent"
+        }
+
+      ]
+    });
+
+    calendar02.render();
+  });
+
+    </script>
+    <script src="js/owl.carousel.js"></script>
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/docs.theme.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+    <script>
+        $(function(){
+
+            //header IOS 크롬에서 볼 때 크기 조절
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', vh+"px");
+            // resize
+            window.addEventListener("resize", ()=>{
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', vh+"px");
+            });
+
+            //header 메뉴 체크시 움직이지 않게
+            $(document).ready(function() {
+                $("#mobile_open").on('click', function() {
+                    if ( $(this).prop('checked') && window.innerWidth <= 1024) {
+                        $(this).parent().addClass("scrollOff");
+                    } else {
+                        $(this).parent().removeClass("scrollOff");
+                    }
+                    });
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <input type="checkbox" id="mobile_open">
+
+    <header class="mobile_dark_header">
+
+        <div class="header_top_m">
+            <a href="#">
+                <img src="img/dark_logo.png">
+            </a>
+
+            <label for="mobile_open">
+                <img src="img/mobile_icon_open.png">
+            </label>
+        </div><!--header_top_m-->
+
+        <div class="mobile_sheet">
+
+            <div>
+                <label for="mobile_open">
+                    <img src="img/close_main_sheet.png">
+                </label>
+            </div>
+
+            <div>
+                <a href="#">
+                    <p>로그인</p>
+                </a>
+
+                <a href="#">
+                    <p>회원가입</p>
+                </a>
+
+            </div>
+
+            <a href="#">
+                <p>예약확인</p>
+            </a>
+
+            <div>
+                <input type="text" id="mobile_search" placeholder="검색어를 입력하세요.">
+                <input type="submit" id="mobile_search_submit">
+                <label for="mobile_search_submit">
+                    <img src="img/serach_btn_web.png">
+                </label>
+            </div>
+
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>다낭</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>나트랑</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>하노이</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>달랏</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>장가계</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>항공권</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>커뮤니티</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <p><span>여행의 모든 것<i>!</i></span><br>
+                상담센터 1588-1588</p>
+            </div>
+
+
+        </div><!--mobile_sheet-->
+
+    </header><!--mobile_dark_header-->
+    
+    <header class="header_dark">
+
+        <div class="gnb_header">
+
+           <div>
+                <div>
+                    <a href="#">
+                        <p>즐겨찾기</p>
+                    </a>
+
+                    <a href="#">
+                        <p>예약확인</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <p>로그인</p>
+                    </a>
+
+                    <div></div>
+
+                    <a href="#">
+                        <p>회원가입</p>
+                    </a>
+                </div>
+           </div>
+
+        </div><!--gnb_header-->
+
+        <div class="header_d_middle">
+
+            <a href="#">
+                <img src="img/dark_logo.png">
+            </a>
+
+            <div class="search_box">
+
+                <input type="text" id="search_txt"  placeholder="검색어를 입력하세요">
+
+                <input type="submit" id="search_submit">
+
+                <label for="search_submit">
+                    <img src="img/serach_btn_web.png">
+                </label>
+
+            </div><!--search_box-->
+
+            <div>
+                <img src="img/call_neumber.png">
+            </div>
+
+        </div><!--header_d_middle-->
+
+        <div class="lnb_header">
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>다낭</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>나트랑</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>하노이</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>달랏</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>장가계</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>항공권</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>커뮤니티</p>
+                    </a>
+                </li>
+            </ul>
+
+        </div><!--lnb_header-->
+
+    </header><!--header_dark-->
+
+    <div class="mobile_lnb_box">
+
+        <div class="owl-carousel owl-theme m_lnb_box">
+
+            <a href="#" class="item m_lnb">
+                <p>다낭</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>나트랑</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>하노이</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>달랏</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>장가계</p>
+            </a>
+
+            <a href="#" class="item m_lnb">
+                <p>항공권</p>
+            </a>
+            
+            <a href="#" class="item m_lnb">
+                <p>커뮤니티</p>
+            </a>
+
+        </div>
+
+    </div><!--mobile_lnb_box-->
+
+    <script>
+  
+        $('.m_lnb_box').owlCarousel({
+          loop: false,
+          margin: 0,
+          nav: true,
+          autoplay: false,
+          responsive:{
+              0:{
+                  items:4
+              },
+              600:{
+                  items:4
+              },
+              1000:{
+                  items:5
+              }
+          }
+      });
+
+    </script>
+
+    <div class="visual_ex">
+
+        <div class="owl-carousel owl-theme visual_box">
+
+
+            <div class="item visual">
+                <img src="img/visual_banner_01.png">
+
+                <div class="visual_txt">
+                    <p>다양한 볼거리와 즐길거리로 가득한</p>
+                    <p>베트남 다낭</p>
+                </div>
+            </div>
+
+            <div class="item visual">
+                <img src="img/visual_banner_02.png">
+
+                <div class="visual_txt">
+                    <p>아름다운 해변과 도시의 합작!</p>
+                    <p>베트남 나트랑</p>
+                </div>
+            </div>
+
+            <div class="item visual">
+                <img src="img/visual_banner_03.png">
+
+                <div class="visual_txt">
+                    <p>아름다운 경관 속 보여지는 문화유산!</p>
+                    <p>베트남 하노이</p>
+                </div>
+            </div>
+
+            <div class="item visual">
+                <img src="img/visual_banner_04.png">
+
+                <div class="visual_txt">
+                    <p>영원한 봄의 도시 속으로 빠지다!</p>
+                    <p>베트남 달랏</p>
+                </div>
+            </div>
+
+            <div class="item visual">
+                <img src="img/visual_banner_05.png">
+
+                <div class="visual_txt">
+                    <p>웅장한 자연관경에 놀라다!</p>
+                    <p>중국 장가계</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!--visual_ex-->
+
+    <script>
+  
+        $('.visual_box').owlCarousel({
+          loop: true,
+          margin: 0,
+          nav: true,
+          autoplayTimeout:6000,
+          autoplay: true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:1
+              },
+              1000:{
+                  items:1
+              }
+          }
+      });
+
+    </script>
+
+    <div class="top_section">
+
+        <div class="title_t_s">
+            <p>무안출발</p>
+            <p>달력으로 한 눈에 보는 여행 상품</p>
+        </div>
+
+        <div class="calendar_ex">
+            <div id='calendar01' class="calendar_01"></div>
+            <div id='calendar02' class="calendar_02"></div>
+        </div>
+
+    </div><!--top_section-->
+
+
+    <div class="bottom_section">
+
+        <div class="title_b_s">
+            <p>무안출발 POINT</p>
+            <p>무안에서 떠나는 편안하고 아름다운 여행</p>
+        </div>
+
+        <div>
+            <div class="notice">
+
+                <div class="notice_title">
+
+                    <p>공지사항</p>
+
+                    <a href="#">
+                        <p>더보기</p>
+                    </a>
+
+                </div><!--notice_title-->
+
+                <div class="notice_img">
+                    <img src="img/notice.png">
+                </div>
+
+                <div>
+                    <a href="#">
+                        <p>무안↔나고야 대한항공 전세기 취향 안내</p>
+                        <p>23.04.04</p>
+                    </a>
+
+                    <a href="#">
+                        <p>무안↔나고야 대한항공 전세기 취향 안내</p>
+                        <p>23.04.04</p>
+                    </a>
+
+                    <a href="#">
+                        <p>무안↔나고야 대한항공 전세기 취향 안내</p>
+                        <p>23.04.04</p>
+                    </a>
+
+                    <a href="#">
+                        <p>무안↔나고야 대한항공 전세기 취향 안내</p>
+                        <p>23.04.04</p>
+                    </a>
+
+                    <a href="#">
+                        <p>무안↔나고야 대한항공 전세기 취향 안내</p>
+                        <p>23.04.04</p>
+                    </a>
+                </div>
+
+            </div><!--notice-->
+    
+            <div class="hit_product_zon">
+
+                <div class="hit_product_title">
+
+                    <p>히트 상품</p>
+
+                </div><!--hit_product_title-->
+
+                <div class="owl-carousel owl-theme hit_product_box">
+
+                    <a href="#" class="item hit_product">
+
+                        <div>
+                            <p>5성급 호텔 특가</p>
+                            <P>[특가]다낭/호이안 3박 45일</P>
+                            <p>549,000원~</p>
+                        </div>
+
+                        <div>
+                            <img src="img/product01.png">
+                        </div>
+
+                    </a>
+
+                    <a href="#" class="item hit_product">
+
+                        <div>
+                            <p>5성급 호텔 특가</p>
+                            <P>[특가]장가계 3박 45일</P>
+                            <p>549,000원~</p>
+                        </div>
+
+                        <div>
+                            <img src="img/product02.png">
+                        </div>
+                        
+                    </a>
+
+                    <a href="#" class="item hit_product">
+
+                        <div>
+                            <p>5성급 호텔 특가</p>
+                            <P>[특가]호이안/달랏 3박 45일</P>
+                            <p>549,000원~</p>
+                        </div>
+
+                        <div>
+                            <img src="img/product03.png">
+                        </div>
+                        
+                    </a>
+
+                </div><!--hit_product_box-->
+    
+            </div><!--hit_product_zon-->
+
+            <script>
+  
+                $('.hit_product_box').owlCarousel({
+                  loop: true,
+                  margin: 0,
+                  nav: true,
+                  autoplayTimeout:6000,
+                  autoplay: true,
+                  responsive:{
+                      0:{
+                          items:1
+                      },
+                      600:{
+                          items:1
+                      },
+                      1000:{
+                          items:1
+                      }
+                  }
+              });
+              </script>
+    
+            <div class="event_zon">
+
+                <div class="event_title">
+
+                    <p>기획전/이벤트</p>
+
+                    <a href="#">
+                        <p>더보기</p>
+                    </a>
+
+                </div><!--event_title-->
+
+
+                <div class="owl-carousel owl-theme event_box">
+
+                    <a href="#" class="item event">
+                        <img src="img/event_01.png">
+                    </a>
+
+                    <a href="#" class="item event">
+                        <img src="img/event_02.png">
+                    </a>
+
+                </div>
+    
+            </div><!--event_zon-->
+
+            <script>
+  
+                $('.event_box').owlCarousel({
+                  loop: true,
+                  margin: 0,
+                  nav: true,
+                  autoplayTimeout:6000,
+                  autoplay: true,
+                  responsive:{
+                      0:{
+                          items:1
+                      },
+                      600:{
+                          items:1
+                      },
+                      1000:{
+                          items:1
+                      }
+                  }
+              });
+              </script>
+
+        </div>
+
+    </div><!--bottom_section-->
+
+    <footer class="footer_dark">
+
+        <div class="footer_line_01"></div>
+
+        <div class="footer_top">
+            
+            <div class="footer_top_menu">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>회사소개</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>여행약관</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>개인정보처리방침</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>이메일주소무단수집</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--footer_top_menu-->
+
+            <div class="footer_sns">
+
+                <a href="#">
+                    <img src="img/insta_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="img/kakao_icon.png">
+                </a>
+
+                <a href="#">
+                    <img src="img/blog_icon.png">
+                </a>
+
+            </div><!--footer_sns-->
+
+        </div><!--footer_top-->
+
+        <div class="footer_line_02"></div>
+
+        <div class="footer_bottom">
+            <p>다크호스투어(주)</p>
+            <p>대표이사 : 황윤석 | 주소 : 광주광역시 서구 상무중앙로 114, 219호(치평동 랜드피아오피스텔)<br>
+            사업자등록번호 : (주)다크호스투어(DARKHORSE TOUR) | 통신판매업신고번호 : 제 2017-광주 서구-0466호 | 대표전화 : 062-228-1119<br>
+            Copyright ⓒ(주)다크호스투어 All Rights Reserved</p>
+        </div>
+    </footer><!--footer_dark-->
+</body>
+</html>

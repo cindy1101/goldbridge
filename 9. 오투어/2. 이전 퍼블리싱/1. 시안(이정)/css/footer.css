@@ -1,0 +1,328 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0; padding: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+/*클리어픽스*/
+.clearfix:before, .clearfix:after 
+{display: block;
+content: '';
+line-height: 0;}
+
+.clearfix:after 
+{clear:both;}
+
+.clearfix 
+{*zoom: 1;}
+
+
+@media all and (min-width: 1420px)
+{
+    /*풋터*/
+    footer.footer_ohtour
+    {width: 100%;
+    background-color: #222;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.footer_top
+    {width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.footer_lnb_ex
+    {width: fit-content;
+    float: left;}
+
+    ul.footer_lnb_ul
+    {width: fit-content;
+    overflow: hidden;}
+
+    ul.footer_lnb_ul>li
+    {float: left;
+    margin-right: 20px;}
+
+    ul.footer_lnb_ul>li:last-child
+    {margin-right: 0;}
+
+    ul.footer_lnb_ul>li>a>p
+    {color: #ddd;
+    line-height: 25px; font-size: 15px;}
+
+    /*SNS*/
+    div.footer_sns_box
+    {width: fit-content;
+    float: right;
+    margin-top: 2.5px;}
+
+    div.footer_sns_box>a
+    {width: 20px; height: 20px;
+    margin-right: 10px;
+    display: block;
+    float: left;}
+
+    div.footer_sns_box>a:last-child
+    {margin-right: 0;}
+
+    div.footer_sns_box>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+    
+    /*중간*/
+    div.footer_center
+    {width: 1400px;
+    margin: 20px auto;
+    overflow: hidden;}
+
+    div.footer_center_left
+    {width: 50%;
+    float: left;}
+
+    div.footer_center_left>p
+    {font-size: 13px;
+    line-height: 20px; color: #c4c4c4;}
+
+    div.footer_center_right
+    {width: 50%;
+    float: left;}
+
+    div.footer_center_right>p
+    {font-size: 13px;
+    line-height: 20px; color: #c4c4c4;}
+
+    /*밑*/
+    div.footer_bottom
+    {width: 1400px;
+    margin: 0 auto;}
+
+    div.footer_bottom>p
+    {font-size: 13px;
+    line-height: 20px; color: #c4c4c4;}
+
+}
+
+
+@media all and (min-width: 769px) and (max-width: 1419px)
+{
+    /*풋터*/
+    footer.footer_ohtour
+    {width: 100%;
+    background-color: #222;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.footer_top
+    {width: 95%;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.footer_lnb_ex
+    {width: fit-content;
+    float: left;}
+
+    ul.footer_lnb_ul
+    {width: fit-content;
+    overflow: hidden;}
+
+    ul.footer_lnb_ul>li
+    {float: left;
+    margin-right: 15px;}
+
+    ul.footer_lnb_ul>li:last-child
+    {margin-right: 0;}
+
+    ul.footer_lnb_ul>li>a>p
+    {color: #ddd;
+    line-height: 25px; font-size: 15px;}
+
+    /*SNS*/
+    div.footer_sns_box
+    {width: fit-content;
+    float: right;
+    margin-top: 2.5px;}
+
+    div.footer_sns_box>a
+    {width: 20px; height: 20px;
+    margin-right: 10px;
+    display: block;
+    float: left;}
+
+    div.footer_sns_box>a:last-child
+    {margin-right: 0;}
+
+    div.footer_sns_box>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*중간*/
+    div.footer_center
+    {width: 95%;
+    margin: 20px auto;
+    overflow: hidden;}
+
+    div.footer_center_left
+    {width: 50%;
+    float: left;}
+
+    div.footer_center_left>p
+    {font-size: 13px;
+    line-height: 20px; color: #c4c4c4;}
+
+    div.footer_center_right
+    {width: 50%;
+    float: left;}
+
+    div.footer_center_right>p
+    {font-size: 13px;
+    line-height: 20px; color: #c4c4c4;}
+
+    /*밑*/
+    div.footer_bottom
+    {width: 95%;
+    margin: 0 auto;}
+
+    div.footer_bottom>p
+    {font-size: 13px;
+    line-height: 20px; color: #c4c4c4;}
+
+}
+
+
+@media all and (max-width: 768px)
+{
+     /*풋터*/
+    footer.footer_ohtour
+    {width: 100%;
+    background-color: #222;
+    padding-top: 15px; padding-bottom: 15px;}
+
+    div.footer_top
+    {width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.footer_lnb_ex
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    ul.footer_lnb_ul
+    {width: 100%;
+    overflow: hidden;}
+
+    ul.footer_lnb_ul>li
+    {float: left;
+    margin-right: 10px;}
+
+    ul.footer_lnb_ul>li:last-child
+    {margin-right: 0;}
+
+    ul.footer_lnb_ul>li>a>p
+    {color: #ddd;
+    line-height: 25px; font-size: 14px;}
+
+    /*SNS*/
+    div.footer_sns_box
+    {width: fit-content;
+    float: right;}
+
+    div.footer_sns_box>a
+    {width: 20px; height: 20px;
+    margin-right: 10px;
+    display: block;
+    float: left;}
+
+    div.footer_sns_box>a:last-child
+    {margin-right: 0;}
+
+    div.footer_sns_box>a img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*중간*/
+    div.footer_center
+    {width: 95%;
+    margin: 10px auto;
+    overflow: hidden;}
+
+    div.footer_center_left
+    {width: 100%;}
+
+    div.footer_center_left>p
+    {font-size: 13px;
+    line-height: 20px; color: #c4c4c4;}
+
+    div.footer_center_right
+    {width: 100%;}
+
+    div.footer_center_right>p
+    {font-size: 13px;
+    line-height: 20px; color: #c4c4c4;}
+
+    /*밑*/
+    div.footer_bottom
+    {width: 95%;
+    margin: 0 auto;}
+
+    div.footer_bottom>p
+    {font-size: 13px;
+    line-height: 20px; color: #c4c4c4;}
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.ckeditor.com/4.12.1/standard-all/ckeditor.js"></script>
+    <link rel="stylesheet" href="hospital_plus.css">
+    
+</head>
+<body>
+
+    <div class="container-fluid px-4">
+
+        <section class="hospital_form_ex">
+
+            <div class="hospital_title_box">
+                <p>> 병원 프로그램 추가</p>
+            </div>
+
+            <form>
+
+                <ul class="hospital_box">
+
+                    <li>
+                        <p>프로그램명</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="hospital_txt_box">
+                    </li>
+
+                    <li>
+                        <p>설명</p>
+                    </li>
+
+                    <li class="hospital_script_box">
+                        <textarea name="" id="hospital_01"></textarea>
+                        <script type="text/javascript">
+                             CKEDITOR.replace('hospital_01',{
+                                 filebrowserUploadUrl: './imageUpload.do'
+                             });
+                        </script>
+                    </li>
+
+                    <li>
+                        <p>Item</p>
+                    </li>
+
+                    <li class="hospital_script_box">
+                        <textarea name="" id="hospital_02"></textarea>
+                        <script type="text/javascript">
+                             CKEDITOR.replace('hospital_02',{
+                                 filebrowserUploadUrl: './imageUpload.do'
+                             });
+                        </script>
+                    </li>
+
+                    <li>
+                        <p>Cost</p>
+                    </li>
+
+                    <li class="hospital_script_box">
+                        <textarea name="" id="hospital_03"></textarea>
+                        <script type="text/javascript">
+                             CKEDITOR.replace('hospital_03',{
+                                 filebrowserUploadUrl: './imageUpload.do'
+                             });
+                        </script>
+                    </li>
+
+                    <li>
+                        <p>Other Guidance</p>
+                    </li>
+
+                    <li class="hospital_script_box">
+                        <textarea name="" id="hospital_04"></textarea>
+                        <script type="text/javascript">
+                             CKEDITOR.replace('hospital_04',{
+                                 filebrowserUploadUrl: './imageUpload.do'
+                             });
+                        </script>
+                    </li>
+
+                </ul>
+
+                <!--<div class="announcement_registration_btn_ex">
+
+                    <input type="submit" class="announcement_re_submit btn-primary" value="등록하기">
+                    <input type="submit" class="announcement_re_submit btn-primary" value="수정하기">
+                    <input type="button" class="announcement_re_submit btn-danger" value="삭제하기" onclick="deletebbs('${data.no}','${data.cate1}', 'board')">
+                    <input type="button" onclick="javascript:location.href='./admCollapse';" class="announcement_re_list btn-secondary" value="목록으로">
+
+                </div>announcement_registration_btn_ex-->
+
+            </form>
+
+        </section><!--servies_form_ex-->
+
+    </div>
+</body>
+</html>

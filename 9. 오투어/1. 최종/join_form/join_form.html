@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <meta property="og:image" content="img/open_graph.png">
+    <link rel="shortcut icon" href="../img/favicon-32x32.png">
+
+    <title>회원가입</title>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/popup.js"></script>
+
+    <!--헤더/풋터-->
+    <link href="../css/header_footer.css" rel="stylesheet">
+    <link href="css/join_form.css" rel="stylesheet">
+
+    <script>
+        //광고성 개인정보 수집  
+        $(function(){
+            
+            $("#open_blurb").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#blurb").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+        
+            $("#close_blurb").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                modalClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+        
+            function modalClose(){
+            $("#blurb").fadeOut(100);}
+        
+        });
+
+        //개인정보취득정책 수집  
+        $(function(){
+            
+            $("#open_privacy").click(function(){
+                $('body').addClass('scrollOff').on('scroll touchmove mousewheel', function(e){
+                e.preventDefault();});
+                $("#privacy").fadeIn(100);
+                const body = document.querySelector('body');
+                body.style.overflowY = 'hidden'
+            });
+        
+            $("#close_privacy").click(function(){
+                $('body').removeClass('scrollOff').off('scroll touchmove mousewheel'); 
+                modalClose(); 
+                const body = document.querySelector('body');
+                body.style.overflowY = 'scroll'
+            });
+        
+            function modalClose(){
+            $("#privacy").fadeOut(100);}
+        
+        });
+    </script>
+</head>
+
+<body>
+
+    <header id="header_m">
+
+        <input type="checkbox" id="mobile_header_open" style="display: none;">
+
+        <div class="header_m">
+            <h1>
+                <a href="../index.html">
+                    <img src="../img/header_logo.png" alt="오션관광 로고">
+                </a>
+            </h1>
+
+            <div class="ham_btn">
+                <label for="mobile_header_open">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="mobile_header_sheet">
+
+            <div class="mobile_header_top">
+
+                <ul>
+
+                    <li>
+                        <a href="../login/login.html">
+                            <div>
+                                <img src="../img/sheet_icon_01.png" alt="즐겨찾기 아이콘">
+                            </div>
+                            <p>로그인</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../join/join.html">
+                            <div>
+                                <img src="../img/sheet_icon_02.png" alt="홈 아이콘">
+                            </div>
+                            <p>회원가입</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../mypage/mypage.html">
+                            <div>
+                                <img src="../img/sheet_icon_03.png" alt="홈 아이콘">
+                            </div>
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../event/event.html">
+                            <div>
+                                <img src="../img/sheet_icon_05.png" alt="홈 아이콘">
+                            </div>
+                            <p>기획전/이벤트</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../discount_coupon/discount_coupon.html">
+                            <div>
+                                <img src="../img/sheet_icon_06.png" alt="홈 아이콘">
+                            </div>
+                            <p>할인쿠폰</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../announcement/announcement.html">
+                            <div>
+                                <img src="../img/sheet_icon_04.png" alt="홈 아이콘">
+                            </div>
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../quote_contact/quote_contact.html">
+                            <div>
+                                <img src="../img/sheet_icon_07.png" alt="홈 아이콘">
+                            </div>
+                            <p>견적문의</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../counsel/counsel.html">
+                            <div>
+                                <img src="../img/sheet_icon_08.png" alt="홈 아이콘">
+                            </div>
+                            <p>상담문의</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="mobile_header_search">
+                <form action="">
+                    <input type="text" placeholder="검색어를 입력해주세요." class="header_search_input_m">
+                    <input type="submit" id="header_search_btn_m" style="display: none;">
+                    <label for="header_search_btn_m">
+                        <div class="search_btn_m">
+                            <img src="../img/header_search.png" alt="검색 아이콘">
+                        </div>
+                    </label>
+                </form>
+            </div>
+
+            <div class="travel_mobile_lnb">
+                <div>
+                    <a href="">
+                        <img src="../img/lnb_icon_01.png" alt="">
+                        <p>해외여행</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="">
+                        <img src="../img/lnb_icon_04.png" alt="">
+                        <p>골프투어</p>
+                    </a>
+                </div>
+
+            </div><!--travel_mobile_lnb-->
+
+            <div class="exbition_mobile_lnb">
+
+                <input type="checkbox" id="mobile_lnb_open01" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open02" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open03" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open04" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open05" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open06" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open07" class="lnb_chk" style="display: none;">
+                <input type="checkbox" id="mobile_lnb_open08" class="lnb_chk" style="display: none;">
+
+
+                <ul>
+                    <li>
+
+                        <label for="mobile_lnb_open01">
+                            <p><a href="../sub/sub.html">태국</a><span class="dot01">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu01">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>모사무이</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>후아인</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>기타 지역</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--태국-->
+
+                    <li>
+
+                        <p><a href="../sub/sub.html">발리</a></p>
+
+                    </li><!--발리-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open02">
+                            <p><a href="../sub/sub.html">필리핀</a><span class="dot02">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu02">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>세부</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>보홀</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>보라카이</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>기타 지역</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--필리핀-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open03">
+                            <p><a href="../sub/sub.html">베트남</a><span class="dot03">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu03">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>다낭</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>나트랑</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>퀴논</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>부꾸옥</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--베트남-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open04">
+                            <p><a href="../sub/sub.html">하와이</a><span class="dot04">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu04">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>오하우</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>이웃섬</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--하와이-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open05">
+                            <p><a href="../sub/sub.html">유럽</a><span class="dot05">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu05">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>서유럽</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>동유럽</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>스페인</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>기타 지역</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--유럽-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open06">
+                            <p><a href="../sub/sub.html">호주</a><span class="dot06">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu06">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>시드니</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>골드코스트</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>케언즈</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>델버른</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--호주-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open07">
+                            <p><a href="../sub/sub.html">몰디브</a><span class="dot07">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu07">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>스피드보트</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>수상비행기</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>국내선</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--몰디브-->
+
+                    <li>
+
+                        <label for="mobile_lnb_open08">
+                            <p><a href="../sub/sub.html">칸쿤</a><span class="dot08">▼</span></p>
+                        </label>
+
+                        <ul class="mobile_submenu08">
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>호텔존</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>무헤레스</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>라바애러마야</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li><!--칸쿤-->
+
+                    <li>
+
+                        <p><a href="../sub/sub.html">기타 지역</a></p>
+
+                    </li><!--기타 지역-->
+
+                </ul>
+
+
+            </div><!--exbition_mobile_lnb-->
+
+
+        </div>
+
+        <div class="mobile_header_dimd"></div>
+
+    </header>
+
+    <header id="header_pc">
+
+        <div class="top_gnb_ex">
+            <div class="clearfix">
+                <ul>
+                    <li><a href="../login/login.html">로그인</a></li>
+                    <li><a href="../join/join.html">회원가입</a></li>
+                    <li><a href="../mypage/mypage.html">마이페이지</a></li>
+                    <li><a href="../event/event.html">기획전/이벤트</a></li>
+                    <li><a href="../discount_coupon/discount_coupon.html">할인쿠폰</a></li>
+                    <li><a href="../announcement/announcement.html">공지사항</a></li>
+                    <li><a href="../quote_contact/quote_contact.html">견적문의</a></li>
+                    <li><a href="../counsel/counsel.html">상담문의</a></li>
+                </ul>
+            </div>
+        </div><!--top_gnb_ex-->
+
+        <div class="top_lnb_ex clearfix">
+            <div>
+
+                <h1 class="header_logo">
+                    <a href="../index.html">
+                        <img src="../img/header_logo.png" alt="오션관광 로고">
+                    </a>
+                </h1>
+
+                <div class="header_search_box">
+                    <form action="">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <input type="submit" id="header_search_btn">
+                        <label for="header_search_btn">
+                            <div class="search_btn">
+                                <img src="../img/header_search.png" alt="검색 아이콘">
+                            </div>
+                        </label>
+                    </form>
+                </div>
+
+                <div class="sub_lnb_ex">
+
+                    <ul>
+
+                        <li>
+                            <a href="">
+                                <img src="../img/lnb_icon_01.png" alt="">
+                                <p>해외여행</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <img src="../img/lnb_icon_04.png" alt="">
+                                <p>골프투어</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div><!--top_lnb_ex-->
+
+        <input type="checkbox" id="total_nav_btn" style="display: none;">
+
+        <div class="total_lnb_ex">
+            <div class="clearfix">
+
+                <ul class="clearfix lnb_header">
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">태국</a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">발리</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">필리핀</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">베트남</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">하와이</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">유럽</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">호주</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">몰디브</a>
+                    </li>
+
+                    <li class="lnb_list">
+                        <a href="../sub/sub.html">칸쿤</a>
+                    </li>
+
+                    <li>
+                        <a href="../sub/sub.html">기타지역</a>
+                    </li>
+                </ul>
+
+                <!-- <div class="total_lnb_btn">
+              <label for="total_nav_btn">
+                <img src="img/open_btn_icon.png" alt="">
+              </label>
+            </div> -->
+
+            </div>
+
+        </div><!--total_lnb_ex-->
+
+        <div class="total_nav_sheet">
+
+            <nav class="bottom_nav">
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>태국</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>모사무이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>후아인</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>기타지역</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>발리</p>
+                        </a>
+                    </h2>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>필리핀</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>세부</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>보홀</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>보라카이</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>기타 지역</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>베트남</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>다낭</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>나트랑</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>퀴논</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>부꾸옥</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>하와이</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>오하우</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>이웃섬</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>유럽</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>서유럽</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>동유럽</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>스페인</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>기타지역</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>호주</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>시드니</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>골드코스트</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>케언즈</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>델버른</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>몰디브</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>스피드보트</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>수상비행기</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>국내선</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>칸쿤</p>
+                        </a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>호텔존</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>무헤레스</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sub/sub.html">
+                                <p>라바애러마야</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bottom_nav_list">
+
+                    <h2 class="bottom_nav_title">
+                        <a href="../sub/sub.html">
+                            <p>기타 지역</p>
+                        </a>
+                    </h2>
+
+                </div>
+            </nav>
+
+        </div><!--total_nav_sheet-->
+
+    </header>
+
+
+    <div class="join_ex">
+
+        <div class="join_title_box">
+            <p>회원가입</p>
+            <p>지금 회원가입 하신 후 <span>오투어앤비즈</span>에서 다양한 서비스를 경험해보세요.</p>
+        </div><!--join_title_box-->
+    
+        <div class="join_member_ex">
+    
+            <form>
+                <div class="join_id_pw_box">
+    
+                    <div class="id_pw_box_ex">
+                        <input type="text" id="join_id_member" placeholder="아이디 (6~20자 영문, 숫자 조합)" required>
+    
+                        <div class="gender_box">
+                            <input type="radio" id="join_man_ck" name="join_gender" style="display: none;" checked
+                                required>
+                            <input type="radio" id="join_woman_ck" name="join_gender" style="display: none;" required>
+    
+                            <label for="join_man_ck">
+                                <p>남</p>
+                            </label>
+    
+                            <label for="join_woman_ck">
+                                <p>여</p>
+                            </label>
+                        </div>
+                    </div>
+    
+                    <input type="password" id="join_pw_member" placeholder="비밀번호 (8~20자 영문, 숫자 조합)" required>
+    
+                    <input type="password" id="join_re_pw_member" placeholder="비밀번호 확인 (8~20자 영문, 숫자 조합)" required>
+
+                    <p class="password_same" style="display: none; margin-bottom: 10px; color: rgb(27, 85, 247);">비밀번호가 일치합니다. </p>
+
+                    <p class="password_inconsistency" style="display: none; margin-bottom: 10px; color: red;">비밀번호가 일치하지 않습니다. </p>
+    
+                    <input type="text" id="join_re_pw_member" placeholder="이름" required>
+    
+                    <div class="emaile_certification_box">
+    
+                        <div>
+                            <input type="text" placeholder="이메일" id="emaile_id_join" required>
+    
+                            <p>@</p>
+    
+                            <input type="text" placeholder="이메일 도메인" id="emaile_domain_join" required>
+                        </div>
+    
+                        <select id="emaile_select_join">
+                            <option value="직접입력">직접입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="nate.com">nate.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="hanmail.net">hanmail.net</option>
+                        </select>
+    
+                    </div><!--emaile_certification_box-->
+    
+                    <div class="tel_box_ex">
+                        <input type="tel" id="join_tel_member" placeholder="휴대폰" required>
+    
+                        
+                    </div>
+    
+                    <div class="privacy_box_ex">
+                        <p class="join_privacy_title">개인정보 유효기간</p>
+    
+                        <div class="privacy_box">
+                            <input type="radio" id="join_secession_ck" name="join_privacy" style="display: none;"
+                                checked required>
+                            <input type="radio" id="join_year_ck" name="join_privacy" style="display: none;" required>
+    
+                            <div>
+                                <label for="join_secession_ck">
+                                    <p>탈퇴시까지</p>
+                                </label>
+    
+                                <label for="join_year_ck">
+                                    <p>1년간</p>
+                                </label>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <p class="privacy_caution">개인정보 유효기간 파기 또는 분리저장, 관리합니다.</p>
+
+                    <div class="agree_box_ex">
+
+                        <div class="clearfix">
+                            
+                            <input type="checkbox" id="total_agree">
+                            <input type="checkbox" id="join_age_ck" required class="all_no_chk">
+                            <input type="checkbox" id="join_blurb_ck" required class="all_no_chk">
+                            <input type="checkbox" id="join_privacy_ck" required class="all_no_chk">
+                            <input type="checkbox" id="join_sms" class="all_no_chk">
+
+                            <div class="total_agree">
+
+                                <div class="join_no_chk_btn">
+                                </div>
+                                
+                                <p><label for="total_agree">전체 동의하기</label></p>
+
+                            </div>
+
+                            <div class="join_age_ck_box">
+        
+                                <div class="join_no_chk_btn">
+                                </div>
+                                
+                                <p><label for="join_age_ck">[필수] 14세 미만입니다.</label></p>
+        
+                            </div>
+
+                            <div class="join_blurb_ck">
+        
+                                <div class="join_no_chk_btn">
+                                </div>
+        
+                                <p>
+                                    <label for="join_blurb_ck">[필수] 광고성 개인정보 수집</label> 
+                                    <span class="agree_popup" id="open_blurb">자세히 보기</span>
+                                </p>
+        
+                            </div>
+
+                            <div class="join_privacy_ck">
+        
+                                <div class="join_no_chk_btn">
+                                </div>
+        
+                                <p>
+                                    <label for="join_privacy_ck">[필수] 개인정보취득정책</label> 
+                                    <span class="agree_popup" id="open_privacy">자세히 보기</span>
+                                </p>
+        
+                            </div>
+        
+                            <div class="join_sms_box">
+        
+                                <div class="join_no_chk_btn">
+                                </div>
+        
+                                <p><label for="join_sms">[선택] SMS, 이메일로 상품 및 이벤트 정보를 받겠습니다.</label></p>
+        
+                            </div>
+        
+                            <P class="tel_caution">만 14세 미만 회원은 법정대리인(부모님) 동의를 받은 경우만 회원가입이 가능합니다.</P>
+
+                        </div>
+
+                    </div>
+    
+                </div><!--join_id_pw_box-->
+    
+                <input type="submit" id="join_submit_btn" value="가입완료" onclick="JoinComplete()">
+    
+            </form>
+    
+        </div><!--join_member_ex-->
+    
+    </div><!--join_ex-->
+
+    <footer id="footer">
+
+        <div class="footer_top">
+
+            <div>
+
+                <div class="footer_top_gnb">
+                    <ul>
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="../tour_provision/tour_provision.html">여행약관</a></li>
+                        <li><a href="../privacy/privacy.html">개인정보처리방침</a></li>
+                        <li><a href="javascript:void(0);" id="open_emaile">이메일주소무단수집거부</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_top_lnb">
+                    <ul>
+                        <li><a href=""><img src="../img/sns_instagram.png" alt=""></a></li>
+                        <li><a href=""><img src="../img/sns_facebook.png" alt=""></a></li>
+                        <li><a href=""><img src="../img/sns_TWITER.png" alt=""></a></li>
+                        <li><a href=""><img src="../img/sns_youtube.png" alt=""></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer_bottom">
+
+            <div>
+                <h1>오투어앤비즈</h1>
+
+                <ul>
+                    <h2>부산본점</h2>
+                    <li>부산광역시 부산진구 서전로9번길 27(부전동) 순흥빌딩 301호 (우)47245</li>
+                    <li>대표전화 : 051-462-5525</li>
+                    <li>팩스 : 0504-206-5909</li>
+                    <li>휴대전화 : 010-9779-9323</li>
+                    <li>대표자 : 정종현</li>
+                </ul>
+
+                <ul>
+                    <h2>창원지점</h2>
+                    <li>경남 창원시 성산구 중앙대로 49, 서광오피스텔 1004-5호 (우)51522</li>
+                    <li>대표전화 : 055-715-6525</li>
+                    <li>팩스 : 0504-206-5909</li>
+                </ul>
+
+                <ul>
+                    <li>메일 : ohotour@gmail.com</li>
+                    <li>사업자등록번호 : 582-87-01521</li>
+                    <li>통신판매업신고번호 : 제2011-부산진-026호</li>
+                    <li>관광사업자등록번호 : 제2019-000013호</li>
+                </ul>
+
+                <p class="footer_Copyright">Copyright ⓒ 2022 OHO TOUR Co., Ltd. All Rights Reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="common_popup_ex" id="emaile" style="display: none;">
+
+        <div class="common_popup_box">
+
+            <div>
+                <p>이메일무단수집거부</p>
+            </div>
+
+            <div>
+                <p>
+                    <span>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며,
+                        이를 위반시 정보통신망법에 의해 형사처벌됨을 유의하시기 바랍니다.</span><br><br>
+
+                    정보통신망법 제 50조의2 (전자우편주소의 무단 수집행위 등 금지)<br><br>
+
+                    1. 누구든지 전자우편주소의 수집을 거부하는 의사가 명시된 인터넷 홈페이지에서 자동으로 전자우편주소를 수집하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는
+                    아니된다.<br>
+
+                    2. 누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매·유통하여서는 아니된다.<br>
+
+                    3. 누구든지 제1항의 및 제2항의 규정에 의하여 수집·판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보전송에 이용하여서는 아니된다.<br><br>
+
+                    정보통신망법 제65조의2 (벌칙)<br><br>
+
+                    1. 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.<br>
+
+                    1-1. 제50조제4항의 규정을 위반하여 기술적 조치를 한 자<br>
+                    1-2. 제50조제6항의 규정을 위반하여 영리목적의 광고성 정보를 전송한 자<br>
+                    1-3. 제50조의2의 규정을 위반하여 전자우편주소를 수집ㆍ판매ㆍ유통 또는 정보전송에 이용한 자
+                </p>
+            </div>
+
+            <div id="close_emaile">
+                <p>닫기</p>
+            </div>
+
+        </div><!--common_popup_box-->
+
+    </div><!--common_popup_ex-->
+
+    <div class="find_id_same_ex" style="display: none;">
+
+        <div class="find_id_same_box">
+
+            <div class="find_icon">
+                <img src="img/join_chk_icon_02.png">
+            </div>
+
+            <div class="find_txt_box">
+                <p><span>회원가입</span>이 완료되었습니다.</p>
+                <p>고객님의 아이디는</p>
+                <p><span>yinarim0824</span>&nbsp;입니다.</p>
+            </div>
+
+            <div class="find_id_same_link_box">
+
+                <a href="../login/login.html">
+                    <p>로그인</p>
+                </a>
+
+                <a href="../index.html">
+                    <p>홈으로</p>
+                </a>
+
+            </div>
+
+        </div><!--find_id_same_box-->
+
+    </div><!--find_id_same_ex-->
+
+    <div class="common_popup_ex" id="blurb" style="display: none;">
+
+        <div class="common_popup_box">
+
+            <div>
+                <p>광고성 개인정보 수집</p>
+            </div>
+
+            <div>
+                <p>
+
+                고객님은 아래 개인정보 수집·이용에 관한 동의를 거부하실 수 있습니다. 다만, 
+                동의하지 않으실 경우 여행 맞춤 서비스 및 정보제공이 일부 제한될 수 있으며 여행서비스 
+                이용에는 영향이 없습니다.<br><br>
+
+                동의하시는 경우 상품이나 서비스 홍보 및 판매권유 등의 목적으로 개인정보를 이용하여 연락을 드릴 수 있습니다.<br><br>
+
+                <span>제공받는 자 </span><br>
+
+                -성명, 휴대전화번호, 이메일<br><br>
+
+                <span>수집 및 이용목적</span><br>
+
+                -오투어/자회사/제휴사의 상품 및 혜택, 각종 이벤트 및 행사 관련 정보 안내<br><br>
+
+                <span>보유 및 이용기간</span><br>
+
+                -회원탈퇴 시 또는 동의철회 시 까지<br><br>
+                </p>
+            </div>
+
+            <div id="close_blurb">
+                <p>닫기</p>
+            </div>
+
+        </div><!--common_popup_box-->
+
+    </div><!--common_popup_ex-->
+
+    <div class="common_popup_ex" id="privacy" style="display: none;">
+
+        <div class="common_popup_box">
+
+            <div>
+                <p>개인정보취득정책</p>
+            </div>
+
+            <div>
+                <p>
+
+                    <span>제1조 목적</span><br>
+
+                    이 약관은 (주)골드브릿지와 여행자가 체결한 국외여행 계약의 세부 이행 및 준수사항을 정함을 목적으로 합니다.<br><br>
+                    
+                    <span>제2조 여행업자와 여행자 의무</span><br>
+                    1. 여행업자는 여행자에게 안전하고 만족스러운 여행서비스를 제공하기 위하여 여행 알선 및 안내·운송·숙박 등 여행 계획의 수립 및 실행 과정에서 맡은 바 임무를 충실히 수행하여야 합니다.<br>
+                    2. 여행자는 안전하고 즐거운 여행을 위하여 여행자간 화합 도모 및 여행업자의 여행질서 유지에 적극 협조하여야 합니다.<br><br>
+                    
+                    <span>제3조 용어의 정리</span><br>
+                    여행의 종류 및 정의, 해외여행 수속대행업의 정의는 다음과 같습니다.<br>
+                    
+                    1. 기획 여행 : 여행업자가 미리 여행 목적지 및 관광 일정, 여행자에게 제공될 운송 및 숙식서비스 내용(이하 ‘여행서비스'라 함), 여행 요금을 정하여 광고 또는 기타 방법으로 여행자를 모집하여 실시하는 여행<br>
+                    2. 희망 여행 : 여행자(개인 또는 단체)가 희망하는 여행 조건에 따라 여행업자가 운송·숙식·관광 등 여행에 관한 전반적인 계획을 수립하여 실시하는 여행<br>
+                    3. 해외여행 수속대행(이하 수속대행계약이라 함) : 여행업자가 여행자로부터 소정의 수속대행요금을 받기로 약정하고, 여행자의 위탁에 따라 다음에 열거하는 업무(이하 수속대행업무라함)를 대행하는 것<br>
+                    - 여권, 사증, 재입국 허가 및 각종 증명서 취득에 관한 수속<br>
+                    - 출입국 수속 서류 작성 및 기타 관련 업무<br><br>
+                    
+                    
+                    <span>제4조 계약의 구성</span><br>
+                    1. 여행계약은 여행계약서(붙임)와 여행약관·여행일정표(또는 여행설명서)를 계약 내용으로 합니다.<br>
+                    2. 여행일정표(또는 여행설명서)에는 여행일자별 여행지와 관광 내용, 교통수단, 쇼핑횟수, 숙박장소, 식사 등 여행 일정 및 여행사 제공 서비스 내용과 여행자 유의사항이 포함되어야 합니다.<br><br>
+                    
+                    <span>제5조 특약</span><br>
+                    여행업자와 여행자는 관계 법규에 위반되지 않는 범위 내에서 서면으로 특약을 맺을 수 있습니다. 이 경우 표준약관과 다름을 여행업자는 여행자에게 설명해야 합니다.<br><br> 
+                   
+                    <span>제6조 계약서 및 약관 등 교부</span><br>
+                    여행업자는 여행자와 여행계약을 체결한 경우 계약서와 여행약관, 여행일정표(또는 여행설명서)를 각 1부씩 여행자에게 교부하여야 합니다.<br><br>
+                    
+                    <span>제7조 계약서 및 약관 등 교부 간주</span><br>
+                    여행업자와 여행자는 다음 각 호의 경우 여행계약서와 여행약관 및 여행일정표(또는 여행설명서)가 교부된 것으로 간주합니다.<br>
+                    
+                    1. 여행자가 인터넷 등 전자정보망으로 제공된 여행계약서, 약관 및 여행일정표(또는 여행설명서)의 내용에 동의하고 여행계약의 체결을 신청한데 대해 여행업자가 전자정보망 내지 기계적 장치 등을 이용하여 여행자에게 승낙의 의사를 통지한 경우<br>
+                    2. 여행업자가 팩시밀리 등 기계적 장치를 이용하여 제공한 여행계약서, 약관 및 여행일정표(또는 여행설명서)의 내용에 대하여 여행자가 동의하고 여행계약의 체결을 신청하는 서면을 송부한데 대해 여행업자가 전자정보망 내지 기계적 장치 등을 이용하여 여행자에게 승낙의 의사를 통지한 경우<br><br>
+                    
+                    <span>제8조 여행업자의 책임</span><br>
+                    여행업자는 여행 출발시부터 도착시까지 여행업자 본인 또는 그 고용인, 현지 여행업자 또는 그 고용인 등(이하 ‘사용인'이라 함)이 제2조 제1항에서 규정한 여행업자 임무와 관련하여 여행자에게 고의 또는 과실로 손해를 가한 경우 책임을 집니다.<br><br>
+                    
+                    <span>제9조 최저행사인원 미충족시 계약 해제</span><br>
+                    1. 여행업자는 최저행사인원이 충족되지 아니하여 여행계약을 해제하는 경우 여행 출발 7일전까지 여행자에게 통지하여야 합니다.<br>
+                    2. 여행업자가 여행 참가자 수 미달로 전항의 기일내 통지를 하지 아니하고 계약을 해제하는 경우, 이미 지급받은 계약금 환급 외에 다음 각 목의 1의 금액을 여행자에게 배상하여야 합니다.<br>
+                    가. 여행출발 1일전까지 통지시 : 여행요금의 20%<br>
+                    나. 여행출발 당일 통지시 : 여행요금의 50%<br><br>
+                    
+                    <span>제10조 계약체결 거절</span><br>
+                    여행업자는 여행자에게 다음 각 호의 1에 해당하는 사유가 있을 경우에는 여행자와의 계약체결을 거절할 수 있습니다.<br>
+                    1. 다른 여행자에게 폐를 끼치거나 여행의 원활한 실시에 지장이 있다고 인정될 때<br>
+                    2. 질병 기타 사유로 여행이 어렵다고 인정될 때<br>
+                    3. 계약서에 명시한 최대행사인원이 초과되었을 때<br><br>
+                    
+                    <span>제11조 여행요금</span><br>
+                    1. 여행계약서의 여행요금에는 다음 각 호가 포함됩니다. 단, 희망여행은 당사자간 합의에 따릅니다.<br>
+                    가. 항공기, 선박, 철도 등 이용운송기관의 운임(보통운임기준)<br>
+                    나. 공항, 역, 부두와 호텔 사이 등 송영버스요금<br>
+                    다. 숙박요금 및 식사요금<br>
+                    라. 안내자 경비<br>
+                    마. 여행 중 필요한 각종 세금<br>
+                    바. 국내 공항, 항만 이용료<br>
+                    사. 관광진흥개발기금<br>
+                    아. 일정표 내 관광지 입장료<br>
+                    자. 기타 개별계약에 따른 비용<br>
+                    2. 여행자는 계약체결시 계약금(여행요금 중 10%이하 금액)을 여행업자에게 지급하여야 하며, 계약금은 여행요금 또는 손해배상액의 전부 또는 일부로 취급합니다.<br>
+                    3. 여행자는 제1항의 여행요금 중 계약금을 제외한 잔금을 여행출발 7일전까지 여행업자에게 지급하여야 합니다.<br>
+                    4. 여행자는 제1항의 여행요금을 여행업자가 지정한 방법(지로구좌, 무통장입금 등)으로 지급하여야 합니다.<br>
+                    5. 희망여행요금에 여행자 보험료가 포함되는 경우 여행업자는 보험회사명, 보상내용 등을 여행자에게 설명하여야 합니다.<br><br>
+
+                    <span>제12조 여행요금의 변경</span><br>
+                    1. 국외여행을 실시함에 있어서 이용운송, 숙박기관에 지급하여야 할 요금이 계약체결시보다 5% 이상 증감하거나 여행요금에 적용된 외화 환율이 계약체결시보다 2% 이상 증감한 경우 여행업자 또는 여행자는 그 증감된 금액 범위 내에서 여행요금의 증감을 상대방에게 청구할 수 있습니다.<br>
+                    2. 여행업자는 제1항의 규정에 따라 여행요금을 증액하였을 때에는 여행출발일 15일전에 여행자에게 통지하여야 합니다.<br><br>
+                    
+                    <span>제13조 여행조건의 변경요건 및 요금 등의 정산</span><br>
+                    1. 위 제1조 내지 제12조의 여행 조건은 다음 각 호의 1의 경우에 한하여 변경될 수 있습니다.<br>
+                    가. 여행자의 안전과 보호를 위하여 여행자의 요청 또는 현지 사정에 의하여 부득이하다고 쌍방이 합의한 경우<br>
+                    나. 천재지변, 전란, 정부의 명령, 운송·숙박기관 등의 파업·휴업 등으로 여행의 목적을 달성할 수 없는 경우<br>
+                    2. 제1항의 여행조건 변경 및 제12조의 여행요금 변경으로 인하여 제11조 제1항의 여행요금에 증감이 생기는 경우에는 여행출발 전 변경분은 여행출발 이전에, 여행중 변경분은 여행 종료 후 10일 이내에 각각 정산(환급)하여야 합니다.<br>
+                    3. 제1항의 규정에 의하지 아니하고 여행조건이 변경되거나 제14조 또는 제15조의 규정에 의한 계약의 해제·해지로 인하여 손해배상액이 발생한 경우에는 여행출발 전 발생분은 여행출발 이전에, 여행중 발생분은 여행 종료 후 10일 이내에 각각 정산(환급)하여야 합니다.<br>
+                    4. 여행자는 여행 출발 후 자기의 사정으로 숙박, 식사, 관광 등 여행요금에 포함된 서비스를 제공받지 못한 경우 여행업자에게 그에 상응하는 요금의 환급을 청구할 수 없습니다. 단, 여행이 중도에 종료된 경우에는 제16조에 준하여 처리합니다.<br><br>
+                    
+                    <span>제14조 손해배상</span><br>
+                    1. 여행업자는 현지여행업자 등의 고의 또는 과실로 여행자에게 손해를 가한 경우 여행업자는 여행자에게 손해를 배상하여야 합니다.<br>
+                    2. 여행업자의 귀책사유로 여행자의 국외여행에 필요한 여권, 사증, 재입국 허가 또는 각종 증명서 등을 취득하지 못하여 여행자의 여행일정에 차질이 생긴 경우 여행업자는 여행자로부터 절차대행을 위하여 받은 금액 전부 및 그 금액의 100% 상당액을 여행자에게 배상하여야 합니다.<br>
+                    3. 여행업자는 항공기, 기차, 선박 등 교통기관의 연발착 또는 교통체증 등으로 인하여 여행자가 입은 손해를 배상하여야 합니다. 단, 여행업자가 고의 또는 과실이 없음을 입증한 때에는 그러하지 아니합니다.<br>
+                    4. 여행업자는 자기나 그 사용인이 여행자의 수하물 수령, 인도, 보관 등에 관하여 주의를 해태(懈怠)하지 아니하였음을 증명하지 아니하면 여행자의 수하물 멸실, 훼손 또는 연착으로 인한 손해를 배상할 책임을 면하지 못합니다.<br><br>
+                    
+                    <span>제15조 여행출발 전 계약해제</span><br>
+                    1. 여행업자 또는 여행자는 여행출발 전 이 여행 계약을 해제할 수 있습니다. 이 경우 발생하는 손해액은 ‘소비자피해보상규정' (재정경제부고시)에 따라 배상합니다.<br>
+                    2. 여행업자 또는 여행자는 여행출발 전에 다음 각 호의 1에 해당하는 사유가 있는 경우 상대방에게 제1항의 손해배상액을 지급하지 아니하고 이 여행계약을 해제할 수 있습니다.<br>
+                    가. 여행업자가 해제할 수 있는 경우<br>
+                    - 제13조 제1항 제1호 및 제2호 사유의 경우<br>
+                    - 다른 여행자에게 폐를 끼치거나 여행의 원활한 실시에 현저한 지장이 있다고 인정될 때<br>
+                    - 질병 등 여행자의 신체에 이상이 발생하여 여행에의 참가가 불가능한 경우<br>
+                    - 여행자가 계약서에 기재된 기일까지 여행요금을 납입하지 아니한 경우<br>
+                    나. 여행자가 해제할 수 있는 경우<br>
+                    - 제13조 제1항 제1호 및 제2호의 사유가 있는 경우<br>
+                    - 여행자의 3촌 이내 친족이 사망한 경우<br>
+                    - 질병 등 여행자의 신체에 이상이 발생하여 여행에의 참가가 불가능한 경우<br>
+                    - 배우자 또는 직계존비속이 신체이상으로 3일 이상 병원(의원)에 입원하여 여행 출발 전까지 퇴원이 곤란한 경우 그 배우자 또는 보호자 1인<br>
+                    - 여행업자의 귀책사유로 계약서 또는 여행일정표(여행설명서)에 기재된 여행일정대로의 여행실시가 불가능해진 경우<br>
+                    - 제12조 제1항의 규정에 의한 여행요금의 증액으로 인하여 여행 계속이 어렵다고 인정될 경우<br><br>
+                    
+                    <span>제16조 여행출발 후 계약해지</span><br>
+                    1. 여행업자 또는 여행자는 여행출발 후 부득이한 사유가 있는 경우 이 여행계약을 해지할 수 있습니다.단, 이로 인하여 상대방이 입은 손해를 배상하여야 합니다.<br>
+                    2. 제1항의 규정에 의하여 계약이 해지된 경우 여행업자는 여행자가 귀국하는데 필요한 사항을 협조하여야 하며, 이에 필요한 비용으로서 여행업자의 귀책사유에 의하지 아니한 것은 여행자가 부담합니다.<br><br>   
+
+                    <span>제17조 여행의 시작과 종료</span><br>
+                    여행의 시작은 탑승수속(선박인 경우 승선수속)을 마친 시점으로 하며, 여행의 종료는 여행자가 입국장 보세구역을 벗어나는 시점으로 합니다. 단, 계약내용상 국내이동이 있을 경우에는 최초 출발지에서 이용하는 운송수단의 출발시각과 도착시각으로 합니다.<br><br>
+
+                    <span>제18조 설명의무</span><br>
+                    여행업자는 계약서에 정하여져 있는 중요한 내용 및 그 변경사항을 여행자가 이해할 수 있도록 설명하여야 합니다.<br><br>
+                    
+                    <span>제19조 보험가입 등</span><br>
+                    여행업자는 이 여행과 관련하여 여행자에게 손해가 발생한 경우 여행자에게 보험금을 지급하기 위한 보험 또는 공제에 가입하거나 영업보증금을 예치하여야 합니다.<br><br>
+                    
+                    <span>제20조 기타사항</span>
+                </p>
+            </div>
+
+            <div id="close_privacy">
+                <p>닫기</p>
+            </div>
+
+        </div><!--common_popup_box-->
+
+    </div><!--common_popup_ex-->
+
+
+
+
+    <script>
+
+        //회원가입 완료되었을때 팝업
+        function JoinComplete(){
+
+            $('body').addClass('scrollfixed');
+            $('.find_id_same_ex').fadeIn(100);
+
+        }
+
+        //전체 동의 누르면 다 전체 동의 된다
+        $(document).on('click','#total_agree',function(){
+           
+            if( $('#total_agree').is(':checked')){
+                $('#join_sms').prop('checked',true);
+                $('#join_age_ck').prop('checked',true);
+                $('#join_privacy_ck').prop('checked',true);
+                $('#join_blurb_ck').prop('checked',true);
+            }else{
+                $('#join_sms').prop('checked',false);
+                $('#join_age_ck').prop('checked',false);
+                $('#join_privacy_ck').prop('checked',false);
+                $('#join_blurb_ck').prop('checked',false);
+            }
+        });
+
+        //모든 거 다 체크 되면 전체동의 체크 된다
+        $(document).on('click','.all_no_chk',function(){
+            if($('input[class=all_no_chk]:checked').length==$('.all_no_chk').length){
+                $('#total_agree').prop('checked',true);
+            }else{
+            $('#total_agree').prop('checked',false);
+            }
+        });
+        
+        //도메인 value 값 받아 오기!
+        $(document).ready(function () {
+
+            $("#blurb_select_join").change(function () {
+                $("#blurb_domain_join").val($(this).val());
+            });
+
+        });
+
+        // 비밀번호 재확인
+         $(document).ready(function() {
+            var passwordInput = $('#join_pw_member');
+            var confirmPasswordInput = $('#join_re_pw_member');
+            var passwordMatchMessage = $('.password_same');
+            var passwordInconsistencyMessage = $('.password_inconsistency');
+            var isPasswordInputComplete = false;
+            var isConfirmPasswordInputComplete = false;
+
+            passwordInput.on('input', function() {
+            isPasswordInputComplete = passwordInput.val().trim() !== '';
+            checkPasswordMatch();
+            });
+
+            confirmPasswordInput.on('input', function() {
+            isConfirmPasswordInputComplete = confirmPasswordInput.val().trim() !== '';
+            checkPasswordMatch();
+            });
+
+            function checkPasswordMatch() {
+            if (isPasswordInputComplete && isConfirmPasswordInputComplete) {
+                var password = passwordInput.val();
+                var confirmPassword = confirmPasswordInput.val();
+
+                if (password === confirmPassword) {
+                // 비밀번호가 일치하는 경우
+                passwordMatchMessage.css('display', 'block');
+                passwordInconsistencyMessage.css('display', 'none');
+                } else {
+                // 비밀번호가 일치하지 않는 경우
+                passwordMatchMessage.css('display', 'none');
+                passwordInconsistencyMessage.css('display', 'block');
+                }
+            } else {
+                // 두 필드 중 하나라도 작성이 완료되지 않은 경우 메시지를 숨김
+                passwordMatchMessage.css('display', 'none');
+                passwordInconsistencyMessage.css('display', 'none');
+            }
+            }
+        });
+
+    </script>
+
+    <script src="../js/header.js"></script>
+</body>
+
+</html>

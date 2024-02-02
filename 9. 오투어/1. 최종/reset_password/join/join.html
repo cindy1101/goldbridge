@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script src="../js/jquery.min.js"></script>
+
+    <!--헤더/풋터-->
+    <link href="../css/header.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+
+    <link href="css/join.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="mobile_header_ex">
+
+        <input type="checkbox" id="mobile_sheet_open">
+
+        <div class="mobile_header_top">
+
+            <a href="../index.html">
+                <img src="../img/header_web_logo.png">
+            </a>
+
+            <label for="mobile_sheet_open" class="open_mobile_sheet_btn">
+                <img src="../img/full_menu_web.png">
+            </label>
+            
+        </div><!--mobile_header_top-->
+
+        <div class="mobile_header_sheet_ex">
+
+            <div class="mobile_sheet_close">
+
+                <a href="../index.html" class="mobile_sheet_logo">
+                    <img src="../img/header_web_logo.png">
+                </a>
+
+                <label for="mobile_sheet_open" class="close_mobile_sheet">
+                    <img src="../img/close_btn.png">
+                </label>
+
+            </div><!--mobile_sheet_close-->
+
+            <div class="mobile_search_box">
+
+                <div>
+                    <input type="text" id="mobile_search_txt_box" placeholder="검색어를 입력하세요.">
+
+                    <input type="submit" id="mobile_search_submit_icon">
+
+                    <label for="mobile_search_submit_icon" class="mobile_search_submit_icon_img">
+                        <img src="../img/search_submit_icon.png">
+                    </label>
+                </div>
+
+            </div><!--mobile_search_box-->
+
+            <div class="mobile_gnb_box">
+
+                <a href="login.html">
+                    <div>
+                        <img src="../img/sheet_icon_01.png">
+                    </div>
+
+                    <p>로그인</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="../img/sheet_icon_02.png">
+                    </div>
+
+                    <p>회원가입</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="../img/sheet_icon_03.png">
+                    </div>
+
+                    <p>마이페이지</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="../img/sheet_icon_04.png">
+                    </div>
+
+                    <p>허니문 후기</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="../img/sheet_icon_05.png">
+                    </div>
+
+                    <p>기획전/이벤트</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="../img/sheet_icon_06.png">
+                    </div>
+
+                    <p>할인쿠폰</p>
+                </a>
+
+                <a href="#">
+                    <div>
+                        <img src="../img/sheet_icon_07.png">
+                    </div>
+
+                    <p>공지사항</p>
+                </a>
+
+
+            </div><!--mobile_gnb_box-->
+
+            <div class="family_mobile_ex">
+
+                <input type="checkbox" id="mobile_family" class="mobile_lnb_menu">
+
+                <label for="mobile_family" class="family_mobile_box">
+
+                    <div>
+                        <p>family Site</p>
+                        <p>▼</p>
+                    </div>
+
+                </label><!--family_mobile_box-->
+
+                <div class="family_mobile_sheet">
+
+                </div><!--family_mobile_sheet-->
+
+            </div><!--family_mobile_ex-->
+
+            <div class="mobile_header_line"></div>
+
+            <div class="mobile_header_sheet_lnb_box">
+
+                <input type="checkbox" id="mobile_lnb_menu_01" class="mobile_lnb_menu">
+                <input type="checkbox" id="mobile_lnb_menu_02" class="mobile_lnb_menu">
+                <input type="checkbox" id="mobile_lnb_menu_03" class="mobile_lnb_menu">
+                <input type="checkbox" id="mobile_lnb_menu_04" class="mobile_lnb_menu">
+                <input type="checkbox" id="mobile_lnb_menu_05" class="mobile_lnb_menu">
+                <input type="checkbox" id="mobile_lnb_menu_06" class="mobile_lnb_menu">
+                <input type="checkbox" id="mobile_lnb_menu_07" class="mobile_lnb_menu">
+                <input type="checkbox" id="mobile_lnb_menu_08" class="mobile_lnb_menu">
+
+
+                <nav class="mobile_lnb_sheet_box">
+                    <ul>
+                        <li>
+                            <label for="mobile_lnb_menu_01">
+                                <div></div>
+                                <p>태국</p>
+                            </label>
+
+                            <ul>
+                                <li>
+                                    <a href="../sub/sub.html">
+                                        <p>모사무이</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <p>후아인</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>기타지역</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!--태국-->
+
+                        <li>
+                            <a href="#">
+                                <div></div>
+                                <p>발리</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <label for="mobile_lnb_menu_02">
+                                <div></div>
+                                <p>필리핀</p>
+                            </label>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>세부</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <p>보홀</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>보라카이</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>기타지역</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!--필리핀-->
+
+                        <li>
+                            <label for="mobile_lnb_menu_03">
+                                <div></div>
+                                <p>베트남</p>
+                            </label>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>다낭</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <p>나트랑</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>퀴논</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>부꾸옥</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!--베트남-->
+
+                        <li>
+                            <label for="mobile_lnb_menu_04">
+                                <div></div>
+                                <p>하와이</p>
+                            </label>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>오하우</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <p>이웃섬</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!--하와이-->
+
+                        <li>
+                            <label for="mobile_lnb_menu_05">
+                                <div></div>
+                                <p>유럽</p>
+                            </label>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>서유럽</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <p>동유럽</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>스페인</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>기타지역</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!--유럽-->
+
+                        <li>
+                            <label for="mobile_lnb_menu_06">
+                                <div></div>
+                                <p>호주</p>
+                            </label>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>시드니</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <p>골드코스트</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>케언즈</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>델버른</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!--호주-->
+
+                        <li>
+                            <label for="mobile_lnb_menu_07">
+                                <div></div>
+                                <p>몰디브</p>
+                            </label>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>스피드보트</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <p>수상비행기</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>국내선</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!--몰디브-->
+
+                        <li>
+                            <label for="mobile_lnb_menu_08">
+                                <div></div>
+                                <p>칸쿤</p>
+                            </label>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>호텔존</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <p>무헤레스</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p>라바애러마야</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!--칸쿤-->
+
+                        <li>
+                            <a href="#">
+                                <div></div>
+                                <p>기타지역</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+
+            </div><!--mobile_header_sheet_lnb_box-->
+
+        </div><!--mobile_header_sheet_ex-->
+
+    </header><!--mobile_header_ex-->
+
+    <header class="header_web">
+
+        <div class="gnb_ex">
+
+            <nav class="gnb_box">
+
+                <ul>
+
+                    <li>
+                        <a href="login.html">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <div></div>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>회원가입</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <div></div>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>마이페이지</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <div></div>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>허니문 후기</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <div></div>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>기획전/이벤트</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <div></div>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>할인쿠폰</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <div></div>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav><!--gnb_box-->
+
+        </div><!--gnb_ex-->
+
+        <div class="header_middle_ex clearfix">
+
+            <a href="../index.html" class="header_web_logo">
+                <img src="../img/header_web_logo.png">
+            </a>
+
+            <div class="search_and_famliy_ex">
+
+                <div class="search_box_web">
+
+                    <input type="text" id="search_web" placeholder="검색어를 입력하세요.">
+
+                    <input type="submit" id="search_web_submit">
+
+                    <label class="search_submit_Web" for="search_web_submit">
+                        <img src="../img/search_submit_icon.png">
+                    </label>
+
+                </div><!--search_box_web-->
+
+                <div class="famliy_box_web_ex">
+
+                    <input type="checkbox" id="famliy_site_web" class="web_header_chk_box">
+
+                    <label class="famliy_box_web_box" for="famliy_site_web">
+                        <div class="famliy_box_web_content_box">
+                            <p>family site</p>
+                            <p>▼</p>
+                        </div>
+                    </label>
+
+                    <div class="family_sheet_web" style="display: none;">
+
+                    </div><!--family_sheet_web-->
+
+                </div><!--famliy_box_web_ex-->
+
+            </div><!--search_and_famliy_ex-->
+
+        </div><!--header_middle_ex-->
+
+        <div class="header_line"></div>
+
+        <div class="header_lnb_ex">
+
+            <div class="header_lnb_box">
+
+                <input type="checkbox" id="header_web_all_chk" class="web_header_chk_box">
+
+                <label for="header_web_all_chk" class="open_web_header_icon">
+                    <img src="../img/full_menu_web.png">
+                </label>
+
+                <div class="header_lnb">
+
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="../sub/sub.html">
+                                    <p>태국</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>발리</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>필리핀</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>베트남</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>하와이</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>유럽</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>호주</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>몰디브</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>칸쿤</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <p>기타지역</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div><!--header_lnb-->
+
+            </div><!--header_lnb_box-->
+
+            <div class="header_full_menu_sheet_ex" style="display: none;">
+
+                <div class="header_full_menu_sheet_box">
+
+                    <div class="header_full_sheet_close_btn">
+
+                        <label for="header_web_all_chk" class="close_web_header_icon">
+                            <img src="../img/close_btn.png">
+                        </label>
+
+                    </div><!--header_full_sheet_close_btn-->
+
+                    <div class="category_ex">
+
+                        <div class="category_box">
+
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="../sub/sub.html">
+                                            <p>태국</p>
+                                        </a>
+    
+                                        <ul>
+                                            <li>
+                                                <a href="../sub/sub.html">
+                                                    <p>모사무이</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>후아인</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>기타지역</p>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                        </div><!--category_box-->
+    
+                        <div class="category_box">
+    
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>발리</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                        </div><!--category_box-->
+    
+                        <div class="category_box">
+    
+                            <nav>
+                                <ul>
+    
+                                    <li>
+                                        <a href="#">
+                                            <p>필리핀</p>
+                                        </a>
+    
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <p>세부</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>보홀</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>보라카이</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>기타 지역</p>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+    
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                        </div><!--category_box-->
+    
+                        <div class="category_box">
+    
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>베트남</p>
+                                        </a>
+    
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <p>다낭</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>나트랑</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>퀴논</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>부꾸옥</p>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                        </div><!--category_box-->
+    
+                        <div class="category_box">
+    
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>하와이</p>
+                                        </a>
+    
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <p>오하우</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>이웃섬</p>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                        </div><!--category_box-->
+    
+                        <div class="category_box">
+    
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>유럽</p>
+                                        </a>
+    
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <p>서유럽</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>동유럽</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>스페인</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>기타지역</p>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                        </div><!--category_box-->
+    
+                        <div class="category_box">
+    
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>호주</p>
+                                        </a>
+    
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <p>시드니</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>골드코스트</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>케언즈</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>델버른</p>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                        </div><!--category_box-->
+    
+                        <div class="category_box">
+    
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>몰디브</p>
+                                        </a>
+    
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <p>스피드보트</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>수상비행기</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>국내선</p>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                        </div><!--category_box-->
+    
+                        <div class="category_box">
+    
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>칸쿤</p>
+                                        </a>
+    
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <p>호텔존</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>무헤레스</p>
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="#">
+                                                    <p>라바애러마야</p>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                        </div><!--category_box-->
+    
+                        <div class="category_box">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>기타 지역</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div><!--category_box-->
+
+                    </div><!--category_ex-->
+
+                </div><!--header_full_menu_sheet_box-->
+
+            </div><!--header_full_menu_sheet_ex-->
+
+        </div><!--header_lnb_ex-->
+
+        <div class="header_line"></div>
+
+    </header><!--header_web-->
+    
+    <div class="join_ex">
+
+        <div class="join_title_box">
+            <p>오투어앤비즈 회원가입</p>
+            <p>지금 회원가입 하신 후 <span>오투어앤비즈</span>에서 다양한 서비스를 경험해보세요.</p>
+        </div><!--join_title_box-->
+    
+        <div class="join_member_ex">
+    
+            <form>
+               
+                <input type="submit" id="join_submit_btn" value="개인 회원가입">
+    
+                <div class="simple_join_box">
+    
+                    <a href="#" class="naver_simple_join">
+                        <div>
+                            <div>
+                                <img src="img/naver_logo.png">
+                            </div>
+    
+                            <p>네이버 간편 회원가입</p>
+                        </div>
+                    </a>
+    
+                    <a href="#" class="kakao_simple_join">
+                        <div>
+                            <div>
+                                <img src="img/kakao_logo_login.png">
+                            </div>
+                            <p>카카오 간편 회원가입</p>
+                        </div>
+                    </a>
+
+                    <p class="sns_join_caution">※ SNS계정 회원가입(만 14세 이상 가능) ※</p>
+    
+                </div>
+    
+                
+    
+            </form>
+    
+        </div><!--join_member_ex-->
+    
+    </div><!--join_ex-->
+
+    <footer class="footer_ohtour">
+
+        <div class="footer_top">
+
+            <div class="footer_lnb_ex">
+
+                <nav>
+                    <ul class="footer_lnb_ul">
+                        <li>
+                            <a href="#">
+                                <p>회사소개</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>여행약관</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>개인정보처리방침</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p>이메일무단수집거부</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div><!--footer_lnb_ex-->
+
+
+            <div class="footer_sns_box">
+
+                <a href="#">
+                    <img src="../img/insta.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/twiiter.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/facebook.png">
+                </a>
+
+                <a href="#">
+                    <img src="../img/youtube.png">
+                </a>
+
+            </div><!--footer_sns_box-->
+
+        </div><!--footer_top-->        
+
+
+        <div class="footer_center">
+
+            <div class="footer_center_left">
+                <p>대표자 : 정종현</p>
+                <p>대표전화 : 051-633-8226</p>
+                <p>팩스 : 0504-009-4142</p>
+                <p>메일 : ohotour@gmail.com</p>
+            </div><!--footer_center_left-->
+
+            <div class="footer_center_right">
+                <p>부산광역시 부산진구 서전로 9번길 27(부전동) 순흥빌딩 301호</p>
+                <p>사업자등록번호 : 582-87-01521</p>
+                <p>통신판매업신고번호 : 제2011-부산진-026호</p>
+                <p>관광사업자등록번호 : 제 2019-0000013호</p>
+            </div><!--footer_center_right-->
+
+        </div><!--footer_center-->
+
+
+        <div class="footer_bottom">
+            <p>Copyright ⓒ 2022 OHOTOUR Co., Ltd. All Rights Reserved</p>
+        </div><!--footer_bottom-->
+
+    </footer><!--footer_ohtour-->
+
+    <script src="../js/header.js"></script>
+</body>
+</html>

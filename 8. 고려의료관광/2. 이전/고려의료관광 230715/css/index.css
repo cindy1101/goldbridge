@@ -1,0 +1,3837 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body {font-family: 'Pretendard'; line-height: 16px;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+@media all and (max-width: 600px)
+{
+    /*비주얼*/
+    div.visual_ex
+    {width: 100%;
+    position: relative;}
+
+    div.visual_banner_ex
+    {width: 100%; height: 90vh;}
+
+    /*이미지*/
+    div.main_visual_box
+    {width: 100%;}
+
+    div.main_visual_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*슬라이드 텍스트*/
+    div.slide_visual_txt
+    {width: 90%;
+    position: absolute;
+    top: 0; left: 5%;
+    z-index: 3;}
+
+    div.slide_visual_txt_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.slide_visual_txt_box>p 
+    {word-break: keep-all;}
+
+    div.slide_visual_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 16px; color: #fff; line-height: 20px;
+    word-break: keep-all;
+    margin-bottom: 5px;}
+
+    div.slide_visual_txt_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 28px; font-family: bold; color: #fff;
+    line-height: 32px;
+    word-break: keep-all;}
+
+    a.slide_visual_txt_more_btn
+    {width: 100px; height: 40px;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;}
+
+    a.slide_visual_txt_more_btn>p
+    {text-align: center;
+    line-height: 40px; color: #fff;}
+
+    
+    /*슬라이드 기능 박스*/
+    .visual_ex .pagination_container_box
+    {width: 90%;
+    position: absolute;
+    top: 0; left: 5%;
+    z-index: 3;}
+
+    .pagination_box .swiper-pagination
+    {position: inherit !important;}
+
+    .pagination_container_box .pagination_box
+    {width: fit-content;
+    float: left;
+    margin-right: 5px;}
+
+    .pagination_box .swiper-pagination2
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    margin-top: 6px;
+    margin-right: 5px;}
+
+    .swiper-pagination2 .swiper-pagination-bullet 
+    {width: 8px; height: 8px; 
+    background: #fff;
+    opacity: 0.5;}
+
+    .swiper-pagination2 .swiper-pagination-bullet-active 
+    {width: 20px; 
+    transition: width .5s; 
+    border-radius: 4px; 
+    background: #fff; 
+    opacity: 1;
+    border: 1px solid transparent;}
+
+    /*글자 페이지네이션*/
+    .pagination_box .swiper-pagination
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    font-size: 16px; line-height: 20px;
+    color: #fff;}
+
+    span.swiper-pagination-current
+    {font-family: 'bold' !important;
+    font-size: 18px;}
+    
+    /*버튼*/
+    div.button_visual_box
+    {width: fit-content;
+    float: left;
+    position: relative;}
+
+    .button_visual_box .swiper-button-next
+    {width: 20px; height: 20px;
+    left: 0; top: 0;
+    margin-top: 0;}
+
+    .button_visual_box .swiper-button-next img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+
+    .button_visual_box .swiper-button-prev
+    {width: 20px; height: 20px;
+    margin-top: 0;
+    top: 0; left: 50px;}
+
+    .button_visual_box .swiper-button-prev img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after 
+    {display: none;}
+    
+    /*멈춤, 시작 버튼*/
+    .button_visual_box .stop_start_btn_box
+    {width: 20px; height: 20px;
+    position: absolute;
+    top: 0; left: 25px;
+    z-index: 3;
+    overflow: hidden;}
+
+    div.swiper-button-play, div.swiper-button-pause
+    {display: none;}
+
+    div.swiper-button-play
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-play img
+    {width: 14px; height: 14px;
+    margin: 3px auto;}
+
+    div.swiper-button-pause
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-pause img
+    {width: 9px; height: 10px;
+    margin: 5px auto;}
+
+    /*건강검진*/
+    div.health_screening_ex
+    {width: 100%;
+    margin-top: 50px; margin-bottom: 50px;}
+
+    /*건강검진 타이틀*/
+    div.health_screening_title_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.health_screening_title_box>p:nth-child(1)
+    {width: 90%;
+    margin: 0 auto;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    color: #222;
+    margin-bottom: 5px;}
+
+    div.health_screening_title_min_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.health_screening_title_min_box>div:nth-child(1)
+    {width: calc(50% - 102.5px); height: 1px;
+    background-color: #ccc;
+    float: left;
+    margin-top: 14.5px;}
+
+    div.health_screening_title_min_box>p:nth-child(2)
+    {width: 195px;
+    margin-left: 5px; margin-right: 5px;
+    font-size: 24px; line-height: 30px;
+    font-family: bold; color: #222;
+    float: left;}
+
+    div.health_screening_title_min_box>div:nth-child(3)
+    {width: calc(50% - 102.5px); height: 1px;
+    background-color: #ccc;
+    float: left;
+    margin-top: 14.5px;}
+    
+    /*컨텐츠*/
+    div.health_screening_contents_ex
+    {width: 85%;
+    margin: 0 auto;
+    margin-bottom: 30px;}
+
+    /*이미지*/
+    a.health_screening_contents>div:nth-child(1)
+    {width: 100%; height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;}
+
+    a.health_screening_contents>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.health_screening_text_contents
+    {width: 100%;}
+
+    div.health_screening_text_contents>p
+    {word-break: break-all;}
+
+    div.health_screening_text_contents>p:nth-child(1)
+    {width: fit-content;
+    font-size: 15px; font-family: 'min_bold';
+    color: #222; line-height: 20px;
+    padding: 5px;
+    border: 1px solid #222; box-sizing: border-box;
+    margin-bottom: 10px;}
+
+    div.health_screening_text_contents>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; font-family: bold;
+    color: #222; line-height: 25px;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.health_screening_text_contents>p:nth-child(3)
+    {width: 100%; 
+    font-size: 14px; line-height: 20px;
+    color: #555;
+    margin-bottom: 15px;}
+
+    div.health_screening_text_contents>p:nth-child(4)
+    {width: 100%;
+    text-align: right;
+    color: red;
+    line-height: 20px; font-size: 15px;}
+
+    div.health_screening_text_contents>p:nth-child(4)>span
+    {font-size: 18px;
+    font-family: bold;}
+
+    /*더보기*/
+    div.health_screening_contents_more_box
+    {width: 120px; height: 40px;
+    margin: 0 auto;}
+
+    div.health_screening_contents_more_box>a
+    {width: 100%; height: 40px;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid #222; box-sizing: border-box;}
+
+    div.health_screening_contents_more_box>a>p
+    {text-align: center;
+    line-height: 40px; 
+    color: #222;}
+
+    /*배너*/
+    div.medical_tourism_banner
+    {width: 100%;
+    background-color: #51b8ff;
+    padding-top: 30px; padding-bottom: 30px;
+    margin-top: 50px; margin-bottom: 50px;}
+
+    div.medical_tourism_banner_box
+    {width: 90%;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    div.medical_tourism_banner_txt
+    {width: 100%;
+    margin-bottom: 10px;}
+
+    div.medical_tourism_banner_txt>p
+    {color: #fff;}
+
+    div.medical_tourism_banner_txt>p:nth-child(1)
+    {font-size: 18px; 
+    line-height: 18px;
+    margin-bottom: 10px;}
+
+    div.medical_tourism_banner_txt>p:nth-child(2)
+    {font-size: 28px; line-height: 30px;
+    margin-bottom: 5px;
+    font-family: bold;
+    word-break: keep-all;}
+
+    div.medical_tourism_banner_txt>p:nth-child(3)
+    {font-size: 28px; line-height: 28px;
+    margin-bottom: 20px;}
+
+    a.medical_tourism_more_btn
+    {display: block;
+    width: 90px; height: 40px;
+    border-radius: 20px;
+    background-color: #fff;}
+
+    a.medical_tourism_more_btn>p
+    {font-size: 16px;
+    text-align: center; line-height: 40px;
+    color: #51b8ff;}
+    
+    /*이미지*/
+    div.medical_tourism_banner_icon
+    {width: 80%;
+    float: right;}
+
+    div.medical_tourism_banner_icon img
+    {width: 100%; height: auto;}
+
+    /*공지사항, 갤러리, 고객센터*/
+    div.bottom_contens_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 80px;}
+
+    /*공지사항*/
+    div.notic_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    /*공지사항 타이틀*/
+    div.notic_title_box
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;}
+
+    div.notic_title_box>p:nth-child(1)
+    {width: calc(100% - 90px);
+    float: left;
+    margin-right: 10px;
+    font-size: 24px; line-height: 30px; font-family: bold;
+    color: #222;}
+
+    div.notic_title_box>a:nth-child(2)
+    {width: 80px; height: 30px;
+    display: block;
+    border: 1px solid #333; box-sizing: border-box;
+    border-radius: 15px;
+    float: right;}
+
+    div.notic_title_box>a:nth-child(2)>p
+    {text-align: center; line-height: 30px;
+    font-size: 15px; color: #222;}
+
+    /*공지사항 이미지*/
+    div.notic_img
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.notic_img img
+    {width: 100%; height: auto;}
+
+    /*공지사항 글*/
+    div.notic_contents_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box>li
+    {width: 100%;}
+
+    ul.notic_contents_list_box>li:nth-child(odd)
+    {background-color: #f3f3f3;}
+
+    ul.notic_contents_list_box>li>a
+    {width: 95%;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box>li>a>p:nth-child(1)
+    {width: calc(100% - 70px);
+    line-height: 35px;
+    color: #222;
+    float: left;
+    font-size: 15px;
+    margin-right: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box>li>a>p:nth-child(2)
+    {width: 65px;
+    color: #222;
+    line-height: 35px;
+    font-size: 15px; text-align: right;
+    float: right;}
+
+    /*갤러리*/
+    div.gallery_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    /*갤러리 타이틀*/
+    div.gallery_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.gallery_title>p
+    {width: 100%;
+    font-size: 24px; line-height: 30px; font-family: bold;
+    color: #222;}
+    
+    div.gallery_content
+    {display: block; 
+    width: 100%; height: 0;
+    padding-bottom: 80%;
+    overflow: hidden;
+    position: relative;}
+
+    div.gallery_content img
+    {width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;}
+    
+    /*글*/
+    div.gallery_txt_ex
+    {width: 100%;
+    padding-top: 10px; padding-bottom: 10px;
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);}
+
+    div.gallery_txt_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;}
+
+    div.gallery_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 18px; font-family: bold; color: #fff;
+    line-height: 20px;
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    div.gallery_more_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.gallery_more_btn_txt_box
+    {width: 100%;
+    margin-bottom: 5px;}
+
+    div.gallery_more_btn_txt_box>p
+    {width: 100%;
+    line-height: 20px;
+    color: #fff;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    div.gallery_more_btn_txt_box>p:nth-child(2)
+    {font-size: 14px; text-align: right;}
+
+    a.gallery_more_btn
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    border: 1px solid #fff; box-sizing: border-box;
+    display: block;
+    float: right;}
+
+    a.gallery_more_btn>p
+    {line-height: 30px;
+    font-size: 15px;
+    color: #fff; text-align: center;}
+    
+    /*콜센터*/
+    div.call_center_ex
+    {width: 100%;}
+
+    div.call_center_title
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.call_center_title>p
+    {width: 100%;
+    font-size: 24px; line-height: 30px; font-family: bold;
+    color: #222;}
+
+    div.call_center_title>p>span
+    {font-size: 14px;
+    font-family: 'Pretendard';
+    color: #8a8a8a;}
+    
+    /*콜센터 박스*/
+    div.call_center_content_ex
+    {width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding-top: 20px; padding-bottom: 20px;}
+
+    div.call_center_content_box
+    {width: 90%;
+    margin: 0 auto;}
+
+    div.call_center_content_01
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.call_center_content_01>p:nth-child(1)
+    {width: 100%;
+    font-size: 18px; font-family: bold;
+    line-height: 20px; color: #222;
+    text-align: center;
+    margin-bottom: 10px;}
+
+    div.call_center_content_01>p:nth-child(2)
+    {width: 100%;
+    word-break: keep-all;
+    font-size: 14px; line-height: 20px; text-align: center;
+    color: #777;
+    margin-bottom: 10px;}
+
+    div.call_center_content_01>div:nth-child(3)
+    {width: 80px; height: 80px;
+    margin: 0 auto;}
+
+    div.call_center_content_01>div:nth-child(3) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.call_center_content_02
+    {width: 227px;
+    margin: 0 auto;}
+
+    /*전화번호*/
+    div.callcenter_tel_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.callcenter_tel_box>p
+    {font-size: 14px;
+    line-height: 30px;
+    color: #222;}
+
+    div.callcenter_tel_box>p:nth-child(1)
+    {width: 50px;
+    font-family: bold;
+    float: left;}
+
+    div.callcenter_tel_box>p:nth-child(2)
+    {width: calc(100% - 50px);
+    float: left;}
+
+    /*휴대폰*/
+    div.callcenter_phone_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.callcenter_phone_box>p
+    {font-size: 14px;
+    line-height: 30px;
+    color: #222;}
+
+    div.callcenter_phone_box>p:nth-child(1)
+    {width: 50px;
+    font-family: bold;
+    float: left;}
+
+    div.callcenter_phone_box>p:nth-child(2)
+    {width: calc(100% - 50px);
+    float: left;}
+
+    /*이메일*/
+    div.callcenter_email_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.callcenter_email_box>p
+    {font-size: 14px;
+    line-height: 30px;
+    color: #222;}
+
+    div.callcenter_email_box>p:nth-child(1)
+    {width: 50px;
+    font-family: bold;
+    float: left;}
+
+    div.callcenter_email_box>p:nth-child(2)
+    {width: calc(100% - 50px);
+    float: left;}
+}
+
+
+@media all and (min-width: 601px) and (max-width: 768px)
+{
+    /*비주얼*/
+    div.visual_ex
+    {width: 100%;
+    position: relative;}
+
+    div.visual_banner_ex
+    {width: 100%; height: 90vh;}
+
+    /*이미지*/
+    div.main_visual_box
+    {width: 100%;}
+
+    div.main_visual_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*슬라이드 텍스트*/
+    div.slide_visual_txt
+    {width: 90%;
+    position: absolute;
+    top: 0; left: 5%;
+    z-index: 3;}
+
+    div.slide_visual_txt_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.slide_visual_txt_box>p 
+    {word-break: keep-all;}
+
+    div.slide_visual_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px; color: #fff; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.slide_visual_txt_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 35px; font-family: bold; color: #fff;
+    line-height: 40px;}
+
+    a.slide_visual_txt_more_btn
+    {width: 100px; height: 40px;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;}
+
+    a.slide_visual_txt_more_btn>p
+    {text-align: center;
+    line-height: 40px; color: #fff;}
+    
+    /*슬라이드 기능 박스*/
+    .visual_ex .pagination_container_box
+    {width: 90%;
+    position: absolute;
+    top: 0; left: 5%;
+    z-index: 3;}
+
+    .pagination_box .swiper-pagination
+    {position: inherit !important;}
+
+    .pagination_container_box .pagination_box
+    {width: fit-content;
+    float: left;
+    margin-right: 10px;}
+
+    .pagination_box .swiper-pagination2
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;}
+
+    .swiper-pagination2 .swiper-pagination-bullet 
+    {width: 10px; height: 10px; 
+    background: #fff;
+    opacity: 0.5;}
+
+    .swiper-pagination2 .swiper-pagination-bullet-active 
+    {width: 40px; 
+    transition: width .5s; 
+    border-radius: 5px; 
+    background: #fff; 
+    opacity: 1;
+    border: 1px solid transparent;}
+
+    /*글자 페이지네이션*/
+    .pagination_box .swiper-pagination
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    font-size: 16px; line-height: 20px;
+    color: #fff;}
+
+    span.swiper-pagination-current
+    {font-family: 'bold' !important;
+    font-size: 18px;}
+    
+    /*버튼*/
+    div.button_visual_box
+    {width: fit-content;
+    float: left;
+    position: relative;}
+
+    .button_visual_box .swiper-button-next
+    {width: 20px; height: 20px;
+    left: 0; top: 0;
+    margin-top: 0;}
+
+    .button_visual_box .swiper-button-next img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+
+    .button_visual_box .swiper-button-prev
+    {width: 20px; height: 20px;
+    margin-top: 0;
+    top: 0; left: 50px;}
+
+    .button_visual_box .swiper-button-prev img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after 
+    {display: none;}
+    
+    /*멈춤, 시작 버튼*/
+    .button_visual_box .stop_start_btn_box
+    {width: 20px; height: 20px;
+    position: absolute;
+    top: 0; left: 25px;
+    z-index: 3;
+    overflow: hidden;}
+
+    div.swiper-button-play, div.swiper-button-pause
+    {display: none;}
+
+    div.swiper-button-play
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-play img
+    {width: 14px; height: 14px;
+    margin: 3px auto;}
+
+    div.swiper-button-pause
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-pause img
+    {width: 9px; height: 10px;
+    margin: 5px auto;}
+    
+    /*건강검진*/
+    div.health_screening_ex
+    {width: 100%;
+    margin-top: 50px; margin-bottom: 50px;}
+
+    /*건강검진 타이틀*/
+    div.health_screening_title_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.health_screening_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 16px; color: #222; line-height: 20px;
+    text-align: center;
+    margin-bottom: 5px;}
+
+    div.health_screening_title_min_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.health_screening_title_min_box>div:nth-child(1)
+    {width: calc(50% - 125px); height: 1px;
+    background-color: #ccc;
+    margin-top: 14.5px;
+    float: left;}
+
+    div.health_screening_title_min_box>p:nth-child(2)
+    {width: 230px;
+    margin-left: 10px; margin-right: 10px;
+    font-size: 28px;
+    line-height: 30px;
+    font-family: bold; color: #222;
+    float: left;}
+
+    div.health_screening_title_min_box>div:nth-child(3)
+    {width: calc(50% - 125px); height: 1px;
+    background-color: #ccc;
+    margin-top: 14.5px;
+    float: left;}
+    
+    /*건강검진 컨텐츠*/
+    div.health_screening_contents_ex
+    {width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;}
+
+    a.health_screening_contents
+    {width: 100%;
+    display: block;}
+
+    /*이미지*/
+    a.health_screening_contents>div:nth-child(1)
+    {width: 100%; height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;}
+
+    a.health_screening_contents>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.health_screening_text_contents
+    {width: 100%;}
+
+    div.health_screening_text_contents>p:nth-child(1)
+    {width: fit-content;
+    font-size: 15px; font-family: 'min_bold';
+    color: #222; line-height: 20px;
+    padding: 5px;
+    border: 1px solid #222; box-sizing: border-box;
+    margin-bottom: 10px;}
+
+    div.health_screening_text_contents>p:nth-child(2)
+    {width: 100%;
+    font-size: 18px; font-family: bold;
+    color: #222; line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 10px;}
+
+    div.health_screening_text_contents>p:nth-child(3)
+    {width: 100%; height: 100px;
+    font-size: 14px; line-height: 20px;
+    color: #555;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin-bottom: 15px;}
+
+    div.health_screening_text_contents>p:nth-child(4)
+    {width: 100%;
+    text-align: right;
+    color: red;
+    line-height: 20px; font-size: 15px;}
+
+    div.health_screening_text_contents>p:nth-child(4)>span
+    {font-size: 18px;
+    font-family: bold;}
+
+    /*더보기*/
+    div.health_screening_contents_more_box
+    {width: 120px; height: 40px;
+    margin: 0 auto;}
+
+    div.health_screening_contents_more_box>a
+    {width: 100%; height: 40px;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid #222; box-sizing: border-box;}
+
+    div.health_screening_contents_more_box>a>p
+    {text-align: center;
+    line-height: 40px; 
+    color: #222;}
+
+    /*배너*/
+    div.medical_tourism_banner
+    {width: 100%;
+    background-color: #51b8ff;
+    padding-top: 30px; padding-bottom: 30px;
+    margin-top: 50px; margin-bottom: 50px;}
+
+    div.medical_tourism_banner_box
+    {width: 90%; height: 300px;
+    margin: 0 auto;
+    position: relative;}
+
+    div.medical_tourism_banner_txt
+    {width: fit-content;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 2;}
+
+    div.medical_tourism_banner_txt>p
+    {color: #fff;}
+
+    div.medical_tourism_banner_txt>p:nth-child(1)
+    {font-size: 18px; 
+    line-height: 18px;
+    margin-bottom: 10px;}
+
+    div.medical_tourism_banner_txt>p:nth-child(2)
+    {font-size: 32px; line-height: 32px;
+    margin-bottom: 5px;
+    font-family: bold;
+    word-break: keep-all;}
+
+    div.medical_tourism_banner_txt>p:nth-child(3)
+    {font-size: 32px; line-height: 32px;
+    margin-bottom: 30px;}
+
+    a.medical_tourism_more_btn
+    {display: block;
+    width: 120px; height: 40px;
+    border-radius: 20px;
+    background-color: #fff;}
+
+    a.medical_tourism_more_btn>p
+    {font-size: 17px;
+    text-align: center; line-height: 40px;
+    color: #51b8ff;}
+
+    div.medical_tourism_banner_icon
+    {width: 310px; 
+    position: absolute;
+    bottom: 0; right: 0;
+    z-index: 1;}
+
+    div.medical_tourism_banner_icon img
+    {width: 100%; height: auto;}
+
+    /*공지사항, 갤러리, 콜센터*/
+    div.bottom_contens_ex
+    {width: 90%;
+    margin: 50px auto;
+    margin-bottom: 80px;
+    overflow: hidden;}
+
+    /*공지사항*/
+    div.notic_ex
+    {width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;}
+
+    div.notic_title_box
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;}
+
+    div.notic_title_box>p:nth-child(1)
+    {width: calc(100% - 90px);
+    float: left;
+    margin-right: 10px;
+    font-size: 22px; font-family: bold; color: #222; line-height: 30px;}
+
+    div.notic_title_box>a:nth-child(2)
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    display: block;
+    float: right;
+    border: 1px solid #222; box-sizing: border-box;}
+
+    div.notic_title_box>a:nth-child(2)>p
+    {text-align: center;
+    font-size: 15px; line-height: 30px; color: #222;}
+
+    div.notic_img
+    {width: 49%;
+    margin-right: 2%;
+    align-self: stretch;}
+
+    div.notic_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.notic_contents_box
+    {width: 49%;}
+
+    ul.notic_contents_list_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box li
+    {width: 100%;}
+
+    ul.notic_contents_list_box li:nth-child(odd)
+    {background-color: #f3f3f3;}
+
+    ul.notic_contents_list_box li>a
+    {width: calc(100% - 20px);
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box li>a>p
+    {font-size: 15px;
+    line-height: 40px;
+    color: #222;}
+
+    ul.notic_contents_list_box li>a>p:nth-child(1)
+    {width: calc(100% - 70px);
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box li>a>p:nth-child(2)
+    {width: 70px;
+    float: right;
+    text-align: right;}
+
+    /*갤러리*/
+    div.gallery_ex
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.gallery_title
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;}
+
+    div.gallery_title>p
+    {width: 100%;
+    font-size: 22px; font-family: bold; color: #222; line-height: 30px;}
+
+    div.gallery_content
+    {display: block; 
+    width: 100%; height: 0;
+    padding-bottom: 80%;
+    overflow: hidden;
+    position: relative;}
+
+    div.gallery_content img
+    {width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;}
+    
+    /*글*/
+    div.gallery_txt_ex
+    {width: 100%;
+    padding-top: 10px; padding-bottom: 10px;
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);}
+
+    div.gallery_txt_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;}
+
+    div.gallery_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 18px; font-family: bold; color: #fff;
+    line-height: 20px;
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    div.gallery_more_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.gallery_more_btn_txt_box
+    {width: 100%;
+    margin-bottom: 5px;}
+
+    div.gallery_more_btn_txt_box>p
+    {width: 100%;
+    line-height: 20px;
+    color: #fff;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    div.gallery_more_btn_txt_box>p:nth-child(2)
+    {font-size: 14px; text-align: right;}
+
+    a.gallery_more_btn
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    border: 1px solid #fff; box-sizing: border-box;
+    display: block;
+    float: right;}
+
+    a.gallery_more_btn>p
+    {line-height: 30px;
+    font-size: 15px;
+    color: #fff; text-align: center;}
+
+    /*콜센터*/
+    div.call_center_ex
+    {width: 100%;
+    border-top: 1px solid #222; box-sizing: border-box;
+    padding-top: 15px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;}
+    
+    /*타이틀*/
+    div.call_center_title
+    {width: 33.333333%;}
+
+    div.call_center_title>p
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 24px; font-family: bold;
+    line-height: 25px;
+    color: #222;}
+
+    div.call_center_title>p>span
+    {display: block;
+    margin-top: 5px;
+    font-family: 'Pretendard';
+    line-height: 20px;
+    font-size: 15px; color: #555;}
+    
+    /*콜센터 내용*/
+    div.call_center_content_ex
+    {width: 66.666666%;}
+
+    div.call_center_content_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;}
+    
+    /*콜센터 내용*/
+    div.call_center_content_01
+    {width: 50%;}
+
+    div.call_center_content_01>p
+    {width: 90%;
+    margin: 0 auto;}
+
+    div.call_center_content_01>p:nth-child(1)
+    {font-size: 18px;
+    margin-bottom: 10px;
+    font-family: bold; color: #222;
+    line-height: 25px; word-break: keep-all;}
+
+    div.call_center_content_01>p:nth-child(2)
+    {font-size: 15px;
+    color: #555; line-height: 20px;
+    word-break: keep-all;}
+
+    div.call_center_content_01>div:nth-child(3)
+    {display: none;}
+    
+    /*전화번호 박스*/
+    div.call_center_content_02
+    {width: 50%;}
+
+    div.call_center_content_02>div
+    {width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.call_center_content_02>div:last-child
+    {margin-bottom: 0;}
+
+    div.call_center_content_02>div>p
+    {width: 100%;
+    color: #222;
+    font-size: 15px; line-height: 20px;
+    word-wrap: break-word;}
+
+    div.call_center_content_02>div>p:nth-child(1)
+    {font-family: bold;
+    margin-bottom: 5px;}
+
+    div.call_center_content_02>div>p:nth-child(2)
+    {color: #555;}
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px)
+{
+      /*비주얼*/
+    div.visual_ex
+    {width: 100%;
+    position: relative;}
+
+    div.visual_banner_ex
+    {width: 100%; height: 90vh;}
+
+    /*이미지*/
+    div.main_visual_box
+    {width: 100%;}
+
+    div.main_visual_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*슬라이드 텍스트*/
+    div.slide_visual_txt
+    {width: 90%;
+    position: absolute;
+    top: 0; left: 5%;
+    z-index: 3;}
+
+    div.slide_visual_txt_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.slide_visual_txt_box>p 
+    {word-break: keep-all;}
+
+    div.slide_visual_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px; color: #fff; line-height: 20px;
+    margin-bottom: 5px;}
+
+    div.slide_visual_txt_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 35px; font-family: bold; color: #fff;
+    line-height: 40px;}
+
+    a.slide_visual_txt_more_btn
+    {width: 100px; height: 40px;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    a.slide_visual_txt_more_btn:hover
+    {background-color: #fff;
+    border: none;}
+
+    a.slide_visual_txt_more_btn>p
+    {text-align: center;
+    line-height: 40px; color: #fff;
+    transition: all 0.5s;}
+
+    a.slide_visual_txt_more_btn:hover>p
+    {color: #222;}
+    
+    /*슬라이드 기능 박스*/
+    .visual_ex .pagination_container_box
+    {width: 90%;
+    position: absolute;
+    top: 0; left: 5%;
+    z-index: 3;}
+
+    .pagination_box .swiper-pagination
+    {position: inherit !important;}
+
+    .pagination_container_box .pagination_box
+    {width: fit-content;
+    float: left;
+    margin-right: 10px;}
+
+    .pagination_box .swiper-pagination2
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;}
+
+    .swiper-pagination2 .swiper-pagination-bullet 
+    {width: 10px; height: 10px; 
+    background: #fff;
+    opacity: 0.5;}
+
+    .swiper-pagination2 .swiper-pagination-bullet-active 
+    {width: 40px; 
+    transition: width .5s; 
+    border-radius: 5px; 
+    background: #fff; 
+    opacity: 1;
+    border: 1px solid transparent;}
+
+    /*글자 페이지네이션*/
+    .pagination_box .swiper-pagination
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    font-size: 16px; line-height: 20px;
+    color: #fff;}
+
+    span.swiper-pagination-current
+    {font-family: 'bold' !important;
+    font-size: 18px;}
+    
+    /*버튼*/
+    div.button_visual_box
+    {width: fit-content;
+    float: left;
+    position: relative;}
+
+    .button_visual_box .swiper-button-next
+    {width: 20px; height: 20px;
+    left: 0; top: 0;
+    margin-top: 0;}
+
+    .button_visual_box .swiper-button-next img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+
+    .button_visual_box .swiper-button-prev
+    {width: 20px; height: 20px;
+    margin-top: 0;
+    top: 0; left: 50px;}
+
+    .button_visual_box .swiper-button-prev img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after 
+    {display: none;}
+    
+    /*멈춤, 시작 버튼*/
+    .button_visual_box .stop_start_btn_box
+    {width: 20px; height: 20px;
+    position: absolute;
+    top: 0; left: 25px;
+    z-index: 3;
+    overflow: hidden;}
+
+    div.swiper-button-play, div.swiper-button-pause
+    {display: none;}
+
+    div.swiper-button-play
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-play img
+    {width: 14px; height: 14px;
+    margin: 3px auto;}
+
+    div.swiper-button-pause
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-pause img
+    {width: 9px; height: 10px;
+    margin: 5px auto;}
+
+     /*추천 건강검진*/
+    div.health_screening_ex
+    {width: 100%;
+    margin-top: 100px; margin-bottom: 100px;}
+    
+    /*타이틀*/
+    div.health_screening_title_box
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.health_screening_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    text-align: center; line-height: 20px;
+    margin-bottom: 5px;
+    color: #222;}
+
+    div.health_screening_title_min_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.health_screening_title_min_box>div:nth-child(1)
+    {width: calc(50% - 140px); height: 1px;
+    background-color: #ddd;
+    float: left;
+    margin-top: 19.5px;}
+
+    div.health_screening_title_min_box>p:nth-child(2)
+    {width: 260px;
+    font-size: 32px;
+    font-family: bold; color: #222;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 10px; margin-right: 10px;
+    float: left;}
+
+    div.health_screening_title_min_box>div:nth-child(3)
+    {width: calc(50% - 140px); height: 1px;
+    background-color: #ddd;
+    float: left;
+    margin-top: 19.5px;}
+    
+    /*건강검진*/
+    div.health_screening_contents_ex
+    {width: 85%;
+    margin: 0 auto;}
+
+    a.health_screening_contents
+    {width: 100%;
+    display: block;}
+    
+    /*이미지*/
+    a.health_screening_contents>div:nth-child(1)
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    a.health_screening_contents>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.health_screening_text_contents
+    {width: 100%;}
+
+    div.health_screening_text_contents>p:nth-child(1)
+    {width: fit-content;
+    line-height: 20px;
+    font-size: 15px; font-family: 'min_bold';
+    padding: 8px;
+    border: 1px solid #222; box-sizing: border-box;
+    color: #222;
+    margin-bottom: 10px;}
+
+    div.health_screening_text_contents>p:nth-child(2)
+    {width: 100%; 
+    font-size: 20px;
+    line-height: 25px; font-family: bold;
+    color: #222;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.health_screening_text_contents>p:nth-child(3)
+    {width: 100%; height: 110px;
+    font-size: 15px; color: #555;
+    line-height: 22px; word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin-bottom: 20px;}
+
+    div.health_screening_text_contents>p:nth-child(4)
+    {width: 100%;
+    text-align: right;
+    color: red; line-height: 25px;}
+
+    div.health_screening_text_contents>p:nth-child(4)>span
+    {font-size: 22px; font-family: bold;}
+
+    /*more 버튼*/
+    div.health_screening_contents_more_box
+    {width: 150px; height: 40px;
+    margin: 0 auto;
+    margin-top: 80px;}
+
+    div.health_screening_contents_more_box>a
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 25px;
+    border: 1px solid #222; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    div.health_screening_contents_more_box>a>p
+    {text-align: center;
+    line-height: 50px;
+    color: #222;}
+
+    div.health_screening_contents_more_box>a:hover
+    {border: none;
+    background-color: #51b8ff;}
+
+    div.health_screening_contents_more_box>a:hover>p
+    {color: #fff;}
+
+    /*의료관광 배너*/
+    div.medical_tourism_banner
+    {width: 100%; 
+    background-color: #51b8ff;
+    padding-top: 50px; padding-bottom: 50px;
+    margin-top: 100px; margin-bottom: 100px;
+    overflow: hidden;}
+
+    div.medical_tourism_banner_box
+    {width: 90%; height: 330px;
+    margin: 0 auto;
+    position: relative;}
+
+    div.medical_tourism_banner_txt
+    {width: 100%;
+    z-index: 2;}
+
+    div.medical_tourism_banner_txt>p
+    {color: #fff;}
+
+    div.medical_tourism_banner_txt>p:nth-child(1)
+    {width: 100%;
+    font-size: 24px; line-height: 24px;
+    margin-bottom: 10px;}
+
+    div.medical_tourism_banner_txt>p:nth-child(2)
+    {width: 100%;
+    font-size: 35px; line-height: 35px;
+    font-family: bold;
+    margin-bottom: 5px;}
+
+    div.medical_tourism_banner_txt>p:nth-child(3)
+    {width: 100%;
+    font-size: 35px; line-height: 35px;
+    margin-bottom: 30px;}
+
+    a.medical_tourism_more_btn
+    {display: block;
+    width: 150px; height: 40px;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    a.medical_tourism_more_btn>p
+    {font-size: 18px;
+    text-align: center; line-height: 40px;
+    color: #fff;
+    transition: all 0.5s;}
+
+    a.medical_tourism_more_btn:hover 
+    {border: none;
+    background-color: #fff;}
+
+    a.medical_tourism_more_btn:hover>p
+    {color: #51b8ff;}
+    
+    /*이미지*/
+    div.medical_tourism_banner_icon
+    {width: 380px;
+    position: absolute;
+    bottom: 0; right: 0;
+    z-index: 1;}
+
+    div.medical_tourism_banner_icon img
+    {width: 100%; height: auto;}
+
+     /*공지사항, 갤러리, 콜센터*/
+    div.bottom_contens_ex
+    {width: 90%;
+    margin: 100px auto;
+    margin-bottom: 150px;
+    overflow: hidden;}
+
+    /*공지사항*/
+    div.notic_ex
+    {width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;}
+
+    div.notic_title_box
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.notic_title_box>p:nth-child(1)
+    {width: calc(100% - 90px);
+    float: left;
+    margin-right: 10px;
+    font-size: 24px; font-family: bold; color: #222; line-height: 30px;}
+
+    div.notic_title_box>a:nth-child(2)
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    display: block;
+    float: right;
+    border: 1px solid #222; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    div.notic_title_box>a:nth-child(2)>p
+    {text-align: center;
+    font-size: 15px; line-height: 30px; color: #222;
+    transition: all 0.5s;}
+
+    div.notic_title_box>a:nth-child(2):hover
+    {background-color: #51b8ff;
+    border: none;}
+
+    div.notic_title_box>a:nth-child(2):hover>p
+    {color: #fff;}
+
+    div.notic_img
+    {width: 49%;
+    margin-right: 2%;
+    align-self: stretch;}
+
+    div.notic_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.notic_contents_box
+    {width: 49%;}
+
+    ul.notic_contents_list_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box li
+    {width: 100%;
+    transition: all 0.3s;}
+
+    ul.notic_contents_list_box li:hover
+    {background-color: #f3f3f3;}
+
+    ul.notic_contents_list_box li>a
+    {width: calc(100% - 20px);
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box li>a>p
+    {font-size: 15px;
+    line-height: 40px;
+    color: #222;
+    transition: all 0.5s;}
+
+    ul.notic_contents_list_box li:hover>a>p
+    {color: #0099ff;}
+
+    ul.notic_contents_list_box li>a>p:nth-child(1)
+    {width: calc(100% - 70px);
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box li>a>p:nth-child(2)
+    {width: 70px;
+    float: right;
+    text-align: right;}
+
+    /*갤러리*/
+    div.gallery_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.gallery_title
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.gallery_title>p
+    {width: 100%;
+    font-size: 24px; font-family: bold; color: #222; line-height: 30px;}
+
+    div.gallery_content
+    {display: block; 
+    width: 100%; height: 0;
+    padding-bottom: 80%;
+    overflow: hidden;
+    position: relative;}
+
+    div.gallery_content img
+    {width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;}
+    
+    /*글*/
+    div.gallery_txt_ex
+    {width: 100%;
+    padding-top: 10px; padding-bottom: 10px;
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);}
+
+    div.gallery_txt_box
+    {width: calc(100% - 20px);
+    margin: 0 auto;}
+
+    div.gallery_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 18px; font-family: bold; color: #fff;
+    line-height: 20px;
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    div.gallery_more_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.gallery_more_btn_txt_box
+    {width: 100%;
+    margin-bottom: 5px;}
+
+    div.gallery_more_btn_txt_box>p
+    {width: 100%;
+    line-height: 20px;
+    color: #fff;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    div.gallery_more_btn_txt_box>p:nth-child(2)
+    {font-size: 14px; text-align: right;}
+
+    a.gallery_more_btn
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    border: 1px solid #fff; box-sizing: border-box;
+    display: block;
+    float: right;
+    transition: all 0.5s;}
+
+    a.gallery_more_btn:hover
+    {border: none;
+    background-color: #fff;}
+
+    a.gallery_more_btn>p
+    {line-height: 30px;
+    font-size: 15px;
+    color: #fff; text-align: center;
+    transition: all 0.5s;}
+
+    a.gallery_more_btn:hover>p
+    {color: #222;}
+
+    /*콜센터*/
+    div.call_center_ex
+    {width: 100%;
+    border-top: 1px solid #222; box-sizing: border-box;
+    padding-top: 15px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;}
+    
+    /*타이틀*/
+    div.call_center_title
+    {width: 33.333333%;}
+
+    div.call_center_title>p
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 24px; font-family: bold;
+    line-height: 25px;
+    color: #222;}
+
+    div.call_center_title>p>span
+    {display: block;
+    margin-top: 5px;
+    font-family: 'Pretendard';
+    line-height: 20px;
+    font-size: 15px; color: #555;}
+    
+    /*콜센터 내용*/
+    div.call_center_content_ex
+    {width: 66.666666%;}
+
+    div.call_center_content_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;}
+    
+    /*콜센터 내용*/
+    div.call_center_content_01
+    {width: 50%;}
+
+    div.call_center_content_01>p
+    {width: 90%;
+    margin: 0 auto;}
+
+    div.call_center_content_01>p:nth-child(1)
+    {font-size: 20px;
+    margin-bottom: 10px;
+    font-family: bold; color: #222;
+    line-height: 25px; word-break: keep-all;}
+
+    div.call_center_content_01>p:nth-child(2)
+    {font-size: 15px;
+    color: #555; line-height: 20px;
+    word-break: keep-all;}
+
+    div.call_center_content_01>div:nth-child(3)
+    {display: none;}
+    
+    /*전화번호 박스*/
+    div.call_center_content_02
+    {width: 50%;}
+
+    div.call_center_content_02>div
+    {width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;}
+
+    div.call_center_content_02>div:last-child
+    {margin-bottom: 0;}
+
+    div.call_center_content_02>div>p
+    {width: 100%;
+    color: #222;
+    font-size: 15px; line-height: 20px;
+    word-wrap: break-word;}
+
+    div.call_center_content_02>div>p:nth-child(1)
+    {font-family: bold;
+    margin-bottom: 5px;
+    font-size: 16px;}
+
+    div.call_center_content_02>div>p:nth-child(2)
+    {color: #555;}
+
+    
+}
+
+@media all and (min-width: 1025px) and (max-width: 1279px)
+{
+     /*비주얼*/
+    div.visual_ex
+    {width: 100%;
+    position: relative;}
+
+    div.visual_banner_ex
+    {width: 100%; height: 90vh;}
+
+    /*이미지*/
+    div.main_visual_box
+    {width: 100%;}
+
+    div.main_visual_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*슬라이드 텍스트*/
+    div.slide_visual_txt
+    {width: 80%;
+    position: absolute;
+    top: 0; left: 10%;
+    z-index: 3;}
+
+    div.slide_visual_txt_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.slide_visual_txt_box>p 
+    {word-break: keep-all;}
+
+    div.slide_visual_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 20px; color: #fff; line-height: 25px;
+    margin-bottom: 5px;}
+
+    div.slide_visual_txt_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 42px; font-family: bold; color: #fff;
+    line-height: 50px;}
+
+    a.slide_visual_txt_more_btn
+    {width: 100px; height: 40px;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    a.slide_visual_txt_more_btn:hover
+    {background-color: #fff;
+    border: none;}
+
+    a.slide_visual_txt_more_btn>p
+    {text-align: center;
+    line-height: 40px; color: #fff;
+    transition: all 0.5s;}
+
+    a.slide_visual_txt_more_btn:hover>p
+    {color: #222;}
+    
+    /*슬라이드 기능 박스*/
+    .visual_ex .pagination_container_box
+    {width: 80%;
+    position: absolute;
+    top: 0; left: 10%;
+    z-index: 3;}
+
+    .pagination_box .swiper-pagination
+    {position: inherit !important;}
+
+    .pagination_container_box .pagination_box
+    {width: fit-content;
+    float: left;
+    margin-right: 10px;}
+
+    .pagination_box .swiper-pagination2
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    margin-top: 2.5px;
+    margin-right: 10px;}
+
+    .swiper-pagination2 .swiper-pagination-bullet 
+    {width: 15px; height: 15px; 
+    background: #fff;
+    opacity: 0.5;}
+
+    .swiper-pagination2 .swiper-pagination-bullet-active 
+    {width: 60px; 
+    transition: width .5s; 
+    border-radius: 7.5px; 
+    background: #fff; 
+    opacity: 1;
+    border: 1px solid transparent;}
+
+    /*글자 페이지네이션*/
+    .pagination_box .swiper-pagination
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    font-size: 16px; line-height: 20px;
+    color: #fff;}
+
+    span.swiper-pagination-current
+    {font-family: 'bold' !important;
+    font-size: 18px;}
+    
+    /*버튼*/
+    div.button_visual_box
+    {width: fit-content;
+    float: left;
+    position: relative;}
+
+    .button_visual_box .swiper-button-next
+    {width: 20px; height: 20px;
+    left: 0; top: 0;
+    margin-top: 0;}
+
+    .button_visual_box .swiper-button-next img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+
+    .button_visual_box .swiper-button-prev
+    {width: 20px; height: 20px;
+    margin-top: 0;
+    top: 0; left: 50px;}
+
+    .button_visual_box .swiper-button-prev img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after 
+    {display: none;}
+    
+    /*멈춤, 시작 버튼*/
+    .button_visual_box .stop_start_btn_box
+    {width: 20px; height: 20px;
+    position: absolute;
+    top: 0; left: 25px;
+    z-index: 3;
+    overflow: hidden;}
+
+    div.swiper-button-play, div.swiper-button-pause
+    {display: none;}
+
+    div.swiper-button-play
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-play img
+    {width: 14px; height: 14px;
+    margin: 3px auto;}
+
+    div.swiper-button-pause
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-pause img
+    {width: 9px; height: 10px;
+    margin: 5px auto;}
+
+     /*추천 건강검진*/
+    div.health_screening_ex
+    {width: 100%;
+    margin-top: 100px; margin-bottom: 100px;}
+    
+    /*타이틀*/
+    div.health_screening_title_box
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.health_screening_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    text-align: center; line-height: 20px;
+    margin-bottom: 5px;
+    color: #222;}
+
+    div.health_screening_title_min_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.health_screening_title_min_box>div:nth-child(1)
+    {width: calc(50% - 140px); height: 1px;
+    background-color: #ddd;
+    float: left;
+    margin-top: 19.5px;}
+
+    div.health_screening_title_min_box>p:nth-child(2)
+    {width: 260px;
+    font-size: 32px;
+    font-family: bold; color: #222;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 10px; margin-right: 10px;
+    float: left;}
+
+    div.health_screening_title_min_box>div:nth-child(3)
+    {width: calc(50% - 140px); height: 1px;
+    background-color: #ddd;
+    float: left;
+    margin-top: 19.5px;}
+    
+    /*건강검진*/
+    div.health_screening_contents_ex
+    {width: 70%;
+    margin: 0 auto;}
+
+    a.health_screening_contents
+    {width: 100%;
+    display: block;}
+    
+    /*이미지*/
+    a.health_screening_contents>div:nth-child(1)
+    {width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    a.health_screening_contents>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;}
+
+    /*글*/
+    div.health_screening_text_contents
+    {width: 100%;}
+
+    div.health_screening_text_contents>p:nth-child(1)
+    {width: fit-content;
+    line-height: 20px;
+    font-size: 15px; font-family: 'min_bold';
+    padding: 8px;
+    border: 1px solid #222; box-sizing: border-box;
+    color: #222;
+    margin-bottom: 10px;}
+
+    div.health_screening_text_contents>p:nth-child(2)
+    {width: 100%; 
+    font-size: 20px;
+    line-height: 25px; font-family: bold;
+    color: #222;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.health_screening_text_contents>p:nth-child(3)
+    {width: 100%; height: 110px;
+    font-size: 15px; color: #555;
+    line-height: 22px; word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin-bottom: 20px;}
+
+    div.health_screening_text_contents>p:nth-child(4)
+    {width: 100%;
+    text-align: right;
+    color: red; line-height: 25px;}
+
+    div.health_screening_text_contents>p:nth-child(4)>span
+    {font-size: 22px; font-family: bold;}
+
+    /*more 버튼*/
+    div.health_screening_contents_more_box
+    {width: 150px; height: 40px;
+    margin: 0 auto;
+    margin-top: 80px;}
+
+    div.health_screening_contents_more_box>a
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 25px;
+    border: 1px solid #222; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    div.health_screening_contents_more_box>a>p
+    {text-align: center;
+    line-height: 50px;
+    color: #222;}
+
+    div.health_screening_contents_more_box>a:hover
+    {border: none;
+    background-color: #51b8ff;}
+
+    div.health_screening_contents_more_box>a:hover>p
+    {color: #fff;}
+
+    /*의료관광 배너*/
+    div.medical_tourism_banner
+    {width: 100%; 
+    background-color: #51b8ff;
+    margin-top: 100px; margin-bottom: 100px;
+    padding-top: 50px; padding-bottom: 50px;
+    overflow: hidden;}
+
+    div.medical_tourism_banner_box
+    {width: 90%; height: 250px;
+    margin: 0 auto;
+    position: relative;}
+
+    div.medical_tourism_banner_txt
+    {width: 100%;
+    position: absolute;
+    top: calc(50% - 89.5px); left: 0;
+    z-index: 2;}
+
+    div.medical_tourism_banner_txt>p
+    {color: #fff;}
+
+    div.medical_tourism_banner_txt>p:nth-child(1)
+    {width: 100%;
+    font-size: 24px; line-height: 24px;
+    margin-bottom: 10px;}
+
+    div.medical_tourism_banner_txt>p:nth-child(2)
+    {width: 100%;
+    font-size: 35px; line-height: 35px;
+    font-family: bold;
+    margin-bottom: 5px;}
+
+    div.medical_tourism_banner_txt>p:nth-child(3)
+    {width: 100%;
+    font-size: 35px; line-height: 35px;
+    margin-bottom: 30px;}
+
+    a.medical_tourism_more_btn
+    {display: block;
+    width: 150px; height: 40px;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    a.medical_tourism_more_btn>p
+    {font-size: 18px;
+    text-align: center; line-height: 40px;
+    color: #fff;
+    transition: all 0.5s;}
+
+    a.medical_tourism_more_btn:hover 
+    {border: none;
+    background-color: #fff;}
+
+    a.medical_tourism_more_btn:hover>p
+    {color: #51b8ff;}
+
+    div.medical_tourism_banner_icon
+    {width: 400px; 
+    position: absolute;
+    top: 0px; right: 0;
+    z-index: 1;
+    opacity: 0.8;}
+
+    div.medical_tourism_banner_icon img
+    {width: 100%; height: auto;}
+
+    /*공지사항, 갤러리, 콜센터*/
+    div.bottom_contens_ex
+    {width: 90%;
+    margin: 100px auto;
+    margin-bottom: 150px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow: hidden;}
+    
+    /*공지사항*/
+    div.notic_ex
+    {width: 47.5%; height: 100%;
+    margin-right: 5%;
+    margin-bottom: 50px;}
+    
+    /*공지사항 타이틀*/
+    div.notic_title_box
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.notic_title_box>p:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    font-size: 28px;
+    font-family: bold; color: #222;
+    line-height: 30px;
+    float: left;}
+
+    div.notic_title_box>a:nth-child(2)
+    {display: block; 
+    width: 80px; height: 30px;
+    float: left;
+    border-radius: 15px;
+    border: 1px solid #222; box-sizing: border-box;}
+
+    div.notic_title_box>a:nth-child(2)>p
+    {text-align: center;
+    line-height: 30px; color: #222;}
+    
+    /*이미지*/
+    div.notic_img
+    {width: 100%; height: calc(100% - 270px);
+    margin-bottom: 20px;}
+
+    div.notic_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+    
+    /*공지 박스*/
+    div.notic_contents_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box>li
+    {width: 100%;
+    transition: all 0.5s;}
+
+    ul.notic_contents_list_box>li>a
+    {width: calc(100% - 10px);
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box>li:hover
+    {background-color: #f3f3f3;}
+
+    ul.notic_contents_list_box>li>a>p
+    {transition: all 0.5s;}
+
+    ul.notic_contents_list_box>li>a>p:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    line-height: 40px;
+    float: left;
+    color: #222;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box>li>a>p:nth-child(2)
+    {width: 80px;
+    line-height: 40px;
+    color: #222;
+    text-align: right;
+    float: left;}
+
+    ul.notic_contents_list_box>li:hover>a>p
+    {color: #0099ff;}
+
+    /*갤러리*/
+    div.gallery_ex
+    {width: 47.5%;
+    margin-bottom: 50px;}
+
+    div.gallery_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.gallery_title>p
+    {width: 100%;
+    font-size: 28px;
+    font-family: bold; color: #222;
+    line-height: 30px;}
+
+    div.gallery_content
+    {display: block; 
+    width: 100%; height: 0;
+    padding-bottom: 80%;
+    overflow: hidden;
+    position: relative;}
+
+    div.gallery_content img
+    {width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;}
+
+    div.gallery_txt_ex
+    {width: 100%;
+    padding-top: 15px; padding-bottom: 15px;
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);}
+
+    div.gallery_txt_box
+    {width: calc(100% - 30px);
+    margin: 0 auto;}
+
+    div.gallery_txt_box>p:nth-child(1)
+    {width: 100%; height: 30px;
+    font-size: 22px; font-family: bold; color: #fff;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    div.gallery_more_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.gallery_more_btn_txt_box
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    float: left;}
+
+    div.gallery_more_btn_txt_box>p
+    {width: 100%; height: 25px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    a.gallery_more_btn
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    display: block;
+    float: right;
+    transition: all 0.5s;}
+
+    a.gallery_more_btn>p
+    {line-height: 30px;
+    color: #fff; text-align: center;
+    transition: all 0.5s;}
+
+    a.gallery_more_btn:hover
+    {background-color: #fff;
+    border: none;}
+
+    a.gallery_more_btn:hover>p
+    {color: #222;}
+
+    /*콜센터*/
+    div.call_center_ex
+    {width: 100%;
+    border-top: 1px solid #222; box-sizing: border-box;
+    padding-top: 20px;
+    display: flex;
+    align-items: stretch;}
+
+    div.call_center_title
+    {width: 33.333333%;}
+
+    div.call_center_title>p
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 28px; line-height: 30px;
+    color: #222; font-family: bold;}
+
+    div.call_center_title>p>span
+    {font-size: 16px;
+    line-height: 20px;
+    display: block;
+    margin-top: 10px;
+    font-family: 'Pretendard';
+    color: #555;}
+
+    div.call_center_content_ex
+    {width: 66.666666%;}
+
+    div.call_center_content_box
+    {width: 100%;
+    display: flex;
+    align-items: stretch;}
+
+    div.call_center_content_01
+    {width: 50%;}
+
+    div.call_center_content_01>p
+    {width: 90%;
+    margin: 0 auto;}
+
+    div.call_center_content_01>p:nth-child(1)
+    {font-size: 20px;
+    font-family: bold;
+    line-height: 20px;
+    color: #222;
+    margin-bottom: 10px;}
+
+    div.call_center_content_01>p:nth-child(2)
+    {font-size: 16px;
+    line-height: 25px; color: #555;
+    word-break: keep-all;
+    margin-bottom: 10px;}
+
+    div.call_center_content_01>div:nth-child(3)
+    {width: 80px; height: 80px;
+    margin-left: 5%;}
+    
+    div.call_center_content_01>div:nth-child(3) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.call_center_content_02
+    {width: 50%;}
+
+    div.call_center_content_02>div
+    {width: 90%;
+    margin: 0 auto;}
+
+    div.call_center_content_02>div>p
+    {line-height: 30px;
+    color: #222;}
+
+    div.call_center_content_02>div>p:nth-child(1)
+    {font-family: bold;}
+
+
+}
+
+@media all and (min-width: 1280px) and (max-width: 1419px)
+{
+     /*비주얼*/
+    div.visual_ex
+    {width: 100%;
+    position: relative;}
+
+    div.visual_banner_ex
+    {width: 100%; height: 90vh;}
+
+    /*이미지*/
+    div.main_visual_box
+    {width: 100%;}
+
+    div.main_visual_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*슬라이드 텍스트*/
+    div.slide_visual_txt
+    {width: 80%;
+    position: absolute;
+    top: calc(50% - 90px); left: 10%;
+    z-index: 3;}
+
+    div.slide_visual_txt_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.slide_visual_txt_box>p 
+    {word-break: keep-all;}
+
+    div.slide_visual_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 20px; color: #fff; line-height: 25px;
+    margin-bottom: 5px;}
+
+    div.slide_visual_txt_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 42px; font-family: bold; color: #fff;
+    line-height: 50px;}
+
+    a.slide_visual_txt_more_btn
+    {width: 100px; height: 40px;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    a.slide_visual_txt_more_btn:hover
+    {background-color: #fff;
+    border: none;}
+
+    a.slide_visual_txt_more_btn>p
+    {text-align: center;
+    line-height: 40px; color: #fff;
+    transition: all 0.5s;}
+
+    a.slide_visual_txt_more_btn:hover>p
+    {color: #222;}
+    
+    /*슬라이드 기능 박스*/
+    .visual_ex .pagination_container_box
+    {width: 80%;
+    position: absolute;
+    top: 0; left: 10%;
+    z-index: 3;}
+
+    .pagination_box .swiper-pagination
+    {position: inherit !important;}
+
+    .pagination_container_box .pagination_box
+    {width: fit-content;
+    float: left;
+    margin-right: 10px;}
+
+    .pagination_box .swiper-pagination2
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    margin-top: 2.5px;
+    margin-right: 10px;}
+
+    .swiper-pagination2 .swiper-pagination-bullet 
+    {width: 15px; height: 15px; 
+    background: #fff;
+    opacity: 0.5;}
+
+    .swiper-pagination2 .swiper-pagination-bullet-active 
+    {width: 60px; 
+    transition: width .5s; 
+    border-radius: 7.5px; 
+    background: #fff; 
+    opacity: 1;
+    border: 1px solid transparent;}
+
+    /*글자 페이지네이션*/
+    .pagination_box .swiper-pagination
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    font-size: 16px; line-height: 20px;
+    color: #fff;}
+
+    span.swiper-pagination-current
+    {font-family: 'bold' !important;
+    font-size: 18px;}
+    
+    /*버튼*/
+    div.button_visual_box
+    {width: fit-content;
+    float: left;
+    position: relative;}
+
+    .button_visual_box .swiper-button-next
+    {width: 20px; height: 20px;
+    left: 0; top: 0;
+    margin-top: 0;}
+
+    .button_visual_box .swiper-button-next img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+
+    .button_visual_box .swiper-button-prev
+    {width: 20px; height: 20px;
+    margin-top: 0;
+    top: 0; left: 50px;}
+
+    .button_visual_box .swiper-button-prev img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after 
+    {display: none;}
+    
+    /*멈춤, 시작 버튼*/
+    .button_visual_box .stop_start_btn_box
+    {width: 20px; height: 20px;
+    position: absolute;
+    top: 0; left: 25px;
+    z-index: 3;
+    overflow: hidden;}
+
+    div.swiper-button-play, div.swiper-button-pause
+    {display: none;}
+
+    div.swiper-button-play
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-play img
+    {width: 14px; height: 14px;
+    margin: 3px auto;}
+
+    div.swiper-button-pause
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-pause img
+    {width: 9px; height: 10px;
+    margin: 5px auto;}
+
+     /*추천 건강검진*/
+    div.health_screening_ex
+    {width: 100%;
+    margin-top: 100px; margin-bottom: 100px;}
+    
+    /*타이틀*/
+    div.health_screening_title_box
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.health_screening_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    text-align: center; line-height: 20px;
+    margin-bottom: 5px;
+    color: #222;}
+
+    div.health_screening_title_min_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.health_screening_title_min_box>div:nth-child(1)
+    {width: calc(50% - 140px); height: 1px;
+    background-color: #ddd;
+    float: left;
+    margin-top: 19.5px;}
+
+    div.health_screening_title_min_box>p:nth-child(2)
+    {width: 260px;
+    font-size: 32px;
+    font-family: bold; color: #222;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 10px; margin-right: 10px;
+    float: left;}
+
+    div.health_screening_title_min_box>div:nth-child(3)
+    {width: calc(50% - 140px); height: 1px;
+    background-color: #ddd;
+    float: left;
+    margin-top: 19.5px;}
+    
+    /*건강검진*/
+    div.health_screening_contents_ex
+    {width: 90%;
+    margin: 0 auto;}
+
+    a.health_screening_contents
+    {width: 100%;
+    display: block;
+    display: flex;
+    align-items: stretch;}
+    
+    /*이미지*/
+    a.health_screening_contents>div:nth-child(1)
+    {width: 49%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 2%;}
+
+    a.health_screening_contents>div:nth-child(1) img
+    {width: 100%; height: auto;}
+
+    /*글*/
+    div.health_screening_text_contents
+    {width: 49%;
+    position: relative;}
+
+    div.health_screening_text_contents>p:nth-child(1)
+    {width: fit-content;
+    line-height: 20px;
+    font-size: 15px; font-family: 'min_bold';
+    padding: 8px;
+    border: 1px solid #222; box-sizing: border-box;
+    color: #222;
+    margin-bottom: 10px;}
+
+    div.health_screening_text_contents>p:nth-child(2)
+    {width: 100%; 
+    font-size: 18px;
+    line-height: 25px; font-family: bold;
+    color: #222;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.health_screening_text_contents>p:nth-child(3)
+    {width: 100%;
+    font-size: 15px; color: #555;
+    line-height: 25px; word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;}
+
+    div.health_screening_text_contents>p:nth-child(4)
+    {width: 100%;
+    position: absolute;
+    left: 0; bottom: 0;
+    text-align: right;
+    color: red; line-height: 25px;}
+
+    div.health_screening_text_contents>p:nth-child(4)>span
+    {font-size: 20px; font-family: bold;}
+
+
+    /*more 버튼*/
+    div.health_screening_contents_more_box
+    {width: 150px; height: 40px;
+    margin: 0 auto;
+    margin-top: 80px;}
+
+    div.health_screening_contents_more_box>a
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 25px;
+    border: 1px solid #222; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    div.health_screening_contents_more_box>a>p
+    {text-align: center;
+    line-height: 50px;
+    color: #222;}
+
+    div.health_screening_contents_more_box>a:hover
+    {border: none;
+    background-color: #51b8ff;}
+
+    div.health_screening_contents_more_box>a:hover>p
+    {color: #fff;}
+
+    /*의료관광 배너*/
+    div.medical_tourism_banner
+    {width: 100%; height: 300px;
+    background-color: #51b8ff;
+    margin-top: 100px; margin-bottom: 100px;
+    overflow: hidden;}
+
+    div.medical_tourism_banner_box
+    {width: 90%; height: 300px;
+    margin: 0 auto;
+    position: relative;}
+    
+    /*글 박스*/
+    div.medical_tourism_banner_txt
+    {width: fit-content;
+    position: absolute;
+    top: calc(50% - 74.5px); left: 0;}
+
+    div.medical_tourism_banner_txt>p:nth-child(1)
+    {font-size: 24px; line-height: 24px;
+    margin-bottom: 10px;
+    color: #fff;}
+
+    div.medical_tourism_banner_txt>p:nth-child(2)
+    {font-size: 38px; line-height: 38px;
+    font-family: bold;
+    color: #fff;
+    margin-bottom: 5px;}
+
+    div.medical_tourism_banner_txt>p:nth-child(3)
+    {font-size: 38px; line-height: 38px;
+    color: #fff;
+    margin-bottom: 30px;}
+    
+    a.medical_tourism_more_btn
+    {display: block;
+    width: 150px; height: 40px;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    a.medical_tourism_more_btn>p
+    {font-size: 18px;
+    text-align: center; line-height: 40px;
+    color: #fff;
+    transition: all 0.5s;}
+
+    a.medical_tourism_more_btn:hover 
+    {border: none;
+    background-color: #fff;}
+
+    a.medical_tourism_more_btn:hover>p
+    {color: #51b8ff;}
+
+    div.medical_tourism_banner_icon
+    {width: 416px; height: 260px;
+    position: absolute;
+    top: 20px; right: 0;}
+
+    div.medical_tourism_banner_icon img
+    {width: 100%; height: auto;}
+
+    /*공지사항, 갤러리, 콜센터*/
+    div.bottom_contens_ex
+    {width: 90%;
+    margin: 100px auto;
+    margin-bottom: 150px;
+    overflow: hidden;}
+
+    /*공지사항*/
+    div.notic_ex
+    {width: 30%; height: 100%;
+    margin-right: 2%;
+    float: left;}
+    
+    /*공지사항 타이틀*/
+    div.notic_title_box
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.notic_title_box>p:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    font-size: 28px;
+    font-family: bold; color: #222;
+    line-height: 30px;
+    float: left;}
+
+    div.notic_title_box>a:nth-child(2)
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    border: 1px solid #222; box-sizing: border-box;
+    display: block;
+    float: left;
+    transition: all 0.5s;}
+
+    div.notic_title_box>a:nth-child(2)>p
+    {text-align: center;
+    line-height: 30px;
+    transition: all 0.5s;}
+
+    div.notic_title_box>a:nth-child(2):hover
+    {border: none;
+    background-color: #51b8ff;}
+
+    div.notic_title_box>a:nth-child(2):hover>p
+    {color: #fff;}
+    
+    /*이미지*/
+    div.notic_img
+    {width: 100%; height: calc(100% - 270px);
+    margin-bottom: 20px;}
+
+    div.notic_img img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    div.notic_contents_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box>li
+    {width: 100%;
+    transition: all 0.5s;}
+
+    ul.notic_contents_list_box>li>a
+    {width: calc(100% - 10px);
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box>li:hover
+    {background-color: #f3f3f3;}
+
+    ul.notic_contents_list_box>li>a>p
+    {transition: all 0.5s;}
+
+    ul.notic_contents_list_box>li>a>p:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    line-height: 40px;
+    float: left;
+    color: #222;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box>li>a>p:nth-child(2)
+    {width: 80px;
+    line-height: 40px;
+    color: #222;
+    text-align: right;
+    float: left;}
+
+    ul.notic_contents_list_box>li:hover>a>p
+    {color: #0099ff;}
+
+    /*갤러리*/
+    div.gallery_ex
+    {width: 36%;
+    margin-right: 2%;
+    float: left;}
+
+    div.gallery_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.gallery_title>p
+    {width: 100%;
+    font-size: 28px;
+    font-family: bold; color: #222;
+    line-height: 30px;}
+
+    div.gallery_content
+    {display: block; 
+    width: 100%; height: 0;
+    padding-bottom: 80%;
+    overflow: hidden;
+    position: relative;}
+
+    div.gallery_content img
+    {width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;}
+
+    div.gallery_txt_ex
+    {width: 100%;
+    padding-top: 15px; padding-bottom: 15px;
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);}
+
+    div.gallery_txt_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;}
+
+    div.gallery_txt_box>p:nth-child(1)
+    {width: 100%; height: 30px;
+    font-size: 22px; font-family: bold; color: #fff;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    div.gallery_more_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.gallery_more_btn_txt_box
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    float: left;}
+
+    div.gallery_more_btn_txt_box>p
+    {width: 100%; height: 25px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    a.gallery_more_btn
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    display: block;
+    float: right;
+    transition: all 0.5s;}
+
+    a.gallery_more_btn>p
+    {line-height: 30px;
+    color: #fff; text-align: center;
+    transition: all 0.5s;}
+
+    a.gallery_more_btn:hover
+    {background-color: #fff;
+    border: none;}
+
+    a.gallery_more_btn:hover>p
+    {color: #222;}
+    
+    /*콜센터*/
+    div.call_center_ex
+    {width: 30%; height: 100%;
+    float: left;}
+
+    div.call_center_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.call_center_title>p
+    {width: 100%;
+    font-size: 28px;
+    font-family: bold; color: #222;
+    line-height: 30px;}
+
+    div.call_center_title>p>span
+    {font-size: 15px;
+    color: #8a8a8a;
+    font-family: 'Pretendard';}
+
+    div.call_center_content_ex
+    {width: 100%; height: calc(100% - 50px);
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    /*콜센터 콘텐츠 박스*/
+    div.call_center_content_box
+    {width: 90%;
+    margin: 0 auto;}
+    
+    /*콜센터 01*/
+    div.call_center_content_01
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.call_center_content_01>p:nth-child(1)
+    {width: 100%;
+    text-align: center;
+    font-size: 20px; line-height: 20px;
+    font-family: bold; color: #222;
+    margin-bottom: 5px;}
+
+    div.call_center_content_01>p:nth-child(2)
+    {width: 100%;
+    text-align: center;
+    word-break: keep-all;
+    color: #777;
+    font-size: 15px; line-height: 20px;
+    margin-bottom: 20px;}
+
+    div.call_center_content_01>div:nth-child(3)
+    {width: 90px; height: 90px;
+    margin: 0 auto;}
+
+    div.call_center_content_01>div:nth-child(3) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*콜센터 02*/
+    div.call_center_content_02
+    {width: 255px;
+    margin: 0 auto;}
+
+    /*전화번호*/
+    div.callcenter_tel_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.callcenter_tel_box>p
+    {line-height: 30px;
+    color: #222;}
+
+    div.callcenter_tel_box>p:nth-child(1)
+    {width: 60px;
+    float: left;
+    font-family: bold;}
+
+    div.callcenter_tel_box>p:nth-child(2)
+    {width: calc(100% - 60px);
+    float: left;}
+
+    /*휴대폰*/
+    div.callcenter_phone_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.callcenter_phone_box>p
+    {line-height: 30px;
+    color: #222;}
+
+    div.callcenter_phone_box>p:nth-child(1)
+    {width: 60px;
+    float: left;
+    font-family: bold;}
+
+    div.callcenter_phone_box>p:nth-child(2)
+    {width: calc(100% - 60px);
+    float: left;}
+    
+    /*이메일*/
+    div.callcenter_email_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.callcenter_email_box>p
+    {line-height: 30px;
+    color: #222;}
+
+    div.callcenter_email_box>p:nth-child(1)
+    {width: 60px;
+    float: left;
+    font-family: bold;}
+
+    div.callcenter_email_box>p:nth-child(2)
+    {width: calc(100% - 60px);
+    float: left;}
+
+}
+
+@media all and (min-width: 1420px)
+{
+    /*비주얼*/
+    div.visual_ex
+    {width: 100%;
+    position: relative;}
+
+    div.visual_banner_ex
+    {width: 100%; height: 90vh;}
+
+    /*이미지*/
+    div.main_visual_box
+    {width: 100%;}
+
+    div.main_visual_box img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*슬라이드 텍스트*/
+    div.slide_visual_txt
+    {width: 80%;
+    position: absolute;
+    top: 0; left: 10%;
+    z-index: 3;}
+
+    div.slide_visual_txt_box
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.slide_visual_txt_box>p 
+    {word-break: keep-all;}
+
+    div.slide_visual_txt_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 20px; color: #fff; line-height: 25px;
+    margin-bottom: 5px;}
+
+    div.slide_visual_txt_box>p:nth-child(2)
+    {width: 100%;
+    font-size: 42px; font-family: bold; color: #fff;
+    line-height: 50px;}
+
+    a.slide_visual_txt_more_btn
+    {width: 100px; height: 40px;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    a.slide_visual_txt_more_btn:hover
+    {background-color: #fff;
+    border: none;}
+
+    a.slide_visual_txt_more_btn>p
+    {text-align: center;
+    line-height: 40px; color: #fff;
+    transition: all 0.5s;}
+
+    a.slide_visual_txt_more_btn:hover>p
+    {color: #222;}
+    
+    /*슬라이드 기능 박스*/
+    .visual_ex .pagination_container_box
+    {width: 80%;
+    position: absolute;
+    top: 0; left: 10%;
+    z-index: 3;}
+
+    .pagination_box .swiper-pagination
+    {position: inherit !important;}
+
+    .pagination_container_box .pagination_box
+    {width: fit-content;
+    float: left;
+    margin-right: 10px;}
+
+    .pagination_box .swiper-pagination2
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    margin-top: 2.5px;
+    margin-right: 10px;}
+
+    .swiper-pagination2 .swiper-pagination-bullet 
+    {width: 15px; height: 15px; 
+    background: #fff;
+    opacity: 0.5;}
+
+    .swiper-pagination2 .swiper-pagination-bullet-active 
+    {width: 60px; 
+    transition: width .5s; 
+    border-radius: 7.5px; 
+    background: #fff; 
+    opacity: 1;
+    border: 1px solid transparent;}
+
+    /*글자 페이지네이션*/
+    .pagination_box .swiper-pagination
+    {width: fit-content !important;
+    display: block !important;
+    float: left;
+    font-size: 16px; line-height: 20px;
+    color: #fff;}
+
+    span.swiper-pagination-current
+    {font-family: 'bold' !important;
+    font-size: 18px;}
+    
+    /*버튼*/
+    div.button_visual_box
+    {width: fit-content;
+    float: left;
+    position: relative;}
+
+    .button_visual_box .swiper-button-next
+    {width: 20px; height: 20px;
+    left: 0; top: 0;
+    margin-top: 0;}
+
+    .button_visual_box .swiper-button-next img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+
+    .button_visual_box .swiper-button-prev
+    {width: 20px; height: 20px;
+    margin-top: 0;
+    top: 0; left: 50px;}
+
+    .button_visual_box .swiper-button-prev img
+    {width: 9px; height: 16px;
+    margin: 2px auto;}
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after 
+    {display: none;}
+    
+    /*멈춤, 시작 버튼*/
+    .button_visual_box .stop_start_btn_box
+    {width: 20px; height: 20px;
+    position: absolute;
+    top: 0; left: 25px;
+    z-index: 3;
+    overflow: hidden;}
+
+    div.swiper-button-play, div.swiper-button-pause
+    {display: none;}
+
+    div.swiper-button-play
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-play img
+    {width: 14px; height: 14px;
+    margin: 3px auto;}
+
+    div.swiper-button-pause
+    {width: 20px; height: 20px;
+    float: left;}
+
+    div.swiper-button-pause img
+    {width: 9px; height: 10px;
+    margin: 5px auto;}
+    
+    /*추천 건강검진*/
+    div.health_screening_ex
+    {width: 100%;
+    margin-top: 100px; margin-bottom: 100px;}
+    
+    /*타이틀*/
+    div.health_screening_title_box
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.health_screening_title_box>p:nth-child(1)
+    {width: 100%;
+    font-size: 17px;
+    text-align: center; line-height: 20px;
+    margin-bottom: 5px;
+    color: #222;}
+
+    div.health_screening_title_min_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.health_screening_title_min_box>div:nth-child(1)
+    {width: calc(50% - 140px); height: 1px;
+    background-color: #ddd;
+    float: left;
+    margin-top: 19.5px;}
+
+    div.health_screening_title_min_box>p:nth-child(2)
+    {width: 260px;
+    font-size: 32px;
+    font-family: bold; color: #222;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 10px; margin-right: 10px;
+    float: left;}
+
+    div.health_screening_title_min_box>div:nth-child(3)
+    {width: calc(50% - 140px); height: 1px;
+    background-color: #ddd;
+    float: left;
+    margin-top: 19.5px;}
+    
+    /*건강검진*/
+    div.health_screening_contents_ex
+    {width: 1400px;
+    margin: 0 auto;}
+
+    a.health_screening_contents
+    {width: 100%;
+    display: block;
+    display: flex;
+    align-items: stretch;}
+    
+    /*이미지*/
+    a.health_screening_contents>div:nth-child(1)
+    {width: 49%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 2%;}
+
+    a.health_screening_contents>div:nth-child(1) img
+    {width: 100%; height: auto;}
+
+    /*글*/
+    div.health_screening_text_contents
+    {width: 49%;
+    position: relative;}
+
+    div.health_screening_text_contents>p:nth-child(1)
+    {width: fit-content;
+    line-height: 20px;
+    font-size: 15px; font-family: 'min_bold';
+    padding: 8px;
+    border: 1px solid #222; box-sizing: border-box;
+    color: #222;
+    margin-bottom: 10px;}
+
+    div.health_screening_text_contents>p:nth-child(2)
+    {width: 100%; 
+    font-size: 20px;
+    line-height: 25px; font-family: bold;
+    color: #222;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.health_screening_text_contents>p:nth-child(3)
+    {width: 100%;
+    font-size: 15px; color: #555;
+    line-height: 25px; word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;}
+
+    div.health_screening_text_contents>p:nth-child(4)
+    {width: 100%;
+    position: absolute;
+    left: 0; bottom: 0;
+    text-align: right;
+    color: red; line-height: 25px;}
+
+    div.health_screening_text_contents>p:nth-child(4)>span
+    {font-size: 22px; font-family: bold;}
+
+
+    /*more 버튼*/
+    div.health_screening_contents_more_box
+    {width: 150px; height: 40px;
+    margin: 0 auto;
+    margin-top: 80px;}
+
+    div.health_screening_contents_more_box>a
+    {width: 100%; height: 50px;
+    display: block;
+    border-radius: 25px;
+    border: 1px solid #222; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    div.health_screening_contents_more_box>a>p
+    {text-align: center;
+    line-height: 50px;
+    color: #222;}
+
+    div.health_screening_contents_more_box>a:hover
+    {border: none;
+    background-color: #51b8ff;}
+
+    div.health_screening_contents_more_box>a:hover>p
+    {color: #fff;}
+
+
+    /*의료관광 배너*/
+    div.medical_tourism_banner
+    {width: 100%; height: 300px;
+    background-color: #51b8ff;
+    margin-top: 100px; margin-bottom: 100px;
+    overflow: hidden;}
+
+    div.medical_tourism_banner_box
+    {width: 1400px; height: 300px;
+    margin: 0 auto;
+    position: relative;}
+    
+    /*글 박스*/
+    div.medical_tourism_banner_txt
+    {width: fit-content;
+    position: absolute;
+    top: calc(50% - 96.5px); left: 0;}
+
+    div.medical_tourism_banner_txt>p:nth-child(1)
+    {font-size: 24px; line-height: 24px;
+    margin-bottom: 10px;
+    color: #fff;}
+
+    div.medical_tourism_banner_txt>p:nth-child(2)
+    {font-size: 42px; line-height: 42px;
+    font-family: bold;
+    color: #fff;
+    margin-bottom: 5px;}
+
+    div.medical_tourism_banner_txt>p:nth-child(3)
+    {font-size: 42px; line-height: 42px;
+    color: #fff;
+    margin-bottom: 30px;}
+    
+    a.medical_tourism_more_btn
+    {display: block;
+    width: 150px; height: 40px;
+    border-radius: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    transition: all 0.5s;}
+
+    a.medical_tourism_more_btn>p
+    {font-size: 18px;
+    text-align: center; line-height: 40px;
+    color: #fff;
+    transition: all 0.5s;}
+
+    a.medical_tourism_more_btn:hover 
+    {border: none;
+    background-color: #fff;}
+
+    a.medical_tourism_more_btn:hover>p
+    {color: #51b8ff;}
+
+    div.medical_tourism_banner_icon
+    {width: 416px; height: 260px;
+    position: absolute;
+    top: 20px; right: 0;}
+
+    div.medical_tourism_banner_icon img
+    {width: 100%; height: auto;}
+
+    /*공지사항, 갤러리, 콜 센터*/
+    div.bottom_contens_ex
+    {width: 1400px;
+    margin: 100px auto;
+    margin-bottom: 150px;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;}
+
+    div.notic_ex
+    {width: 400px; 
+    margin-right: 50px;}
+    
+    /*타이틀*/
+    div.notic_title_box
+    {width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;}
+
+    div.notic_title_box>p:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    font-size: 28px;
+    font-family: bold; color: #222;
+    line-height: 30px;
+    float: left;}
+
+    div.notic_title_box>a:nth-child(2)
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    border: 1px solid #222; box-sizing: border-box;
+    display: block;
+    float: left;
+    transition: all 0.5s;}
+
+    div.notic_title_box>a:nth-child(2)>p
+    {text-align: center;
+    line-height: 30px;
+    transition: all 0.5s;}
+
+    div.notic_title_box>a:nth-child(2):hover
+    {border: none;
+    background-color: #51b8ff;}
+
+    div.notic_title_box>a:nth-child(2):hover>p
+    {color: #fff;}
+
+    /*이미지*/
+    div.notic_img
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.notic_img img
+    {width: 100%; height: auto;}
+
+    /*공지사항 콘텐츠*/
+    div.notic_contents_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box
+    {width: 100%;}
+
+    ul.notic_contents_list_box>li
+    {width: 100%;
+    transition: all 0.5s;}
+
+    ul.notic_contents_list_box>li>a
+    {width: calc(100% - 10px);
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box>li:hover
+    {background-color: #f3f3f3;}
+
+    ul.notic_contents_list_box>li>a>p
+    {transition: all 0.5s;}
+
+    ul.notic_contents_list_box>li>a>p:nth-child(1)
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    line-height: 40px;
+    float: left;
+    color: #222;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    ul.notic_contents_list_box>li>a>p:nth-child(2)
+    {width: 80px;
+    line-height: 40px;
+    color: #222;
+    text-align: right;
+    float: left;}
+
+    ul.notic_contents_list_box>li:hover>a>p
+    {color: #0099ff;}
+    
+    /*갤러리*/
+    div.gallery_ex
+    {width: 500px; 
+    margin-right: 50px;}
+
+    div.gallery_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.gallery_title>p
+    {width: 100%;
+    font-size: 28px;
+    font-family: bold; color: #222;
+    line-height: 30px;}
+
+    div.gallery_content
+    {display: block; 
+    width: 100%; height: 0;
+    padding-bottom: 80%;
+    overflow: hidden;
+    position: relative;}
+
+    div.gallery_content img
+    {width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;}
+
+    div.gallery_txt_ex
+    {width: 100%;
+    padding-top: 20px; padding-bottom: 20px;
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);}
+
+    div.gallery_txt_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;}
+
+    div.gallery_txt_box>p:nth-child(1)
+    {width: 100%; height: 30px;
+    font-size: 22px; font-family: bold; color: #fff;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    div.gallery_more_btn_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.gallery_more_btn_txt_box
+    {width: calc(100% - 90px);
+    margin-right: 10px;
+    float: left;}
+
+    div.gallery_more_btn_txt_box>p
+    {width: 100%; height: 25px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+
+    a.gallery_more_btn
+    {width: 80px; height: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 1px solid #fff; box-sizing: border-box;
+    display: block;
+    float: right;
+    transition: all 0.5s;}
+
+    a.gallery_more_btn>p
+    {line-height: 30px;
+    color: #fff; text-align: center;
+    transition: all 0.5s;}
+
+    a.gallery_more_btn:hover
+    {background-color: #fff;
+    border: none;}
+
+    a.gallery_more_btn:hover>p
+    {color: #222;}
+
+    
+    /*콜센터*/
+    div.call_center_ex
+    {width: 400px;}
+
+    div.call_center_title
+    {width: 100%;
+    margin-bottom: 20px;}
+
+    div.call_center_title>p
+    {width: 100%;
+    font-size: 28px;
+    font-family: bold; color: #222;
+    line-height: 30px;}
+
+    div.call_center_title>p>span
+    {font-size: 15px;
+    color: #8a8a8a;
+    font-family: 'Pretendard';}
+
+    div.call_center_content_ex
+    {width: 100%; height: calc(100% - 60px);
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    /*콜센터 콘텐츠 박스*/
+    div.call_center_content_box
+    {width: 90%;
+    margin: 0 auto;}
+    
+    /*콜센터 01*/
+    div.call_center_content_01
+    {width: 100%;
+    margin-bottom: 30px;}
+
+    div.call_center_content_01>p:nth-child(1)
+    {width: 100%;
+    text-align: center;
+    font-size: 20px; line-height: 20px;
+    font-family: bold; color: #222;
+    margin-bottom: 5px;}
+
+    div.call_center_content_01>p:nth-child(2)
+    {width: 100%;
+    text-align: center;
+    word-break: keep-all;
+    color: #777;
+    font-size: 15px; line-height: 20px;
+    margin-bottom: 30px;}
+
+    div.call_center_content_01>div:nth-child(3)
+    {width: 90px; height: 90px;
+    margin: 0 auto;}
+
+    div.call_center_content_01>div:nth-child(3) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    /*콜센터 02*/
+    div.call_center_content_02
+    {width: 255px;
+    margin: 0 auto;}
+
+    /*전화번호*/
+    div.callcenter_tel_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.callcenter_tel_box>p
+    {line-height: 30px;
+    color: #222;}
+
+    div.callcenter_tel_box>p:nth-child(1)
+    {width: 60px;
+    float: left;
+    font-family: bold;}
+
+    div.callcenter_tel_box>p:nth-child(2)
+    {width: calc(100% - 60px);
+    float: left;}
+
+    /*휴대폰*/
+    div.callcenter_phone_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.callcenter_phone_box>p
+    {line-height: 30px;
+    color: #222;}
+
+    div.callcenter_phone_box>p:nth-child(1)
+    {width: 60px;
+    float: left;
+    font-family: bold;}
+
+    div.callcenter_phone_box>p:nth-child(2)
+    {width: calc(100% - 60px);
+    float: left;}
+    
+    /*이메일*/
+    div.callcenter_email_box
+    {width: 100%;
+    overflow: hidden;}
+
+    div.callcenter_email_box>p
+    {line-height: 30px;
+    color: #222;}
+
+    div.callcenter_email_box>p:nth-child(1)
+    {width: 60px;
+    float: left;
+    font-family: bold;}
+
+    div.callcenter_email_box>p:nth-child(2)
+    {width: calc(100% - 60px);
+    float: left;}
+}

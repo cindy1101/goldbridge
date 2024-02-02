@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.ckeditor.com/4.12.1/standard-all/ckeditor.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+</head>
+<body>
+    
+    <section class="admin_inquriy_ex">
+
+        <div class="admin_title">
+            <p>문의하기</p>
+        </div><!--admin_title end-->
+
+        <form>
+
+            <ul class="admin_inquriy_select">
+
+                <li>
+                    <p>분류</p>
+                </li>
+
+                <li>
+                    <select class="admin_inquriy_select_box">
+
+                        <option value="inquriy" selected>문의하기</option>
+                        <option value="support">지원하기</option>
+
+                    </select><!--admin_community_select_box-->
+                </li>
+
+            </ul><!--admin_inquriy_select end-->
+
+            <ul class="admin_inquriy_cont">
+
+                <li>
+                    <p>NAME</p>
+                </li>
+
+                <li class="admin_inquriy_cont_width">
+                    <input type="text" class="admin_inquriy_txt" placeholder="이름" readonly>
+                </li>
+
+                <li>
+                    <p>PHONE</p>
+                </li>
+
+                <li class="admin_inquriy_cont_width">
+                    <input type="tel" class="admin_inquriy_txt" placeholder="전화번호" readonly>
+                </li>
+
+                <li>
+                    <p>E-MAIL</p>
+                </li>
+
+                <li>
+                    <input type="email" class="admin_inquriy_txt" placeholder="이메일" readonly>
+                </li>
+
+                <li>
+                    <p>SUBJECT</p>
+                </li>
+
+                <li>
+                    <input type="text" class="admin_inquriy_txt" placeholder="문의 행사 내용" readonly>
+                </li>
+
+                <li>
+                    <p>CONTENTS</p>
+                </li>
+
+                <li>
+                    <textarea class="admin_inquriy_textarea" readonly placeholder="예시입니다."></textarea>
+                </li>
+
+                <li>
+                    <p>작성일자</p>
+                </li>
+
+                <li>
+                    <p class="admin_inquriy_day">2023-11-09 13:00:00</p>
+                </li>
+
+            </ul><!--admin_inquriy_cont end // 문의하기-->
+
+            <ul class="admin_support_cont">
+
+                <li>
+                    <p>NAME</p>
+                </li>
+
+                <li class="admin_inquriy_cont_width">
+                    <input type="text" class="admin_inquriy_txt" placeholder="이름" readonly>
+                </li>
+
+                <li>
+                    <p>PHONE</p>
+                </li>
+
+                <li class="admin_inquriy_cont_width">
+                    <input type="tel" class="admin_inquriy_txt" placeholder="전화번호" readonly>
+                </li>
+
+                <li>
+                    <p>SUPPORT AREAS</p>
+                </li>
+
+                <li>
+                    <input type="text" class="admin_inquriy_txt" placeholder="지원 내용" readonly>
+                </li>
+
+                <li>
+                    <p>CONTENTS</p>
+                </li>
+
+                <li>
+                    <textarea class="admin_inquriy_textarea" readonly placeholder="예시입니다."></textarea>
+                </li>
+
+                <li>
+                    <p>PORTFOLIO</p>
+                </li>
+
+                <li>
+                    <div class="admin_download_cont">
+
+                        <a href="#" download="#">
+                            <p>다운로드 파일명</p>
+                            <p>다운로드</p>
+                        </a>
+
+                    </div>
+                </li>
+
+                <li>
+                    <p>작성일자</p>
+                </li>
+
+                <li>
+                    <p class="admin_inquriy_day">2023-11-09 13:00:00</p>
+                </li>
+                
+            </ul><!--admin_support_cont end // 지원하기-->
+
+            <!--문의하기일 때 지원하기에 display:none; 처리 해주세요! (반대도 마찬가지로)-->
+
+            <div class="admin_button_cont_ex">
+
+                <input type="button" class="admin_button_cont btn-secondary" value="목록으로">
+                <input type="button" class="admin_button_cont btn-danger" value="삭제하기">
+
+            </div><!--admin_button_cont_ex-->
+
+        </form>
+
+    </section><!--admin_inquriy_ex end-->
+
+</body>
+</html>

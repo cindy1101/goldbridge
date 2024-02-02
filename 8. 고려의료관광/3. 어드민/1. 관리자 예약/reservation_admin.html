@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reservation_admin.css">
+</head>
+<body>
+    
+    <section class="reservation_admin">
+
+        <div class="reservation_admin_title">
+            <p>> Health Screening Appointment</p>
+        </div>
+
+        <form>
+
+            <ul class="reservation_admin_member">
+
+                <li>
+                    <p>E-mail (Your Username)</p>
+                </li>
+
+                <li>
+                    <input type="text" class="reservation_admin_member_txt">
+                </li>
+
+
+            </ul><!--reservation_admin_member-->
+
+
+            <div class="patient_admin">
+
+                <p class="patient_admin_title">※ Patient Information</p>
+
+                <ul class="patient_admin_form">
+
+                    <li>
+                        <p>Name</p>
+                    </li>
+
+                    <li>
+                        <div class="patient_admin_name">
+                            <input type="text" class="reservation_admin_name_txt">
+                            <input type="text" class="reservation_admin_name_txt">
+                        </div>
+                    </li>
+
+                    <li>
+                        <p>Date of Birth</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="reservation_patient_name_txt">
+                    </li>
+
+                    <li>
+                        <p>Gender</p>
+                    </li>
+
+                    <li>
+                        <div class="patient_admin_gender">
+
+                            <div>
+                                <input type="radio" class="gender_chk_admin" id="patient_admin_male" name="patient_admin_gender">
+
+                                <label for="patient_admin_male">
+                                    <p>Male</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" class="gender_chk_admin" id="patient_admin_female" name="patient_admin_gender">
+
+                                <label for="patient_admin_female">
+                                    <p>Female</p>
+                                </label>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <p>Nationality</p>
+                    </li>
+
+                    <li>
+                        <input type="text" class="reservation_patient_name_txt">
+                    </li>
+
+                    <li>
+                        <p>E-mail Address</p>
+                    </li>
+
+                    <li>
+                        <input type="email" class="reservation_patient_txt">
+                    </li>
+
+                    <li>
+                        <p>Address</p>
+                    </li>
+
+                    <li>
+                        <div class="patient_admin_address">
+                            <input type="text" class="reservation_patient_address_txt">
+                            <input type="text" class="reservation_patient_address_txt">
+                        </div>
+                    </li>
+
+                    <li>
+                        <p>Insurance</p>
+                    </li>
+
+                    <li>
+                        <div class="patient_admin_insurance">
+
+                            <div>
+                                <input type="radio" class="patient_chk_insurance" id="patient_yes_insurance" name="patient_admin_insurance">
+
+                                <label for="patient_yes_insurance">
+                                    <p>Yes</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" class="patient_chk_insurance" id="patient_no_insurance" name="patient_admin_insurance">
+
+                                <label for="patient_no_insurance">
+                                    <p>No / Self-Payment</p>
+                                </label>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <p>Preferred Type of Health Screening Program</p>
+                    </li>
+
+                    <li>
+                        <div class="patient_admin_preferred">
+                            <input type="text" class="reservation_preferred_address_txt">
+                            <input type="text" class="reservation_preferred_address_txt">
+                            <input type="text" class="reservation_preferred_address_txt">
+                        </div>
+                    </li>
+
+                    <li>
+                        <p>Preferred Check-Up Date</p>
+                    </li>
+
+                    <li>
+                        <div class="patient_admin_preferred_date">
+                            <input type="text" class="reservation_preferred_preferred_date_txt">
+                            <input type="text" class="reservation_preferred_preferred_date_txt">
+                            <input type="text" class="reservation_preferred_preferred_date_txt">
+                        </div>
+                    </li>
+
+
+                </ul><!--patient_admin_form-->
+
+            </div><!--patient_admin-->
+
+            <div class="request_an_appointment_admin">
+
+                <p class="request_an_appointment_admin_title">※ Request an Appointment for the Health Screening</p>
+
+                <div class="people_appointment">
+
+                    <p class="people_appointment_title">Health Check-Up User 01</p>
+
+                    <ul class="people_appointment_form">
+
+                        <li>
+                            <p>Name</p>
+                        </li>
+
+                        <li>
+                            <div class="people_appointment_name">
+                                <input type="text" class="appointment_admin_name_txt">
+                                <input type="text" class="appointment_admin_name_txt">
+                            </div>
+                        </li>
+
+                        <li>
+                            <p>Gender</p>
+                        </li>
+
+                        <li>
+                            <div class="people_appointment_gender">
+                                <div>
+                                    <input type="radio" class="people_appointment_gender_chk" id="people_appointment_male" name="people_appointment_gender">
+    
+                                    <label for="people_appointment_male">
+                                        <p>Male</p>
+                                    </label>
+                                </div>
+    
+                                <div>
+                                    <input type="radio" class="people_appointment_gender_chk" id="people_appointment_female" name="people_appointment_gender">
+    
+                                    <label for="people_appointment_female">
+                                        <p>Female</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <p>Passport (Number)</p>
+                        </li>
+
+                        <li>
+                            <div class="people_appointment_passport">
+                                <input type="text" class="people_appointment_passport_txt">
+                                <input type="text" class="people_appointment_passport_txt">
+                                <input type="text" class="people_appointment_passport_txt">
+                            </div>
+                        </li>
+
+                        <li>
+                            <p>Your Status</p>
+                        </li>
+
+                        <li>
+                            <div class="people_appointment_status">
+
+                                <div>
+                                    <input type="checkbox" id="status_01" class="people_appointment_status_chk">
+                                    <label for="status_01">
+                                        <p>Business</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="status_02" class="people_appointment_status_chk">
+                                    <label for="status_02">
+                                        <p>Travel</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="status_03" class="people_appointment_status_chk">
+                                    <label for="status_03">
+                                        <p>Student</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="status_04" class="people_appointment_status_chk">
+                                    <label for="status_04">
+                                        <p>Treatment</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="status_05" class="people_appointment_status_chk">
+                                    <label for="status_05">
+                                        <p>For Health Screening Only / + Medical Tourism</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="status_06" class="people_appointment_status_chk">
+                                    <label for="status_06">
+                                        <p>Other</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="status_07" class="people_appointment_status_chk">
+                                    <label for="status_07">
+                                        <p>Teens / Children</p>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="status_08" class="people_appointment_status_chk">
+                                    <label for="status_08">
+                                        <p>Toddlers / Infants (Babies)</p>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <p>Please describe history of medication intake</p>
+                        </li>
+
+                        <li>
+                            <textarea class="people_appointment_textarea"></textarea>
+                        </li>
+
+                        <li>
+                            <p>Please describe history of surgery, medical treatment</p>
+                        </li>
+
+                        <li>
+                            <textarea class="people_appointment_textarea"></textarea>
+                        </li>
+
+                        <li>
+                            <p>Special Comments or Other Inquiries</p>
+                        </li>
+
+                        <li>
+                            <textarea class="people_appointment_textarea"></textarea>
+                        </li>
+
+                    </ul>
+
+                </div><!--people_appointment-->
+
+            </div><!--request_an_appointment_admin-->
+
+            <div class="total_pay_admin">
+
+                <p class="total_pay_admin_title">※ Total Order Amount</p>
+
+                <ul class="total_admin_product">
+
+                    <li>
+                        <p>검사일자</p>
+                    </li>
+
+                    <li>
+                        <p>검사시간</p>
+                    </li>
+
+                    <li>
+                        <p>병원</p>
+                    </li>
+
+                    <li>
+                        <p>검진프로그램</p>
+                    </li>
+
+                    <li>
+                        <p>성인</p>
+                    </li>
+
+                    <li>
+                        <p>유아</p>
+                    </li>
+
+                    <li>
+                        <p>아동</p>
+                    </li>
+
+                    <li>
+                        <p>검진 기본 가격</p>
+                    </li>
+
+                    <li>
+                        <p>2023-10-31</p>
+                    </li>
+
+                    <li>
+                        <p>AM 10:00</p>
+                    </li>
+
+                    <li>
+                        <p>Inje University, Haeundae PAIK Hospital (Health Promotion Center)</p>
+                    </li>
+
+                    <li>
+                        <p>Male VIP Accommodation Precision Health Checkup</p>
+                    </li>
+
+                    <li>
+                        <p>1</p>
+                    </li>
+
+                    <li>
+                        <p>0</p>
+                    </li>
+
+                    <li>
+                        <p>0</p>
+                    </li>
+
+                    <li>
+                        <p>350,000 won</p>
+                    </li>
+
+                    <li>
+                        <p>2023-10-31</p>
+                    </li>
+
+                    <li>
+                        <p>AM 10:00</p>
+                    </li>
+
+                    <li>
+                        <p>Inje University, Haeundae PAIK Hospital (Health Promotion Center)</p>
+                    </li>
+
+                    <li>
+                        <p>Male VIP Accommodation Precision Health Checkup</p>
+                    </li>
+
+                    <li>
+                        <p>1</p>
+                    </li>
+
+                    <li>
+                        <p>0</p>
+                    </li>
+
+                    <li>
+                        <p>0</p>
+                    </li>
+
+                    <li>
+                        <p>350,000 won</p>
+                    </li>
+
+                </ul>
+
+                <ul class="total_pay_admin_box">
+                    <li>
+                        <p>총 가격</p>
+                    </li>
+
+                    <li>
+                        <p>1,200,000 won</p>
+                    </li>
+                </ul>
+
+            </div><!--total_pay_admin-->
+
+        </form>
+
+    </section><!--reservation_admin-->
+
+</body>
+</html>

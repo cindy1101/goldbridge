@@ -1,0 +1,1806 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+
+*::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'min_bold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+body 
+{font-family: 'Pretendard'; line-height: 16px;
+height: auto !important;}
+
+p {margin-bottom: 0;}
+
+ul {margin: 0;}
+
+input:not([type]), input[type="text"], input[type="password"], 
+input[type="date"], input[type="datetime"], 
+input[type="datetime-local"], input[type="month"], 
+input[type="week"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="time"], 
+input[type="url"], input[type="color"], textarea
+{box-shadow: none;
+background-color: #fff;
+padding: 0;
+margin-bottom: 0;
+outline: none;}
+
+input[type="checkbox"]
+{margin-bottom: 0;}
+
+input[type="checkbox"]+label, input[type="radio"]+label 
+{margin: 0;}
+
+/*이미지 스크롤 막기*/
+.scrollOff
+{width: 100%; height: 100vh;
+position: fixed;
+overflow : hidden;} 
+
+
+@media all and (min-width: 1420px)
+{   
+    /*로그인 페이지*/
+    div.login_ex
+    {width: 400px;
+    margin: 0 auto;
+    margin-top: 190px;
+    margin-bottom: 150px;}
+    
+    /*로그인 top*/
+    div.login_box
+    {width: 100%;
+    padding-bottom: 30px; margin-bottom: 30px; 
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*로그인 타이틀*/
+    p.login_box_title
+    {width: 100%;
+    font-size: 32px; font-family: bold; 
+    color: #222; line-height: 40px;
+    text-align: center;
+    margin-bottom: 30px;}
+
+    /*로그인 폼*/
+    #login_id_box
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    margin-bottom: 10px; color: #333;
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+    #login_password_box
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px; color: #333;
+    text-indent: 10px;
+    margin-bottom: 50px;}
+
+    #login_submit_box
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff; 
+    margin-bottom: 10px;
+    transition: all 0.3s;}
+
+    #login_submit_box:hover
+    {background-color: #796a5b;}
+
+    a.login_join_btn
+    {width: 100%; height: 50px;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s;}
+
+    a.login_join_btn>p
+    {text-align: center; 
+    line-height: 50px;
+    color: #222;
+    transition: all 0.3s;}
+
+    a.login_join_btn:hover
+    {background-color: #aaa;}
+
+    a.login_join_btn:hover>p {color: #fff;}
+
+    /*로그인 bottom*/
+    div.naver_login_ex
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #00c300;
+    transition: all 0.3s;}
+
+    a.naver_login_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;}
+
+    a.naver_login_box>div:nth-child(1)
+    {width: 25px; height: 25px;
+    float: left;
+    margin-top: 12.5px;
+    margin-right: 20px;}
+
+    a.naver_login_box>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.naver_login_box>p:nth-child(2)
+    {width: calc(100% - 45px);
+    float: left;
+    text-align: center;
+    line-height: 50px; color: #fff;}
+
+    div.naver_login_ex:hover {background-color: #00b300;}
+
+
+
+
+    /*회원가입 페이지*/
+    div.join_contents_ex
+    {width: 400px;
+    margin: 0 auto;
+    margin-top: 190px;
+    margin-bottom: 150px;}
+
+    /*회원가입 타이틀*/
+    p.join_contents_title
+    {width: 100%;
+    font-size: 28px; 
+    line-height: 35px;
+    color: #222;
+    margin-bottom: 30px;}
+
+    p.join_contents_title>span {color: #a4917b; font-family: bold;}
+    
+    /*회원가입 폼*/
+    div.join_form_contents_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.join_form_contents_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.join_form_contents_box:last-child
+    {margin-bottom: 0;}
+
+    div.join_form_contents_box>p:nth-child(1)
+    {width: 100%;
+    color: #000; line-height: 20px; font-size: 15px;
+    margin-bottom: 5px;}
+    
+    input[type="text"].join_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+    input[type="password"].join_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+    
+    /*회원가입 버튼*/
+    #join_contetns_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all 0.3s;}
+
+    #join_contetns_submit_btn:hover
+    {background-color: #796a5b;}
+
+    /*회원가입 완료 팝업창*/
+    div.join_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.join_submit_popup_box
+    {width: 500px;
+    border-radius: 5px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+    div.join_submit_popup_icon
+    {width: 50px; height: 50px;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+
+    div.join_submit_popup_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.join_submit_popup_title
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 20px; text-align: center; line-height: 20px;
+    color: #796a5b; font-family: bold;
+    margin-bottom: 20px;}
+
+    p.join_submit_popup_txt
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;
+    font-size: 16px; color: #333; line-height: 25px;
+    margin-bottom: 30px;}
+
+    p.join_submit_popup_txt>span {font-family: 'min_bold'; color: #000;}
+
+    a.join_submit_popup_link_btn
+    {width: calc(100% - 40px); height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #a4917b;}
+
+    a.join_submit_popup_link_btn>p
+    {width: 100%;
+    text-align: center; line-height: 50px; color: #fff;}
+
+
+
+    /*마이페이지 페이지*/
+    div.mypage_page_ex
+    {width: 400px;
+    margin: 0 auto;
+    margin-top: 190px;
+    margin-bottom: 150px;}
+    
+    /*마이페이지 타이틀*/
+    p.mypage_contens_title
+    {width: 100%;
+    font-size: 28px;
+    line-height: 35px;
+    color: #222;
+    margin-bottom: 30px;}
+
+    p.mypage_contens_title>span 
+    {color: #a4917b; font-family: bold;}
+
+    /*마이페이지 폼*/
+    div.mypage_form_contents_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.mypage_form_contents_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.mypage_form_contents_box:last-child
+    {margin-bottom: 0;}
+
+    div.mypage_form_contents_box>p:nth-child(1)
+    {width: 100%;
+    color: #000; line-height: 20px; font-size: 15px;
+    margin-bottom: 5px;}
+    
+    input[type="text"].mypage_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+    input[type="password"].mypage_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+    /*비밀번호 일치할 때*/
+    p.mypage_password_all_right
+    {width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px; color: #00b300; line-height: 20px;}
+
+    /*비밀번호 일치하지 않을 때*/
+    p.mypage_password_not_all_right
+    {width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px; color: red; line-height: 20px;}
+    
+    /*마이페이지 버튼*/
+    div.mypage_form_contents_btn_box
+    {width: 100%;}
+
+    #mypage_change_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff; 
+    margin-bottom: 10px;
+    transition: all 0.3s;}
+
+    #mypage_change_submit_btn:hover
+    {background-color: #796a5b;}
+
+    a.secession_link_href_btn
+    {width: 100%; height: 50px;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s;}
+
+    a.secession_link_href_btn>p
+    {text-align: center; 
+    line-height: 50px;
+    color: #222;
+    transition: all 0.3s;}
+
+    a.secession_link_href_btn:hover
+    {background-color: #aaa;}
+
+    a.secession_link_href_btn:hover>p {color: #fff;}
+
+    /*정보 변경 완료*/
+    div.mypage_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.mypage_submit_popup_box
+    {width: 500px;
+    border-radius: 5px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+    div.mypage_submit_popup_icon
+    {width: 50px; height: 50px;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+  
+    div.mypage_submit_popup_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+  
+    p.mypage_submit_popup_title
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 20px; text-align: center; line-height: 20px;
+    color: #796a5b; font-family: bold;
+    margin-bottom: 20px;}
+  
+    p.join_submit_popup_txt
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;
+    font-size: 16px; color: #333; line-height: 25px;
+    margin-bottom: 30px;}
+  
+    p.join_submit_popup_txt>span {font-family: 'min_bold'; color: #000;}
+  
+    a.mypage_link_href_btn
+    {width: calc(100% - 40px); height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #a4917b;}
+  
+    a.mypage_link_href_btn>p
+    {width: 100%;
+    text-align: center; line-height: 50px; color: #fff;}
+
+
+
+
+    /*회원탈퇴 페이지*/
+    div.withdrawal_contens_ex
+    {width: 500px;
+    margin: 0 auto;
+    margin-top: 190px;
+    margin-bottom: 150px;}
+
+    /*회원가입 타이틀*/
+    p.withdrawal_contens_title
+    {width: 100%;
+    font-size: 28px; 
+    line-height: 35px;
+    color: #222;
+    margin-bottom: 30px;}
+
+    p.withdrawal_contens_title>span {color: #a4917b; font-family: bold;}
+    
+    /*회원탈퇴 박스*/
+    div.withdrawal_contens_notic_box
+    {width: 100%;
+    padding-top: 20px; padding-bottom: 20px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 30px;}
+
+    div.withdrawal_contens_notic_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;}
+
+    div.withdrawal_contens_notic_box>div>p
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    color: #555; line-height: 20px;
+    position: relative;}
+
+    div.withdrawal_contens_notic_box>div>p::before
+    {content: "-";
+    width: 15px;
+    position: absolute;
+    top: 0; left: -15px;}
+
+    div.withdrawal_contens_notic_box>div>p:nth-child(2)
+    {margin-top: 5px; margin-bottom: 5px;}
+
+    /*회원탈퇴 폼*/
+    div.withdrawal_contens_check_box
+    {width: 100%;
+    margin-bottom: 80px;}
+
+    div.withdrawal_contens_check_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; font-size: 15px;
+    color: #000;
+    margin-bottom: 5px;}
+
+    input[type="password"].withdrawal_password_wriht_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+    /*비밀번호 일치하지 않을 때*/
+    p.withdrawal_contens_check_not
+    {width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px; color: red; line-height: 20px;}
+
+    /*회원탈퇴 버튼*/
+    div.withdrawal_contens_submit_btn_box
+    {width: 100%;}
+
+    #withdrawal_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff; 
+    margin-bottom: 10px;
+    transition: all 0.3s;}
+
+    #withdrawal_submit_btn:hover
+    {background-color: #796a5b;}
+
+    a.withdrawal_link_href_btn
+    {width: 100%; height: 50px;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s;}
+
+    a.withdrawal_link_href_btn>p
+    {text-align: center; 
+    line-height: 50px;
+    color: #222;
+    transition: all 0.3s;}
+
+    a.withdrawal_link_href_btn:hover
+    {background-color: #aaa;}
+
+    a.withdrawal_link_href_btn:hover>p {color: #fff;}
+
+    /*회원탈퇴 완료 팝업창*/
+    div.withdrawal_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.withdrawal_submit_popup_box
+    {width: 500px;
+    border-radius: 5px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+    div.withdrawal_submit_popup_icon
+    {width: 50px; height: 50px;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+
+    div.withdrawal_submit_popup_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.withdrawal_submit_popup_title
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 20px; text-align: center; line-height: 20px;
+    color: #796a5b; font-family: bold;
+    margin-bottom: 20px;}
+
+    p.withdrawal_submit_popup_txt
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;
+    font-size: 16px; color: #333; line-height: 25px;
+    margin-bottom: 30px;}
+
+    a.withdrawal_popup_link_href_btn
+    {width: calc(100% - 40px); height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #a4917b;}
+
+    a.withdrawal_popup_link_href_btn>p
+    {width: 100%;
+    text-align: center; line-height: 50px; color: #fff;}
+
+}
+
+
+@media all and (min-width: 769px) and (max-width: 1419px)
+{   
+    /*로그인 페이지*/
+    div.login_ex
+    {width: 400px;
+    margin: 0 auto;
+    margin-top: 190px;
+    margin-bottom: 150px;}
+    
+    /*로그인 top*/
+    div.login_box
+    {width: 100%;
+    padding-bottom: 30px; margin-bottom: 30px; 
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*로그인 타이틀*/
+    p.login_box_title
+    {width: 100%;
+    font-size: 32px; font-family: bold; 
+    color: #222; line-height: 40px;
+    text-align: center;
+    margin-bottom: 30px;}
+
+    /*로그인 폼*/
+    #login_id_box
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    margin-bottom: 10px;
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+    #login_password_box
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;
+    margin-bottom: 50px;}
+
+    #login_submit_box
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all 0.3s;}
+
+    #login_submit_box:hover
+    {background-color: #796a5b;}
+
+    a.login_join_btn
+    {width: 100%; height: 50px;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s;}
+
+    a.login_join_btn>p
+    {text-align: center; 
+    line-height: 50px;
+    color: #222;
+    transition: all 0.3s;}
+
+    a.login_join_btn:hover
+    {background-color: #aaa;}
+
+    a.login_join_btn:hover>p {color: #fff;}
+
+    /*로그인 bottom*/
+    div.naver_login_ex
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #00c300;
+    transition: all 0.3s;}
+
+    a.naver_login_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;}
+
+    a.naver_login_box>div:nth-child(1)
+    {width: 25px; height: 25px;
+    float: left;
+    margin-top: 12.5px;
+    margin-right: 20px;}
+
+    a.naver_login_box>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.naver_login_box>p:nth-child(2)
+    {width: calc(100% - 45px);
+    float: left;
+    text-align: center;
+    line-height: 50px; color: #fff;}
+
+    div.naver_login_ex:hover {background-color: #00b300;}
+
+
+
+
+    /*회원가입 페이지*/
+    div.join_contents_ex
+    {width: 400px;
+    margin: 0 auto;
+    margin-top: 190px;
+    margin-bottom: 150px;}
+
+    /*회원가입 타이틀*/
+    p.join_contents_title
+    {width: 100%;
+    font-size: 28px; 
+    line-height: 35px;
+    color: #222;
+    margin-bottom: 30px;}
+
+    p.join_contents_title>span {color: #a4917b; font-family: bold;}
+    
+    /*회원가입 폼*/
+    div.join_form_contents_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.join_form_contents_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.join_form_contents_box:last-child
+    {margin-bottom: 0;}
+
+    div.join_form_contents_box>p:nth-child(1)
+    {width: 100%;
+    color: #000; line-height: 20px; font-size: 15px;
+    margin-bottom: 5px;}
+    
+    input[type="text"].join_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+    input[type="password"].join_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+    
+    /*회원가입 버튼*/
+    #join_contetns_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all 0.3s;}
+
+    #join_contetns_submit_btn:hover
+    {background-color: #796a5b;}
+
+    /*회원가입 완료 팝업창*/
+    div.join_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.join_submit_popup_box
+    {width: 500px;
+    border-radius: 5px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+    div.join_submit_popup_icon
+    {width: 50px; height: 50px;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+
+    div.join_submit_popup_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.join_submit_popup_title
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 20px; text-align: center; line-height: 20px;
+    color: #796a5b; font-family: bold;
+    margin-bottom: 20px;}
+
+    p.join_submit_popup_txt
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;
+    font-size: 16px; color: #333; line-height: 25px;
+    margin-bottom: 30px;}
+
+    p.join_submit_popup_txt>span {font-family: 'min_bold'; color: #000;}
+
+    a.join_submit_popup_link_btn
+    {width: calc(100% - 40px); height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #a4917b;}
+
+    a.join_submit_popup_link_btn>p
+    {width: 100%;
+    text-align: center; line-height: 50px; color: #fff;}
+
+
+
+    /*마이페이지 페이지*/
+    div.mypage_page_ex
+    {width: 400px;
+    margin: 0 auto;
+    margin-top: 190px;
+    margin-bottom: 150px;}
+    
+    /*마이페이지 타이틀*/
+    p.mypage_contens_title
+    {width: 100%;
+    font-size: 28px;
+    line-height: 35px;
+    color: #222;
+    margin-bottom: 30px;}
+
+    p.mypage_contens_title>span 
+    {color: #a4917b; font-family: bold;}
+
+    /*마이페이지 폼*/
+    div.mypage_form_contents_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.mypage_form_contents_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.mypage_form_contents_box:last-child
+    {margin-bottom: 0;}
+
+    div.mypage_form_contents_box>p:nth-child(1)
+    {width: 100%;
+    color: #000; line-height: 20px; font-size: 15px;
+    margin-bottom: 5px;}
+    
+    input[type="text"].mypage_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+    input[type="password"].mypage_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+    /*비밀번호 일치할 때*/
+    p.mypage_password_all_right
+    {width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px; color: #00b300; line-height: 20px;}
+
+    /*비밀번호 일치하지 않을 때*/
+    p.mypage_password_not_all_right
+    {width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px; color: red; line-height: 20px;}
+    
+    /*마이페이지 버튼*/
+    div.mypage_form_contents_btn_box
+    {width: 100%;}
+
+    #mypage_change_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff; 
+    margin-bottom: 10px;
+    transition: all 0.3s;}
+
+    #mypage_change_submit_btn:hover
+    {background-color: #796a5b;}
+
+    a.secession_link_href_btn
+    {width: 100%; height: 50px;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s;}
+
+    a.secession_link_href_btn>p
+    {text-align: center; 
+    line-height: 50px;
+    color: #222;
+    transition: all 0.3s;}
+
+    a.secession_link_href_btn:hover
+    {background-color: #aaa;}
+
+    a.secession_link_href_btn:hover>p {color: #fff;}
+
+    /*정보 변경 완료*/
+    div.mypage_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.mypage_submit_popup_box
+    {width: 500px;
+    border-radius: 5px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+    div.mypage_submit_popup_icon
+    {width: 50px; height: 50px;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+  
+    div.mypage_submit_popup_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+  
+    p.mypage_submit_popup_title
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 20px; text-align: center; line-height: 20px;
+    color: #796a5b; font-family: bold;
+    margin-bottom: 20px;}
+  
+    p.join_submit_popup_txt
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;
+    font-size: 16px; color: #333; line-height: 25px;
+    margin-bottom: 30px;}
+  
+    p.join_submit_popup_txt>span {font-family: 'min_bold'; color: #000;}
+  
+    a.mypage_link_href_btn
+    {width: calc(100% - 40px); height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #a4917b;}
+  
+    a.mypage_link_href_btn>p
+    {width: 100%;
+    text-align: center; line-height: 50px; color: #fff;}
+
+
+
+    /*회원탈퇴 페이지*/
+    div.withdrawal_contens_ex
+    {width: 500px;
+    margin: 0 auto;
+    margin-top: 190px;
+    margin-bottom: 150px;}
+
+    /*회원가입 타이틀*/
+    p.withdrawal_contens_title
+    {width: 100%;
+    font-size: 28px; 
+    line-height: 35px;
+    color: #222;
+    margin-bottom: 30px;}
+
+    p.withdrawal_contens_title>span {color: #a4917b; font-family: bold;}
+    
+    /*회원탈퇴 박스*/
+    div.withdrawal_contens_notic_box
+    {width: 100%;
+    padding-top: 20px; padding-bottom: 20px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 30px;}
+
+    div.withdrawal_contens_notic_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;}
+
+    div.withdrawal_contens_notic_box>div>p
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    color: #555; line-height: 20px;
+    position: relative;}
+
+    div.withdrawal_contens_notic_box>div>p::before
+    {content: "-";
+    width: 15px;
+    position: absolute;
+    top: 0; left: -15px;}
+
+    div.withdrawal_contens_notic_box>div>p:nth-child(2)
+    {margin-top: 5px; margin-bottom: 5px;}
+
+    /*회원탈퇴 폼*/
+    div.withdrawal_contens_check_box
+    {width: 100%;
+    margin-bottom: 80px;}
+
+    div.withdrawal_contens_check_box>p:nth-child(1)
+    {width: 100%;
+    line-height: 20px; font-size: 15px;
+    color: #000;
+    margin-bottom: 5px;}
+
+    input[type="password"].withdrawal_password_wriht_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 10px;}
+
+     /*비밀번호 일치하지 않을 때*/
+    p.withdrawal_contens_check_not
+    {width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px; color: red; line-height: 20px;}
+
+    /*회원탈퇴 버튼*/
+    div.withdrawal_contens_submit_btn_box
+    {width: 100%;}
+
+    #withdrawal_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff; 
+    margin-bottom: 10px;
+    transition: all 0.3s;}
+
+    #withdrawal_submit_btn:hover
+    {background-color: #796a5b;}
+
+    a.withdrawal_link_href_btn
+    {width: 100%; height: 50px;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s;}
+
+    a.withdrawal_link_href_btn>p
+    {text-align: center; 
+    line-height: 50px;
+    color: #222;
+    transition: all 0.3s;}
+
+    a.withdrawal_link_href_btn:hover
+    {background-color: #aaa;}
+
+    a.withdrawal_link_href_btn:hover>p {color: #fff;}
+
+    /*회원탈퇴 완료 팝업창*/
+    div.withdrawal_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.withdrawal_submit_popup_box
+    {width: 500px;
+    border-radius: 5px;
+    padding-top: 50px; padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+    div.withdrawal_submit_popup_icon
+    {width: 50px; height: 50px;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+
+    div.withdrawal_submit_popup_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.withdrawal_submit_popup_title
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 20px; text-align: center; line-height: 20px;
+    color: #796a5b; font-family: bold;
+    margin-bottom: 20px;}
+
+    p.withdrawal_submit_popup_txt
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;
+    font-size: 16px; color: #333; line-height: 25px;
+    margin-bottom: 30px;}
+
+    a.withdrawal_popup_link_href_btn
+    {width: calc(100% - 40px); height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #a4917b;}
+
+    a.withdrawal_popup_link_href_btn>p
+    {width: 100%;
+    text-align: center; line-height: 50px; color: #fff;}
+
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px)
+{
+    /*로그인*/
+    div.login_ex
+    {margin-top: 165.28px;}
+
+    /*회원가입*/
+    div.join_contents_ex
+    {margin-top: 165.28px;}
+
+    /*마이페이지*/
+    div.mypage_page_ex
+    {margin-top: 165.28px;}
+
+    /*회원탈퇴*/
+    div.withdrawal_contens_ex
+    {margin-top: 165.28px;}
+}
+
+@media all and (max-width: 768px)
+{
+    /*로그인 페이지*/
+    div.login_ex
+    {width: 400px;
+    margin: 0 auto;
+    margin-top: 115.28px;
+    margin-bottom: 80px;}
+    
+    /*로그인 top*/
+    div.login_box
+    {width: 100%;
+    padding-bottom: 30px; margin-bottom: 30px; 
+    border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+    /*로그인 타이틀*/
+    p.login_box_title
+    {width: 100%;
+    font-size: 25px; font-family: bold; 
+    color: #222; line-height: 30px;
+    text-align: center;
+    margin-bottom: 30px;}
+
+    /*로그인 폼*/
+    #login_id_box
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    margin-bottom: 10px;
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 5px;}
+
+    #login_password_box
+    {width: 100%; height: 50px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 15px;
+    text-indent: 5px;
+    margin-bottom: 50px;}
+
+    #login_submit_box
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    font-size: 15px;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff;
+    margin-bottom: 10px;}
+
+    a.login_join_btn
+    {width: 100%; height: 50px;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: block;}
+
+    a.login_join_btn>p
+    {text-align: center; 
+    line-height: 50px;
+    font-size: 15px;
+    color: #222;}
+
+    /*로그인 bottom*/
+    div.naver_login_ex
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #00c300;}
+
+    a.naver_login_box
+    {width: calc(100% - 40px);
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;}
+
+    a.naver_login_box>div:nth-child(1)
+    {width: 25px; height: 25px;
+    float: left;
+    margin-top: 12.5px;
+    margin-right: 20px;}
+
+    a.naver_login_box>div:nth-child(1) img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    a.naver_login_box>p:nth-child(2)
+    {width: calc(100% - 45px);
+    float: left;
+    font-size: 15px;
+    text-align: center;
+    line-height: 50px; color: #fff;}
+
+
+
+
+    /*회원가입 페이지*/
+    div.join_contents_ex
+    {width: 400px;
+    margin: 0 auto;
+    margin-top: 115.28px;
+    margin-bottom: 80px;}
+
+    /*회원가입 타이틀*/
+    p.join_contents_title
+    {width: 100%;
+    font-size: 24px; 
+    line-height: 30px;
+    color: #222;
+    margin-bottom: 30px;}
+
+    p.join_contents_title>span {color: #a4917b; font-family: bold;}
+    
+    /*회원가입 폼*/
+    div.join_form_contents_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.join_form_contents_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.join_form_contents_box:last-child
+    {margin-bottom: 0;}
+
+    div.join_form_contents_box>p:nth-child(1)
+    {width: 100%;
+    color: #000; line-height: 20px; font-size: 15px;
+    margin-bottom: 5px;}
+    
+    input[type="text"].join_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 14px;
+    text-indent: 5px;}
+
+    input[type="password"].join_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 14px;
+    text-indent: 5px;}
+    
+    /*회원가입 버튼*/
+    #join_contetns_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff;}
+
+    /*회원가입 완료 팝업창*/
+    div.join_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.join_submit_popup_box
+    {width: 450px;
+    border-radius: 5px;
+    padding-top: 30px; padding-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+    div.join_submit_popup_icon
+    {width: 40px; height: 40px;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+
+    div.join_submit_popup_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.join_submit_popup_title
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 20px; text-align: center; line-height: 20px;
+    color: #796a5b; font-family: bold;
+    margin-bottom: 15px;}
+
+    p.join_submit_popup_txt
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;
+    font-size: 15px; color: #333; line-height: 20px;
+    margin-bottom: 30px;}
+
+    p.join_submit_popup_txt>span {font-family: 'min_bold'; color: #000;}
+
+    a.join_submit_popup_link_btn
+    {width: 90%; height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #a4917b;}
+
+    a.join_submit_popup_link_btn>p
+    {width: 100%;
+    font-size: 15px;
+    text-align: center; line-height: 50px; color: #fff;}
+
+
+
+    /*마이페이지 페이지*/
+    div.mypage_page_ex
+    {width: 400px;
+    margin: 0 auto;
+    margin-top: 115.28px;
+    margin-bottom: 80px;}
+
+    /*마이페이지 타이틀*/
+    p.mypage_contens_title
+    {width: 100%;
+    font-size: 24px; 
+    line-height: 30px;
+    color: #222;
+    margin-bottom: 30px;}
+
+    p.mypage_contens_title>span {color: #a4917b; font-family: bold;}
+
+    /*마이페이지 폼*/
+    div.mypage_form_contents_ex
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.mypage_form_contents_box
+    {width: 100%;
+    margin-bottom: 15px;}
+
+    div.mypage_form_contents_box:last-child
+    {margin-bottom: 0;}
+
+    div.mypage_form_contents_box>p:nth-child(1)
+    {width: 100%;
+    color: #000; line-height: 20px; font-size: 15px;
+    margin-bottom: 5px;}
+    
+    input[type="text"].mypage_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 14px;
+    text-indent: 5px;}
+
+    input[type="password"].mypage_form_input_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 14px;
+    text-indent: 5px;}
+
+    /*비밀번호 일치할 때*/
+    p.mypage_password_all_right
+    {width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px; color: #00b300; line-height: 20px;}
+
+    /*비밀번호 일치하지 않을 때*/
+    p.mypage_password_not_all_right
+    {width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px; color: red; line-height: 20px;}
+
+    /*마이페이지 버튼*/
+    div.mypage_form_contents_btn_box
+    {width: 100%;}
+
+    #mypage_change_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    font-size: 15px;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff;
+    margin-bottom: 10px;}
+
+    a.secession_link_href_btn
+    {width: 100%; height: 50px;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: block;}
+
+    a.secession_link_href_btn>p
+    {text-align: center; 
+    line-height: 50px;
+    font-size: 15px;
+    color: #222;}
+
+     /*정보변경 완료 팝업창*/
+    div.mypage_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.mypage_submit_popup_box
+    {width: 450px;
+    border-radius: 5px;
+    padding-top: 30px; padding-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+    div.mypage_submit_popup_icon
+    {width: 40px; height: 40px;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+
+    div.mypage_submit_popup_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.mypage_submit_popup_title
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 20px; text-align: center; line-height: 20px;
+    color: #796a5b; font-family: bold;
+    margin-bottom: 15px;}
+
+    p.join_submit_popup_txt
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;
+    font-size: 15px; color: #333; line-height: 20px;
+    margin-bottom: 30px;}
+
+    p.join_submit_popup_txt>span {font-family: 'min_bold'; color: #000;}
+
+    a.mypage_link_href_btn
+    {width: 90%; height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #a4917b;}
+
+    a.mypage_link_href_btn>p
+    {width: 100%;
+    font-size: 15px;
+    text-align: center; line-height: 50px; color: #fff;}
+
+
+
+    /*회원탈퇴 페이지*/
+    div.withdrawal_contens_ex
+    {width: 500px;
+    margin: 0 auto;
+    margin-top: 115.28px;
+    margin-bottom: 80px;}
+
+    /*회원가입 타이틀*/
+    p.withdrawal_contens_title
+    {width: 100%;
+    font-size: 24px; 
+    line-height: 30px;
+    color: #222;
+    margin-bottom: 30px;}
+
+    p.withdrawal_contens_title>span {color: #a4917b; font-family: bold;}
+
+    /*회원탈퇴 박스*/
+    div.withdrawal_contens_notic_box
+    {width: 100%;
+    padding-top: 20px; padding-bottom: 20px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    margin-bottom: 30px;}
+
+    div.withdrawal_contens_notic_box>div
+    {width: calc(100% - 40px);
+    margin: 0 auto;}
+
+    div.withdrawal_contens_notic_box>div>p
+    {width: calc(100% - 15px);
+    margin-left: 15px;
+    color: #555; line-height: 20px;
+    font-size: 15px;
+    word-break: keep-all;
+    position: relative;}
+
+    div.withdrawal_contens_notic_box>div>p::before
+    {content: "-";
+    width: 15px;
+    position: absolute;
+    top: 0; left: -15px;}
+
+    div.withdrawal_contens_notic_box>div>p:nth-child(2)
+    {margin-top: 5px; margin-bottom: 5px;}
+
+    /*회원탈퇴 폼*/
+    div.withdrawal_contens_check_box
+    {width: 100%;
+    margin-bottom: 50px;}
+
+    div.withdrawal_contens_check_box>p:nth-child(1)
+    {width: 100%;
+    color: #000; line-height: 20px; font-size: 15px;
+    margin-bottom: 5px;}
+    
+    input[type="password"].withdrawal_password_wriht_box
+    {width: 100%; height: 45px;
+    border: 1px solid #ddd; box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.027);
+    font-family: 'Pretendard' !important;
+    font-size: 14px;
+    text-indent: 5px;}
+
+    /*비밀번호 일치하지 않을 때*/
+    p.withdrawal_contens_check_not
+    {width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px; color: red; line-height: 20px;}
+ 
+    /*회원탈퇴 버튼*/
+    div.mypage_form_contents_btn_box
+    {width: 100%;}
+
+    #withdrawal_submit_btn
+    {width: 100%; height: 50px;
+    border-radius: 5px;
+    background-color: #a4917b;
+    font-size: 15px;
+    border: none; resize: none; outline: none;
+    text-align: center; line-height: 50px; font-size: 16px;
+    font-family: 'Pretendard' !important;
+    color: #fff;
+    margin-bottom: 10px;}
+
+    a.withdrawal_link_href_btn
+    {width: 100%; height: 50px;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: block;}
+
+    a.withdrawal_link_href_btn>p
+    {text-align: center; 
+    line-height: 50px;
+    font-size: 15px;
+    color: #222;}
+
+    /*회원탈퇴 완료 팝업창*/
+    div.withdrawal_submit_popup_ex
+    {width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+    div.withdrawal_submit_popup_box
+    {width: 450px;
+    border-radius: 5px;
+    padding-top: 30px; padding-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+    div.withdrawal_submit_popup_icon
+    {width: 40px; height: 40px;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+
+    div.withdrawal_submit_popup_icon img
+    {width: 100%; height: 100%;
+    object-fit: cover;}
+
+    p.withdrawal_submit_popup_title
+    {width: 90%;
+    margin: 0 auto;
+    font-size: 20px; text-align: center; line-height: 20px;
+    color: #796a5b; font-family: bold;
+    margin-bottom: 15px;}
+
+    p.withdrawal_submit_popup_txt
+    {width: 90%;
+    margin: 0 auto;
+    text-align: center; word-break: keep-all;
+    font-size: 15px; color: #333; line-height: 20px;
+    margin-bottom: 30px;}
+
+    a.withdrawal_popup_link_href_btn
+    {width: 90%; height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #a4917b;}
+
+    a.withdrawal_popup_link_href_btn>p
+    {width: 100%;
+    font-size: 15px;
+    text-align: center; line-height: 50px; color: #fff;}
+
+
+
+}
+
+@media all and (max-width: 600px)
+{
+    /*로그인*/
+    div.login_ex
+    {width: 90%;}
+
+    /*회원가입*/
+    div.join_contents_ex
+    {width: 90%;}
+
+    /*회원가입 완료 팝업*/
+    div.join_submit_popup_box
+    {width: 90%;
+    padding-top: 5%; padding-bottom: 5%;}
+
+    /*마이페이지*/
+    div.mypage_page_ex
+    {width: 90%;}
+
+    /*정보 변경 완료 팝업*/
+    div.mypage_submit_popup_box
+    {width: 90%;
+    padding-top: 5%; padding-bottom: 5%;}
+
+    /*회원탈퇴 페이지*/
+    div.withdrawal_contens_ex
+    {width: 90%;}
+
+    /*회원탈퇴 박스*/
+    div.withdrawal_contens_notic_box
+    {width: 100%;
+    padding-top: 5%; padding-bottom: 5%;}
+
+    div.withdrawal_contens_notic_box>div
+    {width: 90%;
+    margin: 0 auto;}
+
+    /*회원탈퇴 완료 팝업*/
+    div.withdrawal_submit_popup_box
+    {width: 90%;
+    padding-top: 5%; padding-bottom: 5%;}
+}
+

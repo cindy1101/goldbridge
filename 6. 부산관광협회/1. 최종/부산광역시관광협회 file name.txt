@@ -1,0 +1,17 @@
+agency : 관련기관
+free_board : 공지사항
+free_board_detaile : 공지사항 상세페이지
+history : 설립목적 및 연혁
+introduce : 인사말
+ktasb : 관광공제회
+map_info : 오시는 길
+member_registration_guide : 회원가입안내(퍼블리싱 진행중)
+member_search : 회원사 검색
+member_status : 회원사 현황
+organization : 조직도
+tourist_information : 관광안내소
+tourist_detaile : 관광안내소 디테일
+tourist_guide : 관광종사원 자격증 발급
+work : 기능 및 업무
+tourism_busan : 관광부산
+
