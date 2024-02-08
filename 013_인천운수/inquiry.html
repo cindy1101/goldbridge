@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기</title>
+    <script src="lib/jquery.min.js"></script>
+
+     <!--페이징버튼-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <header class="header_web_ex" onmouseover="headerHoverEvent();" onmouseout="headerNotHoverEvent();">
+
+        <div class="header_cont_box">
+
+            <a href="#" class="header_cont_box_logo">
+                <img src="img/logo_white.png" alt="로고">
+            </a>
+
+            <ul class="header_cont_lnb">
+
+                <li>
+                    <a href="#">
+                        <p>회사소개</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="map.html">
+                        <p>오시는 길</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html">
+                        <p>문의하기</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="announcement.html">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header><!--header_web_ex end-->
+
+    <header class="header_mobile_ex">
+
+        <div class="header_mobile_cont">
+
+            <a href="#" class="header_mobile_logo">
+                <img src="img/logo_color.png" alt="로고">
+            </a>
+
+            <div class="header_mobile_cont_menu" onclick="mobileHeader()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        <div class="header_mobile_sheet_ex">
+
+            <ul class="header_mobile_sheet_cont">
+                
+                <li>
+                    <a href="#">
+                        <p>01</p>
+                        <p>회사소개</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="map.html">
+                        <p>02</p>
+                        <p>오시는길</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html">
+                        <p>03</p>
+                        <p>문의하기</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="announcement.html">
+                        <p>04</p>
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a href="tel:0512088488" class="header_mobile_call" title="고객센터 전화번호">
+
+                <div>
+
+                    <div>
+                        <img src="img/call_icon.png" alt="전화 아이콘">
+                    </div>
+
+                    <p>고객센터</p>
+
+                    <p>051-208-8408</p>
+
+                </div>
+
+            </a>
+
+        </div><!--header_mobile_sheet_ex end-->
+
+    </header><!--header_mobile_ex end-->
+
+    <div class="sub_visual_ex">
+
+        <p class="sub_visual_title">문의하기</p>
+
+        <div class="sub_visual_rout">
+
+            <a href="#" class="sub_visual_root_home_rout" title="메인화면으로">
+                <img src="img/home_icon.png" alt="메인화면으로">
+            </a>
+
+            <div class="sub_visual_depth_box" onclick="rootDepth();">
+
+                <div class="sub_visual_depth_title">
+                    <p>문의하기</p>
+                    <img src="img/arrow_down_icon.png" alt="">
+                </div>
+
+                <ul class="sub_visual_depth_cont">
+
+                    <li>
+                        <a href="#">
+                            <p>회사소개</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="map.html">
+                            <p>오시는길</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="inquiry.html">
+                            <p>문의하기</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="announcement.html">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--sub_visual_depth_box end-->
+
+        </div><!--sub_visual_rout end-->
+
+    </div><!--sub_visual_ex end-->
+
+    <section class="inquiry_ex">
+
+
+        <div class="search_cont_ex search_inquriy_ex">
+
+            <a href="inquriy_write.html" class="inquiry_write_btn">
+
+               <div>
+                    <p>글 작성하기</p>
+                    <img src="img/pencil_icon.png" alt="문의하기 글 작성하기">
+               </div>
+
+            </a><!--inquiry_write_btn end-->
+
+            <form action="">
+
+                <div class="search_cont_flex search_inquriy_cont_flex">
+
+                    <div class="search_select_box" onclick="searchSelectSlide();">
+
+                        <div class="search_select_title">
+                            <p>제목</p>
+                            <img src="img/arrow_down_icon_black.png" alt="">
+                        </div><!--search_select_title end-->
+    
+                        <ul class="search_select_box" id="slideselect">
+    
+                            <li>
+                                <p>제목</p>
+                            </li>
+    
+                            <li>
+                                <p>제목 + 내용</p>
+                            </li>
+
+                            <li>
+                                <p>작성자</p>
+                            </li>
+    
+                        </ul><!--search_select_box-->
+    
+                    </div><!--search_select_box end-->
+    
+                    <div class="search_box">
+
+                        <div class="search_box_flex">
+
+                            <input type="text" name="" class="search_text_box" placeholder="검색어를 입력하세요.">
+
+                            <input type="submit" id="search_submit">
+
+                            <label for="search_submit" class="search_submit_btn">
+                                <img src="img/search_icon.png" alt="검색하기">
+                            </label>
+
+                        </div>
+    
+                    </div><!--search_box end-->
+
+                </div>
+
+            </form>
+
+        </div><!--search_cont_ex end-->
+
+        <div class="inquiry_list_ex">
+
+            <p class="no_title_announcenent" style="display: none;">등록된 게시글이 없습니다.</p>
+
+            <ul class="inquiry_list_title">
+
+                <li>
+                    <p>NO</p>
+                </li>
+
+                <li>
+                    <p>제목</p>
+                </li>
+
+                <li>
+                    <p>작성자</p>
+                </li>
+
+                <li>
+                    <p>등록일자</p>
+                </li>
+
+                <li>
+                    <p>답변상태</p>
+                </li>
+
+            </ul><!--inquiry_list_title-->
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>1</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_no_answer">미완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>탑마트 부산점</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_no_answer">미완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>3</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_no_answer">미완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>4</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_answer">완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>5</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_answer">완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>6</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_answer">완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>7</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_answer">완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>8</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_answer">완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>9</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_answer">완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>10</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_answer">완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>11</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_answer">완료</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="inquiry_list_cont">
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>12</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>구인구직 / 1.2톤 냉동탑차 구합니다.<img src="img/lock_outline_icon.png" alt="잠금 글"></p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>신조물산</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p>2023-12-20</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">
+                        <p class="inquiry_answer">완료</p>
+                    </a>
+                </li>
+            </ul>
+
+        </div><!--inquiry_list_ex end-->
+
+        <div class="page_btn_box">
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                </ul>
+            </nav>
+
+        </div><!--page_btn_box-->
+
+    </section><!--inquiry_ex end-->
+
+    <footer class="footer_ex">
+
+        <div class="footer_cont_box">
+
+            <div class="footer_cont_top">
+
+                <p class="footer_cont_top_company_name">(주)인천냉동운송공사</p>
+
+                <div class="footer_cont_top_right">
+
+                    <a href="javascript:void(0);">
+                        <p>이용약관</p>
+                    </a>
+
+                    <a href="javascript:void(0);">
+                        <p>개인정보처리방침</p>
+                    </a>
+
+                </div><!--footer_cont_top end-->
+
+            </div><!--footer_cont_box end-->
+
+            <div class="footer_cont_line"></div>
+
+            <div class="footer_cont_bottom">
+
+                <div class="footer_cont_bottom_box_01">
+                    <p>대표 : 김정교</p>
+                    <p>사업자번호 : 138-86-02312</p>
+                    <p>주소 : 부산광역시 사하구 원양로 407-1 3층 (주)인천냉동운송공사</p>
+                </div>
+
+                <div class="footer_cont_bottom_box_02">
+                    <p>우편번호 : 49449</p>
+                    <p>전화번호 : 051-208-8488</p>
+                    <p>팩스번호 : 051-208-8408</p>
+                </div>
+
+            </div><!--footer_cont_bottom end-->
+
+
+        </div>
+
+    </footer><!--footer_ex end-->
+
+    <div class="inquiry_popup_ex" style="display: none;">
+
+        <form>
+
+            <div class="inquiry_popup_cont">
+
+                <div class="inquiry_popup_txt_box">
+
+                    <div>
+                        <img src="img/lock_popup_icon.png" alt="">
+                    </div>
+
+                    <p>비밀글 보기</p>
+                    <p>작성자와 관리자만 열람하실 수 있습니다.<br />
+                    본인이라면 <span>비밀번호</span>를 입력하세요.</p>
+
+                </div>
+
+                <input type="password" class="inquiry_popup_password">
+
+                <div class="inquiry_popup_btn">
+
+                    <input type="submit" id="inquiry_password_btn" value="확인하기">
+
+                    <p class="inquiry_popup_list_btn">목록으로</p>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div><!--inquiry_popup_ex end-->
+
+    <script src="lib/header.js"></script>
+    <script src="lib/sub.js"></script>
+
+    <script>
+
+        //비밀글 비밀번호 입력 팝업
+        $(document).ready(function(){
+
+            $('.inquiry_list_cont li').click(function(){
+
+                $('.inquiry_popup_ex').fadeIn();
+                $('body').addClass('scrollOff');
+
+            });
+
+            $('.inquiry_popup_list_btn').click(function(){
+
+                $('.inquiry_popup_ex').fadeOut();
+                $('body').removeClass('scrollOff');
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>

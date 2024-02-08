@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행사 안내 디테일</title>
+    <script src="lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header_ex">
+
+            <div class="header_main" style="display: none;">
+
+                <a href="#" class="header_main_logo">
+                    <img src="image/logo.png" alt="">
+                </a>
+
+                <div class="header_main_open_box">
+
+                    <a href="#" class="login_link_icon">
+                        <img src="image/login_icon.png" alt="">
+                    </a>
+
+                    <div class="main_menu_open_icon" onclick="openHeader();">
+                        <img src="image/menu_open_icon.png" alt="">
+                    </div>
+
+                </div>
+
+            </div><!--header_main // 메인 페이지일 때 헤더 적용-->
+
+            <div class="header_sub">
+    
+                <a href="#">
+                    <img src="image/back_icon.png" alt="">
+                </a>
+    
+                <p>행사 안내</p>
+    
+                <div class="menu_open_btn" onclick="openHeader();">
+                    <img src="image/menu_open_icon.png" alt="">
+                </div>
+    
+            </div><!--header_sub // 서브페이지일 때 헤더 적용-->
+    
+    
+            <div class="header_sheet">
+    
+                <div class="header_sheet_top">
+    
+                    <div>
+                        <p>전체 메뉴</p>
+    
+                        <div onclick="closeHeader();">
+                            <img src="image/close_icon.png" alt="">
+                        </div>
+                    </div>
+    
+                </div><!--header_sheet_top end-->
+    
+                <div class="before_login_box">
+    
+                    <div class="before_login_text_cont">
+    
+                        <p><span>로그인</span> 하시고<br>
+                        진해군항제 축제를 즐겨보세요!</p>
+        
+                        <p>로그인 하신 후 스마트하게 진해군항제를 즐겨보세요!</p>
+    
+                    </div><!--before_login_text_cont end-->
+    
+                    <a href="#" class="href_login">
+                        <p>→</p>
+                    </a>
+    
+                </div><!--before_login_box end // 로그인 전에 나오기-->
+    
+                <div class="profile_box after_login_box" style="display: none;">
+    
+                    <div class="profile_image_box">
+                        <img src="image/profile_image.png" alt="">
+                    </div><!--profile_image_box end-->
+        
+                    <div class="profile_text_box">
+        
+                        <p>윤아름</p>
+                        <p>poriy@naver.com</p>
+                        
+                        <div class="profile_header_btn_box">
+    
+                            <a href="#">
+                                <p>로그아웃</p>
+                            </a>
+    
+                            <a href="mypage.html">
+                                <p>마이페이지</p>
+                            </a>
+    
+                        </div>
+        
+                    </div><!--profile_text_box end-->
+        
+                </div><!--profile_box end // 로그인 후 나오기-->
+    
+                <a href="#" class="header_sheet_banner">
+    
+                    <div class="header_sheet_banner_cont">
+                        <p>봄 바람 흩날리며 온 벚꽃 가득 <span>진해군항제 오늘의 축제</span> ♥<br>
+                        안내 받고 즐겁게 즐기자!</p>
+    
+                        <p>→</p>
+    
+                    </div>
+    
+                </a><!--header_sheet_banner end-->
+    
+                <nav class="header_sheet_lib">
+    
+                    <ul>
+                        <li>
+                            <a href="about.html">
+                                <div>
+                                    <img src="image/navi_icon_01.png" alt="">
+                                </div>
+    
+                                <p>진해군항제 소개</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="image/navi_icon_02.png" alt="">
+                                </div>
+    
+                                <p>행사 안내</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="image/navi_icon_03.png" alt="">
+                                </div>
+    
+                                <p>추천코스</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="image/navi_icon_04.png" alt="">
+                                </div>
+    
+                                <p>주변 안내</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="shop.html">
+                                <div>
+                                    <img src="image/navi_icon_05.png" alt="">
+                                </div>
+    
+                                <p>참가 상점 안내</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="image/navi_icon_06.png" alt="">
+                                </div>
+    
+                                <p>진해군항제 AR 체험</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cctv.html">
+                                <div>
+                                    <img src="image/navi_icon_07.png" alt="">
+                                </div>
+    
+                                <p>실시간 축제 현황</p>
+                            </a>
+                        </li>
+                    </ul>
+    
+                </nav>
+    
+            </div><!--header_sheet end-->
+    
+        </header><!--header_ex end-->
+
+        <main class="event_detaile_page_main">
+
+            <div class="event_detaile_visual_banner">
+                <img src="image/event_detaile_visual.png" alt="">
+            </div>
+
+            <div class="event_detaile_select_box">
+
+                <div class="event_detaile_select_inpormation on" onclick="eventInpormation();">
+                    <p>정보</p>
+                </div>
+
+                <div class="event_detaile_select_tour" onclick="eventTour();">
+                    <p>일정 안내</p>
+                </div>
+
+            </div>
+
+            <div class="event_detaile_title">
+
+                <p class="event_detaile_title_main">진해 군악의장 페스티벌 개막식</p>
+
+                <div class="event_detaile_title_sub">
+                    <p>대한민국 대표 군항도시에서 펼쳐지는 군악의 울림, 민 · 관 · 군이 함께 만들어가는 세계적인 군 문화 축제의 장!</p>
+                    <p>소통과 화합 그리고 평화와 희망을 연주하는 진해 군악의장 페스티벌로 여러분을 안내합니다.</p>
+                </div>
+
+            </div><!--event_detaile_title end-->
+
+
+            <div class="event_inpormation_ex">
+
+                <div class="event_inpormation_day">
+                    <p class="event_inpormation_day_main_title">축제 일정</p>
+                    <p class="event_inpormation_day_sub_title">2023년 03월 31일 18:30 ~ 21:00</p>
+                </div>
+
+                <div class="event_inpormation_map">
+
+                    <p class="event_inpormation_map_main_title">축제 장소</p>
+
+                    <div class="event_inpormation_map_cont">
+                        
+                        <div class="event_inpormation_map_cont_txt">
+                            <p class="event_inpormation_map_cont_txt_main">진해공설운동</p>
+                            <p class="event_inpormation_map_cont_txt_sub">경상남도 창원시 진해구 도만동 1</p>
+                        </div>
+
+                        <a href="#" class="google_map_btn">
+                            <p>구글 길찾기</p>
+                        </a>
+
+                    </div><!--event_inpormation_map_cont end-->
+
+                    <div class="event_inpormation_map_api">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.3300688935356!2d128.65230122635106!3d35.148388159059515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568d32a9028d7b3%3A0xeed77dc26eb22776!2z7KeE7ZW06rO17ISk7Jq064-Z7J6l!5e0!3m2!1sko!2skr!4v1707296271109!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div><!--event_inpormation_map end-->
+
+            </div><!--event_inpormation_ex end-->
+
+            <div class="event_tour_ex" style="display: none;">
+
+                <div class="event_tour_ex_rout">
+                    <p class="event_tour_ex_rout_time">18:30 ~ 18:50</p>
+                    <p class="event_tour_ex_rout_main_title">해군 군악의장대 공연</p>
+                </div>
+
+                <div class="event_tour_ex_rout">
+                    <p class="event_tour_ex_rout_time">18:50 ~ 19:00</p>
+                    <p class="event_tour_ex_rout_main_title">홍보영상 상영</p>
+                </div>
+
+                <div class="event_tour_ex_rout">
+                    <p class="event_tour_ex_rout_time">19:00 ~ 19:30</p>
+                    <p class="event_tour_ex_rout_main_title">내빈 소개 · 개막 선언 · 내빈 인사말</p>
+                </div>
+
+                <div class="event_tour_ex_rout">
+                    <p class="event_tour_ex_rout_time">19:00 ~ 19:30</p>
+                    <p class="event_tour_ex_rout_main_title">오프닝 공연 “ 평화의 울림 “</p>
+                    
+                    <div class="event_tour_ex_rout_sub">
+                        <p>대한민국의 대표 군항 도시 진해에서 울리는 평화의 울림!</p>
+                        <p>민 · 관 · 군이 보여주는 아름다운 공연을 놓치지 마세요.</p>
+                    </div>
+                
+                </div>
+
+                <div class="event_tour_ex_rout">
+                    <p class="event_tour_ex_rout_time">19:40 ~ 21:00</p>
+                    <p class="event_tour_ex_rout_main_title">축하행사 “ 블라썸 피크닉 뮤직 페스티벌 “</p>
+                    <div class="event_tour_ex_rout_sub">
+                        <p>벚꽃 바람 불며 성큼 다가온 봄을 음악으로 만나다!</p>
+                        <p>봄 바람 타고 온 박정서 · 배진아 · 김희재 · 문초희 · 백수정 · 박창근 · 10센치
+                            다양한 가수들이 선사하는 봄의 멜로디, 즐기러 오세요!</p>
+                    </div>
+                </div>
+                
+            </div><!--event_tour_ex end-->
+
+
+        </main><!--event_detaile_page_main end-->
+
+
+        <div class="bottom_navi_bar">
+
+            <a href="#">
+                <div class="bottom_navi_icon_cont">
+                    <div>
+                        <img src="image/bottom_calendar.png" alt="">
+                    </div>
+
+                    <p>행사일정</p>
+                </div>
+            </a>
+
+            <a href="shop.html">
+                <div class="bottom_navi_icon_cont">
+                    <div>
+                        <img src="image/bottom_cart.png" alt="">
+                    </div>
+
+                    <p>상점안내</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="bottom_ar_cont">
+                    <div></div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="bottom_navi_icon_cont">
+                    <div>
+                        <img src="image/bottom_map.png" alt="">
+                    </div>
+
+                    <p>주변안내</p>
+                </div>
+            </a>
+
+            <a href="mypage.html">
+                <div class="bottom_navi_icon_cont">
+                    <div>
+                        <img src="image/bottom_person.png" alt="">
+                    </div>
+
+                    <p>마이페이지</p>
+                </div>
+            </a>
+
+        </div><!--bottom_navi_bar end-->
+
+
+    </div><!--container end-->
+
+    <script src="lib/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>참가상점 디테일</title>
+    <script src="lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <header class="header_ex">
+
+            <div class="header_main" style="display: none;">
+
+                <a href="#" class="header_main_logo">
+                    <img src="image/logo.png" alt="">
+                </a>
+
+                <div class="header_main_open_box">
+
+                    <a href="#" class="login_link_icon">
+                        <img src="image/login_icon.png" alt="">
+                    </a>
+
+                    <div class="main_menu_open_icon" onclick="openHeader();">
+                        <img src="image/menu_open_icon.png" alt="">
+                    </div>
+
+                </div>
+
+            </div><!--header_main // 메인 페이지일 때 헤더 적용-->
+
+            <div class="header_sub">
+    
+                <a href="#">
+                    <img src="image/back_icon.png" alt="">
+                </a>
+    
+                <p>참가상점 안내</p>
+    
+                <div class="menu_open_btn" onclick="openHeader();">
+                    <img src="image/menu_open_icon.png" alt="">
+                </div>
+    
+            </div><!--header_sub // 서브페이지일 때 헤더 적용-->
+    
+    
+            <div class="header_sheet">
+    
+                <div class="header_sheet_top">
+    
+                    <div>
+                        <p>전체 메뉴</p>
+    
+                        <div onclick="closeHeader();">
+                            <img src="image/close_icon.png" alt="">
+                        </div>
+                    </div>
+    
+                </div><!--header_sheet_top end-->
+    
+                <div class="before_login_box">
+    
+                    <div class="before_login_text_cont">
+    
+                        <p><span>로그인</span> 하시고<br>
+                        진해군항제 축제를 즐겨보세요!</p>
+        
+                        <p>로그인 하신 후 스마트하게 진해군항제를 즐겨보세요!</p>
+    
+                    </div><!--before_login_text_cont end-->
+    
+                    <a href="#" class="href_login">
+                        <p>→</p>
+                    </a>
+    
+                </div><!--before_login_box end // 로그인 전에 나오기-->
+    
+                <div class="profile_box after_login_box" style="display: none;">
+    
+                    <div class="profile_image_box">
+                        <img src="image/profile_image.png" alt="">
+                    </div><!--profile_image_box end-->
+        
+                    <div class="profile_text_box">
+        
+                        <p>윤아름</p>
+                        <p>poriy@naver.com</p>
+                        
+                        <div class="profile_header_btn_box">
+    
+                            <a href="#">
+                                <p>로그아웃</p>
+                            </a>
+    
+                            <a href="mypage.html">
+                                <p>마이페이지</p>
+                            </a>
+    
+                        </div>
+        
+                    </div><!--profile_text_box end-->
+        
+                </div><!--profile_box end // 로그인 후 나오기-->
+    
+                <a href="#" class="header_sheet_banner">
+    
+                    <div class="header_sheet_banner_cont">
+                        <p>봄 바람 흩날리며 온 벚꽃 가득 <span>진해군항제 오늘의 축제</span> ♥<br>
+                        안내 받고 즐겁게 즐기자!</p>
+    
+                        <p>→</p>
+    
+                    </div>
+    
+                </a><!--header_sheet_banner end-->
+    
+                <nav class="header_sheet_lib">
+    
+                    <ul>
+                        <li>
+                            <a href="about.html">
+                                <div>
+                                    <img src="image/navi_icon_01.png" alt="">
+                                </div>
+    
+                                <p>진해군항제 소개</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="image/navi_icon_02.png" alt="">
+                                </div>
+    
+                                <p>행사 안내</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="image/navi_icon_03.png" alt="">
+                                </div>
+    
+                                <p>추천코스</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="image/navi_icon_04.png" alt="">
+                                </div>
+    
+                                <p>주변 안내</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="shop.html">
+                                <div>
+                                    <img src="image/navi_icon_05.png" alt="">
+                                </div>
+    
+                                <p>참가 상점 안내</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="image/navi_icon_06.png" alt="">
+                                </div>
+    
+                                <p>진해군항제 AR 체험</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cctv.html">
+                                <div>
+                                    <img src="image/navi_icon_07.png" alt="">
+                                </div>
+    
+                                <p>실시간 축제 현황</p>
+                            </a>
+                        </li>
+                    </ul>
+    
+                </nav>
+    
+            </div><!--header_sheet end-->
+    
+        </header><!--header_ex end-->
+
+        <main class="shop_detaile_page_main">
+
+            <div class="shop_detaile_main_banner">
+                <img src="image/shop_detaile_banner.png" alt="">
+            </div><!--shop_detaile_main_banner end-->
+
+            <div class="shop_detaile_title_box">
+
+                <div class="shop_detaile_main_title_box">
+                    <p class="shop_detail_sub_title">육즙이 팡! 맛도 팡!</p>
+                    <p class="shop_detail_main_title">군항제 수제버거</p>
+                </div>
+
+                <div class="shop_detaile_title_information">
+
+                    <div>
+                        <div>
+                            <img src="image/shop_time.png" alt="">
+                        </div>
+                        <p>10:00 ~ 20:00</p>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="image/shop_address.png" alt="">
+                        </div>
+                        <p>진해 공설운동장 및 창원시 일원</p>
+                    </div>
+
+                    <div>
+
+                        <div>
+                            <img src="image/shop_call.png" alt="">
+                        </div>
+
+                        <a href="tel:010-0000-0000">
+                            <p>010-****-****</p>
+                        </a>
+
+                    </div>
+
+                </div><!--shop_detaile_title_information end-->
+
+            </div><!--shop_detaile_title_box end-->
+
+            <div class="shop_detaile_menu_box">
+                
+                <div class="shop_detaile_menu_box_title">
+                    <p>Menu</p>
+                </div><!--shop_detaile_menu_box_title end-->
+
+                <div class="shop_detaile_menu_cont_box">
+
+                    <div class="shop_detaile_menu_cont">
+
+                        <div class="shop_detaile_menu_cont_image">
+                            <img src="image/shop_detail_product_01.png" alt="">
+                        </div>
+
+                        <div class="shop_detaile_menu_cont_text">
+
+                            <p class="shop_detaile_best_menu">대표메뉴</p>
+                            <p class="shop_detaile_menu_cont_main_title">베이컨 치즈 치킨 버거 세트</p>
+                            <p class="shop_detaile_menu_cont_sub_title">베이컨 치즈 치킨 버거 + 감자튀김 + 콜라 or 사이다</p>
+                            <p class="shop_detaile_menu_cont_price"><span>10,300</span> 원</p>
+                        
+                        </div>
+
+                    </div><!--shop_detaile_menu_cont end-->
+
+                    <div class="shop_detaile_menu_cont">
+
+                        <div class="shop_detaile_menu_cont_image">
+                            <img src="image/shop_detail_product_02.png" alt="">
+                        </div>
+
+                        <div class="shop_detaile_menu_cont_text">
+
+                            <p class="shop_detaile_menu_cont_main_title">킹프론 치킨 버거 세트</p>
+                            <p class="shop_detaile_menu_cont_sub_title">킹프론 치킨 버거 + 감자튀김 + 콜라 or 사이다</p>
+                            <p class="shop_detaile_menu_cont_price"><span>12,300</span> 원</p>
+                        
+                        </div>
+
+                    </div><!--shop_detaile_menu_cont end-->
+
+                    <div class="shop_detaile_menu_cont">
+
+                        <div class="shop_detaile_menu_cont_image">
+                            <img src="image/shop_detail_product_03.png" alt="">
+                        </div>
+
+                        <div class="shop_detaile_menu_cont_text">
+
+                            <p class="shop_detaile_menu_cont_main_title">그릴라이트 치킨 버거 세트</p>
+                            <p class="shop_detaile_menu_cont_sub_title">그릴라이트 치킨 버거 + 감자튀김 + 콜라 or 사이다</p>
+                            <p class="shop_detaile_menu_cont_price"><span>8,800</span> 원</p>
+                        
+                        </div>
+
+                    </div><!--shop_detaile_menu_cont end-->
+
+                    <div class="shop_detaile_menu_cont">
+
+                        <div class="shop_detaile_menu_cont_image">
+                            <img src="image/shop_detail_product_04.png" alt="">
+                        </div>
+
+                        <div class="shop_detaile_menu_cont_text">
+
+                            <p class="shop_detaile_menu_cont_main_title">아보카도 치킨 버거 세트</p>
+                            <p class="shop_detaile_menu_cont_sub_title">아보카도 치킨 버거 + 감자튀김 + 콜라 or 사이다</p>
+                            <p class="shop_detaile_menu_cont_price"><span>10,500</span> 원</p>
+                        
+                        </div>
+
+                    </div><!--shop_detaile_menu_cont end-->
+
+                    <div class="shop_detaile_menu_cont">
+
+                        <div class="shop_detaile_menu_cont_image">
+                            <img src="image/shop_detail_product_05.png" alt="">
+                        </div>
+
+                        <div class="shop_detaile_menu_cont_text">
+
+                            <p class="shop_detaile_menu_cont_main_title">새우 버거 세트</p>
+                            <p class="shop_detaile_menu_cont_sub_title">새우 버거 + 감자튀김 + 콜라 or 사이다</p>
+                            <p class="shop_detaile_menu_cont_price"><span>7,500</span> 원</p>
+                        
+                        </div>
+
+                    </div><!--shop_detaile_menu_cont end-->
+
+                    <div class="shop_detaile_menu_cont">
+
+                        <div class="shop_detaile_menu_cont_image">
+                            <img src="image/shop_detail_product_06.png" alt="">
+                        </div>
+
+                        <div class="shop_detaile_menu_cont_text">
+
+                            <p class="shop_detaile_menu_cont_main_title">불고기 버거 세트</p>
+                            <p class="shop_detaile_menu_cont_sub_title">불고기 버거 + 감자튀김 + 콜라 or 사이다</p>
+                            <p class="shop_detaile_menu_cont_price"><span>7,500</span> 원</p>
+                        
+                        </div>
+
+                    </div><!--shop_detaile_menu_cont end-->
+
+                </div><!--shop_detaile_menu_cont_box end-->
+
+            </div><!--shop_detaile_menu_box end-->
+
+        </main><!--shop_page_main end-->
+
+        <div class="bottom_navi_bar">
+
+            <a href="#">
+                <div class="bottom_navi_icon_cont">
+                    <div>
+                        <img src="image/bottom_calendar.png" alt="">
+                    </div>
+
+                    <p>행사일정</p>
+                </div>
+            </a>
+
+            <a href="shop.html">
+                <div class="bottom_navi_icon_cont">
+                    <div>
+                        <img src="image/bottom_cart.png" alt="">
+                    </div>
+
+                    <p>상점안내</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="bottom_ar_cont">
+                    <div></div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="bottom_navi_icon_cont">
+                    <div>
+                        <img src="image/bottom_map.png" alt="">
+                    </div>
+
+                    <p>주변안내</p>
+                </div>
+            </a>
+
+            <a href="mypage.html">
+                <div class="bottom_navi_icon_cont">
+                    <div>
+                        <img src="image/bottom_person.png" alt="">
+                    </div>
+
+                    <p>마이페이지</p>
+                </div>
+            </a>
+
+        </div><!--bottom_navi_bar end-->
+
+        <div class="survey_btn_ex">
+
+            <div class="survey_btn" onclick="openSurvey();">
+
+                <div>
+                    <div>
+                        <img src="image/survey_icon.png" alt="">
+                    </div>
+        
+                    <p>설문조사</p>
+                </div>
+    
+            </div><!--survey_btn end // 설문조사 버튼-->
+
+        </div><!--survey_btn_ex end-->
+
+        <div class="survey_form" style="display: none;">
+
+            <div class="survey_form_cont">
+
+                <p class="survey_form_cont_title">상품 서비스 만족도 조사</p>
+
+                <form action="">
+
+                    <div class="survey_question">
+                        <p><span>01</span>. 이용하신 매장 이름을 입력해주세요.</p>
+                        <input type="text" class="survey_question_txt" required>
+                    </div>
+
+                    <div class="survey_question">
+                        <p><span>02</span>. 이용하신 일자와 시간을 입력해주세요.</p>
+                        <input type="text" class="survey_question_txt" required>
+                    </div>
+
+                    <div class="survey_question_radio">
+
+                        <p><span>03</span>. 만족도를 선택해주세요.</p>
+
+                        <div class="survey_question_radio_cont">
+
+                            <div>
+                                <input type="radio" class="survey_radio" id="survey_radio_01" name="survey" value="매우만족">
+
+                                <label for="survey_radio_01" class="label_radio_circle"></label>
+
+                                <label for="survey_radio_01">
+                                    <p>매우만족</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" class="survey_radio" id="survey_radio_02" name="survey" value="만족">
+
+                                <label for="survey_radio_02" class="label_radio_circle"></label>
+
+                                <label for="survey_radio_02">
+                                    <p>만족</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" class="survey_radio" id="survey_radio_03" name="survey" value="보통">
+
+                                <label for="survey_radio_03" class="label_radio_circle"></label>
+
+                                <label for="survey_radio_03">
+                                    <p>보통</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" class="survey_radio" id="survey_radio_04" name="survey" value="불만족">
+
+                                <label for="survey_radio_04" class="label_radio_circle"></label>
+
+                                <label for="survey_radio_04">
+                                    <p>불만족</p>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" class="survey_radio" id="survey_radio_05" name="survey" value="매우불만족">
+
+                                <label for="survey_radio_05" class="label_radio_circle"></label>
+
+                                <label for="survey_radio_05">
+                                    <p>매우불만족</p>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="survey_question_textarea">
+                        <p><span>04</span>. 3번 질문에 대한 이유를 작성해주세요.</p>
+                        <textarea class="survey_question_textarea"></textarea>
+                    </div>
+
+                    <div class="survey_form_cont_btn_box">
+                        <p class="survey_form_cont_close_btn" onclick="closeSurvey();">닫기</p>
+                        <input type="submit" class="survey_form_cont_submit" value="제출하기" onclick="openSurveySubmit();">
+                    </div>
+
+                </form>
+
+            </div><!--survey_form_cont end-->
+
+        </div><!--survey_form end // 설문조사 팝업-->
+
+        <div class="survey_submit_popup" style="display: none;">
+
+            <div class="survey_submit_popup_cont">
+
+                <p class="survey_submit_popup_cont_title">상품 서비스 만족도 조사</p>
+
+                <div class="survey_submit_popup_cont_text">
+
+                    <div class="survey_submit_popup_cont_text_icon">
+                        <img src="image/survey_submit_icon.png" alt="">
+                    </div>
+
+                    <p>우리 <span>벚꽃</span>할래요? <span>진해군항제</span></p>
+                    <p><span>상품 서비스 만족도 조사</span>에 응해주셔서 감사합니다.</p>
+                </div>
+
+                <p class="survey_submit_popup_cont_close" onclick="closeSurveySubmit();">확인</p>
+            
+            </div><!--survey_submit_popup_cont end-->
+
+        </div><!--survey_submit_popup end // 팝업 끝-->
+
+    </div><!--container end-->
+
+    <script src="lib/index.js"></script>
+</body>
+</html>

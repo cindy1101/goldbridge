@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오시는 길</title>
+
+    <script src="lib/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+    <header class="header_web_ex" onmouseover="headerHoverEvent();" onmouseout="headerNotHoverEvent();">
+
+        <div class="header_cont_box">
+
+            <a href="#" class="header_cont_box_logo">
+                <img src="img/logo_white.png" alt="로고">
+            </a>
+
+            <ul class="header_cont_lnb">
+
+                <li>
+                    <a href="#">
+                        <p>회사소개</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>오시는 길</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html">
+                        <p>문의하기</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="announcement.html">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header><!--header_web_ex end-->
+
+    <header class="header_mobile_ex">
+
+        <div class="header_mobile_cont">
+
+            <a href="#" class="header_mobile_logo">
+                <img src="img/logo_color.png" alt="로고">
+            </a>
+
+            <div class="header_mobile_cont_menu" onclick="mobileHeader()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        <div class="header_mobile_sheet_ex">
+
+            <ul class="header_mobile_sheet_cont">
+                
+                <li>
+                    <a href="#">
+                        <p>01</p>
+                        <p>회사소개</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="map.html">
+                        <p>02</p>
+                        <p>오시는길</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html">
+                        <p>03</p>
+                        <p>문의하기</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="announcement.html">
+                        <p>04</p>
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a href="tel:0512088488" class="header_mobile_call" title="고객센터 전화번호">
+
+                <div>
+
+                    <div>
+                        <img src="img/call_icon.png" alt="전화 아이콘">
+                    </div>
+
+                    <p>고객센터</p>
+
+                    <p>051-208-8408</p>
+
+                </div>
+
+            </a>
+
+        </div><!--header_mobile_sheet_ex end-->
+
+    </header><!--header_mobile_ex end-->
+
+    <div class="sub_visual_ex">
+
+        <p class="sub_visual_title">오시는길</p>
+
+        <div class="sub_visual_rout">
+
+            <a href="#" class="sub_visual_root_home_rout" title="메인화면으로">
+                <img src="img/home_icon.png" alt="메인화면으로">
+            </a>
+
+            <div class="sub_visual_depth_box" onclick="rootDepth();">
+
+                <div class="sub_visual_depth_title">
+                    <p>오시는길</p>
+                    <img src="img/arrow_down_icon.png" alt="">
+                </div>
+
+                <ul class="sub_visual_depth_cont">
+
+                    <li>
+                        <a href="#">
+                            <p>회사소개</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>오시는길</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="inquiry.html">
+                            <p>문의하기</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="announcement.html">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--sub_visual_depth_box end-->
+
+        </div><!--sub_visual_rout end-->
+
+    </div><!--sub_visual_ex end-->
+
+    <section class="way_top_come_ex">
+
+        <div id="daumRoughmapContainer1705473469444" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+        <!--카카오톡 지도 api-->
+        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+        <script charset="UTF-8">
+            new daum.roughmap.Lander({
+                "timestamp" : "1705473469444",
+                "key" : "2hpgu"
+            }).render();
+        </script>
+
+
+        <div class="map_infomation_box">
+
+           <p>(주)인천냉동운수</p>
+
+           <div class="map_infomation_cont">
+
+                <div class="map_infomation_cont_box">
+                    
+                    <p>주소</p>
+                    <p>부산광역시 사하구 원양로 407-1 3층 (주)인천냉동운송공사</p>
+
+                </div>
+
+                <div class="map_infomation_cont_box">
+                    
+                    <p>전화번호</p>
+                    <p>051-208-8488</p>
+
+                </div>
+
+                <div class="map_infomation_cont_box">
+
+                    <p>FAX</p>
+                    <p>051-208-8408</p>
+
+                </div>
+           </div>
+
+        </div><!--map_infomation_box end-->
+
+
+        <div class="bus_cont_box">
+
+            <div class="bus_cont_box_title">
+                <p>버스로 오시는 길</p>
+            </div>
+
+            <div class="bus_text_box">
+
+                <div class="bus_text_cont">
+                    <p class="bus_common">일반</p>
+                    <p>16번 · 161번 · 61번 · 6번 · 69-1번<br>
+                    부산천연가스발전소 정류장 하차 후 도보로 4분 (205m) 이동</p>
+                </div>
+
+                <div class="bus_text_cont">
+                    <p class="bus_common">일반</p>
+                    <p>171번 · 9번<br>
+                    감천사거리 정류장 하차 후 도보로 4분 (205m) 이동</p>
+                </div>
+
+                <div class="bus_text_cont">
+                    <p class="bus_town">마을</p>
+                    <p>서구 2-2<br>
+                    감전119안전센터 정류장 하차 후 도보로 1분 (56m) 이동</p>
+                </div>
+
+                <div class="bus_text_cont">
+                    <p class="bus_town">마을</p>
+                    <p>사하구1 · 사하구1-1<br>
+                    감천사거리 정류장 하차 후 도보로 3분 (194m) 이동</p>
+                </div>
+
+            </div><!--bus_text_box end-->
+
+        </div><!--bus_cont_box end-->
+
+        
+    </section>
+
+    <footer class="footer_ex">
+
+        <div class="footer_cont_box">
+
+            <div class="footer_cont_top">
+
+                <p class="footer_cont_top_company_name">(주)인천냉동운송공사</p>
+
+                <div class="footer_cont_top_right">
+
+                    <a href="javascript:void(0);">
+                        <p>이용약관</p>
+                    </a>
+
+                    <a href="javascript:void(0);">
+                        <p>개인정보처리방침</p>
+                    </a>
+
+                </div><!--footer_cont_top end-->
+
+            </div><!--footer_cont_box end-->
+
+            <div class="footer_cont_line"></div>
+
+            <div class="footer_cont_bottom">
+
+                <div class="footer_cont_bottom_box_01">
+                    <p>대표 : 김정교</p>
+                    <p>사업자번호 : 138-86-02312</p>
+                    <p>주소 : 부산광역시 사하구 원양로 407-1 3층 (주)인천냉동운송공사</p>
+                </div>
+
+                <div class="footer_cont_bottom_box_02">
+                    <p>우편번호 : 49449</p>
+                    <p>전화번호 : 051-208-8488</p>
+                    <p>팩스번호 : 051-208-8408</p>
+                </div>
+
+            </div><!--footer_cont_bottom end-->
+
+
+        </div>
+
+    </footer><!--footer_ex end-->
+
+    <script src="lib/header.js"></script>
+    <script src="lib/sub.js"></script>
+</body>
+</html>

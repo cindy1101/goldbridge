@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 디테일</title>
+    <script src="lib/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header class="header_web_ex" onmouseover="headerHoverEvent();" onmouseout="headerNotHoverEvent();">
+
+        <div class="header_cont_box">
+
+            <a href="#" class="header_cont_box_logo">
+                <img src="img/logo_white.png" alt="로고">
+            </a>
+
+            <ul class="header_cont_lnb">
+
+                <li>
+                    <a href="#">
+                        <p>회사소개</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="map.html">
+                        <p>오시는 길</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html">
+                        <p>문의하기</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="announcement.html">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header><!--header_web_ex end-->
+
+    <header class="header_mobile_ex">
+
+        <div class="header_mobile_cont">
+
+            <a href="#" class="header_mobile_logo">
+                <img src="img/logo_color.png" alt="로고">
+            </a>
+
+            <div class="header_mobile_cont_menu" onclick="mobileHeader()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        <div class="header_mobile_sheet_ex">
+
+            <ul class="header_mobile_sheet_cont">
+                
+                <li>
+                    <a href="#">
+                        <p>01</p>
+                        <p>회사소개</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="map.html">
+                        <p>02</p>
+                        <p>오시는길</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html">
+                        <p>03</p>
+                        <p>문의하기</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="announcement.html">
+                        <p>04</p>
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a href="tel:0512088488" class="header_mobile_call" title="고객센터 전화번호">
+
+                <div>
+
+                    <div>
+                        <img src="img/call_icon.png" alt="전화 아이콘">
+                    </div>
+
+                    <p>고객센터</p>
+
+                    <p>051-208-8408</p>
+
+                </div>
+
+            </a>
+
+        </div><!--header_mobile_sheet_ex end-->
+
+    </header><!--header_mobile_ex end-->
+
+    <div class="sub_visual_ex">
+
+        <p class="sub_visual_title">공지사항</p>
+
+        <div class="sub_visual_rout">
+
+            <a href="#" class="sub_visual_root_home_rout" title="메인화면으로">
+                <img src="img/home_icon.png" alt="메인화면으로">
+            </a>
+
+            <div class="sub_visual_depth_box" onclick="rootDepth();">
+
+                <div class="sub_visual_depth_title">
+                    <p>공지사항</p>
+                    <img src="img/arrow_down_icon.png" alt="">
+                </div>
+
+                <ul class="sub_visual_depth_cont">
+
+                    <li>
+                        <a href="#">
+                            <p>회사소개</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="map.html">
+                            <p>오시는길</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <p>문의하기</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="announcement.html">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--sub_visual_depth_box end-->
+
+        </div><!--sub_visual_rout end-->
+
+    </div><!--sub_visual_ex end-->
+
+    <section class="announcement_detaile_ex">
+
+        <div class="write_detaile_title">
+
+            <p class="write_detaile_title_text">현대커머셜 물류사 위수탁차주를 위한 타이어 공동 구매 이벤트</p>
+
+            <div class="write_detaile_view_box">
+
+                <div class="write_calendar_box">
+
+                    <div>
+                        <img src="img/calendar_icon.png" alt="">
+                    </div>
+
+                    <p>2024-12-31</p>
+
+                </div><!--write_calendar_box end-->
+
+                <div class="write_view_box">
+
+                    <div>
+                        <img src="img/remove_eye_icon.png" alt="">
+                    </div>
+
+                    <p>200</p>
+
+                </div><!--write_view_box end-->
+
+            </div><!--write_detaile_view_box end-->
+
+        </div><!--write_detaile_title end-->
+
+        <div class="announcement_detaile_cont">
+
+            <img src="img/announcement_detaile_image.png" alt="">
+
+            <p>당 제휴사인 현대커머셜에서 차주분들을 위한 공동구매를 진행 중이오니 관심있는 분들은 참고 부탁드립니다.</p>
+            <br />
+            <p>■ 공동구매 상품</p>
+            <ul>
+                <li>화물타이어: 시장최저가대비 12,000원~24,000원 할인</li>
+                <li>화물전용 네비게이션: 299,000원 (20%할인)</li>
+                <li>화물전용 블랙박스: 248,000원 (40%할인)</li>
+                <li>화물전용 후방카메라: 99,000원(40%할인)</li>
+            </ul>
+            <br />
+            <p>■ 이벤트 자세히 보기</p>
+            <ul>
+                <li>타이어: https://goo.gl//Iu5ryx</li>
+                <li>네비 등: https://goo.gl/UUvGfT</li>
+            </ul>
+            <br />
+            <p>■ 이벤트 기간 -17년 6월 12일 ~ 8월 12일</p>
+
+        </div><!--announcement_detaile_cont end-->
+
+        <div class="detaile_link_box">
+
+            <a href="#" class="prve_link_box">
+
+                <p>이전 글</p>
+
+                <div>
+                    <p class="prve_link_no_txt" style="display: none;">이전 글이 없습니다.</p>
+                    <p class="prve_link_title">현대커머셜 물류사 위수탁차주를 위한 타이어 공동 구매 이벤트</p>
+                </div>
+
+            </a>
+
+            <a href="#" class="next_link_box">
+
+                <p>다음 글</p>
+
+                <div> 
+                    <p class="next_link_no_txt">다음 글이 없습니다.</p>
+                    <p class="next_link_title" style="display: none;">현대커머셜 물류사 위수탁차주를 위한 타이어 공동 구매 이벤트</p>
+                </div>
+
+            </a>
+
+        </div><!--detaile_link_box end-->
+
+        <a href="announcement.html" class="list_back_btn">
+            <p>목록으로</p>
+        </a>
+
+    </section><!--announcement_detaile_ex end-->
+
+
+    <footer class="footer_ex">
+
+        <div class="footer_cont_box">
+
+            <div class="footer_cont_top">
+
+                <p class="footer_cont_top_company_name">(주)인천냉동운송공사</p>
+
+                <div class="footer_cont_top_right">
+
+                    <a href="javascript:void(0);">
+                        <p>이용약관</p>
+                    </a>
+
+                    <a href="javascript:void(0);">
+                        <p>개인정보처리방침</p>
+                    </a>
+
+                </div><!--footer_cont_top end-->
+
+            </div><!--footer_cont_box end-->
+
+            <div class="footer_cont_line"></div>
+
+            <div class="footer_cont_bottom">
+
+                <div class="footer_cont_bottom_box_01">
+                    <p>대표 : 김정교</p>
+                    <p>사업자번호 : 138-86-02312</p>
+                    <p>주소 : 부산광역시 사하구 원양로 407-1 3층 (주)인천냉동운송공사</p>
+                </div>
+
+                <div class="footer_cont_bottom_box_02">
+                    <p>우편번호 : 49449</p>
+                    <p>전화번호 : 051-208-8488</p>
+                    <p>팩스번호 : 051-208-8408</p>
+                </div>
+
+            </div><!--footer_cont_bottom end-->
+
+
+        </div>
+
+    </footer><!--footer_ex end-->
+
+
+    <script src="lib/header.js"></script>
+    <script src="lib/sub.js"></script>
+</body>
+</html>

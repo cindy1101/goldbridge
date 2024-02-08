@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기</title>
+    <script src="lib/jquery.min.js"></script>
+
+    <!--에디터-->
+    <script src="https://cdn.ckeditor.com/4.12.1/standard-all/ckeditor.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    
+    <header class="header_web_ex" onmouseover="headerHoverEvent();" onmouseout="headerNotHoverEvent();">
+
+        <div class="header_cont_box">
+
+            <a href="#" class="header_cont_box_logo">
+                <img src="img/logo_white.png" alt="로고">
+            </a>
+
+            <ul class="header_cont_lnb">
+
+                <li>
+                    <a href="#">
+                        <p>회사소개</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="map.html">
+                        <p>오시는 길</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html">
+                        <p>문의하기</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="announcement.html">
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header><!--header_web_ex end-->
+
+    <header class="header_mobile_ex">
+
+        <div class="header_mobile_cont">
+
+            <a href="#" class="header_mobile_logo">
+                <img src="img/logo_color.png" alt="로고">
+            </a>
+
+            <div class="header_mobile_cont_menu" onclick="mobileHeader()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        <div class="header_mobile_sheet_ex">
+
+            <ul class="header_mobile_sheet_cont">
+                
+                <li>
+                    <a href="#">
+                        <p>01</p>
+                        <p>회사소개</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="map.html">
+                        <p>02</p>
+                        <p>오시는길</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html">
+                        <p>03</p>
+                        <p>문의하기</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="announcement.html">
+                        <p>04</p>
+                        <p>공지사항</p>
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a href="tel:0512088488" class="header_mobile_call" title="고객센터 전화번호">
+
+                <div>
+
+                    <div>
+                        <img src="img/call_icon.png" alt="전화 아이콘">
+                    </div>
+
+                    <p>고객센터</p>
+
+                    <p>051-208-8408</p>
+
+                </div>
+
+            </a>
+
+        </div><!--header_mobile_sheet_ex end-->
+
+    </header><!--header_mobile_ex end-->
+
+    <div class="sub_visual_ex">
+
+        <p class="sub_visual_title">문의하기</p>
+
+        <div class="sub_visual_rout">
+
+            <a href="#" class="sub_visual_root_home_rout" title="메인화면으로">
+                <img src="img/home_icon.png" alt="메인화면으로">
+            </a>
+
+            <div class="sub_visual_depth_box" onclick="rootDepth();">
+
+                <div class="sub_visual_depth_title">
+                    <p>문의하기</p>
+                    <img src="img/arrow_down_icon.png" alt="">
+                </div>
+
+                <ul class="sub_visual_depth_cont">
+
+                    <li>
+                        <a href="#">
+                            <p>회사소개</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="map.html">
+                            <p>오시는길</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="inquiry.html">
+                            <p>문의하기</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="announcement.html">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!--sub_visual_depth_box end-->
+
+        </div><!--sub_visual_rout end-->
+
+    </div><!--sub_visual_ex end-->
+
+    <section class="inquiry_write_ex">
+
+        <form action="">
+
+            <ul class="inquiry_write_cont">
+
+                <li>
+                    <p>제목</p>
+                </li>
+
+                <li>
+                    <input type="text" class="inquiry_write_title" required>
+                </li>
+
+                <li>
+                    <p>작성자</p>
+                </li>
+
+                <li>
+                    <input type="text" class="inquiry_write_name" required>
+                </li>
+
+                <li>
+                    <p>비밀번호</p>
+                </li>
+
+                <li>
+                    <input type="password" class="inquiry_write_password" placeholder="게시글 확인시 이용됩니다." required>
+                </li>
+
+                <li>
+                    <p>문의내용</p>
+                </li>
+
+                <li>
+                    <textarea class="inquiry_write_textarea" id="mce_2"></textarea>
+                    
+                    <script type="text/javascript">
+                        CKEDITOR.replace('mce_2',{
+                            filebrowserUploadUrl: './imageUpload.do'
+                        });
+                    </script>
+                </li>
+
+                <li>
+                    <p>파일첨부</p>
+                </li>
+
+                <li>
+                    <div class="file_upload_cont">
+
+                        <input type="file" id="file_upload_btn" name="file_name" multiple>
+                        <input id="upload-name" disabled="disabled" placeholder="여러개의 파일은 압축해서 100MB이하 ZIP파일로 올려주세요.">
+                        <label for="file_upload_btn" class="file_upload_label">파일선택</label>
+
+                    </div><!--file_upload_cont end-->
+                </li>
+
+            </ul><!--inquiry_write_cont end-->
+
+            <div class="inquiry_checkbox_cont"> 
+
+                <input type="checkbox" id="inquiry_checkbox">
+
+                <label for="inquiry_checkbox" class="inquiry_checkbox_label_box"></label>
+
+                <label for="inquiry_checkbox" class="inquiry_checkbox_label_txt">
+                    <p><span>개인정보수집 및 이용방침</span>에 동의합니다.</p>
+                </label>
+                
+                <p class="open_privacy_txt_btn">약관보기</p>
+
+            </div><!--inquiry_checkbox_cont end-->
+
+            <div class="inquiry_write_btn_box">
+
+                <input type="submit" value="등록하기" class="inquiry_write_submit">
+
+                <a href="inquiry.html" class="inquiry_write_list_btn">
+                    <p>목록으로</p>
+                </a>
+
+            </div><!--inquiry_write_btn_box end-->
+
+        </form>
+
+    </section><!--inquiry_write_ex end-->
+
+    <footer class="footer_ex">
+
+        <div class="footer_cont_box">
+
+            <div class="footer_cont_top">
+
+                <p class="footer_cont_top_company_name">(주)인천냉동운송공사</p>
+
+                <div class="footer_cont_top_right">
+
+                    <a href="javascript:void(0);">
+                        <p>이용약관</p>
+                    </a>
+
+                    <a href="javascript:void(0);">
+                        <p>개인정보처리방침</p>
+                    </a>
+
+                </div><!--footer_cont_top end-->
+
+            </div><!--footer_cont_box end-->
+
+            <div class="footer_cont_line"></div>
+
+            <div class="footer_cont_bottom">
+
+                <div class="footer_cont_bottom_box_01">
+                    <p>대표 : 김정교</p>
+                    <p>사업자번호 : 138-86-02312</p>
+                    <p>주소 : 부산광역시 사하구 원양로 407-1 3층 (주)인천냉동운송공사</p>
+                </div>
+
+                <div class="footer_cont_bottom_box_02">
+                    <p>우편번호 : 49449</p>
+                    <p>전화번호 : 051-208-8488</p>
+                    <p>팩스번호 : 051-208-8408</p>
+                </div>
+
+            </div><!--footer_cont_bottom end-->
+
+
+        </div>
+
+    </footer><!--footer_ex end-->
+
+    <script>
+
+        //파일 업로드시 파일 이름 추가
+        $('#file_upload_btn').change(function(){
+
+            var fileName = [];
+
+            for(var i = 0; i < this.files.length; i++){
+
+                fileName.push(this.files[i].name);
+
+            }
+
+            $('#upload-name').val(fileName.join(','));
+
+        });
+
+        //join : 배열 합치기
+        //push : 배열 요소 추가 
+
+    </script>
+
+    <script src="lib/header.js"></script>
+    <script src="lib/sub.js"></script>
+
+</body>
+</html>
